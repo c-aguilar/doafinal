@@ -1,0 +1,343 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DeltaERP
+</name>
+</assembly>
+<members>
+<member name="P:Delta_ERP.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources._in">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.add_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.AppIcon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.APTIV">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.arrow_right_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.box_front_open_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.box_front_open_hand">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.box_open_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.critical_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.critical_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.cross_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.cross_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.delete_package_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.equal">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.excel_exports_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.folder_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.greater">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.greater_equal">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.information_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.information_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.minor">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.minor_equal_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.No_image_available">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.not_equal">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ok_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ORD_MoverEmailTemplate">
+	<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        .auto-style2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #006699;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="color: #5e9ca0;"&gt;Mover de muestras&amp;nbsp;&lt;span style="color: #2b2301;"&gt;@id&lt;/span&gt; aprobado.&lt;/h1&gt;
+&lt;h2 style="color: #2e6c80;"&gt;Detalles:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Usuario:&lt;/strong&gt; @use [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_AverageRequirementsByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
+WHERE (('{3}' BETWEEN StartProduction AND EndProduction) OR ('{ [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_AverageRequirementsByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
+INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+WHE [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_BoardCapacitiesByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date],ISNULL(SC.WorkingShifts,'') AS DayShifts,B.ShiftCombination AS BoardShifts,CL.Seconds
+FROM Sys_Calendar AS SC
+LEFT OUTER JOIN Sys_ShiftCombination AS SF ON SC.WorkingShifts = SF.Combination
+CROSS JOIN Sch_Materials AS M  
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material
+INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board
+INNER JOIN Eng_1719Controls AS CL ON M.Material = CL.Material
+INNER JOIN Sys_ShiftCombination AS SFB ON B.ShiftCombination = SFB.Comb [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_BoardCapacitiesByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date],ISNULL(SC.WorkingShifts,'') AS DayShifts,Bd.ShiftCombination AS BoardShifts,CL.Seconds
+FROM Sys_Calendar AS SC
+LEFT OUTER JOIN Sys_ShiftCombination AS SF ON SC.WorkingShifts = SF.Combination
+CROSS JOIN Sch_Materials AS M  
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material
+INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board
+INNER JOIN Eng_1719Controls AS CL ON M.Material = CL.Material
+INNER JOIN Sys_ShiftCombination AS SFB ON Bd.ShiftCombination = SFB. [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_ByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' 
+AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1} [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_ByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' 
+AND ((' [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_CommentsByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,C.Comment 
+FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+AND M.Business = '{2}' AND B.Volume='Low' ORDER BY M.Material.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_CommentsByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,C.Comment 
+FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+AND B.Family = '{2}' AND Bd.Volume='Low' 
+ORDER BY M.Material.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_Daily_Plant">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,Bd.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' 
+AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+ORDER BY M.Material,SC.[Date].
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_EPSProductionByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
+LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date]
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2} [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_EPSProductionByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity  
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date] 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_MaterialsByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool, Bd.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUT [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_MaterialsByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool,BD.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTE [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_RequirementsByBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{ [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_RequirementsByFamily">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,Bd.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity  
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEE [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.PP_Weekly_Plant">
+	<summary>
+  Looks up a localized string similar to SELECT M.Material,Bd.Board,[Week],ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material INNER JOIN Mfg_Boards AS Mb ON Bd.Board = Mb.Board 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND MB.Volume='Low' 
+ [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.printer_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.question_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.shield_delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.tag_blue_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.text_list_bullets">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.tick_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.tick_light_blue_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.tick_red_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.warning_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_CriticalLabel">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,140^FH\^FB1200,1,0,C,1^FD*** CRITICO ***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
+^FT0,470^A0N,60,60^FH\^FB1200,1,0,L,1^FDArea: @area^FS
+^FT0,590^A0N,60,60^FH\^FB1200,2,0,L,1^FDComentario: @comment^FS
+^PQ1,0,1,Y^XZ.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_MoverLabel">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT350,120^A0N,90,90^FH\^FB800,1,0,R,1^FDMover ID @moverid^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT20,430^A0N,80,80^FH\^FB1200,1,0,L,1^FDCantidad: @quantity @uom^FS
+^FT20,490^A0N,60,60^FH\^FB1200,1,0,L,1^FDLocal: @local^FS
+^BY4,4,104^FT20,150^BCN,,Y,N^FD@partid^FS
+^PQ1,0,1,Y^XZ.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_QualityLabel">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,100^FH\^FB1200,1,0,C,1^FD***ALERTA DE CALIDAD***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
+^FT0,530^A0N,60,60^FH\^FB1200,2,0,L,1^FDMotivo: @reason^FS
+^PQ1,0,1,Y^XZ.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_ReceivingLabel">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^BY3,3,70^FT560,90^BCN,,N,N^FD@partnumber^FS
+^FT160,70^A0N,70,60^FH\^FB550,1,0,L,1^FD@supplierpart^FS
+^FT160,140^A0N,70,60^FH\^FB880,1,0,L,1^FD@suppliername^FS
+^FO0,453^GB970,0,6^FS
+^FO3,151^GB363,0,6^FS
+^FT125,185^A0N,28,28^FH\^FDESTACION^FS
+^FT5,255^A0N,100,65^FH\^FB360,1,0,C,1^FD@warehouse^FS
+^FO3,267^GB363,0,6^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C, [rest of string was truncated]";.
+</summary>
+</member><member name="T:Delta_ERP.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

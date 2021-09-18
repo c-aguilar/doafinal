@@ -1,0 +1,31 @@
+C:\Users\MZ23ZX\AppData\Local\Temporary Projects\Delta Cutting System\bin\Debug\Delta Cutting System.exe.config
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.exe.config
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.exe.manifest
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.application
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.exe
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.pdb
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Delta Cutting System.xml
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\CAguilar.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\itextsharp.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\CAguilar.pdb
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\CAguilar.xml
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\Interop.AcroPDFLib.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.vbprojResolveAssemblyReference.cache
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Interop.AcroPDFLib.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Interop.PDFSHELLSERVERLib.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.vbproj.ResolveComReference.cache
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.ErrorReportViewer.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.ReportViewer.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.KomaxRead.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.Main.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.PDFViewer.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.ProductionPlanDaily.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta_Cutting_System.Resources.resources
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.vbproj.GenerateResource.Cache
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.exe.manifest
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.application
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.exe
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.xml
+C:\Proyectos\Delta Cutting System\Delta Cutting System\obj\Debug\Delta Cutting System.pdb

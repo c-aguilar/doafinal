@@ -1,0 +1,1451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1D8741B-956F-4B19-81E6-E4F5F5A8A9C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Delta_ERP.My.MyApplication</StartupObject>
+    <RootNamespace>Delta_ERP</RootNamespace>
+    <AssemblyName>Delta ERP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\dl2cv74w1\wwwroot\Apps\RBEV\Delta ERP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://DL2CV74W1/apps/RBEV/Delta ERP/</InstallUrl>
+    <ProductName>Delta ERP</ProductName>
+    <PublisherName>Delphi RBE V</PublisherName>
+    <SuiteName>Delta</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Install.htm</WebPage>
+    <ApplicationRevision>194</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Delta ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Delta ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>delta.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>19C25CDDD58CA488FECF17C4ED4ED795D1C54161</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Delta Cutting System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAguilar">
+      <HintPath>..\..\CAguilar\CAguilar\bin\Debug\CAguilar.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CAguilar\CAguilar\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CAguilar" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Classes\Language.vb" />
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_StartingWorkChecklist.Designer.vb">
+      <DependentUpon>CDR_StartingWorkChecklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_StartingWorkChecklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_CheckpointTemplate.Designer.vb">
+      <DependentUpon>CDR_CheckpointTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_CheckpointTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_KanbanScan.Designer.vb">
+      <DependentUpon>CDR_KanbanScan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_KanbanScan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_PrintKanban.Designer.vb">
+      <DependentUpon>CDR_PrintKanban.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_PrintKanban.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_FindManufacturing.Designer.vb">
+      <DependentUpon>CDR_FindManufacturing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_FindManufacturing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\CDR.vb" />
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.Designer.vb">
+      <DependentUpon>CDR_EngineeringVsZCS12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Operators.Designer.vb">
+      <DependentUpon>CDR_Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Workload.Designer.vb">
+      <DependentUpon>CDR_Workload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Workload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbanPrint.Designer.vb">
+      <DependentUpon>CDR_KanbanPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbanPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Kanbans.Designer.vb">
+      <DependentUpon>CDR_Kanbans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_Kanbans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbanHistory.Designer.vb">
+      <DependentUpon>CDR_KanbanHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbanHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_MissingHistory.Designer.vb">
+      <DependentUpon>CDR_MissingHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_MissingHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_ScanningHistory.Designer.vb">
+      <DependentUpon>CDR_ScanningHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_ScanningHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\Reports\ForecastVs261.Designer.vb">
+      <DependentUpon>ForecastVs261.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Reports\ForecastVs261.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieCenter\DiC_AskManual.Designer.vb">
+      <DependentUpon>DiC_AskManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DieCenter\DiC_AskManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieCenter\DiC_DeliverTerminal.Designer.vb">
+      <DependentUpon>DiC_DeliverTerminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DieCenter\DiC_DeliverTerminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieCenter\DiC_Picklist.Designer.vb">
+      <DependentUpon>DiC_Picklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DieCenter\DiC_Picklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieCenter\DiC_PrintPicklist.Designer.vb">
+      <DependentUpon>DiC_PrintPicklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DieCenter\DiC_PrintPicklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieCenter\Dic_Selector.Designer.vb">
+      <DependentUpon>Dic_Selector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DieCenter\Dic_Selector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_Checkpoint.Designer.vb">
+      <DependentUpon>FGR_Checkpoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_Checkpoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_SerialScan.Designer.vb">
+      <DependentUpon>FGR_SerialScan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_SerialScan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Users\NewUser.Designer.vb">
+      <DependentUpon>NewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Users\NewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Users\Permissions\ClonePermissionsFrom.Designer.vb">
+      <DependentUpon>ClonePermissionsFrom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Users\Permissions\ClonePermissionsFrom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Users\Permissions\UserRights.Designer.vb">
+      <DependentUpon>UserRights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Users\Permissions\UserRights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Alphanumeric.vb" />
+    <Compile Include="Classes\Operator.vb" />
+    <Compile Include="General\AlertsReport.Designer.vb">
+      <DependentUpon>AlertsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\AlertsReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\CalendarRange.Designer.vb">
+      <DependentUpon>CalendarRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\CalendarRange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_Checkpoint.Designer.vb">
+      <DependentUpon>CDR_Checkpoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_Checkpoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_MissingPartnumbers.Designer.vb">
+      <DependentUpon>CDR_MissingPartnumbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_MissingPartnumbers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_ExitRoute.Designer.vb">
+      <DependentUpon>CDR_ExitRoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_ExitRoute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_EmptyContainers.Designer.vb">
+      <DependentUpon>CDR_EmptyContainers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_EmptyContainers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\SAP\VA32_DeliveryCorrection.Designer.vb">
+      <DependentUpon>VA32_DeliveryCorrection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Service\SAP\VA32_DeliveryCorrection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ConditionSelector.Designer.vb">
+      <DependentUpon>ConditionSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\ConditionSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\DeltaReporter.Designer.vb">
+      <DependentUpon>DeltaReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\DeltaReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FadeBackground.Designer.vb">
+      <DependentUpon>FadeBackground.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\FadeBackground.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\EnterBox.Designer.vb">
+      <DependentUpon>EnterBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\EnterBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\PDFViewer.designer.vb">
+      <DependentUpon>PDFViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\PDFViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\SingleReportViewer.Designer.vb">
+      <DependentUpon>SingleReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\SingleReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leadprep\BagLabelPrinter.Designer.vb">
+      <DependentUpon>BagLabelPrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Leadprep\BagLabelPrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MB51_261VsZ11.Designer.vb">
+      <DependentUpon>MB51_261VsZ11.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MB51_261VsZ11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MB51_261VsZ11_Details.Designer.vb">
+      <DependentUpon>MB51_261VsZ11_Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MB51_261VsZ11_Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MAn_ConsumptionHistory.Designer.vb">
+      <DependentUpon>MAn_ConsumptionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MAn_ConsumptionHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\SAP\DownloadMB51.Designer.vb">
+      <DependentUpon>DownloadMB51.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\SAP\DownloadMB51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Forecast\Ord_ImportForecast.Designer.vb">
+      <DependentUpon>Ord_ImportForecast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Forecast\Ord_ImportForecast.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Partnumber.vb" />
+    <Compile Include="Ordering\Receiving\Ord_ReportCriticalToReceiving.Designer.vb">
+      <DependentUpon>Ord_ReportCriticalToReceiving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Receiving\Ord_ReportCriticalToReceiving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_MixMaxHistory.Designer.vb">
+      <DependentUpon>Ord_MixMaxHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_MixMaxHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_CriticalHistory.Designer.vb">
+      <DependentUpon>Ord_CriticalHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_CriticalHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ABC.Designer.vb">
+      <DependentUpon>Ord_ABC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ABC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ConsumptionHistory.Designer.vb">
+      <DependentUpon>Ord_ConsumptionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ConsumptionHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ForecastVsZapimatinfo.Designer.vb">
+      <DependentUpon>Ord_ForecastVsZapimatinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ForecastVsZapimatinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ForecastWaterfall.Designer.vb">
+      <DependentUpon>Ord_ForecastWaterfall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_ForecastWaterfall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_MoverHistory.Designer.vb">
+      <DependentUpon>Ord_MoverHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Reports\Ord_MoverHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_ApproveMover.Designer.vb">
+      <DependentUpon>Ord_ApproveMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_ApproveMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_PrintMover.Designer.vb">
+      <DependentUpon>Ord_PrintMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_PrintMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_CancelMover.Designer.vb">
+      <DependentUpon>Ord_CancelMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_CancelMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_NewMover.Designer.vb">
+      <DependentUpon>Ord_NewMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Ord_NewMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_AnswerMixMax.Designer.vb">
+      <DependentUpon>Ord_AnswerMixMax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_AnswerMixMax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_MixMaxAlerts.Designer.vb">
+      <DependentUpon>Ord_MixMaxAlerts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_MixMaxAlerts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RejectSerialnumber.Designer.vb">
+      <DependentUpon>QLY_RejectSerialnumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RejectSerialnumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RemoveSerialAlert.Designer.vb">
+      <DependentUpon>QLY_RemoveSerialAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RemoveSerialAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_NewAlert.Designer.vb">
+      <DependentUpon>QLY_NewAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_NewAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RemoveAlert.Designer.vb">
+      <DependentUpon>QLY_RemoveAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_RemoveAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quality\Reportes\Qly_AlertsHistory.Designer.vb">
+      <DependentUpon>Qly_AlertsHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Reportes\Qly_AlertsHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_ToTracker.Designer.vb">
+      <DependentUpon>Rec_ToTracker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_ToTracker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Management\REC_Operators.Designer.vb">
+      <DependentUpon>REC_Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Management\REC_Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_LabeledVsPaid.designer.vb">
+      <DependentUpon>Rec_LabeledVsPaid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_LabeledVsPaid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_DeleteLabel.Designer.vb">
+      <DependentUpon>Rec_DeleteLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_DeleteLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_ReprintLabel.Designer.vb">
+      <DependentUpon>Rec_ReprintLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_ReprintLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_SMSVsMB51.designer.vb">
+      <DependentUpon>Rec_SMSVsMB51.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_SMSVsMB51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Receiving.vb" />
+    <Compile Include="Receiving\Rec_Labeling.Designer.vb">
+      <DependentUpon>Rec_Labeling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_Labeling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_NewSerial.Designer.vb">
+      <DependentUpon>Rec_NewSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_NewSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_TrackerToService.Designer.vb">
+      <DependentUpon>Rec_TrackerToService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_TrackerToService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Reports\Rec_SerialHistory.Designer.vb">
+      <DependentUpon>Rec_SerialHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Reports\Rec_SerialHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_ToQuality.Designer.vb">
+      <DependentUpon>Rec_ToQuality.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_ToQuality.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_TrackerPartialDiscount.Designer.vb">
+      <DependentUpon>Rec_TrackerPartialDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_TrackerPartialDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Reports\Rec_TrackerDiscountHistory.Designer.vb">
+      <DependentUpon>Rec_TrackerDiscountHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Reports\Rec_TrackerDiscountHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_AutoScheduleOptions.Designer.vb">
+      <DependentUpon>Sch_AutoScheduleOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_AutoScheduleOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_BusinessSelectorDialog.Designer.vb">
+      <DependentUpon>Sch_BusinessSelectorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_BusinessSelectorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\Calendar.Designer.vb">
+      <DependentUpon>Calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\Calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ErrorReportViewer.Designer.vb">
+      <DependentUpon>ErrorReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\ErrorReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ReportViewer.Designer.vb">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\ReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ChartHeadcountWorkloadSchedule.Designer.vb">
+      <DependentUpon>Sch_ChartHeadcountWorkloadSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ChartHeadcountWorkloadSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHighVolume.Designer.vb">
+      <DependentUpon>Sch_ProductionPlanDailyHighVolume.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHighVolume.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ImportProductionPlan.Designer.vb">
+      <DependentUpon>Sch_ImportProductionPlan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ImportProductionPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10WaterfallReport.Designer.vb">
+      <DependentUpon>Sch_VL10WaterfallReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10WaterfallReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10HeadcountReport.Designer.vb">
+      <DependentUpon>Sch_VL10HeadcountReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10HeadcountReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHigh.Designer.vb">
+      <DependentUpon>Sch_ProductionPlanDailyHigh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHigh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Sch_CSVProductionPlanOptionsDialog.Designer.vb">
+      <DependentUpon>Sch_CSVProductionPlanOptionsDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Sch_CSVProductionPlanOptionsDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyLow.Designer.vb">
+      <DependentUpon>Sch_ProductionPlanDailyLow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyLow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Delta.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Classes\User.vb" />
+    <Compile Include="General\LoadingScreen.Designer.vb">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\LoadingScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_ProductionPlanHeadcountReport.Designer.vb">
+      <DependentUpon>Sch_ProductionPlanHeadcountReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_ProductionPlanHeadcountReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10Variations.Designer.vb">
+      <DependentUpon>Sch_VL10Variations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10Variations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10VsCapacityReport.Designer.vb">
+      <DependentUpon>Sch_VL10VsCapacityReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_VL10VsCapacityReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Tools\Sch_SchedulingPrintLabels.Designer.vb">
+      <DependentUpon>Sch_SchedulingPrintLabels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Tools\Sch_SchedulingPrintLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_UploadDateRangeSelector.Designer.vb">
+      <DependentUpon>Sch_UploadDateRangeSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_UploadDateRangeSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_DownloadedDatesUpload.designer.vb">
+      <DependentUpon>Sch_DownloadedDatesUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_DownloadedDatesUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_UploadWaterfallReport.Designer.vb">
+      <DependentUpon>Sch_UploadWaterfallReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\UploadWaterfall\Sch_UploadWaterfallReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\Movers\Shi_ShipMover.Designer.vb">
+      <DependentUpon>Shi_ShipMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\Movers\Shi_ShipMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ManualAdjustment.Designer.vb">
+      <DependentUpon>Smk_ManualAdjustment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ManualAdjustment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ChangeLocation.Designer.vb">
+      <DependentUpon>Smk_ChangeLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ChangeLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_DeclareEmpty.Designer.vb">
+      <DependentUpon>Smk_DeclareEmpty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_DeclareEmpty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_FindSerial.Designer.vb">
+      <DependentUpon>Smk_FindSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_FindSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_PartialDiscount.Designer.vb">
+      <DependentUpon>Smk_PartialDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_PartialDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_OpenSerial.Designer.vb">
+      <DependentUpon>Smk_OpenSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_OpenSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ReactiveSerial.Designer.vb">
+      <DependentUpon>Smk_ReactiveSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_ReactiveSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_SerialMovements.Designer.vb">
+      <DependentUpon>Smk_SerialMovements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_SerialMovements.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_StoreSerial.Designer.vb">
+      <DependentUpon>Smk_StoreSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Componentes\Smk_StoreSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_BadgeKiosk.Designer.vb">
+      <DependentUpon>Smk_BadgeKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_BadgeKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_ChangeLocationKiosk.Designer.vb">
+      <DependentUpon>Smk_ChangeLocationKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_ChangeLocationKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_DeclareEmptyKiosk.Designer.vb">
+      <DependentUpon>Smk_DeclareEmptyKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_DeclareEmptyKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_FindSerialKiosk.Designer.vb">
+      <DependentUpon>Smk_FindSerialKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_FindSerialKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_OpenSerialKiosk.Designer.vb">
+      <DependentUpon>Smk_OpenSerialKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_OpenSerialKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_PartialDiscountKiosk.Designer.vb">
+      <DependentUpon>Smk_PartialDiscountKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_PartialDiscountKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_StoreSerialKiosk.Designer.vb">
+      <DependentUpon>Smk_StoreSerialKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_StoreSerialKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_NewSerial.Designer.vb">
+      <DependentUpon>Smk_NewSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_NewSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_ChooseWarehouse.Designer.vb">
+      <DependentUpon>Smk_ChooseWarehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_ChooseWarehouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_FixSerialnumber.Designer.vb">
+      <DependentUpon>Smk_FixSerialnumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_FixSerialnumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\SMK_Operators.Designer.vb">
+      <DependentUpon>SMK_Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\SMK_Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_RackOwners.Designer.vb">
+      <DependentUpon>Smk_RackOwners.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_RackOwners.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.Designer.vb">
+      <DependentUpon>Smk_PickupMoverManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMover.Designer.vb">
+      <DependentUpon>Smk_PickupMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PrintMover.Designer.vb">
+      <DependentUpon>Smk_PrintMover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Mover\Smk_PrintMover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Audit.Designer.vb">
+      <DependentUpon>Smk_Audit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Audit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_BrokenFIFO.Designer.vb">
+      <DependentUpon>Smk_BrokenFIFO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_BrokenFIFO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_MovementHistory.Designer.vb">
+      <DependentUpon>Smk_MovementHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_MovementHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_SAPVsDelta.Designer.vb">
+      <DependentUpon>Smk_SAPVsDelta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_SAPVsDelta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_SimpleAudit.Designer.vb">
+      <DependentUpon>Smk_SimpleAudit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_SimpleAudit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Serialnumber.vb" />
+    <Compile Include="Supermarket\Smk_AlertMissing.Designer.vb">
+      <DependentUpon>Smk_AlertMissing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Smk_AlertMissing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_Kiosk.Designer.vb">
+      <DependentUpon>Smk_Kiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Kiosk\Smk_Kiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Smk_SAPTransfers.Designer.vb">
+      <DependentUpon>Smk_SAPTransfers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Smk_SAPTransfers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Supermarket.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_StartingWorkChecklist.resx">
+      <DependentUpon>CDR_StartingWorkChecklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_CheckpointTemplate.resx">
+      <DependentUpon>CDR_CheckpointTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_KanbanScan.resx">
+      <DependentUpon>CDR_KanbanScan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_PrintKanban.resx">
+      <DependentUpon>CDR_PrintKanban.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_FindManufacturing.resx">
+      <DependentUpon>CDR_FindManufacturing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.resx">
+      <DependentUpon>CDR_EngineeringVsZCS12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_Operators.resx">
+      <DependentUpon>CDR_Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_Workload.resx">
+      <DependentUpon>CDR_Workload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_KanbanPrint.resx">
+      <DependentUpon>CDR_KanbanPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_Kanbans.resx">
+      <DependentUpon>CDR_Kanbans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_KanbanHistory.resx">
+      <DependentUpon>CDR_KanbanHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_MissingHistory.resx">
+      <DependentUpon>CDR_MissingHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_ScanningHistory.resx">
+      <DependentUpon>CDR_ScanningHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Reports\ForecastVs261.resx">
+      <DependentUpon>ForecastVs261.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieCenter\DiC_AskManual.resx">
+      <DependentUpon>DiC_AskManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieCenter\DiC_DeliverTerminal.resx">
+      <DependentUpon>DiC_DeliverTerminal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieCenter\DiC_Picklist.resx">
+      <DependentUpon>DiC_Picklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieCenter\DiC_PrintPicklist.resx">
+      <DependentUpon>DiC_PrintPicklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieCenter\Dic_Selector.resx">
+      <DependentUpon>Dic_Selector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_Checkpoint.resx">
+      <DependentUpon>FGR_Checkpoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_SerialScan.resx">
+      <DependentUpon>FGR_SerialScan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Users\NewUser.resx">
+      <DependentUpon>NewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Users\Permissions\ClonePermissionsFrom.resx">
+      <DependentUpon>ClonePermissionsFrom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Users\Permissions\UserRights.resx">
+      <DependentUpon>UserRights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\AlertsReport.resx">
+      <DependentUpon>AlertsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\CalendarRange.resx">
+      <DependentUpon>CalendarRange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_Checkpoint.resx">
+      <DependentUpon>CDR_Checkpoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_MissingPartnumbers.resx">
+      <DependentUpon>CDR_MissingPartnumbers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_ExitRoute.resx">
+      <DependentUpon>CDR_ExitRoute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_EmptyContainers.resx">
+      <DependentUpon>CDR_EmptyContainers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Service\SAP\VA32_DeliveryCorrection.resx">
+      <DependentUpon>VA32_DeliveryCorrection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ConditionSelector.resx">
+      <DependentUpon>ConditionSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\DeltaReporter.resx">
+      <DependentUpon>DeltaReporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FadeBackground.resx">
+      <DependentUpon>FadeBackground.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\EnterBox.resx">
+      <DependentUpon>EnterBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\PDFViewer.resx">
+      <DependentUpon>PDFViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\SingleReportViewer.resx">
+      <DependentUpon>SingleReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leadprep\BagLabelPrinter.resx">
+      <DependentUpon>BagLabelPrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Reports\MB51_261VsZ11.resx">
+      <DependentUpon>MB51_261VsZ11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Reports\MB51_261VsZ11_Details.resx">
+      <DependentUpon>MB51_261VsZ11_Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Reports\MAn_ConsumptionHistory.resx">
+      <DependentUpon>MAn_ConsumptionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\SAP\DownloadMB51.resx">
+      <DependentUpon>DownloadMB51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount\Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Forecast\Ord_ImportForecast.resx">
+      <DependentUpon>Ord_ImportForecast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Receiving\Ord_ReportCriticalToReceiving.resx">
+      <DependentUpon>Ord_ReportCriticalToReceiving.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_MixMaxHistory.resx">
+      <DependentUpon>Ord_MixMaxHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_CriticalHistory.resx">
+      <DependentUpon>Ord_CriticalHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_ABC.resx">
+      <DependentUpon>Ord_ABC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_ConsumptionHistory.resx">
+      <DependentUpon>Ord_ConsumptionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_ForecastVsZapimatinfo.resx">
+      <DependentUpon>Ord_ForecastVsZapimatinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_ForecastWaterfall.resx">
+      <DependentUpon>Ord_ForecastWaterfall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Reports\Ord_MoverHistory.resx">
+      <DependentUpon>Ord_MoverHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Mover\Ord_ApproveMover.resx">
+      <DependentUpon>Ord_ApproveMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Mover\Ord_PrintMover.resx">
+      <DependentUpon>Ord_PrintMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Mover\Ord_CancelMover.resx">
+      <DependentUpon>Ord_CancelMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Mover\Ord_NewMover.resx">
+      <DependentUpon>Ord_NewMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Ord_AnswerMixMax.resx">
+      <DependentUpon>Ord_AnswerMixMax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Ord_MixMaxAlerts.resx">
+      <DependentUpon>Ord_MixMaxAlerts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Alerts\QLY_RejectSerialnumber.resx">
+      <DependentUpon>QLY_RejectSerialnumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Alerts\QLY_RemoveSerialAlert.resx">
+      <DependentUpon>QLY_RemoveSerialAlert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Alerts\QLY_NewAlert.resx">
+      <DependentUpon>QLY_NewAlert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Alerts\QLY_RemoveAlert.resx">
+      <DependentUpon>QLY_RemoveAlert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Reportes\Qly_AlertsHistory.resx">
+      <DependentUpon>Qly_AlertsHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_ToTracker.resx">
+      <DependentUpon>Rec_ToTracker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Management\REC_Operators.resx">
+      <DependentUpon>REC_Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_LabeledVsPaid.resx">
+      <DependentUpon>Rec_LabeledVsPaid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_DeleteLabel.resx">
+      <DependentUpon>Rec_DeleteLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_ReprintLabel.resx">
+      <DependentUpon>Rec_ReprintLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_SMSVsMB51.resx">
+      <DependentUpon>Rec_SMSVsMB51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_Labeling.resx">
+      <DependentUpon>Rec_Labeling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_NewSerial.resx">
+      <DependentUpon>Rec_NewSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_TrackerToService.resx">
+      <DependentUpon>Rec_TrackerToService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Reports\Rec_SerialHistory.resx">
+      <DependentUpon>Rec_SerialHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_ToQuality.resx">
+      <DependentUpon>Rec_ToQuality.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_TrackerPartialDiscount.resx">
+      <DependentUpon>Rec_TrackerPartialDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Reports\Rec_TrackerDiscountHistory.resx">
+      <DependentUpon>Rec_TrackerDiscountHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_AutoScheduleOptions.resx">
+      <DependentUpon>Sch_AutoScheduleOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_BusinessSelectorDialog.resx">
+      <DependentUpon>Sch_BusinessSelectorDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\Calendar.resx">
+      <DependentUpon>Calendar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ErrorReportViewer.resx">
+      <DependentUpon>ErrorReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ReportViewer.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ChartHeadcountWorkloadSchedule.resx">
+      <DependentUpon>Sch_ChartHeadcountWorkloadSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHighVolume.resx">
+      <DependentUpon>Sch_ProductionPlanDailyHighVolume.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ImportProductionPlan.resx">
+      <DependentUpon>Sch_ImportProductionPlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_VL10WaterfallReport.resx">
+      <DependentUpon>Sch_VL10WaterfallReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_VL10HeadcountReport.resx">
+      <DependentUpon>Sch_VL10HeadcountReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHigh.resx">
+      <DependentUpon>Sch_ProductionPlanDailyHigh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Sch_CSVProductionPlanOptionsDialog.resx">
+      <DependentUpon>Sch_CSVProductionPlanOptionsDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyLow.resx">
+      <DependentUpon>Sch_ProductionPlanDailyLow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_ProductionPlanHeadcountReport.resx">
+      <DependentUpon>Sch_ProductionPlanHeadcountReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_VL10Variations.resx">
+      <DependentUpon>Sch_VL10Variations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_VL10VsCapacityReport.resx">
+      <DependentUpon>Sch_VL10VsCapacityReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Tools\Sch_SchedulingPrintLabels.resx">
+      <DependentUpon>Sch_SchedulingPrintLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\UploadWaterfall\Sch_UploadDateRangeSelector.resx">
+      <DependentUpon>Sch_UploadDateRangeSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\UploadWaterfall\Sch_DownloadedDatesUpload.resx">
+      <DependentUpon>Sch_DownloadedDatesUpload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\UploadWaterfall\Sch_UploadWaterfallReport.resx">
+      <DependentUpon>Sch_UploadWaterfallReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\Movers\Shi_ShipMover.resx">
+      <DependentUpon>Shi_ShipMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_ManualAdjustment.resx">
+      <DependentUpon>Smk_ManualAdjustment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_ChangeLocation.resx">
+      <DependentUpon>Smk_ChangeLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_DeclareEmpty.resx">
+      <DependentUpon>Smk_DeclareEmpty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_FindSerial.resx">
+      <DependentUpon>Smk_FindSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_PartialDiscount.resx">
+      <DependentUpon>Smk_PartialDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_OpenSerial.resx">
+      <DependentUpon>Smk_OpenSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_ReactiveSerial.resx">
+      <DependentUpon>Smk_ReactiveSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_SerialMovements.resx">
+      <DependentUpon>Smk_SerialMovements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Componentes\Smk_StoreSerial.resx">
+      <DependentUpon>Smk_StoreSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_BadgeKiosk.resx">
+      <DependentUpon>Smk_BadgeKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_ChangeLocationKiosk.resx">
+      <DependentUpon>Smk_ChangeLocationKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_DeclareEmptyKiosk.resx">
+      <DependentUpon>Smk_DeclareEmptyKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_FindSerialKiosk.resx">
+      <DependentUpon>Smk_FindSerialKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_OpenSerialKiosk.resx">
+      <DependentUpon>Smk_OpenSerialKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_PartialDiscountKiosk.resx">
+      <DependentUpon>Smk_PartialDiscountKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_StoreSerialKiosk.resx">
+      <DependentUpon>Smk_StoreSerialKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_NewSerial.resx">
+      <DependentUpon>Smk_NewSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_ChooseWarehouse.resx">
+      <DependentUpon>Smk_ChooseWarehouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_FixSerialnumber.resx">
+      <DependentUpon>Smk_FixSerialnumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\SMK_Operators.resx">
+      <DependentUpon>SMK_Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_RackOwners.resx">
+      <DependentUpon>Smk_RackOwners.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.resx">
+      <DependentUpon>Smk_PickupMoverManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PickupMover.resx">
+      <DependentUpon>Smk_PickupMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PrintMover.resx">
+      <DependentUpon>Smk_PrintMover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_Audit.resx">
+      <DependentUpon>Smk_Audit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_BrokenFIFO.resx">
+      <DependentUpon>Smk_BrokenFIFO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_MovementHistory.resx">
+      <DependentUpon>Smk_MovementHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_SAPVsDelta.resx">
+      <DependentUpon>Smk_SAPVsDelta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_SimpleAudit.resx">
+      <DependentUpon>Smk_SimpleAudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Smk_AlertMissing.resx">
+      <DependentUpon>Smk_AlertMissing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Kiosk\Smk_Kiosk.resx">
+      <DependentUpon>Smk_Kiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Smk_SAPTransfers.resx">
+      <DependentUpon>Smk_SAPTransfers.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProcessEngineering\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="delta.ico" />
+    <None Include="Resources\not_equal.png" />
+    <None Include="Resources\minor_equal_.png" />
+    <None Include="Resources\minor.png" />
+    <None Include="Resources\in.png" />
+    <None Include="Resources\greater_equal.png" />
+    <None Include="Resources\greater.png" />
+    <None Include="Resources\equal.png" />
+    <None Include="Resources\text_list_bullets.png" />
+    <None Include="Resources\minor_equal.png" />
+    <None Include="Resources\excel_exports.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\box_front_open_hand.png" />
+    <None Include="Resources\shield_delete.png" />
+    <None Include="Resources\SemaphoreYellow.png" />
+    <None Include="Resources\SemaphoreRed.png" />
+    <None Include="Resources\SemaphoreGreen.png" />
+    <None Include="Resources\No_image_available.png" />
+    <None Include="Resources\cross_32.png" />
+    <None Include="Resources\tick_light_blue.png" />
+    <None Include="Resources\tick_red.png" />
+    <None Include="Resources\CDR_Blue.png" />
+    <None Include="Resources\CDR_Red.png" />
+    <None Include="Resources\CDR_Green.png" />
+    <None Include="Resources\tag_blue.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\APTIV.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\delete_package.png" />
+    <None Include="Resources\box_open.png" />
+    <None Include="Resources\box_front_open.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\critical.png" />
+    <None Include="Resources\cancel_.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\accept_button.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

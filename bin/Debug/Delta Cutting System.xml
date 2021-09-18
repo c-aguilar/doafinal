@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DeltaCuttingSystem
+</name>
+</assembly>
+<members>
+<member name="P:Delta_Cutting_System.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Delta_Cutting_System.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Delta_Cutting_System.My.Resources.Resources.AppIcon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:Delta_Cutting_System.My.Resources.Resources.PP_Daily_Family">
+	<summary>
+  Looks up a localized string similar to SELECT CONVERT(VARCHAR,SD.[Date]) + ' ' + DATENAME(W,SD.[Date]) AS [Date],M.Material,ISNULL(Requeriment,0) AS Requeriment FROM Sys_Dates AS SD CROSS JOIN Sch_Materials AS M LEFT OUTER JOIN Sch_DailyProductionPlan AS PP 
+ON M.Material = PP.Material AND SD.[Date] = PP.[Date] INNER JOIN Sch_Business AS B ON M.BusinessID = B.ID
+WHERE WorkHours &gt; 0 AND ProductionPlanMode = '{0}' AND B.Family = '{1}'
+AND ((DATEADD(D,{2},GETDATE()) BETWEEN StartProduction AND FinishProduction) OR (DATEADD(D,{3},GETDATE()) BETWE [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_Cutting_System.My.Resources.Resources.PP_Daily_FamilyBusiness">
+	<summary>
+  Looks up a localized string similar to SELECT CONVERT(VARCHAR,SD.[Date]) + ' ' + DATENAME(W,SD.[Date]) AS [Date],M.Material,ISNULL(Requeriment,0) AS Requeriment FROM Sys_Dates AS SD CROSS JOIN Sch_Materials AS M LEFT OUTER JOIN Sch_DailyProductionPlan AS PP 
+ON M.Material = PP.Material AND SD.[Date] = PP.[Date] INNER JOIN Sch_Business AS B ON M.BusinessID = B.ID
+WHERE WorkHours &gt; 0 AND ProductionPlanMode = '{0}' AND B.Family = '{1}' AND B.Business = '{2}'
+AND ((DATEADD(D,{3},GETDATE()) BETWEEN StartProduction AND FinishProduction) OR (DATEADD [rest of string was truncated]";.
+</summary>
+</member><member name="T:Delta_Cutting_System.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

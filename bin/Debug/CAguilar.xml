@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAguilar
+</name>
+</assembly>
+<members>
+<member name="M:CAguilar.Ini.Find(System.String)">
+	<summary>Find a ini file, if not exist allow find it.
+ </summary>
+	<param name="FileName">Ini file name.</param>
+	<returns>True if it went okay, False otherwise.</returns>
+	<remarks></remarks>
+</member><member name="M:CAguilar.Ini.ReadKey(System.String,System.Object)">
+	<summary>
+ Reads a key value from an ini file.
+ </summary>
+	<param name="Key">Key to read.</param>
+	<param name="_Default">Default value in case key is empty.</param>
+	<returns>String key value if it went okay, "IniKeyError" otherwise.</returns>
+	<remarks></remarks>
+</member><member name="M:CAguilar.Ini.WriteKey(System.String,System.Object)">
+	<summary>
+ Writes a new value on specific key or creat it in an ini file.
+ </summary>
+	<param name="Key">Key to replace.</param>
+	<param name="Value">Value to write.</param>
+	<returns>True if it went okay, False otherwise.</returns>
+	<remarks></remarks>
+</member><member name="P:CAguilar.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:CAguilar.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:CAguilar.My.Resources.Resources.critical">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CAguilar.My.Resources.Resources.filter">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CAguilar.My.Resources.Resources.information">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CAguilar.My.Resources.Resources.tick">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:CAguilar.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
