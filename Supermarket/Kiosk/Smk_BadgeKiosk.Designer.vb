@@ -48,7 +48,7 @@ Partial Class Smk_BadgeKiosk
         '
         'Badge_txt
         '
-        Me.Badge_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Badge_txt.BackColor = System.Drawing.Color.Ivory
         Me.Badge_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Badge_txt.Location = New System.Drawing.Point(53, 44)
         Me.Badge_txt.MaxLength = 16

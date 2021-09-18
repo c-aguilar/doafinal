@@ -104,7 +104,7 @@ Partial Class DiC_Picklist
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(349, 35)
         Me.CountDown_lbl.TabIndex = 30
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Panel2

@@ -145,7 +145,7 @@ Partial Class Smk_RackOwners
         '
         'Rack_txt
         '
-        Me.Rack_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Rack_txt.BackColor = System.Drawing.Color.Ivory
         Me.Rack_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Rack_txt.Location = New System.Drawing.Point(217, 93)
         Me.Rack_txt.Mask = "00"

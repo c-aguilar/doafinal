@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>\\dl2cv74w1\wwwroot\Apps\RBEV\Delta ERP\</PublishUrl>
+    <PublishUrl>ftp://DLJ0JFMR2/Apps/RBEV/Delta ERP/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,14 +23,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://DL2CV74W1/apps/RBEV/Delta ERP/</InstallUrl>
+    <InstallUrl>http://DLJ0JFMR2/apps/RBEV/Delta ERP/</InstallUrl>
     <ProductName>Delta ERP</ProductName>
     <PublisherName>Delphi RBE V</PublisherName>
     <SuiteName>Delta</SuiteName>
+    <MinimumRequiredVersion>1.0.0.239</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>Install.htm</WebPage>
-    <ApplicationRevision>194</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>276</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -45,6 +46,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Delta ERP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -90,8 +92,19 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAguilar">
-      <HintPath>..\..\CAguilar\CAguilar\bin\Debug\CAguilar.dll</HintPath>
+    <Reference Include="CAguilar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CAguilar\CAguilar\bin\Release\CAguilar.dll</HintPath>
+    </Reference>
+    <Reference Include="DPCtlUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlUruNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DPUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPUruNet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -100,10 +113,16 @@
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -121,14 +140,58 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Documents" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Administrator\Users\FingerPrintEnrollment.Designer.vb">
+      <DependentUpon>FingerPrintEnrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\FingerPrintEnrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Capabilities.designer.vb">
+      <DependentUpon>Capabilities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Capabilities.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\NewOperatorEnrollment.designer.vb">
+      <DependentUpon>NewOperatorEnrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\NewOperatorEnrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Enrollment.designer.vb">
+      <DependentUpon>Enrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Enrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Fingerprint.vb" />
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Identification.Designer.vb">
+      <DependentUpon>Identification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\Identification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\ReaderSelection.Designer.vb">
+      <DependentUpon>ReaderSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrator\Users\Fingerprint\ReaderSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\Language.vb" />
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_HealingContainerization.Designer.vb">
+      <DependentUpon>CDR_HealingContainerization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_HealingContainerization.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ComponentDeliveryRoutes\Checkpoint\CDR_StartingWorkChecklist.Designer.vb">
       <DependentUpon>CDR_StartingWorkChecklist.vb</DependentUpon>
     </Compile>
@@ -160,10 +223,88 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ComponentDeliveryRoutes\CDR.vb" />
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_AddMissingKanban.Designer.vb">
+      <DependentUpon>DDR_AddMissingKanban.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_AddMissingKanban.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_DiscountCritical.Designer.vb">
+      <DependentUpon>DDR_DiscountCritical.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_DiscountCritical.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_MissingIDKanbans.Designer.vb">
+      <DependentUpon>DDR_MissingIDKanbans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_MissingIDKanbans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_OutCart.Designer.vb">
+      <DependentUpon>DDR_OutCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_OutCart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_CartStatus.Designer.vb">
+      <DependentUpon>DDR_CartStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_CartStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_ExitCart.Designer.vb">
+      <DependentUpon>DDR_ExitCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_ExitCart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_InCart.Designer.vb">
+      <DependentUpon>DDR_InCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_InCart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_KanbanScan.Designer.vb">
+      <DependentUpon>DDR_KanbanScan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_KanbanScan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_LoopIcon.Designer.vb">
+      <DependentUpon>DDR_LoopIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_LoopIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_StartingWorkChecklist.Designer.vb">
+      <DependentUpon>DDR_StartingWorkChecklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_StartingWorkChecklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_Checkpoint.Designer.vb">
+      <DependentUpon>DDR_Checkpoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Checkpoint\DDR_Checkpoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.Designer.vb">
       <DependentUpon>CDR_EngineeringVsZCS12.vb</DependentUpon>
     </Compile>
     <Compile Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_GenericKanbans.Designer.vb">
+      <DependentUpon>CDR_GenericKanbans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_GenericKanbans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbansManagement.Designer.vb">
+      <DependentUpon>CDR_KanbansManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbansManagement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ComponentDeliveryRoutes\Management\CDR_Operators.Designer.vb">
@@ -196,6 +337,18 @@
     <Compile Include="ComponentDeliveryRoutes\Management\CDR_KanbanHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR2_Kanbans.Designer.vb">
+      <DependentUpon>CDR2_Kanbans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\CDR2_Kanbans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\DDR_Containerization.Designer.vb">
+      <DependentUpon>DDR_Containerization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Management\DDR_Containerization.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ComponentDeliveryRoutes\Reports\CDR_MissingHistory.Designer.vb">
       <DependentUpon>CDR_MissingHistory.vb</DependentUpon>
     </Compile>
@@ -208,10 +361,146 @@
     <Compile Include="ComponentDeliveryRoutes\Reports\CDR_ScanningHistory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComponentReadiness\Reports\ForecastVs261.Designer.vb">
-      <DependentUpon>ForecastVs261.vb</DependentUpon>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_Headcount.Designer.vb">
+      <DependentUpon>CDR_Headcount.vb</DependentUpon>
     </Compile>
-    <Compile Include="ComponentReadiness\Reports\ForecastVs261.vb">
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_Headcount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_WeeklyScanningHistory.Designer.vb">
+      <DependentUpon>CDR_WeeklyScanningHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentDeliveryRoutes\Reports\CDR_WeeklyScanningHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\ComponentPlan.vb" />
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanRunAllSuggestions.Designer.vb">
+      <DependentUpon>CR_ComponentPlanRunAllSuggestions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanRunAllSuggestions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_MaterialScheduledChanges.Designer.vb">
+      <DependentUpon>CR_MaterialScheduledChanges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_MaterialScheduledChanges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrderFake.Designer.vb">
+      <DependentUpon>CR_ComponentPlanNewOrderFake.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrderFake.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentePlanSelectOrderDialog.Designer.vb">
+      <DependentUpon>CR_ComponentePlanSelectOrderDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentePlanSelectOrderDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrder.Designer.vb">
+      <DependentUpon>CR_ComponentPlanNewOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewPromise.Designer.vb">
+      <DependentUpon>CR_ComponentPlanNewPromise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewPromise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlan.Designer.vb">
+      <DependentUpon>CR_ComponentPlan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ActiveRawMaterialSerials.Designer.vb">
+      <DependentUpon>CR_ActiveRawMaterialSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ActiveRawMaterialSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanSimulation.Designer.vb">
+      <DependentUpon>CR_ComponentPlanSimulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanSimulation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_HarnRequirementDetails.Designer.vb">
+      <DependentUpon>CR_HarnRequirementDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_HarnRequirementDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ImportPhysicalInventory.Designer.vb">
+      <DependentUpon>CR_ImportPhysicalInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_ImportPhysicalInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_MRPSelectDialog.Designer.vb">
+      <DependentUpon>CR_MRPSelectDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_MRPSelectDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_PhysicalInventoryDialog.Designer.vb">
+      <DependentUpon>CR_PhysicalInventoryDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_PhysicalInventoryDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_QuickTasks.Designer.vb">
+      <DependentUpon>CR_QuickTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_QuickTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_BusinessScheduledChanges.Designer.vb">
+      <DependentUpon>CR_BusinessScheduledChanges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\CR_BusinessScheduledChanges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\QuickTaskComponentPlanControl.Designer.vb">
+      <DependentUpon>QuickTaskComponentPlanControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentPlan\QuickTaskComponentPlanControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\ComponentReadiness.vb" />
+    <Compile Include="ComponentReadiness\Picklist\CR_DeletePicklist.Designer.vb">
+      <DependentUpon>CR_DeletePicklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\CR_DeletePicklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\CR_Picklist.Designer.vb">
+      <DependentUpon>CR_Picklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\CR_Picklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\CR_PrintPicklist.Designer.vb">
+      <DependentUpon>CR_PrintPicklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\CR_PrintPicklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\Picklist\PDFPicklistParts.vb" />
+    <Compile Include="ComponentReadiness\Picklist\Picklist.vb" />
+    <Compile Include="ComponentReadiness\Reports\CR_AMRReport.Designer.vb">
+      <DependentUpon>CR_AMRReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Reports\CR_AMRReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentReadiness\Reports\CR_ForecastVs261.Designer.vb">
+      <DependentUpon>CR_ForecastVs261.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentReadiness\Reports\CR_ForecastVs261.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DieCenter\DiC_AskManual.Designer.vb">
@@ -244,6 +533,12 @@
     <Compile Include="DieCenter\Dic_Selector.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="General\PrintingDialog.designer.vb">
+      <DependentUpon>PrintingDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\PrintingDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_Checkpoint.Designer.vb">
       <DependentUpon>FGR_Checkpoint.vb</DependentUpon>
     </Compile>
@@ -256,28 +551,64 @@
     <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_SerialScan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_BadgeKiosk.Designer.vb">
+      <DependentUpon>FGR_BadgeKiosk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_BadgeKiosk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_CancelSerialMovements.Designer.vb">
+      <DependentUpon>FGR_CancelSerialMovements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_CancelSerialMovements.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_Backflush.Designer.vb">
+      <DependentUpon>FGR_Backflush.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_Backflush.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_Operators.Designer.vb">
+      <DependentUpon>FGR_Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Management\FGR_Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Reports\FGR_BackflushHours.Designer.vb">
+      <DependentUpon>FGR_BackflushHours.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Reports\FGR_BackflushHours.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Reports\FGR_Headcount.Designer.vb">
+      <DependentUpon>FGR_Headcount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedGoodDeliveryRoutes\Reports\FGR_Headcount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="General\AboutBox.Designer.vb">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </Compile>
     <Compile Include="General\AboutBox.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator\Users\NewUser.Designer.vb">
+    <Compile Include="Classes\Administrator\Users\NewUser.Designer.vb">
       <DependentUpon>NewUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\Users\NewUser.vb">
+    <Compile Include="Classes\Administrator\Users\NewUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator\Users\Permissions\ClonePermissionsFrom.Designer.vb">
+    <Compile Include="Classes\Administrator\Users\Permissions\ClonePermissionsFrom.Designer.vb">
       <DependentUpon>ClonePermissionsFrom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\Users\Permissions\ClonePermissionsFrom.vb">
+    <Compile Include="Classes\Administrator\Users\Permissions\ClonePermissionsFrom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator\Users\Permissions\UserRights.Designer.vb">
+    <Compile Include="Classes\Administrator\Users\Permissions\UserRights.Designer.vb">
       <DependentUpon>UserRights.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\Users\Permissions\UserRights.vb">
+    <Compile Include="Classes\Administrator\Users\Permissions\UserRights.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Alphanumeric.vb" />
@@ -330,6 +661,12 @@
     <Compile Include="General\ConditionSelector.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="General\DeltaPivoter.Designer.vb">
+      <DependentUpon>DeltaPivoter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\DeltaPivoter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="General\DeltaReporter.Designer.vb">
       <DependentUpon>DeltaReporter.vb</DependentUpon>
     </Compile>
@@ -360,10 +697,52 @@
     <Compile Include="General\SingleReportViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="General\PopupReport.Designer.vb">
+      <DependentUpon>PopupReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\PopupReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Leadprep\BagLabelPrinter.Designer.vb">
       <DependentUpon>BagLabelPrinter.vb</DependentUpon>
     </Compile>
     <Compile Include="Leadprep\BagLabelPrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\MAn_ZMF47.Designer.vb">
+      <DependentUpon>MAn_ZMF47.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\MAn_ZMF47.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Movers\MAn_SamplesMaterialMovers_mi.Designer.vb">
+      <DependentUpon>MAn_SamplesMaterialMovers_mi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Movers\MAn_SamplesMaterialMovers_mi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_InsertPermit.Designer.vb">
+      <DependentUpon>MAn_InsertPermit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_InsertPermit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_MandatoryPermitsVsBOM.Designer.vb">
+      <DependentUpon>MAn_MandatoryPermitsVsBOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_MandatoryPermitsVsBOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_Process309.Designer.vb">
+      <DependentUpon>MAn_Process309.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Permits\MAn_Process309.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MAn_InitialWeightAnalysis.Designer.vb">
+      <DependentUpon>MAn_InitialWeightAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialAnalyst\Reports\MAn_InitialWeightAnalysis.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MaterialAnalyst\Reports\MB51_261VsZ11.Designer.vb">
@@ -401,13 +780,20 @@
     <Compile Include="MyAccount\Profile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ordering\BOM.vb" />
     <Compile Include="Ordering\Forecast\Ord_ImportForecast.Designer.vb">
       <DependentUpon>Ord_ImportForecast.vb</DependentUpon>
     </Compile>
     <Compile Include="Ordering\Forecast\Ord_ImportForecast.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ordering\Partnumber.vb" />
+    <Compile Include="Ordering\RawMaterial.vb" />
+    <Compile Include="Ordering\Receiving\Ord_ControlledPartnumbers.Designer.vb">
+      <DependentUpon>Ord_ControlledPartnumbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Receiving\Ord_ControlledPartnumbers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ordering\Receiving\Ord_ReportCriticalToReceiving.Designer.vb">
       <DependentUpon>Ord_ReportCriticalToReceiving.vb</DependentUpon>
     </Compile>
@@ -456,6 +842,7 @@
     <Compile Include="Ordering\Reports\Ord_MoverHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ordering\Supermarket\Mover\Mover.vb" />
     <Compile Include="Ordering\Supermarket\Mover\Ord_ApproveMover.Designer.vb">
       <DependentUpon>Ord_ApproveMover.vb</DependentUpon>
     </Compile>
@@ -486,12 +873,29 @@
     <Compile Include="Ordering\Supermarket\Ord_AnswerMixMax.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_SetMfgConsumption.Designer.vb">
+      <DependentUpon>Ord_SetMfgConsumption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering\Supermarket\Ord_SetMfgConsumption.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ordering\Supermarket\Ord_MixMaxAlerts.Designer.vb">
       <DependentUpon>Ord_MixMaxAlerts.vb</DependentUpon>
     </Compile>
     <Compile Include="Ordering\Supermarket\Ord_MixMaxAlerts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProcessEngineering\PEColor.vb" />
+    <Compile Include="ProcessEngineering\Leadcode.vb" />
+    <Compile Include="ProcessEngineering\MSpec.vb" />
+    <Compile Include="ProcessEngineering\PEng_Leadcodes.Designer.vb">
+      <DependentUpon>PEng_Leadcodes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessEngineering\PEng_Leadcodes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessEngineering\Seal.vb" />
+    <Compile Include="ProcessEngineering\Terminal.vb" />
     <Compile Include="Quality\Alerts\QLY_RejectSerialnumber.Designer.vb">
       <DependentUpon>QLY_RejectSerialnumber.vb</DependentUpon>
     </Compile>
@@ -516,10 +920,34 @@
     <Compile Include="Quality\Alerts\QLY_RemoveAlert.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Quality\Alerts\QLY_ServiceToQuality.Designer.vb">
+      <DependentUpon>QLY_ServiceToQuality.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quality\Alerts\QLY_ServiceToQuality.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Quality\Reportes\Qly_AlertsHistory.Designer.vb">
       <DependentUpon>Qly_AlertsHistory.vb</DependentUpon>
     </Compile>
     <Compile Include="Quality\Reportes\Qly_AlertsHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Management\REC_Containers.Designer.vb">
+      <DependentUpon>REC_Containers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Management\REC_Containers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ZPLPrinterSettings.Designer.vb">
+      <DependentUpon>ZPLPrinterSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\ZPLPrinterSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Rec_Dashboard.Designer.vb">
+      <DependentUpon>Rec_Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving\Rec_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Receiving\Rec_ToTracker.Designer.vb">
@@ -552,10 +980,10 @@
     <Compile Include="Receiving\Rec_ReprintLabel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Receiving\Rec_SMSVsMB51.designer.vb">
+    <Compile Include="Receiving\Reports\Rec_SMSVsMB51.designer.vb">
       <DependentUpon>Rec_SMSVsMB51.vb</DependentUpon>
     </Compile>
-    <Compile Include="Receiving\Rec_SMSVsMB51.vb">
+    <Compile Include="Receiving\Reports\Rec_SMSVsMB51.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Receiving\Receiving.vb" />
@@ -595,12 +1023,16 @@
     <Compile Include="Receiving\Rec_TrackerPartialDiscount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Receiving\Reports\Rec_TrackerDiscountHistory.Designer.vb">
-      <DependentUpon>Rec_TrackerDiscountHistory.vb</DependentUpon>
+    <Compile Include="Receiving\Reports\Rec_Headcount.Designer.vb">
+      <DependentUpon>Rec_Headcount.vb</DependentUpon>
     </Compile>
-    <Compile Include="Receiving\Reports\Rec_TrackerDiscountHistory.vb">
+    <Compile Include="Receiving\Reports\Rec_Headcount.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Scheduling\Business.vb" />
+    <Compile Include="Scheduling\Family.vb" />
+    <Compile Include="Scheduling\Harn.vb" />
+    <Compile Include="Scheduling\ProductionPlan\ProductionPlan.vb" />
     <Compile Include="Scheduling\ProductionPlan\Sch_AutoScheduleOptions.Designer.vb">
       <DependentUpon>Sch_AutoScheduleOptions.vb</DependentUpon>
     </Compile>
@@ -638,12 +1070,6 @@
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="General\ReportViewer.Designer.vb">
-      <DependentUpon>ReportViewer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="General\ReportViewer.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Scheduling\ProductionPlan\Sch_ChartHeadcountWorkloadSchedule.Designer.vb">
       <DependentUpon>Sch_ChartHeadcountWorkloadSchedule.vb</DependentUpon>
     </Compile>
@@ -660,6 +1086,36 @@
       <DependentUpon>Sch_ImportProductionPlan.vb</DependentUpon>
     </Compile>
     <Compile Include="Scheduling\ProductionPlan\Sch_ImportProductionPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleItemBOMVariation.Designer.vb">
+      <DependentUpon>Sch_LevelScheduleItemBOMVariation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleItemBOMVariation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_CompatibilityReport.Designer.vb">
+      <DependentUpon>Sch_CompatibilityReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_CompatibilityReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleBOMVariation.Designer.vb">
+      <DependentUpon>Sch_LevelScheduleBOMVariation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleBOMVariation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleNewLevelResult.Designer.vb">
+      <DependentUpon>Sch_LevelScheduleNewLevelResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleNewLevelResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleValidation.Designer.vb">
+      <DependentUpon>Sch_LevelScheduleValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\Reports\Sch_LevelScheduleValidation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Scheduling\Reports\Sch_VL10WaterfallReport.Designer.vb">
@@ -680,6 +1136,7 @@
     <Compile Include="Scheduling\ProductionPlan\Sch_ProductionPlanDailyHigh.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Scheduling\Scheduling.vb" />
     <Compile Include="Scheduling\Sch_CSVProductionPlanOptionsDialog.Designer.vb">
       <DependentUpon>Sch_CSVProductionPlanOptionsDialog.vb</DependentUpon>
     </Compile>
@@ -752,64 +1209,215 @@
     <Compile Include="Scheduling\UploadWaterfall\Sch_UploadWaterfallReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Shipping\Management\SHI_Operators.designer.vb">
+      <DependentUpon>SHI_Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\Management\SHI_Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Shipping\Movers\Shi_ShipMover.Designer.vb">
       <DependentUpon>Shi_ShipMover.vb</DependentUpon>
     </Compile>
     <Compile Include="Shipping\Movers\Shi_ShipMover.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ManualAdjustment.Designer.vb">
+    <Compile Include="Shipping\Reports\SHI_Headcount.Designer.vb">
+      <DependentUpon>SHI_Headcount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\Reports\SHI_Headcount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_APIPrint.Designer.vb">
+      <DependentUpon>Smk_APIPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_APIPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_APITicketSelector.Designer.vb">
+      <DependentUpon>Smk_APITicketSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_APITicketSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_CableAPI.designer.vb">
+      <DependentUpon>Smk_CableAPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\API\Smk_CableAPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_SmkSettings.Designer.vb">
+      <DependentUpon>Smk_SmkSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_SmkSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableNewReel.designer.vb">
+      <DependentUpon>Smk_CableNewReel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableNewReel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCutterChange.Designer.vb">
+      <DependentUpon>Smk_CableCutterChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCutterChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCutterToService.designer.vb">
+      <DependentUpon>Smk_CableCutterToService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCutterToService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CablePhysicalInventory.designer.vb">
+      <DependentUpon>Smk_CablePhysicalInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CablePhysicalInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSerialsOnCutters.Designer.vb">
+      <DependentUpon>Smk_CableSerialsOnCutters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSerialsOnCutters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CablePendingNextSerials.designer.vb">
+      <DependentUpon>Smk_CablePendingNextSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CablePendingNextSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\Sys_Authentication.Designer.vb">
+      <DependentUpon>Sys_Authentication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\Sys_Authentication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRandomToCutter.designer.vb">
+      <DependentUpon>Smk_CableRandomToCutter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRandomToCutter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRandomToService.designer.vb">
+      <DependentUpon>Smk_CableRandomToService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRandomToService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRoutesRegistry.designer.vb">
+      <DependentUpon>Smk_CableRoutesRegistry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableRoutesRegistry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSerialReprint.designer.vb">
+      <DependentUpon>Smk_CableSerialReprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSerialReprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSearchRandom.Designer.vb">
+      <DependentUpon>Smk_CableSearchRandom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSearchRandom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSearchService.designer.vb">
+      <DependentUpon>Smk_CableSearchService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSearchService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableServiceToCutter.designer.vb">
+      <DependentUpon>Smk_CableServiceToCutter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableServiceToCutter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSelectTara.designer.vb">
+      <DependentUpon>Smk_CableSelectTara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableSelectTara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCheckpoint.designer.vb">
+      <DependentUpon>Smk_CableCheckpoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableCheckpoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableDeclareEmpty.Designer.vb">
+      <DependentUpon>Smk_CableDeclareEmpty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Cable\Smk_CableDeclareEmpty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Cable\SupermarketCable.vb" />
+    <Compile Include="Supermarket\Components\Smk_SamplesWeight.Designer.vb">
+      <DependentUpon>Smk_SamplesWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Components\Smk_SamplesWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Components\Smk_ReturnToRandom.Designer.vb">
+      <DependentUpon>Smk_ReturnToRandom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Components\Smk_ReturnToRandom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Components\Smk_ManualAdjustment.Designer.vb">
       <DependentUpon>Smk_ManualAdjustment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ManualAdjustment.vb">
+    <Compile Include="Supermarket\Components\Smk_ManualAdjustment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ChangeLocation.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_ChangeLocation.Designer.vb">
       <DependentUpon>Smk_ChangeLocation.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ChangeLocation.vb">
+    <Compile Include="Supermarket\Components\Smk_ChangeLocation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_DeclareEmpty.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_DeclareEmpty.Designer.vb">
       <DependentUpon>Smk_DeclareEmpty.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_DeclareEmpty.vb">
+    <Compile Include="Supermarket\Components\Smk_DeclareEmpty.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_FindSerial.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_FindSerial.Designer.vb">
       <DependentUpon>Smk_FindSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_FindSerial.vb">
+    <Compile Include="Supermarket\Components\Smk_FindSerial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_PartialDiscount.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_PartialDiscount.Designer.vb">
       <DependentUpon>Smk_PartialDiscount.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_PartialDiscount.vb">
+    <Compile Include="Supermarket\Components\Smk_PartialDiscount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_OpenSerial.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_OpenSerial.Designer.vb">
       <DependentUpon>Smk_OpenSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_OpenSerial.vb">
+    <Compile Include="Supermarket\Components\Smk_OpenSerial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ReactiveSerial.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_ReactiveSerial.Designer.vb">
       <DependentUpon>Smk_ReactiveSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_ReactiveSerial.vb">
+    <Compile Include="Supermarket\Components\Smk_ReactiveSerial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_SerialMovements.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_SerialMovements.Designer.vb">
       <DependentUpon>Smk_SerialMovements.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_SerialMovements.vb">
+    <Compile Include="Supermarket\Components\Smk_SerialMovements.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_StoreSerial.Designer.vb">
+    <Compile Include="Supermarket\Components\Smk_StoreSerial.Designer.vb">
       <DependentUpon>Smk_StoreSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Componentes\Smk_StoreSerial.vb">
+    <Compile Include="Supermarket\Components\Smk_StoreSerial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supermarket\Kiosk\Smk_BadgeKiosk.Designer.vb">
@@ -854,6 +1462,24 @@
     <Compile Include="Supermarket\Kiosk\Smk_StoreSerialKiosk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Supermarket\Management\Smk_PrintLinkLabels.Designer.vb">
+      <DependentUpon>Smk_PrintLinkLabels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_PrintLinkLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_DeclareEmptyDiscrepancy.Designer.vb">
+      <DependentUpon>Smk_DeclareEmptyDiscrepancy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_DeclareEmptyDiscrepancy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_LinkLabels.Designer.vb">
+      <DependentUpon>Smk_LinkLabels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Management\Smk_LinkLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supermarket\Management\Smk_NewSerial.Designer.vb">
       <DependentUpon>Smk_NewSerial.vb</DependentUpon>
     </Compile>
@@ -872,10 +1498,10 @@
     <Compile Include="Supermarket\Management\Smk_FixSerialnumber.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Management\SMK_Operators.Designer.vb">
-      <DependentUpon>SMK_Operators.vb</DependentUpon>
+    <Compile Include="Supermarket\Management\Smk_Operators.designer.vb">
+      <DependentUpon>Smk_Operators.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Management\SMK_Operators.vb">
+    <Compile Include="Supermarket\Management\Smk_Operators.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supermarket\Management\Smk_RackOwners.Designer.vb">
@@ -884,22 +1510,23 @@
     <Compile Include="Supermarket\Management\Smk_RackOwners.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.Designer.vb">
+    <Compile Include="Supermarket\Masternumber.vb" />
+    <Compile Include="Supermarket\Mover\Smk_PickupMoverManual.Designer.vb">
       <DependentUpon>Smk_PickupMoverManual.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.vb">
+    <Compile Include="Supermarket\Mover\Smk_PickupMoverManual.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMover.Designer.vb">
+    <Compile Include="Supermarket\Mover\Smk_PickupMover.Designer.vb">
       <DependentUpon>Smk_PickupMover.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PickupMover.vb">
+    <Compile Include="Supermarket\Mover\Smk_PickupMover.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PrintMover.Designer.vb">
+    <Compile Include="Supermarket\Mover\Smk_PrintMover.Designer.vb">
       <DependentUpon>Smk_PrintMover.vb</DependentUpon>
     </Compile>
-    <Compile Include="Supermarket\Reports\Mover\Smk_PrintMover.vb">
+    <Compile Include="Supermarket\Mover\Smk_PrintMover.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supermarket\Reports\Smk_Audit.Designer.vb">
@@ -914,10 +1541,28 @@
     <Compile Include="Supermarket\Reports\Smk_BrokenFIFO.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Dashboard.Designer.vb">
+      <DependentUpon>Smk_Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Headcount.Designer.vb">
+      <DependentUpon>Smk_Headcount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_Headcount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supermarket\Reports\Smk_MovementHistory.Designer.vb">
       <DependentUpon>Smk_MovementHistory.vb</DependentUpon>
     </Compile>
     <Compile Include="Supermarket\Reports\Smk_MovementHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_TimeSusceptibleMaterial.Designer.vb">
+      <DependentUpon>Smk_TimeSusceptibleMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_TimeSusceptibleMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supermarket\Reports\Smk_SAPVsDelta.Designer.vb">
@@ -932,6 +1577,13 @@
     <Compile Include="Supermarket\Reports\Smk_SimpleAudit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Supermarket\Reports\Smk_StdWork.Designer.vb">
+      <DependentUpon>Smk_StdWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Reports\Smk_StdWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Scale.vb" />
     <Compile Include="Supermarket\Serialnumber.vb" />
     <Compile Include="Supermarket\Smk_AlertMissing.Designer.vb">
       <DependentUpon>Smk_AlertMissing.vb</DependentUpon>
@@ -952,8 +1604,56 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supermarket\Supermarket.vb" />
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService.designer.vb">
+      <DependentUpon>Smk_TerminalCutterToService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService_New.designer.vb">
+      <DependentUpon>Smk_TerminalCutterToService_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService2_New.designer.vb">
+      <DependentUpon>Smk_TerminalCutterToService2_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalCutterToService2_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalRandomToCutter.designer.vb">
+      <DependentUpon>Smk_TerminalRandomToCutter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalRandomToCutter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalRandomToCutter_New.designer.vb">
+      <DependentUpon>Smk_TerminalRandomToCutter_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket\Terminals\Smk_TerminalRandomToCutter_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\Administrator\Users\Fingerprint\Capabilities.resx">
+      <DependentUpon>Capabilities.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Administrator\Users\Fingerprint\NewOperatorEnrollment.resx">
+      <DependentUpon>NewOperatorEnrollment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Administrator\Users\Fingerprint\Enrollment.resx">
+      <DependentUpon>Enrollment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Administrator\Users\Fingerprint\Identification.resx">
+      <DependentUpon>Identification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Administrator\Users\Fingerprint\ReaderSelection.resx">
+      <DependentUpon>ReaderSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_HealingContainerization.resx">
+      <DependentUpon>CDR_HealingContainerization.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_StartingWorkChecklist.resx">
       <DependentUpon>CDR_StartingWorkChecklist.vb</DependentUpon>
     </EmbeddedResource>
@@ -969,8 +1669,47 @@
     <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\CDR_FindManufacturing.resx">
       <DependentUpon>CDR_FindManufacturing.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_AddMissingKanban.resx">
+      <DependentUpon>DDR_AddMissingKanban.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_DiscountCritical.resx">
+      <DependentUpon>DDR_DiscountCritical.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_MissingIDKanbans.resx">
+      <DependentUpon>DDR_MissingIDKanbans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_OutCart.resx">
+      <DependentUpon>DDR_OutCart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_CartStatus.resx">
+      <DependentUpon>DDR_CartStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_ExitCart.resx">
+      <DependentUpon>DDR_ExitCart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_InCart.resx">
+      <DependentUpon>DDR_InCart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_KanbanScan.resx">
+      <DependentUpon>DDR_KanbanScan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_LoopIcon.resx">
+      <DependentUpon>DDR_LoopIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_StartingWorkChecklist.resx">
+      <DependentUpon>DDR_StartingWorkChecklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Checkpoint\DDR_Checkpoint.resx">
+      <DependentUpon>DDR_Checkpoint.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_EngineeringVsZCS12.resx">
       <DependentUpon>CDR_EngineeringVsZCS12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_GenericKanbans.resx">
+      <DependentUpon>CDR_GenericKanbans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_KanbansManagement.resx">
+      <DependentUpon>CDR_KanbansManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_Operators.resx">
       <DependentUpon>CDR_Operators.vb</DependentUpon>
@@ -987,14 +1726,86 @@
     <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR_KanbanHistory.resx">
       <DependentUpon>CDR_KanbanHistory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\CDR2_Kanbans.resx">
+      <DependentUpon>CDR2_Kanbans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Management\DDR_Containerization.resx">
+      <DependentUpon>DDR_Containerization.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_MissingHistory.resx">
       <DependentUpon>CDR_MissingHistory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_ScanningHistory.resx">
       <DependentUpon>CDR_ScanningHistory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComponentReadiness\Reports\ForecastVs261.resx">
-      <DependentUpon>ForecastVs261.vb</DependentUpon>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_Headcount.resx">
+      <DependentUpon>CDR_Headcount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDeliveryRoutes\Reports\CDR_WeeklyScanningHistory.resx">
+      <DependentUpon>CDR_WeeklyScanningHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanRunAllSuggestions.resx">
+      <DependentUpon>CR_ComponentPlanRunAllSuggestions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_MaterialScheduledChanges.resx">
+      <DependentUpon>CR_MaterialScheduledChanges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrderFake.resx">
+      <DependentUpon>CR_ComponentPlanNewOrderFake.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentePlanSelectOrderDialog.resx">
+      <DependentUpon>CR_ComponentePlanSelectOrderDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewOrder.resx">
+      <DependentUpon>CR_ComponentPlanNewOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanNewPromise.resx">
+      <DependentUpon>CR_ComponentPlanNewPromise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlan.resx">
+      <DependentUpon>CR_ComponentPlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ActiveRawMaterialSerials.resx">
+      <DependentUpon>CR_ActiveRawMaterialSerials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ComponentPlanSimulation.resx">
+      <DependentUpon>CR_ComponentPlanSimulation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_HarnRequirementDetails.resx">
+      <DependentUpon>CR_HarnRequirementDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_ImportPhysicalInventory.resx">
+      <DependentUpon>CR_ImportPhysicalInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_MRPSelectDialog.resx">
+      <DependentUpon>CR_MRPSelectDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_PhysicalInventoryDialog.resx">
+      <DependentUpon>CR_PhysicalInventoryDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_QuickTasks.resx">
+      <DependentUpon>CR_QuickTasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\CR_BusinessScheduledChanges.resx">
+      <DependentUpon>CR_BusinessScheduledChanges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\ComponentPlan\QuickTaskComponentPlanControl.resx">
+      <DependentUpon>QuickTaskComponentPlanControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Picklist\CR_DeletePicklist.resx">
+      <DependentUpon>CR_DeletePicklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Picklist\CR_Picklist.resx">
+      <DependentUpon>CR_Picklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Picklist\CR_PrintPicklist.resx">
+      <DependentUpon>CR_PrintPicklist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Reports\CR_AMRReport.resx">
+      <DependentUpon>CR_AMRReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentReadiness\Reports\CR_ForecastVs261.resx">
+      <DependentUpon>CR_ForecastVs261.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DieCenter\DiC_AskManual.resx">
       <DependentUpon>DiC_AskManual.vb</DependentUpon>
@@ -1011,22 +1822,44 @@
     <EmbeddedResource Include="DieCenter\Dic_Selector.resx">
       <DependentUpon>Dic_Selector.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\PrintingDialog.resx">
+      <DependentUpon>PrintingDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_Checkpoint.resx">
       <DependentUpon>FGR_Checkpoint.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_SerialScan.resx">
       <DependentUpon>FGR_SerialScan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Checkpoint\FGR_BadgeKiosk.resx">
+      <DependentUpon>FGR_BadgeKiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Management\FGR_CancelSerialMovements.resx">
+      <DependentUpon>FGR_CancelSerialMovements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Management\FGR_Backflush.resx">
+      <DependentUpon>FGR_Backflush.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Management\FGR_Operators.resx">
+      <DependentUpon>FGR_Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Reports\FGR_BackflushHours.resx">
+      <DependentUpon>FGR_BackflushHours.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedGoodDeliveryRoutes\Reports\FGR_Headcount.resx">
+      <DependentUpon>FGR_Headcount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrator\Users\NewUser.resx">
+    <EmbeddedResource Include="Classes\Administrator\Users\NewUser.resx">
       <DependentUpon>NewUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrator\Users\Permissions\ClonePermissionsFrom.resx">
+    <EmbeddedResource Include="Classes\Administrator\Users\Permissions\ClonePermissionsFrom.resx">
       <DependentUpon>ClonePermissionsFrom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrator\Users\Permissions\UserRights.resx">
+    <EmbeddedResource Include="Classes\Administrator\Users\Permissions\UserRights.resx">
       <DependentUpon>UserRights.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\AlertsReport.resx">
@@ -1053,6 +1886,9 @@
     <EmbeddedResource Include="General\ConditionSelector.resx">
       <DependentUpon>ConditionSelector.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\DeltaPivoter.resx">
+      <DependentUpon>DeltaPivoter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\DeltaReporter.resx">
       <DependentUpon>DeltaReporter.vb</DependentUpon>
     </EmbeddedResource>
@@ -1068,8 +1904,29 @@
     <EmbeddedResource Include="General\SingleReportViewer.resx">
       <DependentUpon>SingleReportViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\PopupReport.resx">
+      <DependentUpon>PopupReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Leadprep\BagLabelPrinter.resx">
       <DependentUpon>BagLabelPrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\MAn_ZMF47.resx">
+      <DependentUpon>MAn_ZMF47.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Movers\MAn_SamplesMaterialMovers_mi.resx">
+      <DependentUpon>MAn_SamplesMaterialMovers_mi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Permits\MAn_InsertPermit.resx">
+      <DependentUpon>MAn_InsertPermit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Permits\MAn_MandatoryPermitsVsBOM.resx">
+      <DependentUpon>MAn_MandatoryPermitsVsBOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Permits\MAn_Process309.resx">
+      <DependentUpon>MAn_Process309.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialAnalyst\Reports\MAn_InitialWeightAnalysis.resx">
+      <DependentUpon>MAn_InitialWeightAnalysis.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaterialAnalyst\Reports\MB51_261VsZ11.resx">
       <DependentUpon>MB51_261VsZ11.vb</DependentUpon>
@@ -1088,6 +1945,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ordering\Forecast\Ord_ImportForecast.resx">
       <DependentUpon>Ord_ImportForecast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Receiving\Ord_ControlledPartnumbers.resx">
+      <DependentUpon>Ord_ControlledPartnumbers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ordering\Receiving\Ord_ReportCriticalToReceiving.resx">
       <DependentUpon>Ord_ReportCriticalToReceiving.vb</DependentUpon>
@@ -1128,8 +1988,14 @@
     <EmbeddedResource Include="Ordering\Supermarket\Ord_AnswerMixMax.resx">
       <DependentUpon>Ord_AnswerMixMax.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ordering\Supermarket\Ord_SetMfgConsumption.resx">
+      <DependentUpon>Ord_SetMfgConsumption.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ordering\Supermarket\Ord_MixMaxAlerts.resx">
       <DependentUpon>Ord_MixMaxAlerts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessEngineering\PEng_Leadcodes.resx">
+      <DependentUpon>PEng_Leadcodes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quality\Alerts\QLY_RejectSerialnumber.resx">
       <DependentUpon>QLY_RejectSerialnumber.vb</DependentUpon>
@@ -1143,8 +2009,20 @@
     <EmbeddedResource Include="Quality\Alerts\QLY_RemoveAlert.resx">
       <DependentUpon>QLY_RemoveAlert.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Quality\Alerts\QLY_ServiceToQuality.resx">
+      <DependentUpon>QLY_ServiceToQuality.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Quality\Reportes\Qly_AlertsHistory.resx">
       <DependentUpon>Qly_AlertsHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Management\REC_Containers.resx">
+      <DependentUpon>REC_Containers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ZPLPrinterSettings.resx">
+      <DependentUpon>ZPLPrinterSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Rec_Dashboard.resx">
+      <DependentUpon>Rec_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receiving\Rec_ToTracker.resx">
       <DependentUpon>Rec_ToTracker.vb</DependentUpon>
@@ -1161,7 +2039,7 @@
     <EmbeddedResource Include="Receiving\Rec_ReprintLabel.resx">
       <DependentUpon>Rec_ReprintLabel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Receiving\Rec_SMSVsMB51.resx">
+    <EmbeddedResource Include="Receiving\Reports\Rec_SMSVsMB51.resx">
       <DependentUpon>Rec_SMSVsMB51.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receiving\Rec_Labeling.resx">
@@ -1182,8 +2060,8 @@
     <EmbeddedResource Include="Receiving\Rec_TrackerPartialDiscount.resx">
       <DependentUpon>Rec_TrackerPartialDiscount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Receiving\Reports\Rec_TrackerDiscountHistory.resx">
-      <DependentUpon>Rec_TrackerDiscountHistory.vb</DependentUpon>
+    <EmbeddedResource Include="Receiving\Reports\Rec_Headcount.resx">
+      <DependentUpon>Rec_Headcount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_AutoScheduleOptions.resx">
       <DependentUpon>Sch_AutoScheduleOptions.vb</DependentUpon>
@@ -1197,14 +2075,12 @@
     <EmbeddedResource Include="General\ErrorReportViewer.resx">
       <DependentUpon>ErrorReportViewer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="General\ReportViewer.resx">
-      <DependentUpon>ReportViewer.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="General\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ChartHeadcountWorkloadSchedule.resx">
       <DependentUpon>Sch_ChartHeadcountWorkloadSchedule.vb</DependentUpon>
@@ -1214,6 +2090,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scheduling\ProductionPlan\Sch_ImportProductionPlan.resx">
       <DependentUpon>Sch_ImportProductionPlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_LevelScheduleItemBOMVariation.resx">
+      <DependentUpon>Sch_LevelScheduleItemBOMVariation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_CompatibilityReport.resx">
+      <DependentUpon>Sch_CompatibilityReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_LevelScheduleBOMVariation.resx">
+      <DependentUpon>Sch_LevelScheduleBOMVariation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_LevelScheduleNewLevelResult.resx">
+      <DependentUpon>Sch_LevelScheduleNewLevelResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\Reports\Sch_LevelScheduleValidation.resx">
+      <DependentUpon>Sch_LevelScheduleValidation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scheduling\Reports\Sch_VL10WaterfallReport.resx">
       <DependentUpon>Sch_VL10WaterfallReport.vb</DependentUpon>
@@ -1260,34 +2151,109 @@
     <EmbeddedResource Include="Scheduling\UploadWaterfall\Sch_UploadWaterfallReport.resx">
       <DependentUpon>Sch_UploadWaterfallReport.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\Management\SHI_Operators.resx">
+      <DependentUpon>SHI_Operators.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shipping\Movers\Shi_ShipMover.resx">
       <DependentUpon>Shi_ShipMover.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_ManualAdjustment.resx">
+    <EmbeddedResource Include="Shipping\Reports\SHI_Headcount.resx">
+      <DependentUpon>SHI_Headcount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\API\Smk_APIPrint.resx">
+      <DependentUpon>Smk_APIPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\API\Smk_APITicketSelector.resx">
+      <DependentUpon>Smk_APITicketSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\API\Smk_CableAPI.resx">
+      <DependentUpon>Smk_CableAPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_SmkSettings.resx">
+      <DependentUpon>Smk_SmkSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableNewReel.resx">
+      <DependentUpon>Smk_CableNewReel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableCutterChange.resx">
+      <DependentUpon>Smk_CableCutterChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableCutterToService.resx">
+      <DependentUpon>Smk_CableCutterToService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CablePhysicalInventory.resx">
+      <DependentUpon>Smk_CablePhysicalInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableSerialsOnCutters.resx">
+      <DependentUpon>Smk_CableSerialsOnCutters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CablePendingNextSerials.resx">
+      <DependentUpon>Smk_CablePendingNextSerials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\Sys_Authentication.resx">
+      <DependentUpon>Sys_Authentication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableRandomToCutter.resx">
+      <DependentUpon>Smk_CableRandomToCutter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableRandomToService.resx">
+      <DependentUpon>Smk_CableRandomToService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableRoutesRegistry.resx">
+      <DependentUpon>Smk_CableRoutesRegistry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableSerialReprint.resx">
+      <DependentUpon>Smk_CableSerialReprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableSearchRandom.resx">
+      <DependentUpon>Smk_CableSearchRandom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableSearchService.resx">
+      <DependentUpon>Smk_CableSearchService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableServiceToCutter.resx">
+      <DependentUpon>Smk_CableServiceToCutter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableSelectTara.resx">
+      <DependentUpon>Smk_CableSelectTara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableCheckpoint.resx">
+      <DependentUpon>Smk_CableCheckpoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Cable\Smk_CableDeclareEmpty.resx">
+      <DependentUpon>Smk_CableDeclareEmpty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Components\Smk_SamplesWeight.resx">
+      <DependentUpon>Smk_SamplesWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Components\Smk_ReturnToRandom.resx">
+      <DependentUpon>Smk_ReturnToRandom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Components\Smk_ManualAdjustment.resx">
       <DependentUpon>Smk_ManualAdjustment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_ChangeLocation.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_ChangeLocation.resx">
       <DependentUpon>Smk_ChangeLocation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_DeclareEmpty.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_DeclareEmpty.resx">
       <DependentUpon>Smk_DeclareEmpty.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_FindSerial.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_FindSerial.resx">
       <DependentUpon>Smk_FindSerial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_PartialDiscount.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_PartialDiscount.resx">
       <DependentUpon>Smk_PartialDiscount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_OpenSerial.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_OpenSerial.resx">
       <DependentUpon>Smk_OpenSerial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_ReactiveSerial.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_ReactiveSerial.resx">
       <DependentUpon>Smk_ReactiveSerial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_SerialMovements.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_SerialMovements.resx">
       <DependentUpon>Smk_SerialMovements.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Componentes\Smk_StoreSerial.resx">
+    <EmbeddedResource Include="Supermarket\Components\Smk_StoreSerial.resx">
       <DependentUpon>Smk_StoreSerial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Kiosk\Smk_BadgeKiosk.resx">
@@ -1311,6 +2277,15 @@
     <EmbeddedResource Include="Supermarket\Kiosk\Smk_StoreSerialKiosk.resx">
       <DependentUpon>Smk_StoreSerialKiosk.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_PrintLinkLabels.resx">
+      <DependentUpon>Smk_PrintLinkLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_DeclareEmptyDiscrepancy.resx">
+      <DependentUpon>Smk_DeclareEmptyDiscrepancy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Management\Smk_LinkLabels.resx">
+      <DependentUpon>Smk_LinkLabels.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Management\Smk_NewSerial.resx">
       <DependentUpon>Smk_NewSerial.vb</DependentUpon>
     </EmbeddedResource>
@@ -1320,19 +2295,19 @@
     <EmbeddedResource Include="Supermarket\Management\Smk_FixSerialnumber.resx">
       <DependentUpon>Smk_FixSerialnumber.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Management\SMK_Operators.resx">
-      <DependentUpon>SMK_Operators.vb</DependentUpon>
+    <EmbeddedResource Include="Supermarket\Management\Smk_Operators.resx">
+      <DependentUpon>Smk_Operators.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Management\Smk_RackOwners.resx">
       <DependentUpon>Smk_RackOwners.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PickupMoverManual.resx">
+    <EmbeddedResource Include="Supermarket\Mover\Smk_PickupMoverManual.resx">
       <DependentUpon>Smk_PickupMoverManual.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PickupMover.resx">
+    <EmbeddedResource Include="Supermarket\Mover\Smk_PickupMover.resx">
       <DependentUpon>Smk_PickupMover.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supermarket\Reports\Mover\Smk_PrintMover.resx">
+    <EmbeddedResource Include="Supermarket\Mover\Smk_PrintMover.resx">
       <DependentUpon>Smk_PrintMover.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Reports\Smk_Audit.resx">
@@ -1341,14 +2316,26 @@
     <EmbeddedResource Include="Supermarket\Reports\Smk_BrokenFIFO.resx">
       <DependentUpon>Smk_BrokenFIFO.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_Dashboard.resx">
+      <DependentUpon>Smk_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_Headcount.resx">
+      <DependentUpon>Smk_Headcount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Reports\Smk_MovementHistory.resx">
       <DependentUpon>Smk_MovementHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_TimeSusceptibleMaterial.resx">
+      <DependentUpon>Smk_TimeSusceptibleMaterial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Reports\Smk_SAPVsDelta.resx">
       <DependentUpon>Smk_SAPVsDelta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Reports\Smk_SimpleAudit.resx">
       <DependentUpon>Smk_SimpleAudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Reports\Smk_StdWork.resx">
+      <DependentUpon>Smk_StdWork.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Smk_AlertMissing.resx">
       <DependentUpon>Smk_AlertMissing.vb</DependentUpon>
@@ -1358,6 +2345,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supermarket\Smk_SAPTransfers.resx">
       <DependentUpon>Smk_SAPTransfers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Terminals\Smk_TerminalCutterToService.resx">
+      <DependentUpon>Smk_TerminalCutterToService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Terminals\Smk_TerminalCutterToService_New.resx">
+      <DependentUpon>Smk_TerminalCutterToService_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Terminals\Smk_TerminalCutterToService2_New.resx">
+      <DependentUpon>Smk_TerminalCutterToService2_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Terminals\Smk_TerminalRandomToCutter.resx">
+      <DependentUpon>Smk_TerminalRandomToCutter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supermarket\Terminals\Smk_TerminalRandomToCutter_New.resx">
+      <DependentUpon>Smk_TerminalRandomToCutter_New.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -1374,9 +2376,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ProcessEngineering\" />
+    <Folder Include="Supermarket\Sensitive\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Logo.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -1398,6 +2401,49 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="delta.ico" />
+    <None Include="Resources\bullet_arrow_left.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\Scanning In.png" />
+    <None Include="Resources\Scanning Out.png" />
+    <None Include="Resources\Not Started.png" />
+    <None Include="Resources\Outside.png" />
+    <None Include="Resources\Outside wait.png" />
+    <None Include="Resources\Inside.png" />
+    <None Include="Resources\Inside Wait.png" />
+    <None Include="Resources\bullet_white.png" />
+    <None Include="Resources\iconfinder_warning_101127.png" />
+    <None Include="Resources\bullet_error.png" />
+    <None Include="Resources\radioactivity.png" />
+    <None Include="Resources\wrench_orange.png" />
+    <None Include="Resources\wrench.png" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow_up.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\bullet_wrench.png" />
+    <None Include="Resources\bullet_valid.png" />
+    <None Include="Resources\bullet_up.png" />
+    <None Include="Resources\bullet_down.png" />
+    <None Include="Resources\bullet_delete.png" />
+    <None Include="Resources\bullet_add.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\iconfinder_error_small_14416.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\appbar.chevron.up.png" />
+    <None Include="Resources\appbar.chevron.down.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\flag_flyaway_red.png" />
+    <None Include="Resources\hot.png" />
+    <None Include="Resources\flag_hot.png" />
+    <None Include="Resources\battery_low_32.png" />
+    <None Include="Resources\battery_low.png" />
+    <None Include="Resources\not_in.png" />
+    <None Include="Resources\ajax_loader_gray_512.gif" />
+    <None Include="Resources\run_macros.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\if_icon-114-lock_314481.png" />
+    <None Include="Resources\bullet_white_16.png" />
+    <None Include="Resources\tick_16.png" />
     <None Include="Resources\not_equal.png" />
     <None Include="Resources\minor_equal_.png" />
     <None Include="Resources\minor.png" />

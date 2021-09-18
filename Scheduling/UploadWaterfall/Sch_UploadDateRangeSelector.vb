@@ -23,7 +23,7 @@
                 If upload IsNot Nothing Then
                     upload.Columns.Add("UploadDate", GetType(Date), "Convert([Date],'System.DateTime')")
                     upload.Columns.Add("UploadTime", GetType(Date), "Convert([Time],'System.DateTime')")
-                    upload.DefaultView.Sort = "Material,UploadDate,UploadTime DESC"
+                    upload.DefaultView.Sort = "Material,UploadDate DESC,UploadTime DESC"
                     Dim all = upload.DefaultView.ToTable(False, "Material", "MRPCn", "User name", "UploadDate", "UploadTime", "Quantity", "Quantity_1", "Quantity_2", "Quantity_3", "Quantity_4", "Quantity_5", "Quantity_6", "Quantity_7", "Quantity_8", "Quantity_9", "Quantity_10", "Quantity_11", "Quantity_12", "Quantity_13", "Quantity_14", "Quantity_15", "Quantity_16", "Quantity_17", "Quantity_18", "Quantity_19", "Quantity_20", "Quantity_21", "Quantity_22", "Quantity_23", "Quantity_24", "Quantity_25", "Quantity_26", "Quantity_27")
                     Dim distinct As New DataTable
                     distinct.Columns.Add("Material")

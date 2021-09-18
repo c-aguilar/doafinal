@@ -23,14 +23,16 @@
                 Kanbans_dgv.DataSource = Nothing
                 Local_lbl.Text = ""
             Else
-                Kanbans_dgv.DataSource = SQL.Current.GetDatatable(String.Format("SELECT Partnumber AS [No. de Parte], Bussiness AS Negocio, Board AS Tablero, Kit, EngLoc AS Localizacion, Slot, Side AS Lado, Section AS Seccion FROM CDR_Kanbans WHERE Partnumber = '{0}' ORDER BY ", partnumber))
+                Kanbans_dgv.DataSource = SQL.Current.GetDatatable(String.Format("SELECT Partnumber AS [No. de Parte], Business AS Negocio, Board AS Tablero, Kit, EngLoc AS Localizacion, Slot, Side AS Lado, Section AS Seccion FROM CDR_Kanbans WHERE Partnumber = '{0}' GROUP BY Partnumber, Business, Board, Kit, EngLoc, Slot, Side, Section ORDER BY Business,Board", partnumber))
                 Local_lbl.Text = SQL.Current.GetString(String.Format("SELECT dbo.Smk_Locations('{0}');", partnumber))
             End If
         Else
-            partnumber = Strings.right("00000000" & Kanban_txt.Text, 8)
-            Kanbans_dgv.DataSource = SQL.Current.GetDatatable(String.Format("SELECT Partnumber AS [No. de Parte], Bussiness AS Negocio, Board AS Tablero, Kit, EngLoc AS Localizacion, Slot, Side AS Lado, Section AS Seccion FROM CDR_Kanbans WHERE Partnumber = '{0}' ORDER BY ", partnumber))
+            partnumber = RawMaterial.Format(Kanban_txt.Text)
+            Kanbans_dgv.DataSource = SQL.Current.GetDatatable(String.Format("SELECT Partnumber AS [No. de Parte], Business AS Negocio, Board AS Tablero, Kit, EngLoc AS Localizacion, Slot, Side AS Lado, Section AS Seccion FROM CDR_Kanbans WHERE Partnumber = '{0}' GROUP BY Partnumber, Business, Board, Kit, EngLoc, Slot, Side, Section ORDER BY Business,Board", partnumber))
             Local_lbl.Text = SQL.Current.GetString(String.Format("SELECT dbo.Smk_Locations('{0}');", partnumber))
         End If
+        Kanban_txt.Clear()
+        Kanban_txt.Focus()
     End Sub
 
     Private Sub CDR_CheckpointTemplate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -43,5 +45,9 @@
 
     Private Sub Close_btn_Click(sender As Object, e As EventArgs) Handles Close_btn.Click
         Me.Close()
+    End Sub
+
+    Private Sub CDR_FindManufacturing_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Dispose()
     End Sub
 End Class

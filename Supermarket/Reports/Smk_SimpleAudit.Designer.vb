@@ -35,6 +35,9 @@ Partial Class Smk_SimpleAudit
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LocationA_txt = New System.Windows.Forms.TextBox()
         Me.Run_btn = New System.Windows.Forms.Button()
+        Me.All_rb = New System.Windows.Forms.RadioButton()
+        Me.IgnoreMSpec_rb = New System.Windows.Forms.RadioButton()
+        Me.OnlyMspec_rb = New System.Windows.Forms.RadioButton()
         Me.ToolStripMain.SuspendLayout()
         CType(Me.Report_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,7 +119,7 @@ Partial Class Smk_SimpleAudit
         '
         'LocationB_txt
         '
-        Me.LocationB_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.LocationB_txt.BackColor = System.Drawing.Color.Ivory
         Me.LocationB_txt.Location = New System.Drawing.Point(132, 31)
         Me.LocationB_txt.MaxLength = 8
         Me.LocationB_txt.Name = "LocationB_txt"
@@ -136,7 +139,7 @@ Partial Class Smk_SimpleAudit
         '
         'LocationA_txt
         '
-        Me.LocationA_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.LocationA_txt.BackColor = System.Drawing.Color.Ivory
         Me.LocationA_txt.Location = New System.Drawing.Point(45, 32)
         Me.LocationA_txt.MaxLength = 8
         Me.LocationA_txt.Name = "LocationA_txt"
@@ -150,18 +153,53 @@ Partial Class Smk_SimpleAudit
         Me.Run_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Run_btn.Image = CType(resources.GetObject("Run_btn.Image"), System.Drawing.Image)
         Me.Run_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Run_btn.Location = New System.Drawing.Point(202, 29)
+        Me.Run_btn.Location = New System.Drawing.Point(434, 29)
         Me.Run_btn.Name = "Run_btn"
         Me.Run_btn.Size = New System.Drawing.Size(100, 25)
         Me.Run_btn.TabIndex = 139
         Me.Run_btn.Text = "Ejecutar"
         Me.Run_btn.UseVisualStyleBackColor = False
         '
+        'All_rb
+        '
+        Me.All_rb.AutoSize = True
+        Me.All_rb.Location = New System.Drawing.Point(209, 32)
+        Me.All_rb.Name = "All_rb"
+        Me.All_rb.Size = New System.Drawing.Size(50, 17)
+        Me.All_rb.TabIndex = 142
+        Me.All_rb.Text = "Todo"
+        Me.All_rb.UseVisualStyleBackColor = True
+        '
+        'IgnoreMSpec_rb
+        '
+        Me.IgnoreMSpec_rb.AutoSize = True
+        Me.IgnoreMSpec_rb.Checked = True
+        Me.IgnoreMSpec_rb.Location = New System.Drawing.Point(265, 32)
+        Me.IgnoreMSpec_rb.Name = "IgnoreMSpec_rb"
+        Me.IgnoreMSpec_rb.Size = New System.Drawing.Size(81, 17)
+        Me.IgnoreMSpec_rb.TabIndex = 141
+        Me.IgnoreMSpec_rb.TabStop = True
+        Me.IgnoreMSpec_rb.Text = "Omitir Cable"
+        Me.IgnoreMSpec_rb.UseVisualStyleBackColor = True
+        '
+        'OnlyMspec_rb
+        '
+        Me.OnlyMspec_rb.AutoSize = True
+        Me.OnlyMspec_rb.Location = New System.Drawing.Point(352, 32)
+        Me.OnlyMspec_rb.Name = "OnlyMspec_rb"
+        Me.OnlyMspec_rb.Size = New System.Drawing.Size(76, 17)
+        Me.OnlyMspec_rb.TabIndex = 140
+        Me.OnlyMspec_rb.Text = "Solo Cable"
+        Me.OnlyMspec_rb.UseVisualStyleBackColor = True
+        '
         'Smk_SimpleAudit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(807, 350)
+        Me.Controls.Add(Me.All_rb)
+        Me.Controls.Add(Me.IgnoreMSpec_rb)
+        Me.Controls.Add(Me.OnlyMspec_rb)
         Me.Controls.Add(Me.Run_btn)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LocationB_txt)
@@ -190,4 +228,7 @@ Partial Class Smk_SimpleAudit
     Friend WithEvents LocationA_txt As System.Windows.Forms.TextBox
     Friend WithEvents Run_btn As System.Windows.Forms.Button
     Friend WithEvents Print_btn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents All_rb As System.Windows.Forms.RadioButton
+    Friend WithEvents IgnoreMSpec_rb As System.Windows.Forms.RadioButton
+    Friend WithEvents OnlyMspec_rb As System.Windows.Forms.RadioButton
 End Class

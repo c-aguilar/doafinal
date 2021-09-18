@@ -35,6 +35,7 @@ Partial Class Smk_Kiosk
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Option_txt = New CAguilar.WaterMarkTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Warehouse_lbl = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -233,11 +234,25 @@ Partial Class Smk_Kiosk
         Me.Panel4.Size = New System.Drawing.Size(107, 483)
         Me.Panel4.TabIndex = 1
         '
+        'Warehouse_lbl
+        '
+        Me.Warehouse_lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Warehouse_lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.Warehouse_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Warehouse_lbl.ForeColor = System.Drawing.Color.White
+        Me.Warehouse_lbl.Location = New System.Drawing.Point(699, 14)
+        Me.Warehouse_lbl.Name = "Warehouse_lbl"
+        Me.Warehouse_lbl.Size = New System.Drawing.Size(232, 23)
+        Me.Warehouse_lbl.TabIndex = 52
+        Me.Warehouse_lbl.Text = "Warehouse"
+        Me.Warehouse_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Smk_Kiosk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(949, 556)
+        Me.Controls.Add(Me.Warehouse_lbl)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.DieCenter_lbl)
         Me.Name = "Smk_Kiosk"
@@ -263,4 +278,5 @@ Partial Class Smk_Kiosk
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Option_txt As CAguilar.WaterMarkTextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents Warehouse_lbl As System.Windows.Forms.Label
 End Class

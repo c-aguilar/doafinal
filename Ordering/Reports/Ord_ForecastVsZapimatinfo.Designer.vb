@@ -34,7 +34,7 @@ Partial Class Ord_ForecastVsZapimatinfo
         Me.CopyToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         Me.Report_dgv = New CAguilar.DataGridViewWithFilters()
         Me.Partnumber_txt = New System.Windows.Forms.TextBox()
         Me.Slocs_clb = New System.Windows.Forms.CheckedListBox()
@@ -81,7 +81,7 @@ Partial Class Ord_ForecastVsZapimatinfo
         '
         'ToolStripMain
         '
-        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExport, Me.toolStripSeparator, Me.CopyToolStripButton, Me.FindToolStripButton, Me.toolStripSeparator1, Me.ToolStripLabel1})
+        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExport, Me.toolStripSeparator, Me.CopyToolStripButton, Me.FindToolStripButton, Me.toolStripSeparator1, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
         Me.ToolStripMain.Size = New System.Drawing.Size(984, 29)
@@ -127,13 +127,13 @@ Partial Class Ord_ForecastVsZapimatinfo
         Me.toolStripSeparator1.Name = "toolStripSeparator1"
         Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 29)
         '
-        'ToolStripLabel1
+        'Title_lbl
         '
-        Me.ToolStripLabel1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(235, 26)
-        Me.ToolStripLabel1.Text = "Pronostico Vs Consumo Real"
+        Me.Title_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Title_lbl.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Title_lbl.Name = "Title_lbl"
+        Me.Title_lbl.Size = New System.Drawing.Size(235, 26)
+        Me.Title_lbl.Text = "Pronostico Vs Consumo Real"
         '
         'Report_dgv
         '
@@ -213,7 +213,7 @@ Partial Class Ord_ForecastVsZapimatinfo
     Friend WithEvents FindToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents toolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Report_dgv As CAguilar.DataGridViewWithFilters
-    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents Title_lbl As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Partnumber_txt As System.Windows.Forms.TextBox
     Friend WithEvents Slocs_clb As System.Windows.Forms.CheckedListBox
 End Class

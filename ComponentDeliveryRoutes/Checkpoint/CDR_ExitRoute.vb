@@ -27,8 +27,8 @@
                 If CDR.Routes.Exists(Function(f) f.Name.ToLower = scan.ToLower) Then
                     Dim route = CDR.Routes.Find(Function(f) f.Name.ToLower = scan.ToLower)
                     If route.Status = CDR.Status.IN Then
-                        FlashAlerts.ShowConfirm("Salida registrada.", , True)
                         route.GoOut()
+                        FlashAlerts.ShowConfirm("Salida registrada.", , True)
                         Me.Close()
                     Else
                         If route.Started Then
@@ -53,5 +53,13 @@
 
     Private Sub CDR_ExitRoute_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Route_txt.Focus()
+    End Sub
+
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
     End Sub
 End Class

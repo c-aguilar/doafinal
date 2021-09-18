@@ -118,19 +118,72 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AppIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PP_AverageRequirementsByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
-WHERE (('{3}' BETWEEN StartProduction AND EndProduction) OR ('{4}' BETWEEN StartProduction AND EndProduction)) AND SC.Date BETWEEN '{3}' AND '{4}' AND M.Business = '{5}' AND B.Volume='{3}' ;</value>
+  <data name="ZPL_QualityLabel" xml:space="preserve">
+    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,100^FH\^FB1200,1,0,C,1^FD***ALERTA DE CALIDAD***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
+^FT0,530^A0N,60,60^FH\^FB1200,2,0,L,1^FDMotivo: @reason^FS
+^PQ1,0,1,Y^XZ</value>
   </data>
-  <data name="PP_AverageRequirementsByFamily" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
-INNER JOIN Sch_Business AS B ON M.Business = B.Business 
-WHERE (('{3}' BETWEEN StartProduction AND EndProduction) OR ('{4}' BETWEEN StartProduction AND EndProduction)) AND SC.Date BETWEEN '{3}' AND '{4}' AND B.Family = '{5}' AND Bd.Volume='{3}';</value>
+  <data name="add_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radioactivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radioactivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_CriticalLabel" xml:space="preserve">
+    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,140^FH\^FB1200,1,0,C,1^FD*** CRITICO ***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
+^FT0,470^A0N,60,60^FH\^FB1200,1,0,L,1^FDArea: @area^FS
+^FT0,590^A0N,60,60^FH\^FB1200,2,0,L,1^FDComentario: @comment^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_valid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_valid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_Weekly_Plant" xml:space="preserve">
+    <value>SELECT M.Material,Bd.Board,[Week],ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material INNER JOIN Mfg_Boards AS Mb ON Bd.Board = Mb.Board 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND MB.Volume='Low' 
+ORDER BY M.Material,SC.[Date]</value>
+  </data>
+  <data name="ddr_scanning_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Scanning In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_EPSProductionByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
+LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date]
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' AND B.Volume='{3}';</value>
+  </data>
+  <data name="bullet_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shield_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shield_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ddr_outside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Outside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PP_BoardCapacitiesByBusiness" xml:space="preserve">
     <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(SC.WorkingShifts,'') AS DayShifts,B.ShiftCombination AS BoardShifts,CL.Seconds
@@ -143,6 +196,176 @@ INNER JOIN Eng_1719Controls AS CL ON M.Material = CL.Material
 INNER JOIN Sys_ShiftCombination AS SFB ON B.ShiftCombination = SFB.Combination 
 WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
 AND (SC.[Date] BETWEEN '{0}' AND '{1}') AND M.Business = '{2}' AND B.Volume='Low';</value>
+  </data>
+  <data name="ddr_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_warning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_error_small_14416.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_list_bullets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_list_bullets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="APTIV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\APTIV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box_open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_white_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_white_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minor_equal_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minor_equal_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_CommentsByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,C.Comment 
+FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+AND M.Business = '{2}' AND B.Volume='Low' ORDER BY M.Material</value>
+  </data>
+  <data name="ZPL_DicPicklist_6Cols_Row" xml:space="preserve">
+    <value>^FT10,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@cdd^FS
+^FT300,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@smk^FS
+^FT550,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD0@local^FS
+^FT800,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@status^FS
+^FT1100,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@serial^FS
+^FT1500,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@np^FS</value>
+  </data>
+  <data name="battery_low" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery_low.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box_front_open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box_front_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_RequirementsByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' AND B.Volume='{3}';</value>
+  </data>
+  <data name="ddr_not_started" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Not Started.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_DicPicklist_6Cols_Vertical" xml:space="preserve">
+    <value>^XA^XB^LL2107^PW903^MTD^MNN
+^FT70,190^A0N,50,50^FWB^FB550,1,0,L,1^FDCDD^FS
+^FT70,650^A0N,50,50^FWB^FB550,1,0,L,1^FDLocal Smk^FS
+^FT70,920^A0N,50,50^FWB^FB550,1,0,L,1^FDLocal Serie^FS
+^FT70,1130^A0N,50,50^FWB^FB550,1,0,L,1^FDEstatus^FS
+^FT70,1540^A0N,50,50^FWB^FB550,1,0,L,1^FDSerie^FS
+^FT70,1780^A0N,50,50^FWB^FB550,1,0,L,1^FDNo. Parte^FS
+
+@rows
+
+^FO5,10^GB0,1780,3^FS
+^FO85,10^GB0,1780,3^FS
+^FO590,10^GB0,1780,3^FS
+^FO10,10^GB580,0,3^FS
+^FO10,220^GB580,0,3^FS
+^FO10,670^GB580,0,3^FS
+^FO10,950^GB580,0,3^FS
+^FO10,1150^GB580,0,3^FS
+^FO10,1560^GB580,0,3^FS
+^FO10,1790^GB580,0,3^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="wrench_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrench_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_MaterialsByFamily" xml:space="preserve">
+    <value>SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool,BD.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN vw_PastDue AS PD ON M.Material = PD.Material LEFT OUTER JOIN vw_CurrentInventory AS CI ON M.Material = CI.Material 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Family = '{2}' AND Bd.Volume='{3}'
+ORDER BY M.Material;</value>
+  </data>
+  <data name="PP_MaterialsByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool, Bd.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN vw_PastDue AS PD ON M.Material = PD.Material LEFT OUTER JOIN vw_CurrentInventory AS CI ON M.Material = CI.Material 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Business = '{2}' AND Bd.Volume='{3}' ORDER BY M.Material;</value>
+  </data>
+  <data name="run_macros_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\run_macros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_AverageRequirementsByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
+WHERE (('{3}' BETWEEN StartProduction AND EndProduction) OR ('{4}' BETWEEN StartProduction AND EndProduction)) AND SC.Date BETWEEN '{3}' AND '{4}' AND M.Business = '{5}' AND B.Volume='{3}' ;</value>
+  </data>
+  <data name="PP_Daily_Plant" xml:space="preserve">
+    <value>SELECT M.Material,Bd.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' 
+AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+ORDER BY M.Material,SC.[Date]</value>
+  </data>
+  <data name="information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tick_red_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ddr_outside_wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Outside wait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_EPSProductionByFamily" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity  
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date] 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' AND Bd.Volume='{3}';</value>
+  </data>
+  <data name="ZPL_NoMaterial" xml:space="preserve">
+    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH0,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT50,100^FB1100,1,0,C,0^A0N,70,60^FH\^FDMaterial^FS
+^FT50,200^FB1100,1,0,C,0^A0N,150,140^FH\^FD@partnumber^FS
+^FT50,520^FB1100,2,0,C,0^A0N,180,170^FH\^FDNO SURTIDO^FS
+^FT50,550^FB1100,2,0,C,0^A0N,80,80^FH\^FD@date^FS
+^FT100,540^FB1000,1,0,R,0^A0N,40,40^FH\^FDSMS Barriles^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="arrow_right_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tag_blue_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tag_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_ByBusiness" xml:space="preserve">
+    <value>SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' 
+AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Volume='{3}' 
+ORDER BY M.Class,M.Material,SC.[Date]</value>
+  </data>
+  <data name="ZPL_LinkLabel" xml:space="preserve">
+    <value>^XA
+^FO20,20^GB1180,120,70^FS
+^FT20,190^A0N,80,80^FB1180,2,0,C,1^FR^FDETIQUETA DE ENLACE^FS
+^FT20,280^A0N,160,110^FB1180,1,0,C,1^FD@partnumber^FS
+^FT20,390^A0N,50,50^FB1180,2,0,C,1^FD@description^FS
+^BY3,3,104^FT280,490^BCN,,N,N^FD@serial^FS
+^FT20,625^A0N,70,70^FB1180,2,0,C,1^FD@serial^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="ddr_scanning_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Scanning Out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_package_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="excel_exports_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel_exports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PP_BoardCapacitiesByFamily" xml:space="preserve">
     <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(SC.WorkingShifts,'') AS DayShifts,Bd.ShiftCombination AS BoardShifts,CL.Seconds
@@ -157,246 +380,63 @@ INNER JOIN Sch_Business AS B ON M.Business = B.Business
 WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
 AND (SC.[Date] BETWEEN '{0}' AND '{1}') AND B.Family = '{2}' AND Bd.Volume='Low';</value>
   </data>
-  <data name="PP_ByFamily" xml:space="preserve">
-    <value>SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
-INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
-LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
-WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' 
-AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND Bd.Volume = '{3}' 
-ORDER BY M.Class,M.Material,SC.[Date]</value>
-  </data>
-  <data name="PP_CommentsByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,C.Comment 
-FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
-AND M.Business = '{2}' AND B.Volume='Low' ORDER BY M.Material</value>
-  </data>
-  <data name="PP_CommentsByFamily" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,C.Comment 
-FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
-AND B.Family = '{2}' AND Bd.Volume='Low' 
-ORDER BY M.Material</value>
-  </data>
-  <data name="PP_ByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
-INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
-LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
-WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' 
-AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Volume='{3}' 
-ORDER BY M.Class,M.Material,SC.[Date]</value>
-  </data>
-  <data name="PP_MaterialsByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool, Bd.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN vw_PastDue AS PD ON M.Material = PD.Material LEFT OUTER JOIN vw_CurrentInventory AS CI ON M.Material = CI.Material 
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Business = '{2}' AND Bd.Volume='{3}' ORDER BY M.Material;</value>
-  </data>
-  <data name="PP_MaterialsByFamily" xml:space="preserve">
-    <value>SELECT M.Material,M.Class,MB.Board,Bd.Class AS Tool,BD.Volume,Bd.ShiftCombination,Seconds,Operators,M.CustomerPN,M.Description,B.Family,M.Business,StdPack,ISNULL(PastDue,0) AS PastDue,ISNULL(CI.Quantity,0) AS Stock,StartProduction,EndProduction FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board  INNER JOIN Eng_1719Controls AS Cl ON M.Material = Cl.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN vw_PastDue AS PD ON M.Material = PD.Material LEFT OUTER JOIN vw_CurrentInventory AS CI ON M.Material = CI.Material 
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND B.Family = '{2}' AND Bd.Volume='{3}'
-ORDER BY M.Material;</value>
-  </data>
-  <data name="PP_RequirementsByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' AND B.Volume='{3}';</value>
-  </data>
-  <data name="PP_RequirementsByFamily" xml:space="preserve">
-    <value>SELECT M.Material,Bd.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity  
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
-LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate 
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' AND Bd.Volume='{3}';</value>
-  </data>
-  <data name="PP_EPSProductionByBusiness" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS B ON MB.Board = B.Board 
-LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date]
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND M.Business = '{2}' AND B.Volume='{3}';</value>
-  </data>
-  <data name="PP_EPSProductionByFamily" xml:space="preserve">
-    <value>SELECT M.Material,MB.Board,SC.[Date],ISNULL(Quantity,0) AS Quantity  
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
-LEFT OUTER JOIN vw_Sch_EPSDailyProduction AS DP ON M.Material = DP.Material AND SC.[Date] = DP.[Date] 
-WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' AND Bd.Volume='{3}';</value>
-  </data>
-  <data name="PP_Daily_Plant" xml:space="preserve">
-    <value>SELECT M.Material,Bd.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
-INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material 
-LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
-WHERE SC.[Date] BETWEEN '{0}' AND '{1}' 
-AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
-ORDER BY M.Material,SC.[Date]</value>
-  </data>
-  <data name="PP_Weekly_Plant" xml:space="preserve">
-    <value>SELECT M.Material,Bd.Board,[Week],ISNULL(Quantity,0) AS Quantity 
-FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
-INNER JOIN Sch_MaterialBoards AS Bd ON M.Material = Bd.Material INNER JOIN Mfg_Boards AS Mb ON Bd.Board = Mb.Board 
-LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
-WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND MB.Volume='Low' 
-ORDER BY M.Material,SC.[Date]</value>
-  </data>
-  <data name="critical_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ok_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accept_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="critical_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\critical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="information_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tick_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZPL_ReceivingLabel" xml:space="preserve">
-    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
-^BY3,3,70^FT560,90^BCN,,N,N^FD@partnumber^FS
-^FT160,70^A0N,70,60^FH\^FB550,1,0,L,1^FD@supplierpart^FS
-^FT160,140^A0N,70,60^FH\^FB880,1,0,L,1^FD@suppliername^FS
-^FO0,453^GB970,0,6^FS
-^FO3,151^GB363,0,6^FS
-^FT125,185^A0N,28,28^FH\^FDESTACION^FS
-^FT5,255^A0N,100,65^FH\^FB360,1,0,C,1^FD@warehouse^FS
-^FO3,267^GB363,0,6^FS
-^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
-^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@service^FS
-^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
-^FT10,445^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
-^FT970,95^A0N,100,60^FH\^FB210,1,0,C,1^FD@legend^FS
-^FT1020,150^A0N,28,28^FH\^FDSEMANA^FS
-^FT970,230^A0N,100,60^FH\^FB210,1,0,C,1^FD@week^FS
-^FT1030,275^A0N,28,28^FH\^FDTROCA^FS
-^FT970,350^A0N,100,60^FH\^FB210,1,0,C,1^FD@truck^FS
-^FO965,0^GB0,455,6^FS
-^FO965,116^GB200,0,6^FS
-^FO965,240^GB200,0,6^FS
-^FO965,356^GB200,0,6^FS
-^FT10,134^A0N,155,152^FH\^FD@redtag^FS
-^FO142,0^GB0,150,6^FS
-^FO360,156^GB0,300,6^FS
-^FO3,360^GB363,0,6^FS
-^FT375,405^A0N,67,52^FH\^FD@serieO^FS
-^FT602,445^A0N,130,120^FH\^FD@serieS^FS
-^FT370,280^A0N,160,110^FH\^FB590,1,0,C,1^FD@partnumber^FS
-^FT370,325^A0N,38,32^FH\^FB590,1,0,C,1^FD@description^FS
-^BY3,3,104^FT240,570^BCN,,N,N^FD@serie^FS
-^FT10,495^A0N,40,40^FH\^FD@date^FS
-^FT10,535^A0N,40,40^FH\^FD@hour^FS
-^FT10,575^A0N,40,40^FH\^FDDelta ERP^FS
-^FO1000,340^BQN,2,7,Q^FD@serie^FS
-^PQ1,0,1,Y^XZ</value>
-  </data>
-  <data name="arrow_right_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box_front_open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_front_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box_open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_package_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZPL_CriticalLabel" xml:space="preserve">
-    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
-^FT0,160^A0N,140,140^FH\^FB1200,1,0,C,1^FD*** CRITICO ***^FS
-^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
-^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
-^FT0,470^A0N,60,60^FH\^FB1200,1,0,L,1^FDArea: @area^FS
-^FT0,590^A0N,60,60^FH\^FB1200,2,0,L,1^FDComentario: @comment^FS
-^PQ1,0,1,Y^XZ</value>
-  </data>
-  <data name="cross_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="APTIV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\APTIV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tag_blue_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tag_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZPL_MoverLabel" xml:space="preserve">
-    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
-^FT350,120^A0N,90,90^FH\^FB800,1,0,R,1^FDMover ID @moverid^FS
-^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
-^FT20,430^A0N,80,80^FH\^FB1200,1,0,L,1^FDCantidad: @quantity @uom^FS
-^FT20,490^A0N,60,60^FH\^FB1200,1,0,L,1^FDLocal: @local^FS
-^BY4,4,104^FT20,150^BCN,,Y,N^FD@partid^FS
-^PQ1,0,1,Y^XZ</value>
-  </data>
-  <data name="cross_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tick_light_blue_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tick_light_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tick_red_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tick_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="No_image_available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\No_image_available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shield_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shield_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZPL_QualityLabel" xml:space="preserve">
-    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
-^FT0,160^A0N,140,100^FH\^FB1200,1,0,C,1^FD***ALERTA DE CALIDAD***^FS
-^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
-^FT0,410^A0N,60,60^FH\^FB1200,1,0,L,1^FDUsuario: @user^FS
-^FT0,530^A0N,60,60^FH\^FB1200,2,0,L,1^FDMotivo: @reason^FS
-^PQ1,0,1,Y^XZ</value>
+  <data name="REC_TrackerEmailTemplate" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        .auto-style2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #006699;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="color: #5e9ca0;"&gt;Material enviado a tracker de pendientes de procesar.&lt;/h1&gt;
+&lt;h2 style="color: #2e6c80;"&gt;Detalles:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Usuario: &lt;/strong&gt; @username&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Delivery: &lt;/strong&gt;@delivery&lt;br /&gt;&lt;strong&gt;Motivo: &lt;/strong&gt; @reason&lt;br /&gt;&lt;strong&gt;Comentario: &lt;/strong&gt;@comment&amp;nbsp;&lt;/p&gt;
+&lt;h2 style="color: #2e6c80;"&gt;Numeros de parte:&lt;/h2&gt;
+&lt;table class="editorDemoTable"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td class="auto-style2"&gt;No. de Serie&lt;/td&gt;
+&lt;td class="auto-style2"&gt;No. de Parte&lt;/td&gt;
+&lt;td class="auto-style2"&gt;Descripcion&lt;/td&gt;
+&lt;td class="auto-style2"&gt;Cantidad&lt;/td&gt;
+&lt;td class="auto-style2"&gt;Unidad&lt;/td&gt;
+&lt;td class="auto-style2"&gt;Troca&lt;/td&gt;
+&lt;td class="auto-style2"&gt;Fecha&lt;/td&gt;
+&lt;td class="auto-style2"&gt;MRP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+@partnumbers
+&lt;/tbody&gt;
+&lt;/table&gt;
+    &lt;p style="font-size: small"&gt;Delta ERP&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
   </data>
   <data name="box_front_open_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_front_open_hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tick_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="excel_exports_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\excel_exports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flag_flyaway_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flag_flyaway_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PP_AverageRequirementsByFamily" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,SC.[Date] AS DeliveryDate,CASE WHEN DATEPART(WEEKDAY,SC.Date) IN ({0},{1}) THEN 0 ELSE FLOOR(ISNULL(OpenQuantity,0)/{2}) END AS OpenQuantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board LEFT OUTER JOIN vw_Sch_WeeklyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Week] = CR.[Week] 
+INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+WHERE (('{3}' BETWEEN StartProduction AND EndProduction) OR ('{4}' BETWEEN StartProduction AND EndProduction)) AND SC.Date BETWEEN '{3}' AND '{4}' AND B.Family = '{5}' AND Bd.Volume='{3}';</value>
   </data>
-  <data name="greater" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="greater_equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greater_equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minor_equal_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minor_equal_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="not_equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\not_equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_list_bullets" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\text_list_bullets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ORD_MoverEmailTemplate" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -415,7 +455,7 @@ ORDER BY M.Material,SC.[Date]</value>
 &lt;body&gt;
 &lt;h1 style="color: #5e9ca0;"&gt;Mover de muestras&amp;nbsp;&lt;span style="color: #2b2301;"&gt;@id&lt;/span&gt; aprobado.&lt;/h1&gt;
 &lt;h2 style="color: #2e6c80;"&gt;Detalles:&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Usuario:&lt;/strong&gt; @username. &lt;br /&gt;&lt;strong&gt;Requisitor:&lt;/strong&gt; @requisitor.&lt;strong&gt;&lt;br /&gt;Razon:&lt;/strong&gt; @reason. &lt;br /&gt;&lt;strong&gt;Localidad:&lt;/strong&gt; @locality.&lt;strong&gt;&lt;br /&gt;Comentarios:&lt;/strong&gt; @comments.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Usuario:&lt;/strong&gt; @username. &lt;br /&gt;&lt;strong&gt;Requisitor:&lt;/strong&gt; @requisitor.&lt;strong&gt;&lt;br /&gt;Razon:&lt;/strong&gt; @reason. &lt;br /&gt;&lt;strong&gt;Localidad:&lt;/strong&gt; @locality.&lt;strong&gt;&lt;br /&gt;Comentario:&lt;/strong&gt; @comment.&amp;nbsp;&lt;/p&gt;
 &lt;h2 style="color: #2e6c80;"&gt;Numeros de parte:&lt;/h2&gt;
 &lt;table class="editorDemoTable"&gt;
 &lt;thead&gt;
@@ -434,6 +474,258 @@ ORDER BY M.Material,SC.[Date]</value>
     &lt;p style="font-size: small"&gt;Delta ERP&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</value>
-    <comment>Utilizado para mandar email con la info del mover</comment>
+  </data>
+  <data name="not_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\not_in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_white_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="critical_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battery_low_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery_low_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_ReceivingLabel" xml:space="preserve">
+    <value>^XA^LL0600^PW1200
+^BY3,3,70^FT700,90^BCN,,N,N^FD@partnumber^FS
+^FT160,70^A0N,70,60^FH\^FB550,1,0,L,1^FD@supplierpart^FS
+^FT160,140^A0N,60,50^FH\^FB1100,1,0,L,1^FD@suppliername^FS
+
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDESTACION^FS
+^FT5,260^A0N,90,65^FH\^FB360,1,0,C,1^FR^FD@warehouse^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@service^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
+^FT970,230^A0N,100,60^FH\^FB210,1,0,C,1^FD@legend^FS
+^FT1020,290^A0N,28,28^FH\^FDSEMANA^FS
+^FT970,350^A0N,70,50^FH\^FB210,1,0,C,1^FD@week^FS
+^FT1030,390^A0N,28,28^FH\^FDTROCA^FS
+^FT970,448^A0N,70,50^FH\^FB210,1,0,C,1^FD@truck^FS
+^FO965,151^GB0,305,6^FS
+^FO965,260^GB205,0,6^FS
+^FO965,360^GB205,0,6^FS
+
+^FO0,151^GB1175,310,6^FS
+^FT10,134^A0N,155,152^FH\^FD@redtag^FS
+
+^FO360,156^GB0,300,6^FS
+^FO3,360^GB363,0,6^FS
+^FT375,410^A0N,67,52^FH\^FD@serieO^FS
+^FT605,450^A0N,120,120^FH\^FD@serieS^FS
+^FT370,280^A0N,160,110^FH\^FB590,1,0,C,1^FD@partnumber^FS
+^FT370,355^A0N,38,32^FH\^FB590,2,0,C,1^FD@description^FS
+^BY3,3,104^FT280,575^BCN,,N,N^FD@serie^FS
+^FT10,495^A0N,40,40^FH\^FD@date^FS
+^FT10,535^A0N,40,40^FH\^FD@hour^FS
+^FT10,575^A0N,40,40^FH\^FDDelta ERP^FS
+^FO1040,360^BQN,2,5,Q^FDMA,@qr^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="greater_equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greater_equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="not_equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\not_equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="information_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ajax_loader_gray_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ajax_loader_gray_512.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ddr_inside_wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inside Wait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="link_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="No_image_available" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\No_image_available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accept_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_RequirementsByFamily" xml:space="preserve">
+    <value>SELECT M.Material,Bd.Board,SC.[Date] AS DeliveryDate,ISNULL(OpenQuantity,0) AS OpenQuantity  
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS CR ON M.Material = CR.Material AND SC.[Date] = CR.DeliveryDate 
+WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' AND Bd.Volume='{3}';</value>
+  </data>
+  <data name="tick_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tick_light_blue_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick_light_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_DicPicklist_6Cols_Row_Vertical" xml:space="preserve">
+    <value>^FT@item70,200^A0N,60,50^FWB^FB550,1,0,L,1^FD@cdd^FS
+^FT@item70,650^A0N,40,30^FWB^FB400,2,0,L,1^FD@smk^FS
+^FT@item70,920^A0N,60,50^FWB^FB550,1,0,L,1^FD@local^FS
+^FT@item70,1130^A0N,60,50^FWB^FB550,1,0,L,1^FD@status^FS
+^FT@item70,1540^A0N,60,50^FWB^FB550,1,0,L,1^FD@serial^FS
+^FT@item70,1780^A0N,60,50^FWB^FB550,1,0,L,1^FD@np^FS</value>
+  </data>
+  <data name="ZPL_ControlledLabel" xml:space="preserve">
+    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,80^FH\^FB1200,1,0,C,1^FD***MATERIAL CONTROLADO***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,520^A0N,140,80^FH\^FB1200,1,0,C,1^FD*************************************^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="ZPL_MoverLabel" xml:space="preserve">
+    <value>^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT350,120^A0N,90,90^FH\^FB800,1,0,R,1^FDMover ID @moverid^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT20,430^A0N,80,80^FH\^FB1200,1,0,L,1^FDCantidad: @quantity @uom^FS
+^FT20,490^A0N,60,60^FH\^FB1200,1,0,L,1^FDLocal: @local^FS
+^BY4,4,104^FT20,150^BCN,,Y,N^FD@partid^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="delete_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_DicPicklist_6Cols" xml:space="preserve">
+    <value>^XA^LL0400^PW1800
+^FT10,70^A0N,50,50^FH\^FB550,1,0,L,1^FDCDD^FS
+^FT300,70^A0N,50,50^FH\^FB550,1,0,L,1^FDLocal Smk^FS
+^FT550,70^A0N,50,50^FH\^FB550,1,0,L,1^FDLocal Serie^FS
+^FT800,70^A0N,50,50^FH\^FB550,1,0,L,1^FDEstatus^FS
+^FT1100,70^A0N,50,50^FH\^FB550,1,0,L,1^FDSerie^FS
+^FT1500,70^A0N,50,50^FH\^FB550,1,0,L,1^FDNo. de Parte^FS
+@rows
+^FO5,10^GB0,580,3^FS
+^FO290,10^GB0,580,3^FS
+^FO540,10^GB0,580,3^FS
+^FO790,10^GB0,580,3^FS
+^FO1090,10^GB0,580,3^FS
+^FO1490,10^GB0,580,3^FS
+^FO1785,10^GB0,580,3^FS
+^FO3,85^GB1780,0,3^FS
+^FO3,185^GB1780,0,3^FS
+^FO3,285^GB1780,0,3^FS
+^FO3,385^GB1780,0,3^FS
+^FO3,485^GB1780,0,3^FS
+^FO3,585^GB1780,0,3^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_ByFamily" xml:space="preserve">
+    <value>SELECT M.Material,M.Class,MB.Board,SC.[Date],DATENAME(W,SC.[Date]) AS WeekDay,ISNULL(Quantity,0) AS Quantity 
+FROM Sys_Calendar AS SC CROSS JOIN Sch_Materials AS M 
+INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business 
+LEFT OUTER JOIN Sch_DailyProductionPlan AS PP ON M.Material = PP.Material AND SC.[Date] = PP.[Date] 
+WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND B.Family = '{2}' 
+AND (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction)) AND Bd.Volume = '{3}' 
+ORDER BY M.Class,M.Material,SC.[Date]</value>
+  </data>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PP_CommentsByFamily" xml:space="preserve">
+    <value>SELECT M.Material,MB.Board,C.Comment 
+FROM Sch_Materials AS M INNER JOIN Sch_MaterialBoards AS MB ON M.Material = MB.Material INNER JOIN Mfg_Boards AS Bd ON MB.Board = Bd.Board INNER JOIN Sch_DailyProductionPlanComments AS C ON M.Material = C.Material AND MB.Board = C.Board INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE (('{0}' BETWEEN StartProduction AND EndProduction) OR ('{1}' BETWEEN StartProduction AND EndProduction))
+AND B.Family = '{2}' AND Bd.Volume='Low' 
+ORDER BY M.Material</value>
+  </data>
+  <data name="ZPL_MasterLabel" xml:space="preserve">
+    <value>^XA^LL0600^PW1200
+^FO0,5^GB1175,140,70^FS
+^FT250,140^A0N,155,200^FH\^FR^FDMASTER^FS
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDESTACION^FS
+^FT5,260^A0N,90,65^FH\^FB360,1,0,C,1^FR^FD@warehouse^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@service^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
+^FT970,230^A0N,100,60^FH\^FB210,1,0,C,1^FD@legend^FS
+^FT1020,290^A0N,28,28^FH\^FDSEMANA^FS
+^FT970,350^A0N,70,50^FH\^FB210,1,0,C,1^FD@week^FS
+^FT1030,390^A0N,28,28^FH\^FDTROCA^FS
+^FT970,448^A0N,70,50^FH\^FB210,1,0,C,1^FD@truck^FS
+^FO965,151^GB0,305,6^FS
+^FO965,260^GB205,0,6^FS
+^FO965,360^GB205,0,6^FS
+^FO0,151^GB1175,310,6^FS
+^FT10,134^A0N,155,152^FH\^FR^FD@redtag^FS
+
+^FO360,156^GB0,300,6^FS
+^FO3,360^GB363,0,6^FS
+^FT375,410^A0N,67,52^FH\^FD@serieO^FS
+^FT605,450^A0N,120,120^FH\^FD@serieS^FS
+^FT370,280^A0N,160,110^FH\^FB590,1,0,C,1^FD@partnumber^FS
+^FT370,355^A0N,38,32^FH\^FB590,2,0,C,1^FD@description^FS
+^BY3,3,104^FT280,575^BCN,,N,N^FD@serie^FS
+^FT10,495^A0N,40,40^FH\^FD@date^FS
+^FT10,535^A0N,40,40^FH\^FD@hour^FS
+^FT10,575^A0N,40,40^FH\^FDDelta ERP^FS
+^FO1040,360^BQN,2,5,Q^FD@serie^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="purple_warning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_warning_101127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="critical_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\critical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZPL_APILabel" xml:space="preserve">
+    <value>^XA^LL0600^PW1200
+^FT800,100^A0N,60,50^FH\^FB1100,1,0,L,1^FDFOLIO: @folio^FS
+
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDPUNTO DE USO^FS
+^FT5,260^A0N,68,50FH\^FB360,1,0,C,1^FR^FD@service^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPESO NETO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@weight^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
+^FO0,151^GB1175,310,6^FS
+^FT100,100^A0N,110,140^FH\^FD@api^FS
+
+^FO360,156^GB0,300,6^FS
+^FO3,360^GB363,0,6^FS
+^FT375,410^A0N,67,52^FH\^FD@serieO^FS
+^FT605,450^A0N,120,120^FH\^FD@serieS^FS
+^FT370,280^A0N,160,110^FH\^FB590,1,0,C,1^FD@partnumber^FS
+^FT370,355^A0N,38,32^FH\^FB590,2,0,C,1^FD@description^FS
+^BY3,3,104^FT280,575^BCN,,N,N^FD@serie^FS
+^FT10,495^A0N,40,40^FH\^FD@date^FS
+^FT10,535^A0N,40,40^FH\^FD@hour^FS
+^FT10,140^A0N,40,40^FH\^FD@ticket^FS
+^FO1040,360^BQN,2,5,Q^FDMA,@qr^FS
+^PQ1,0,1,Y^XZ</value>
+  </data>
+  <data name="bullet_arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_arrow_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

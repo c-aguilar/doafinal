@@ -37,32 +37,6 @@
     End Sub
 
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If serials IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(serials, Title_lbl.Text, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(serials, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = serials
-                        pdf.Title = Title_lbl.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(serials, Title_lbl.Text)
     End Sub
 End Class

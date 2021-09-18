@@ -5,33 +5,7 @@
     End Sub
 
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If report IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(report, Title_lbl.Text, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(report, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = report
-                        pdf.Title = Title_lbl.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(report, Title_lbl.Text)
     End Sub
 
     Private Sub Print_btn_Click(sender As Object, e As EventArgs) Handles Print_btn.Click
@@ -74,7 +48,7 @@
             If Integer.TryParse(LocationA_txt.Text, Nothing) Then
                 If LocationB_txt.Text <> "" Then
                     If Integer.TryParse(LocationB_txt.Text, Nothing) Then
-                        location_serial_filter = String.Format("AND CONVERT(INTEGER, CASE WHEN Location NOT LIKE '%[^0-9]%' THEN Location  ELSE -1 END) BETWEEN {0} AND {1}", Strings.Left(LocationA_txt.Text.Trim & "00000000", 8), Strings.Left(LocationB_txt.Text.Trim & "99999999", 8))
+                        location_serial_filter = String.Format("AND CONVERT(INTEGER, CASE WHEN Location LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]' THEN Location  ELSE -1 END) BETWEEN {0} AND {1}", Strings.Left(LocationA_txt.Text.Trim & "00000000", 8), Strings.Left(LocationB_txt.Text.Trim & "99999999", 8))
                     Else
                         FlashAlerts.ShowError("Rango de locales incorrecto.")
                         Exit Sub
@@ -89,7 +63,17 @@
         Else
             location_serial_filter = ""
         End If
-        report = SQL.Current.GetDatatable(String.Format("SELECT [Location] AS Local,Warehousename AS Estacion,StatusDescription AS Estatus,Serialnumber,CurrentQuantity AS Cantidad,UoM AS Unidad,Partnumber AS [No. de Parte] FROM vw_Smk_Serials WHERE Status IN ('S','O','C','Q','T','U') AND InvoiceTrouble = 0 {0} ORDER BY [Location];", location_serial_filter))
+
+        Dim mspec_serials_filter As String
+        If IgnoreMSpec_rb.Checked Then
+            mspec_serials_filter = "AND MaterialType <> 'Cable'"
+        ElseIf OnlyMspec_rb.Checked Then
+            mspec_serials_filter = "AND MaterialType = 'Cable'"
+        Else
+            mspec_serials_filter = ""
+        End If
+
+        report = SQL.Current.GetDatatable(String.Format("SELECT [Location] AS Local,Warehousename AS Estacion,StatusDescription AS Estatus,Serialnumber,CurrentQuantity AS Cantidad,UoM AS Unidad,Partnumber AS [No. de Parte] FROM vw_Smk_Serials WHERE Status IN ('S','O','C','Q','T','U') AND InvoiceTrouble = 0 {0} {1} ORDER BY [Location];", location_serial_filter, mspec_serials_filter))
         Report_dgv.DataSource = report
         LoadingScreen.Hide()
     End Sub

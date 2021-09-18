@@ -22,6 +22,10 @@ Partial Class QLY_RemoveAlert
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(QLY_RemoveAlert))
         Me.Alerts_dgv = New CAguilar.DataGridViewWithFilters()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,6 +37,7 @@ Partial Class QLY_RemoveAlert
         Me.remove_btn = New CAguilar.DataGridViewImprovedButtonColumn()
         Me.ToolStripMain = New System.Windows.Forms.ToolStrip()
         Me.Refresh_btn = New System.Windows.Forms.ToolStripButton()
+        Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         CType(Me.Alerts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,15 +49,45 @@ Partial Class QLY_RemoveAlert
         Me.Alerts_dgv.AllowColumnHiding = True
         Me.Alerts_dgv.AllowUserToAddRows = False
         Me.Alerts_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray
+        Me.Alerts_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Alerts_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Alerts_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Alerts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Alerts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Alerts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Partnumber, Me.SupplierPartnumber, Me.Reason, Me.Date_, Me.User, Me.remove_btn})
-        Me.Alerts_dgv.Location = New System.Drawing.Point(4, 28)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Alerts_dgv.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Alerts_dgv.DefaultRowFilter = Nothing
+        Me.Alerts_dgv.EnableHeadersVisualStyles = False
+        Me.Alerts_dgv.Location = New System.Drawing.Point(4, 32)
         Me.Alerts_dgv.Name = "Alerts_dgv"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Alerts_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.Alerts_dgv.ShowRowNumber = True
-        Me.Alerts_dgv.Size = New System.Drawing.Size(805, 363)
+        Me.Alerts_dgv.Size = New System.Drawing.Size(805, 359)
         Me.Alerts_dgv.TabIndex = 91
         '
         'ID
@@ -105,6 +140,8 @@ Partial Class QLY_RemoveAlert
         '
         'remove_btn
         '
+        Me.remove_btn.DefaultImage = Nothing
+        Me.remove_btn.DefaultText = ""
         Me.remove_btn.HeaderText = "Desactivar"
         Me.remove_btn.Name = "remove_btn"
         Me.remove_btn.ReadOnly = True
@@ -113,7 +150,7 @@ Partial Class QLY_RemoveAlert
         '
         'ToolStripMain
         '
-        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Refresh_btn, Me.toolStripSeparator, Me.Title_lbl})
+        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Refresh_btn, Me.FindToolStripButton, Me.toolStripSeparator, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
         Me.ToolStripMain.Size = New System.Drawing.Size(814, 29)
@@ -129,6 +166,16 @@ Partial Class QLY_RemoveAlert
         Me.Refresh_btn.Size = New System.Drawing.Size(23, 26)
         Me.Refresh_btn.Text = "&Refresh"
         Me.Refresh_btn.ToolTipText = "Actualizar"
+        '
+        'FindToolStripButton
+        '
+        Me.FindToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.FindToolStripButton.Image = CType(resources.GetObject("FindToolStripButton.Image"), System.Drawing.Image)
+        Me.FindToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.FindToolStripButton.Name = "FindToolStripButton"
+        Me.FindToolStripButton.Size = New System.Drawing.Size(23, 26)
+        Me.FindToolStripButton.Text = "&Buscar"
+        Me.FindToolStripButton.ToolTipText = "Buscar"
         '
         'toolStripSeparator
         '
@@ -172,4 +219,5 @@ Partial Class QLY_RemoveAlert
     Friend WithEvents Date_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents User As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents remove_btn As CAguilar.DataGridViewImprovedButtonColumn
+    Friend WithEvents FindToolStripButton As System.Windows.Forms.ToolStripButton
 End Class

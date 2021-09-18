@@ -2,7 +2,10 @@
     Dim report As DataTable
     Dim sb As SearchBox
     Private Sub Ord_MixMaxAlerts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sb = New SearchBox(Report_dgv)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(Me.Report_dgv)
+
         Dim users = SQL.Current.GetDatatable("SELECT DISTINCT [FullName],U.Username FROM Sys_Users AS U INNER JOIN Ord_MRPControllers AS M ON U.Username = M.Username ")
         users.Rows.Add("Todos", "*")
         GF.FillCombobox(Username_cbo, users, "Fullname", "Username")
@@ -16,7 +19,7 @@
 
     Private Sub RefreshAlerts()
         Dim user_filter As String = If(Username_cbo.SelectedValue = "*", "", String.Format("AND U.Username = '{0}'", Username_cbo.SelectedValue))
-        report = SQL.Current.GetDatatable(String.Format("SELECT A.ID, A.[Partnumber], R.Description, M.MRP,U.FullName AS [Owner],dbo.Smk_Locations(A.Partnumber) AS [Location], [Type], O.FullName AS ReportedBy, A.[Date], [Comment],ISNULL(dbo.Ord_ForecastAvg(A.[Partnumber],A.[Date],2),0) AS Forecast,dbo.Ord_NextTransit(A.Partnumber) AS Transit, AU.Fullname AS AnswerBy, [AnswerDate], [Answer],[PromiseDate] FROM Ord_RawMaterialAlerts AS A INNER JOIN Sys_RawMaterial AS R ON A.Partnumber = R.Partnumber INNER JOIN Ord_MRPControllers AS M ON R.MRP = M.MRP INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Smk_Operators AS O ON A.Badge = O.Badge LEFT OUTER JOIN Sys_Users AS AU ON A.AnswerUsername = AU.Username WHERE ((LEFT(A.[Type],3) IN ('Min','Cri') AND (A.PromiseDate IS NULL Or A.PromiseDate >= GETDATE())) OR (LEFT(A.[Type],3) = 'Max' AND A.Answer IS NULL)) {0} ORDER BY A.[Type],A.Partnumber;", user_filter))
+        report = SQL.Current.GetDatatable(String.Format("SELECT A.ID, A.[Partnumber], R.Description, M.MRP,U.FullName AS [Owner],dbo.Smk_Locations(A.Partnumber) AS [Location], [Type], O.FullName AS ReportedBy, A.[Date], [Comment],ISNULL(dbo.Ord_ForecastAvg(A.[Partnumber],A.[Date],2),0) AS Forecast,dbo.Ord_NextTransit(A.Partnumber) AS Transit, R.SupplierName, AU.Fullname AS AnswerBy, [AnswerDate], [Answer],[PromiseDate] FROM Ord_RawMaterialAlerts AS A INNER JOIN Sys_RawMaterial AS R ON A.Partnumber = R.Partnumber INNER JOIN Ord_MRPControllers AS M ON R.MRP = M.MRP INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Smk_Operators AS O ON A.Badge = O.Badge LEFT OUTER JOIN Sys_Users AS AU ON A.AnswerUsername = AU.Username WHERE ((LEFT(A.[Type],3) IN ('Min','Cri') AND (A.PromiseDate IS NULL Or A.PromiseDate >= GETDATE())) OR (LEFT(A.[Type],3) = 'Max' AND A.Answer IS NULL)) {0} ORDER BY A.[Type],A.Partnumber;", user_filter))
         Report_dgv.DataSource = report
     End Sub
 
@@ -28,33 +31,7 @@
 
 
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If report IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(report.DefaultView, Title_lbl.Text, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(report.DefaultView.ToTable, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = report.DefaultView.ToTable
-                        pdf.Title = Title_lbl.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(report.DefaultView, Title_lbl.Text)
     End Sub
 
     Private Sub Ord_MixMaxAlerts_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -81,7 +58,7 @@
                     dbi.Item("PromiseDate") = DBNull.Value
                 End If
                 Report_dgv.InvalidateRow(e.RowIndex)
-                FlashAlerts.ShowConfirm("Hecho!")
+                FlashAlerts.ShowConfirm("¡Hecho!")
             End If
             answer.Dispose()
         End If
@@ -89,5 +66,6 @@
 
     Private Sub Find_btn_Click(sender As Object, e As EventArgs) Handles Find_btn.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 End Class

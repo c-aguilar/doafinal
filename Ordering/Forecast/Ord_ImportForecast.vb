@@ -10,7 +10,7 @@
                 LoadingScreen.Show()
                 Dim sheet = SheetSelector.Get(ofd.FileName)
                 Dim new_file = GF.TempTXTPath
-                If MyExcel.ToTXT(ofd.FileName, new_file, sheet) Then
+                If MyExcel.ToTXT(ofd.FileName, new_file, sheet.Trim("'").Trim("$")) Then
                     data = CSV.Datatable(new_file, vbTab, True, True, 0)
                     Save_btn.Enabled = False
                     If data IsNot Nothing Then
@@ -55,18 +55,18 @@
                             Dim col_date As Date
                             If Date.TryParse(data.Columns(i).ColumnName, col_date) Then
                                 For Each row As DataRow In data.Rows
-                                    forecast.Rows.Add(Strings.Right("00000000" & row.Item("Part").ToString.Trim, 8), first_date, col_date, row.Item(i))
+                                    forecast.Rows.Add(RawMaterial.Format(row.Item("Part")), first_date, col_date, row.Item(i))
                                 Next
                             ElseIf data.Columns(i).ColumnName.ToLower = "past due" Then
                                 For Each row As DataRow In data.Rows
-                                    forecast.Rows.Add(Strings.Right("00000000" & row.Item("Part").ToString.Trim, 8), first_date, first_date.AddDays(-7), row.Item(i))
+                                    forecast.Rows.Add(RawMaterial.Format(row.Item("Part")), first_date, first_date.AddDays(-7), row.Item(i))
                                 Next
                             End If
                         Next
                         If SQL.Current.Upsert(forecast, "tmpForecast", "CREATE TABLE #tmpForecast ([Partnumber] [char](8) NOT NULL,[Date] [date] NOT NULL,[Week] [date] NOT NULL,[Quantity] [float] NOT NULL)", "MERGE Ord_Forecast AS target USING #tmpForecast AS source ON target.Partnumber = source.Partnumber AND target.[Date] = source.[Date] AND target.[Week] = source.[Week] WHEN MATCHED THEN UPDATE SET Quantity = source.Quantity WHEN NOT MATCHED THEN INSERT (Partnumber,[Date],[Week],Quantity) VALUES (source.Partnumber,source.[Date],source.[Week],source.[Quantity]);") Then
                             LoadingScreen.Hide()
                             Save_btn.Enabled = False
-                            FlashAlerts.ShowConfirm("Hecho!")
+                            FlashAlerts.ShowConfirm("¡Hecho!")
                         Else
                             LoadingScreen.Hide()
                             FlashAlerts.ShowError("Error al guardar.")

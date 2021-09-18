@@ -22,6 +22,7 @@ Partial Class FGR_SerialScan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FGR_SerialScan))
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -34,14 +35,12 @@ Partial Class FGR_SerialScan
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Close_btn = New System.Windows.Forms.Button()
         Me.Kanbans_dgv = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kanban = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.result = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.icon_img = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.Title_lbl = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CountDown_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.CountDown_lbl = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         CType(Me.Picture_pb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -82,7 +81,7 @@ Partial Class FGR_SerialScan
         Me.Route_lbl.ForeColor = System.Drawing.Color.Black
         Me.Route_lbl.Location = New System.Drawing.Point(83, 43)
         Me.Route_lbl.Name = "Route_lbl"
-        Me.Route_lbl.Size = New System.Drawing.Size(84, 35)
+        Me.Route_lbl.Size = New System.Drawing.Size(209, 35)
         Me.Route_lbl.TabIndex = 150
         Me.Route_lbl.Text = "RUTA 1"
         '
@@ -166,12 +165,12 @@ Partial Class FGR_SerialScan
         '
         Me.Kanbans_dgv.AllowUserToAddRows = False
         Me.Kanbans_dgv.AllowUserToDeleteRows = False
+        Me.Kanbans_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Kanbans_dgv.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Kanbans_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Kanbans_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Kanbans_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Kanbans_dgv.ColumnHeadersVisible = False
-        Me.Kanbans_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.kanban, Me.result, Me.icon_img})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -189,48 +188,17 @@ Partial Class FGR_SerialScan
         Me.Kanbans_dgv.Size = New System.Drawing.Size(312, 512)
         Me.Kanbans_dgv.TabIndex = 141
         '
-        'ID
+        'Title_lbl
         '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Visible = False
-        '
-        'kanban
-        '
-        Me.kanban.DataPropertyName = "Kanban"
-        Me.kanban.HeaderText = "Kanban"
-        Me.kanban.Name = "kanban"
-        Me.kanban.ReadOnly = True
-        Me.kanban.Width = 250
-        '
-        'result
-        '
-        Me.result.DataPropertyName = "Result"
-        Me.result.HeaderText = "Result"
-        Me.result.Name = "result"
-        Me.result.ReadOnly = True
-        Me.result.Visible = False
-        '
-        'icon_img
-        '
-        Me.icon_img.HeaderText = "Icon"
-        Me.icon_img.Name = "icon_img"
-        Me.icon_img.ReadOnly = True
-        Me.icon_img.Width = 50
-        '
-        'lblTitle
-        '
-        Me.lblTitle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblTitle.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.SteelBlue
-        Me.lblTitle.Location = New System.Drawing.Point(0, 0)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(841, 25)
-        Me.lblTitle.TabIndex = 152
-        Me.lblTitle.Text = "Escaneo de Contenedores de PT"
+        Me.Title_lbl.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Title_lbl.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Title_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Title_lbl.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Title_lbl.Location = New System.Drawing.Point(0, 0)
+        Me.Title_lbl.Name = "Title_lbl"
+        Me.Title_lbl.Size = New System.Drawing.Size(841, 25)
+        Me.Title_lbl.TabIndex = 152
+        Me.Title_lbl.Text = "Escaneo de Contenedores de PT"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -256,12 +224,31 @@ Partial Class FGR_SerialScan
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         Me.DataGridViewTextBoxColumn3.Visible = False
         '
+        'CountDown_timer
+        '
+        Me.CountDown_timer.Interval = 1000
+        '
+        'CountDown_lbl
+        '
+        Me.CountDown_lbl.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CountDown_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.CountDown_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CountDown_lbl.ForeColor = System.Drawing.Color.DimGray
+        Me.CountDown_lbl.Location = New System.Drawing.Point(607, 512)
+        Me.CountDown_lbl.Name = "CountDown_lbl"
+        Me.CountDown_lbl.Size = New System.Drawing.Size(218, 26)
+        Me.CountDown_lbl.TabIndex = 153
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
+        Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        '
         'FGR_SerialScan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(841, 646)
-        Me.Controls.Add(Me.lblTitle)
+        Me.Controls.Add(Me.CountDown_lbl)
+        Me.Controls.Add(Me.Title_lbl)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Route_lbl)
         Me.Controls.Add(Me.OperatorName_lbl)
@@ -272,6 +259,7 @@ Partial Class FGR_SerialScan
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FGR_SerialScan"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Finished Good Delivery Routes"
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -291,12 +279,10 @@ Partial Class FGR_SerialScan
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Close_btn As System.Windows.Forms.Button
     Friend WithEvents Kanbans_dgv As System.Windows.Forms.DataGridView
-    Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kanban As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents result As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents icon_img As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents lblTitle As System.Windows.Forms.Label
+    Friend WithEvents Title_lbl As System.Windows.Forms.Label
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CountDown_timer As System.Windows.Forms.Timer
+    Friend WithEvents CountDown_lbl As System.Windows.Forms.Label
 End Class

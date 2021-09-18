@@ -35,6 +35,10 @@ Partial Class Smk_PartialDiscountKiosk
         Me.CountDown_lbl = New System.Windows.Forms.Label()
         Me.Close_btn = New System.Windows.Forms.Button()
         Me.CountDown_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.Description_lbl = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Partnumber_lbl = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +68,7 @@ Partial Class Smk_PartialDiscountKiosk
         '
         Me.Partial_btn.Image = CType(resources.GetObject("Partial_btn.Image"), System.Drawing.Image)
         Me.Partial_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Partial_btn.Location = New System.Drawing.Point(115, 201)
+        Me.Partial_btn.Location = New System.Drawing.Point(115, 293)
         Me.Partial_btn.Name = "Partial_btn"
         Me.Partial_btn.Size = New System.Drawing.Size(150, 50)
         Me.Partial_btn.TabIndex = 3
@@ -75,7 +79,7 @@ Partial Class Smk_PartialDiscountKiosk
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 154)
+        Me.Label2.Location = New System.Drawing.Point(58, 246)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 91
@@ -83,10 +87,10 @@ Partial Class Smk_PartialDiscountKiosk
         '
         'Quantity_nud
         '
-        Me.Quantity_nud.BackColor = System.Drawing.Color.LightYellow
+        Me.Quantity_nud.BackColor = System.Drawing.Color.Ivory
         Me.Quantity_nud.DecimalPlaces = 3
         Me.Quantity_nud.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Quantity_nud.Location = New System.Drawing.Point(185, 145)
+        Me.Quantity_nud.Location = New System.Drawing.Point(185, 237)
         Me.Quantity_nud.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.Quantity_nud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Quantity_nud.Name = "Quantity_nud"
@@ -97,7 +101,7 @@ Partial Class Smk_PartialDiscountKiosk
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(107, 83)
         Me.Serial_txt.MaxLength = 16
@@ -109,7 +113,7 @@ Partial Class Smk_PartialDiscountKiosk
         '
         Me.CurrentQuantity_lbl.AutoSize = True
         Me.CurrentQuantity_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentQuantity_lbl.Location = New System.Drawing.Point(197, 117)
+        Me.CurrentQuantity_lbl.Location = New System.Drawing.Point(197, 209)
         Me.CurrentQuantity_lbl.Name = "CurrentQuantity_lbl"
         Me.CurrentQuantity_lbl.Size = New System.Drawing.Size(19, 25)
         Me.CurrentQuantity_lbl.TabIndex = 100
@@ -119,7 +123,7 @@ Partial Class Smk_PartialDiscountKiosk
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(58, 124)
+        Me.Label3.Location = New System.Drawing.Point(58, 216)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 16)
         Me.Label3.TabIndex = 95
@@ -136,7 +140,7 @@ Partial Class Smk_PartialDiscountKiosk
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(326, 26)
         Me.CountDown_lbl.TabIndex = 103
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Close_btn
@@ -149,7 +153,7 @@ Partial Class Smk_PartialDiscountKiosk
         Me.Close_btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close_btn.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Close_btn.Location = New System.Drawing.Point(89, 288)
+        Me.Close_btn.Location = New System.Drawing.Point(89, 380)
         Me.Close_btn.Name = "Close_btn"
         Me.Close_btn.Size = New System.Drawing.Size(202, 86)
         Me.Close_btn.TabIndex = 104
@@ -161,12 +165,56 @@ Partial Class Smk_PartialDiscountKiosk
         '
         Me.CountDown_timer.Interval = 1000
         '
+        'Description_lbl
+        '
+        Me.Description_lbl.AutoSize = True
+        Me.Description_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Description_lbl.Location = New System.Drawing.Point(107, 157)
+        Me.Description_lbl.Name = "Description_lbl"
+        Me.Description_lbl.Size = New System.Drawing.Size(14, 20)
+        Me.Description_lbl.TabIndex = 112
+        Me.Description_lbl.Text = "-"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(17, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(83, 16)
+        Me.Label6.TabIndex = 111
+        Me.Label6.Text = "Descripcion:"
+        '
+        'Partnumber_lbl
+        '
+        Me.Partnumber_lbl.AutoSize = True
+        Me.Partnumber_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Partnumber_lbl.Location = New System.Drawing.Point(107, 126)
+        Me.Partnumber_lbl.Name = "Partnumber_lbl"
+        Me.Partnumber_lbl.Size = New System.Drawing.Size(16, 24)
+        Me.Partnumber_lbl.TabIndex = 110
+        Me.Partnumber_lbl.Text = "-"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(71, 134)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(30, 16)
+        Me.Label5.TabIndex = 109
+        Me.Label5.Text = "NP:"
+        '
         'Smk_PartialDiscountKiosk
         '
         Me.AcceptButton = Me.Partial_btn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(380, 386)
+        Me.ClientSize = New System.Drawing.Size(380, 479)
+        Me.Controls.Add(Me.Description_lbl)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Partnumber_lbl)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Close_btn)
         Me.Controls.Add(Me.CountDown_lbl)
         Me.Controls.Add(Me.CurrentQuantity_lbl)
@@ -200,4 +248,8 @@ Partial Class Smk_PartialDiscountKiosk
     Friend WithEvents CountDown_lbl As System.Windows.Forms.Label
     Friend WithEvents Close_btn As System.Windows.Forms.Button
     Friend WithEvents CountDown_timer As System.Windows.Forms.Timer
+    Friend WithEvents Description_lbl As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Partnumber_lbl As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

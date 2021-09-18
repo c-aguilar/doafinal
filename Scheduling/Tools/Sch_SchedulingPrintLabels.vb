@@ -30,19 +30,19 @@
             Dim sap As New SAP
             If sap.Available Then
                 For Each l As DataRowView In labels.DefaultView
-                    Dim x = l.Item("StdPack")
-                    Dim y = l.Item("Quantity")
+                    'Dim x = l.Item("StdPack")
+                    'Dim y = l.Item("Quantity")
                     If l.Item("Quantity") <= l.Item("StdPack") Then
-                        If Not (IsNothing(l.Item("Material")) OrElse IsDBNull(l.Item("Material"))) AndAlso sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), l.Item("Quantity"), IIf(IsNothing(l.Item("Document")) OrElse IsDBNull(l.Item("Document")), "", l.Item("Document")), 1, l.Item("Copies")) Then
+                        If Not (IsNothing(l.Item("Material")) OrElse IsDBNull(l.Item("Material"))) AndAlso sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), l.Item("Quantity"), Delta.NullReplace(l.Item("Document"), ""), 1, l.Item("Copies")) Then
                             l.Item("Status") = "Printed"
                         Else
                             l.Item("Status") = "Error"
                         End If
                     Else
-                        If Not (IsNothing(l.Item("Material")) OrElse IsDBNull(l.Item("Material"))) AndAlso sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), l.Item("StdPack"), IIf(IsNothing(l.Item("Document")) OrElse IsDBNull(l.Item("Document")), "", l.Item("Document")), Math.Floor(l.Item("Quantity") / l.Item("StdPack")), l.Item("Copies")) Then
+                        If Not (IsNothing(l.Item("Material")) OrElse IsDBNull(l.Item("Material"))) AndAlso sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), l.Item("StdPack"), Delta.NullReplace(l.Item("Document"), ""), Math.Floor(l.Item("Quantity") / l.Item("StdPack")), l.Item("Copies")) Then
                             Dim quantity_remaining = l.Item("Quantity") - (Math.Floor(l.Item("Quantity") / l.Item("StdPack")) * l.Item("StdPack"))
                             If quantity_remaining > 0 Then
-                                sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), quantity_remaining, 1, l.Item("Copies"))
+                                sap.ZMDEPR(Parameter("SYS_PlantCode"), l.Item("Material"), IIf(IsNothing(l.Item("Ship To")) OrElse IsDBNull(l.Item("Ship To")), "", l.Item("Ship To")), IIf(IsNothing(l.Item("Container")) OrElse IsDBNull(l.Item("Container")), "", l.Item("Container")), quantity_remaining, Delta.NullReplace(l.Item("Document"), ""), 1, l.Item("Copies"))
                             End If
                             l.Item("Status") = "Printed"
                         Else

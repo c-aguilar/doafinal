@@ -1,7 +1,7 @@
 ﻿Public Class Smk_Kiosk
 
     Private Sub Smk_Kiosk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Warehouse_lbl.Text = String.Format("Estación {0}", SQL.Current.GetString("Name", "Smk_Warehouses", "Warehouse", My.Settings.Warehouse, ""))
     End Sub
 
     Private Sub Smk_Kiosk_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

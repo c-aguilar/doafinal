@@ -23,7 +23,7 @@ Partial Class QLY_RejectSerialnumber
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(QLY_RejectSerialnumber))
-        Me.Alerts_dgv = New System.Windows.Forms.DataGridView()
+        Me.Alerts_dgv = New DataGridViewWithFilters
         Me.Serial = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Partnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierPartnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +38,7 @@ Partial Class QLY_RejectSerialnumber
         Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         Me.SelectAll_chk = New System.Windows.Forms.CheckBox()
         Me.Delete_btn = New System.Windows.Forms.Button()
+        Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.Alerts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStripMain.SuspendLayout()
         Me.SuspendLayout()
@@ -53,7 +54,7 @@ Partial Class QLY_RejectSerialnumber
         Me.Alerts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Serial, Me.Partnumber, Me.SupplierPartnumber, Me.SupplierName, Me.Reason, Me.Date_, Me.check})
         Me.Alerts_dgv.Location = New System.Drawing.Point(4, 62)
         Me.Alerts_dgv.Name = "Alerts_dgv"
-        Me.Alerts_dgv.Size = New System.Drawing.Size(888, 329)
+        Me.Alerts_dgv.Size = New System.Drawing.Size(837, 329)
         Me.Alerts_dgv.TabIndex = 91
         '
         'Serial
@@ -111,10 +112,10 @@ Partial Class QLY_RejectSerialnumber
         '
         'ToolStripMain
         '
-        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Refresh_btn, Me.Export_btn, Me.toolStripSeparator, Me.Title_lbl})
+        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Refresh_btn, Me.Export_btn, Me.FindToolStripButton, Me.toolStripSeparator, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
-        Me.ToolStripMain.Size = New System.Drawing.Size(897, 29)
+        Me.ToolStripMain.Size = New System.Drawing.Size(846, 29)
         Me.ToolStripMain.TabIndex = 103
         Me.ToolStripMain.Text = "ToolStrip1"
         '
@@ -152,8 +153,9 @@ Partial Class QLY_RejectSerialnumber
         '
         'SelectAll_chk
         '
+        Me.SelectAll_chk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SelectAll_chk.AutoSize = True
-        Me.SelectAll_chk.Location = New System.Drawing.Point(705, 39)
+        Me.SelectAll_chk.Location = New System.Drawing.Point(711, 39)
         Me.SelectAll_chk.Name = "SelectAll_chk"
         Me.SelectAll_chk.Size = New System.Drawing.Size(123, 17)
         Me.SelectAll_chk.TabIndex = 105
@@ -162,9 +164,10 @@ Partial Class QLY_RejectSerialnumber
         '
         'Delete_btn
         '
+        Me.Delete_btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Delete_btn.Image = CType(resources.GetObject("Delete_btn.Image"), System.Drawing.Image)
         Me.Delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Delete_btn.Location = New System.Drawing.Point(599, 34)
+        Me.Delete_btn.Location = New System.Drawing.Point(605, 34)
         Me.Delete_btn.Name = "Delete_btn"
         Me.Delete_btn.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
         Me.Delete_btn.Size = New System.Drawing.Size(100, 25)
@@ -173,11 +176,21 @@ Partial Class QLY_RejectSerialnumber
         Me.Delete_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Delete_btn.UseVisualStyleBackColor = True
         '
+        'FindToolStripButton
+        '
+        Me.FindToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.FindToolStripButton.Image = CType(resources.GetObject("FindToolStripButton.Image"), System.Drawing.Image)
+        Me.FindToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.FindToolStripButton.Name = "FindToolStripButton"
+        Me.FindToolStripButton.Size = New System.Drawing.Size(23, 26)
+        Me.FindToolStripButton.Text = "&Buscar"
+        Me.FindToolStripButton.ToolTipText = "Buscar"
+        '
         'QLY_RejectSerialnumber
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(897, 396)
+        Me.ClientSize = New System.Drawing.Size(846, 396)
         Me.Controls.Add(Me.SelectAll_chk)
         Me.Controls.Add(Me.Delete_btn)
         Me.Controls.Add(Me.ToolStripMain)
@@ -192,7 +205,7 @@ Partial Class QLY_RejectSerialnumber
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Alerts_dgv As System.Windows.Forms.DataGridView
+    Friend WithEvents Alerts_dgv As DataGridViewWithFilters
     Friend WithEvents ToolStripMain As System.Windows.Forms.ToolStrip
     Friend WithEvents Refresh_btn As System.Windows.Forms.ToolStripButton
     Friend WithEvents toolStripSeparator As System.Windows.Forms.ToolStripSeparator
@@ -207,4 +220,5 @@ Partial Class QLY_RejectSerialnumber
     Friend WithEvents Reason As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Date_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents check As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents FindToolStripButton As System.Windows.Forms.ToolStripButton
 End Class

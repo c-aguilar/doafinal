@@ -26,16 +26,11 @@ Partial Class Dic_Selector
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DieCenter_lbl = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Picklist_dgv = New System.Windows.Forms.DataGridView()
-        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Name_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Option_txt = New CAguilar.WaterMarkTextBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Name_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Picklist_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -54,43 +49,11 @@ Partial Class Dic_Selector
         Me.DieCenter_lbl.Text = "Picklist de Terminales"
         Me.DieCenter_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 600.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 2, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(8, 55)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(789, 477)
-        Me.TableLayoutPanel1.TabIndex = 55
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.Controls.Add(Me.Picklist_dgv)
-        Me.Panel3.Controls.Add(Me.Panel1)
-        Me.Panel3.Location = New System.Drawing.Point(97, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(594, 471)
-        Me.Panel3.TabIndex = 0
-        '
         'Picklist_dgv
         '
         Me.Picklist_dgv.AllowUserToAddRows = False
         Me.Picklist_dgv.AllowUserToDeleteRows = False
-        Me.Picklist_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Picklist_dgv.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Picklist_dgv.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Picklist_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -106,14 +69,40 @@ Partial Class Dic_Selector
         Me.Picklist_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.Name_})
         Me.Picklist_dgv.EnableHeadersVisualStyles = False
         Me.Picklist_dgv.GridColor = System.Drawing.SystemColors.Control
-        Me.Picklist_dgv.Location = New System.Drawing.Point(22, 81)
+        Me.Picklist_dgv.Location = New System.Drawing.Point(109, 106)
         Me.Picklist_dgv.Name = "Picklist_dgv"
         Me.Picklist_dgv.ReadOnly = True
+        Me.Picklist_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.Picklist_dgv.RowHeadersVisible = False
-        Me.Picklist_dgv.RowTemplate.DividerHeight = 60
-        Me.Picklist_dgv.RowTemplate.Height = 140
-        Me.Picklist_dgv.Size = New System.Drawing.Size(550, 389)
+        Me.Picklist_dgv.RowTemplate.DividerHeight = 100
+        Me.Picklist_dgv.RowTemplate.Height = 210
+        Me.Picklist_dgv.Size = New System.Drawing.Size(587, 417)
         Me.Picklist_dgv.TabIndex = 29
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Panel1.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel1.Controls.Add(Me.Option_txt)
+        Me.Panel1.Location = New System.Drawing.Point(261, 59)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(282, 41)
+        Me.Panel1.TabIndex = 27
+        '
+        'Option_txt
+        '
+        Me.Option_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Option_txt.BackColor = System.Drawing.Color.White
+        Me.Option_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Option_txt.ForeColor = System.Drawing.Color.Black
+        Me.Option_txt.Location = New System.Drawing.Point(3, 3)
+        Me.Option_txt.Name = "Option_txt"
+        Me.Option_txt.Size = New System.Drawing.Size(276, 35)
+        Me.Option_txt.TabIndex = 24
+        Me.Option_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Option_txt.WaterMarkColor = System.Drawing.Color.Gray
+        Me.Option_txt.WaterMarkText = "Escanea una opcion..."
         '
         'Code
         '
@@ -135,11 +124,11 @@ Partial Class Dic_Selector
         '
         Me.Name_.DataPropertyName = "Name"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Name_.DefaultCellStyle = DataGridViewCellStyle3
         Me.Name_.HeaderText = "Name"
@@ -147,56 +136,18 @@ Partial Class Dic_Selector
         Me.Name_.ReadOnly = True
         Me.Name_.Width = 190
         '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel1.Controls.Add(Me.Option_txt)
-        Me.Panel1.Location = New System.Drawing.Point(156, 13)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(282, 41)
-        Me.Panel1.TabIndex = 27
-        '
-        'Option_txt
-        '
-        Me.Option_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Option_txt.BackColor = System.Drawing.Color.White
-        Me.Option_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Option_txt.ForeColor = System.Drawing.Color.Black
-        Me.Option_txt.Location = New System.Drawing.Point(3, 3)
-        Me.Option_txt.Name = "Option_txt"
-        Me.Option_txt.Size = New System.Drawing.Size(276, 35)
-        Me.Option_txt.TabIndex = 24
-        Me.Option_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.Option_txt.WaterMarkColor = System.Drawing.Color.Gray
-        Me.Option_txt.WaterMarkText = "Escanea una opcion..."
-        '
-        'Panel4
-        '
-        Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.Location = New System.Drawing.Point(697, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(89, 471)
-        Me.Panel4.TabIndex = 1
-        '
         'Dic_Selector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(804, 535)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Picklist_dgv)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DieCenter_lbl)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Dic_Selector"
         Me.ShowIcon = False
         Me.Text = "Die Center"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
         CType(Me.Picklist_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -204,12 +155,9 @@ Partial Class Dic_Selector
 
     End Sub
     Friend WithEvents DieCenter_lbl As System.Windows.Forms.Label
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Picklist_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Option_txt As CAguilar.WaterMarkTextBox
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Code As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Name_ As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

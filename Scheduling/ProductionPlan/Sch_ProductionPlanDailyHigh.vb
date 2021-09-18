@@ -22,11 +22,13 @@ Public Class Sch_ProductionPlanDailyHigh
         PastDueCombo.SelectedItem = "Weekly"
         ShowCombo.SelectedItem = "Only Requirements"
         InitialDateButton.Text = from_day.ToShortDateString
-        sb = New SearchBox(Me.dgvProductionPlan)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(Me.dgvProductionPlan)
     End Sub
     Private Sub ProductionPlanDaily_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If Not changes_saved Then
-            Select Case MessageBox.Show("Save changes before close?", "Changes not saved", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+            Select Case MessageBox.Show("Save changes before close?", "Changes not saved", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                 Case Windows.Forms.DialogResult.Yes
                     Save()
                 Case Windows.Forms.DialogResult.Cancel
@@ -56,6 +58,7 @@ Public Class Sch_ProductionPlanDailyHigh
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 
     Private Sub CopyToolStripButton_Click(sender As Object, e As EventArgs) Handles CopyToolStripButton.Click
@@ -297,7 +300,7 @@ Public Class Sch_ProductionPlanDailyHigh
                                         End If
                                     Next
                                 Else
-                                    'Vaciar resultados al plan de produccion
+                                    'Vaciar resultados al plan de producción
                                     'For Each row As DataRow In dec_column.Rows
                                     '    If row.Item("Quantity") > 0 Then
                                     '        Dim material As DataRow = ds_production_plan.Tables("Materials").Rows.Find({row.Item("Material"), row.Item("Board")})
@@ -691,7 +694,7 @@ Public Class Sch_ProductionPlanDailyHigh
     Private Sub LoadProductionPlan()
         dgvProductionPlan.EndEdit()
         If Not changes_saved Then
-            Select Case MessageBox.Show("Save changes before refresh?", "Changes not saved", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+            Select Case MessageBox.Show("Save changes before refresh?", "Changes not saved", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                 Case Windows.Forms.DialogResult.Yes
                     Save()
                 Case Windows.Forms.DialogResult.Cancel
@@ -729,8 +732,8 @@ Public Class Sch_ProductionPlanDailyHigh
 
             ds_production_plan = New DataSet
             ds_production_plan.Tables.Add(production_plan) 'Plan de producccion para el usuario
-            'ds_production_plan.Tables.Add(decimal_pp) 'Plan de produccion para auto scheduling
-            ds_production_plan.Tables.Add(sum_pp) 'Plan de produccion sumado para numeros de parte en varios tableros
+            'ds_production_plan.Tables.Add(decimal_pp) 'Plan de producción para auto scheduling
+            ds_production_plan.Tables.Add(sum_pp) 'Plan de producción sumado para numeros de parte en varios tableros
             ds_production_plan.Tables.Add(New DataTable(""))
             ds_production_plan.Tables.Add(GetMaterialWithPastDueAndStock(from_day, from_day.AddDays((weeks_toShow * 7) - 1), selected_business, selected_family))
             ds_production_plan.Tables.Add(GetCapacities(from_day, from_day.AddDays((weeks_toShow * 7) - 1), selected_business, selected_family))
@@ -1305,35 +1308,7 @@ Public Class Sch_ProductionPlanDailyHigh
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Cursor.Current = Cursors.WaitCursor
-        If Not IsNothing(ds_production_plan) Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(ds_production_plan.Tables("CurrentProductionPlan").DefaultView.ToTable, "PP_" & ChangeBusinessButton.Text.Replace("/", "-"), True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(ds_production_plan.Tables("CurrentProductionPlan").DefaultView.ToTable, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = ds_production_plan.Tables("CurrentProductionPlan").DefaultView.ToTable
-                        pdf.Title = "Production Plan -" & ChangeBusinessButton.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
-        Cursor.Current = Cursors.Arrow
+        Delta.Export(ds_production_plan.Tables("CurrentProductionPlan").DefaultView, "PP_" & ChangeBusinessButton.Text.Replace("/", "-"))
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click

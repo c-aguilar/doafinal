@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("APTIV RBE V")> 
 <Assembly: AssemblyProduct("Delta ERP")> 
-<Assembly: AssemblyCopyright("Carlos Aguilar <carlos.daniel.aguilar@aptiv.com>")> 
+<Assembly: AssemblyCopyright("Ing. Carlos Aguilar <carlos.daniel.aguilar@aptiv.com>")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

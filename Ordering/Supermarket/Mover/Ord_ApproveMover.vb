@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub LoadMovers()
-        Dim movers As DataTable = SQL.Current.GetDatatable("SELECT M.ID, U.FullName, Requisitor,Reason, Customer, Partnumbers,Cost, T.[Description], Locality, M.[Date], M.Comment FROM Ord_Movers AS M INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(P.Partnumber) AS Partnumbers,SUM(dbo.Sys_UnitConversion(R.Partnumber,P.UoM,P.Quantity,R.UoM) * UnitCost) AS Cost FROM Ord_MoverPartnumbers AS P INNER JOIN Sys_RawMaterial AS R ON P.Partnumber = R.Partnumber GROUP BY MoverID) AS P ON M.ID = P.MoverID INNER JOIN Sys_Users AS U ON M.Username = U.Username WHERE M.Status = 'N';")
+        Dim movers As DataTable = SQL.Current.GetDatatable("SELECT M.ID, U.FullName, Requisitor, M.Reason, Customer, Partnumbers, Cost, T.[Description], Locality, M.[Date], M.Comment FROM Ord_Movers AS M INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(P.Partnumber) AS Partnumbers,SUM(dbo.Sys_UnitConversion(R.Partnumber,P.UoM,P.Quantity,R.UoM) * UnitCost) AS Cost FROM Ord_MoverPartnumbers AS P INNER JOIN Sys_RawMaterial AS R ON P.Partnumber = R.Partnumber GROUP BY MoverID) AS P ON M.ID = P.MoverID INNER JOIN Sys_Users AS U ON M.Username = U.Username WHERE M.Status = 'N';")
         Movers_dgv.DataSource = movers
     End Sub
 
@@ -40,7 +40,7 @@
                 FlashAlerts.ShowError("Error al mostrar mover.")
             End If
         ElseIf e.RowIndex >= 0 AndAlso e.ColumnIndex = Movers_dgv.Columns("approve_btn").Index Then
-            If MessageBox.Show(String.Format("Aprobar Mover ID {0}?", Movers_dgv.Rows(e.RowIndex).Cells("id").Value), "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(String.Format("¿Aprobar Mover ID {0}?", Movers_dgv.Rows(e.RowIndex).Cells("id").Value), "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                 If SQL.Current.Update("Ord_Movers", {"Status", "ApprovalUsername"}, {"A", User.Current.Username}, "ID", Movers_dgv.Rows(e.RowIndex).Cells("id").Value) Then
                     If SQL.Current.GetString("[Type]", "Ord_Movers", "ID", Movers_dgv.Rows(e.RowIndex).Cells("id").Value, "") = "S" Then 'Samples, Muestras que se requieren hacer movimiento 933
                         If Environment.UserName.ToLower = User.Current.Username Then
@@ -51,21 +51,21 @@
                             html_body = html_body.Replace("@requisitor", Movers_dgv.Rows(e.RowIndex).Cells("requisitor").Value)
                             html_body = html_body.Replace("@reason", Movers_dgv.Rows(e.RowIndex).Cells("reason").Value)
                             html_body = html_body.Replace("@locality", Movers_dgv.Rows(e.RowIndex).Cells("locality").Value)
-                            html_body = html_body.Replace("@comments", Movers_dgv.Rows(e.RowIndex).Cells("comments").Value)
+                            html_body = html_body.Replace("@comment", Movers_dgv.Rows(e.RowIndex).Cells("comment").Value)
                             Dim parts_html As String = ""
                             Dim partnumbers As DataTable = SQL.Current.GetDatatable(String.Format("SELECT P.Partnumber,R.Description,P.Quantity,P.UoM,dbo.Sys_UnitConversion(R.Partnumber,P.UoM,P.Quantity,R.UoM) * UnitCost AS Cost FROM Ord_MoverPartnumbers AS P INNER JOIN Sys_RawMaterial AS R ON P.Partnumber = R.Partnumber WHERE MoverID = {0};", Movers_dgv.Rows(e.RowIndex).Cells("id").Value))
                             For Each part As DataRow In partnumbers.Rows
-                                parts_html &= String.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td></tr>", part.Item("Partnumber"), part.Item("Description"), part.Item("Quantity"), part.Item("UoM"), part.Item("Cost"))
+                                parts_html &= String.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td></tr>", part.Item("Partnumber"), part.Item("Description"), FormatNumber(part.Item("Quantity"), 1), part.Item("UoM"), FormatCurrency(part.Item("Cost"), 1))
                             Next
                             html_body = html_body.Replace("@partnumbers", parts_html)
                             If Mail.OutlookMail("Mover de Muestras Aprobado", html_body, String.Join(";", ma_emails.ToArray), "", "") Then
                                 FlashAlerts.ShowConfirm("Analista de Materiales notificado.")
                             Else
-                                FlashAlerts.ShowInformation("No fue posible enviar el correo de notificacion al analista de materiales.", 3)
+                                FlashAlerts.ShowInformation("No fue posible enviar el correo de notificación al analista de materiales.", 3)
                             End If
                         Else
                             FlashAlerts.ShowConfirm(ActiveDirectory.CurrentUser.ToLower)
-                            FlashAlerts.ShowInformation("No fue posible enviar el correo de notificacion al analista de materiales debido a que se encuentra en otra sesion.", 3)
+                            FlashAlerts.ShowInformation("No fue posible enviar el correo de notificación al analista de materiales debido a que se encuentra en otra sesion.", 3)
                         End If
                     End If
                     LoadMovers()
@@ -77,15 +77,15 @@
         End If
     End Sub
 
-    Private Sub Approved_chk_CheckedChanged(sender As Object, e As EventArgs)
-        LoadMovers()
-    End Sub
-
     Private Sub Ord_ApproveMover_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         LoadMovers()
     End Sub
 
     Private Sub Ord_ApproveMover_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me.Dispose()
+    End Sub
+
+    Private Sub Refresh_btn_Click(sender As Object, e As EventArgs) Handles Refresh_btn.Click
+        LoadMovers()
     End Sub
 End Class

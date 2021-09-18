@@ -1,10 +1,18 @@
 ﻿Public Class CDR_Checkpoint
     Dim current_route_carrousel As Integer = 0
+    Dim timers_stopped As Boolean = False
     Private Sub CDR_Checkpoint_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Warehouse_lbl.Text = String.Format("Estación {0}", SQL.Current.GetString("Name", "Smk_Warehouses", "Warehouse", My.Settings.Warehouse, ""))
         Missing_timer_Tick(Nothing, Nothing)
         Positions_timer_Tick(Nothing, Nothing)
         Carrousel_timer_Tick(Nothing, Nothing)
     End Sub
+
+    'Protected Overrides Sub OnPaintBackground(e As PaintEventArgs)
+    '    Using br As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.FromArgb(52, 73, 94), Color.FromArgb(26, 36, 42), 90.0F)
+    '        e.Graphics.FillRectangle(br, Me.ClientRectangle)
+    '    End Using
+    'End Sub
 
     Private Sub CDR_Checkpoint_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Option_txt.Focus()
@@ -23,6 +31,7 @@
     End Sub
 
     Private Sub ReadOption()
+        timers_stopped = True
         Dim option_scan As String = Option_txt.Text.ToUpper.Trim
         Option_txt.Clear()
         Select Case option_scan
@@ -48,6 +57,12 @@
             Case "FIND"
                 Dim fadeback As New FadeBackground(CDR_FindManufacturing)
                 fadeback.ShowDialog()
+                Option_txt.Focus()
+            Case "WEIGHT"
+                If CBool(Parameter("CDR_HealingContainerization_Enabled", False, True)) Then
+                    Dim fadeback As New FadeBackground(CDR_HealingContainerization)
+                    fadeback.ShowDialog()
+                End If
                 Option_txt.Focus()
             Case Else
                 If CDR.Routes.Exists(Function(f) f.Name.ToLower = option_scan.ToLower) Then
@@ -96,9 +111,10 @@
                     UpdatePositions()
                 Else
                     Option_txt.Focus()
-                    FlashAlerts.ShowError("Opcion incorrecta.")
+                    FlashAlerts.ShowError("Opción incorrecta.")
                 End If
         End Select
+        timers_stopped = False
     End Sub
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
@@ -114,14 +130,9 @@
     End Sub
 
     Private Sub Missing_timer_Tick(sender As Object, e As EventArgs) Handles Missing_timer.Tick
-        UpdateMissings()
-    End Sub
-
-    Private Sub UpdateMissings()
-        'NUEVA CONEXION PARA QUE EL TIMER NO CIERRE LA CONEXION CURRENT EN CASO DE QUE SE ESTE USANDO
-        Dim connection As New SQL(SQL.Current.ConnectionString)
-        Missing_dgv.DataSource = connection.GetDatatable(String.Format("SELECT Partnumber,[Date],FullName,Answer,~M.Active AS [Active] FROM Smk_MissingAlerts AS M INNER JOIN Smk_Operators AS O ON M.Badge = O.Badge WHERE (M.Active = 1 OR (CONVERT(DATE,[Date]) = CONVERT(DATE,GETDATE()) AND dbo.Sys_Shift([Date]) = dbo.Sys_Shift(GETDATE()))) AND Warehouse = '{0}'", My.Settings.Warehouse))
-        connection = Nothing
+        If Not timers_stopped AndAlso SQL.Current.Available Then
+            Missing_dgv.DataSource = SQL.Current.GetDatatable(String.Format("SELECT M.Partnumber,M.[Date],O.FullName,M.Answer,~M.Active AS [Active] FROM Smk_MissingAlerts AS M INNER JOIN Smk_Operators AS O ON M.Badge = O.Badge WHERE (M.Active = 1 OR (CONVERT(DATE,[Date]) = CONVERT(DATE,GETDATE()) AND dbo.Sys_Shift([Date]) = dbo.Sys_Shift(GETDATE()))) AND Warehouse = '{0}'", My.Settings.Warehouse))
+        End If
     End Sub
 
     Private Sub UpdatePositions()
@@ -138,27 +149,21 @@
     Private Sub Positions_dgv_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles Positions_dgv.CellFormatting
         If e.RowIndex >= 0 Then
             If Positions_dgv.Rows(e.RowIndex).Cells("status").Value = "IN" Then
-                e.CellStyle.ForeColor = Color.FromArgb(88, 151, 103)
+                'e.CellStyle.ForeColor = Color.FromArgb(88, 171, 103)
                 If e.ColumnIndex = Positions_dgv.Columns("color_flag").Index Then
-                    e.CellStyle.BackColor = Color.FromArgb(88, 151, 103)
+                    e.CellStyle.BackColor = Color.FromArgb(88, 171, 103)
                 End If
             Else
-                e.CellStyle.ForeColor = Color.FromArgb(70, 52, 96)
+                'e.CellStyle.ForeColor = Color.FromArgb(84, 63, 115)
                 If e.ColumnIndex = Positions_dgv.Columns("color_flag").Index Then
-                    e.CellStyle.BackColor = Color.FromArgb(70, 52, 96)
+                    e.CellStyle.BackColor = Color.FromArgb(84, 63, 115) '(70, 52, 96)
                 End If
             End If
         End If
     End Sub
 
-    Private Sub Positions_dgv_SelectionChanged(sender As Object, e As EventArgs) Handles Positions_dgv.SelectionChanged
-        If Positions_dgv.SelectedRows.Count = 1 Then
-            DisplayRouteInfo(Positions_dgv.SelectedRows.Item(0).Cells("route").Value)
-            Option_txt.Focus()
-        End If
-    End Sub
-
     Private Sub Carrousel_timer_Tick(sender As Object, e As EventArgs) Handles Carrousel_timer.Tick
+        If timers_stopped OrElse Not SQL.Current.Available Then Exit Sub
         Dim route = CDR.Routes.Find(Function(f) f.Route > current_route_carrousel And f.Started = True)
         If route IsNot Nothing Then
             current_route_carrousel = route.Route
@@ -197,7 +202,7 @@
     End Sub
 
     Private Sub Positions_timer_Tick(sender As Object, e As EventArgs) Handles Positions_timer.Tick
-        UpdatePositions()
+        If Not timers_stopped AndAlso SQL.Current.Available Then UpdatePositions()
     End Sub
 
     Private Sub DisplayRouteInfo(route_id As Integer)
@@ -208,27 +213,27 @@
         Week_chrt.Series(0).Points.Clear()
         Week_chrt.Series(1).Points.Clear()
 
-        Containers_chrt.Series(0).Color = Color.Black
-        Containers_chrt.Series(1).Color = Color.LimeGreen
-
+        'Containers_chrt.Series(0).Color = Color.Black
+        'Containers_chrt.Series(1).Color = Color.LimeGreen
+        CDR.RefreshRoute(route_id) 'ACTUALIZAR AL INFO DE LA RUTA
         Dim route = CDR.Routes.Find(Function(f) f.Route = route_id)
         Dim shift = CDR.Shifts.Find(Function(f) f.Name = route.Shift)
         Picture_pb.Image = Delta.GetUserPhoto(route.Badge)
         OperatorName_lbl.Text = String.Format("{0} | {1} | Turno {2}", route.OperatorName, route.Badge, route.Shift)
 
-        Dim emptys As Integer = 0
+        Dim emptys As Integer = SQL.Current.GetScalar(String.Format("SELECT COUNT(ID) FROM Smk_SerialMovements WHERE Movement = 'DER' AND Badge = '{0}' AND CONVERT(DATE,[Date]) = CONVERT(DATE,GETDATE()) AND dbo.Sys_Shift([Date]) = '{1}';", route.Badge, route.Shift))
         Dim proportion As Decimal = DateDiff(DateInterval.Minute, shift.Start, Now()) / DateDiff(DateInterval.Minute, shift.Start, shift.Ending)
 
-        Dim real_wkl = ((route.MovedContainers * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * route.LoopsCounter) + (emptys * 30) + (route.ExtraPaid * proportion)) / shift.Seconds
-        Dim goal_wkl = ((route.ContainersDailyGoal * proportion * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * (route.LoopsGoal * proportion)) + (emptys * 30) + (route.ExtraPaid * proportion)) / shift.Seconds
+        Dim real_wkl = ((route.MovedContainers * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * route.LoopsCounter) + (emptys * Parameter("CDR_Workload_EmptyDeclaration_Seconds", 30)) + (route.ExtraPaid * proportion)) / shift.Seconds
+        Dim goal_wkl = ((route.ContainersDailyGoal * proportion * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * (route.LoopsGoal * proportion)) + (emptys * Parameter("CDR_Workload_EmptyDeclaration_Seconds", 30)) + (route.ExtraPaid * proportion)) / shift.Seconds
 
         Dim desing_wkl = ((route.ContainersDailyGoal * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * route.LoopsGoal) + (route.ExtraPaid)) / shift.Seconds
         Route_lbl.Text = route.Name
-        DailyLoops_lbl.Text = String.Format("Vueltas por dia: {0}", route.LoopsGoal)
+        DailyLoops_lbl.Text = String.Format("Vueltas por día: {0}", route.LoopsGoal)
         ATT_lbl.Text = String.Format("Tiempo elemento: {0}", Parameter("CDR_ATT"))
-        PrimaryWalkings_lbl.Text = String.Format("Caminares primaros: {0}", route.PrimaryWalkings)
+        PrimaryWalkings_lbl.Text = String.Format("Caminares primarios: {0}", route.PrimaryWalkings)
         SecondaryWalkings_lbl.Text = String.Format("Caminares secundarios: {0}", route.SecondaryWalkings)
-        DailyContainers_lbl.Text = String.Format("Contenedores por dia: {0}", route.ContainersDailyGoal)
+        DailyContainers_lbl.Text = String.Format("Contenedores por día: {0}", route.ContainersDailyGoal)
         DesignWorkload_chart.Series(0).Points(0).SetValueY(desing_wkl)
         DesignWorkload_chart.Series(0).Points(1).SetValueY(1 - desing_wkl)
         DesignWorkload_chart.Titles(0).Text = FormatPercent(desing_wkl, 1)
@@ -287,24 +292,45 @@
                     Time_chrt.Series(1).Points.AddXY(cnt, DateDiff(DateInterval.Minute, l.OutDate, route.Loops.Item(cnt).InDate))
 
                 End If
-            End If       
+            End If
             cnt += 1
         Next
 
-        emptys = 0 'QUE ONDA CON LOS CONTENEDORES DECLARADOS VACIOS???
+        emptys = SQL.Current.GetScalar(String.Format("SELECT COUNT(ID) FROM Smk_SerialMovements WHERE Movement = 'DER' AND Badge = '{0}' AND DATEPART(WK,InDate) = DATEPART(WK,GETDATE()) AND DATEPART(YY,InDate) = DATEPART(YY,GETDATE()) AND dbo.Sys_Shift([Date]) = '{1}';", route.Badge, route.Shift))
         Week_chrt.ChartAreas(0).AxisY2.Maximum = route.ContainersDailyGoal
-        Dim conn As New SQL(SQL.Current.ConnectionString)
-        Dim cnt_week As DataTable = conn.GetDatatable(String.Format("SELECT CONVERT(DATE,InDate) AS [Date],COUNT(ID) AS Loops,SUM(Kanbans) AS Containers  FROM CDR_RoutesLoopRegister AS R INNER JOIN (SELECT LoopID,COUNT(Kanban) AS Kanbans FROM CDR_RoutesLoopKanbans GROUP BY LoopID) AS C ON R.ID = C.LoopID WHERE DATEPART(WK,InDate) = DATEPART(WK,GETDATE()) AND DATEPART(YY,InDate) = DATEPART(YY,GETDATE()) AND Badge = '{0}' AND dbo.Sys_Shift(InDate) = '{1}' GROUP BY CONVERT(DATE,InDate) ORDER BY CONVERT(DATE,InDate)", route.Badge, route.Shift))
+        Dim cnt_week As DataTable = SQL.Current.GetDatatable(String.Format("SELECT CONVERT(DATE,InDate) AS [Date],COUNT(ID) AS Loops,SUM(Kanbans) AS Containers  FROM CDR_RoutesLoopRegister AS R INNER JOIN (SELECT LoopID,COUNT(Kanban) AS Kanbans FROM CDR_RoutesLoopKanbans GROUP BY LoopID) AS C ON R.ID = C.LoopID WHERE DATEPART(WK,InDate) = DATEPART(WK,GETDATE()) AND DATEPART(YY,InDate) = DATEPART(YY,GETDATE()) AND Badge = '{0}' AND dbo.Sys_Shift(InDate) = '{1}' GROUP BY CONVERT(DATE,InDate) ORDER BY CONVERT(DATE,InDate)", route.Badge, route.Shift))
         For Each d As DataRow In cnt_week.Rows
-            Dim wk As Single = ((d.Item("Containers") * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * d.Item("Loops")) + (emptys * 30) + route.ExtraPaid) / shift.Seconds
-            Week_chrt.Series(0).Points.AddXY(d.Item("Date"), wk)
-            Week_chrt.Series(1).Points.AddXY(d.Item("Date"), d.Item("Containers"))
+            Dim wk As Single = ((d.Item("Containers") * Parameter("CDR_ATT")) + (((route.PrimaryWalkings + route.SecondaryWalkings) / 2) * d.Item("Loops")) + (emptys * Parameter("CDR_Workload_EmptyDeclaration_Seconds", 30)) + route.ExtraPaid) / shift.Seconds
+            Week_chrt.Series(1).Points.AddXY(d.Item("Date"), wk)
+            Week_chrt.Series(0).Points.AddXY(d.Item("Date"), d.Item("Containers"))
         Next
     End Sub
 
     Private Sub CDR_Checkpoint_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        timers_stopped = True
+        Carrousel_timer.Stop()
+        Missing_timer.Stop()
+        Positions_timer.Stop()
+        Carrousel_timer.Enabled = False
+        Missing_timer.Enabled = False
+        Positions_timer.Enabled = False
+        Carrousel_timer.Dispose()
+        Missing_timer.Dispose()
+        Positions_timer.Dispose()
         CDR.CleanRoutesInfo()
         Me.Dispose()
     End Sub
 
+    'Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+    '    Using br As New System.Drawing.Drawing2D.LinearGradientBrush(Panel8.ClientRectangle, Color.FromArgb(255, 255, 255), Color.FromArgb(210, 210, 210), 90.0F)
+    '        e.Graphics.FillRectangle(br, Panel8.ClientRectangle)
+    '    End Using
+    'End Sub
+
+    Private Sub Positions_dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Positions_dgv.CellClick
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            DisplayRouteInfo(Positions_dgv.SelectedRows.Item(0).Cells("route").Value)
+            Option_txt.Focus()
+        End If
+    End Sub
 End Class

@@ -57,36 +57,42 @@
 
     Private Sub ReadSerial()
         RemainTime = 30
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             serial = New Serialnumber(Serial_txt.Text)
-            If serial.Exist Then
-                If serial.RedTag Then
+            If serial.Exists Then
+                If serial.Type = RawMaterial.MaterialType.Cable Then
                     Clean()
-                    FlashAlerts.ShowError("Serie bloqueada por calidad.")
-                ElseIf serial.InvoiceTrouble Then
-                    Clean()
-                    FlashAlerts.ShowError("La serie se encuentra en el Tracker de Problemas.")
-                    Log(serial.SerialNumber, "Smk_TryPartialDiscountSerialOnTracker")
+                    FlashAlerts.ShowError("Opcion no disponible para este numero de parte.")
                 Else
-                    If serial.Consumption = RawMaterial.ConsumptionType.Partial OrElse serial.Consumption = RawMaterial.ConsumptionType.Mixed Then
-                        Select Case serial.Status
-                            Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality
-                                CurrentQuantity_lbl.Text = String.Format("{0} {1}", serial.CurrentQuantity, serial.UoM)
-                                Quantity_nud.Focus()
-                            Case Serialnumber.SerialStatus.Stored
-                                Clean()
-                                FlashAlerts.ShowError("La serie no ha sido abierta.")
-                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker
-                                Clean()
-                                FlashAlerts.ShowError("La serie no ha sido dada de alta.")
-                            Case Serialnumber.SerialStatus.Empty
-                                Clean()
-                                FlashAlerts.ShowError("La serie se encuentra declarada vacia.")
-                        End Select
+                    If serial.RedTag Then
+                        Clean()
+                        FlashAlerts.ShowError("Serie bloqueada por calidad.")
+                    ElseIf serial.InvoiceTrouble Then
+                        Log(serial.SerialNumber, "Smk_TryPartialDiscountSerialOnTracker")
+                        Clean()
+                        FlashAlerts.ShowError("La serie se encuentra en el Tracker de Problemas.")
                     Else
-                        FlashAlerts.ShowError("El numero de parte no es de consumo parcial.")
+                        If serial.Consumption = RawMaterial.ConsumptionType.Partial OrElse serial.Consumption = RawMaterial.ConsumptionType.Mixed OrElse serial.Consumption = RawMaterial.ConsumptionType.Service OrElse serial.Consumption = RawMaterial.ConsumptionType.Obsolete OrElse serial.Consumption = RawMaterial.ConsumptionType.CAO Then
+                            Select Case serial.Status
+                                Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality
+                                    CurrentQuantity_lbl.Text = String.Format("{0} {1}", serial.CurrentQuantity, serial.UoM)
+                                    Quantity_nud.Focus()
+                                Case Serialnumber.SerialStatus.Stored
+                                    Clean()
+                                    FlashAlerts.ShowError("La serie no ha sido abierta.")
+                                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker, Serialnumber.SerialStatus.Presupermarket
+                                    Clean()
+                                    FlashAlerts.ShowError("La serie no ha sido dada de alta.")
+                                Case Serialnumber.SerialStatus.Empty
+                                    Clean()
+                                    FlashAlerts.ShowError("La serie se encuentra declarada vacia.")
+                            End Select
+                        Else
+                            FlashAlerts.ShowError("El numero de parte no es de consumo parcial.")
+                        End If
                     End If
                 End If
+
             Else
                 Clean()
                 FlashAlerts.ShowError("La serie no existe.")
@@ -110,7 +116,7 @@
     End Sub
 
     Private Sub Serial_txt_TextChanged(sender As Object, e As EventArgs) Handles Serial_txt.TextChanged
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             ReadSerial()
         ElseIf Serial_txt.Text = "CLOSE" Then
             Me.Close()

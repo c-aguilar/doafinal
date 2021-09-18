@@ -49,7 +49,7 @@ Partial Class Rec_TrackerPartialDiscount
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(37, 36)
+        Me.Label1.Location = New System.Drawing.Point(31, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 16)
         Me.Label1.TabIndex = 89
@@ -70,7 +70,7 @@ Partial Class Rec_TrackerPartialDiscount
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(37, 97)
+        Me.Label2.Location = New System.Drawing.Point(31, 97)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 91
@@ -78,10 +78,10 @@ Partial Class Rec_TrackerPartialDiscount
         '
         'Quantity_nud
         '
-        Me.Quantity_nud.BackColor = System.Drawing.Color.LightYellow
+        Me.Quantity_nud.BackColor = System.Drawing.Color.Ivory
         Me.Quantity_nud.DecimalPlaces = 3
         Me.Quantity_nud.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Quantity_nud.Location = New System.Drawing.Point(136, 92)
+        Me.Quantity_nud.Location = New System.Drawing.Point(130, 92)
         Me.Quantity_nud.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.Quantity_nud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Quantity_nud.Name = "Quantity_nud"
@@ -92,9 +92,9 @@ Partial Class Rec_TrackerPartialDiscount
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Serial_txt.Location = New System.Drawing.Point(86, 30)
+        Me.Serial_txt.Location = New System.Drawing.Point(80, 30)
         Me.Serial_txt.MaxLength = 16
         Me.Serial_txt.Name = "Serial_txt"
         Me.Serial_txt.Size = New System.Drawing.Size(170, 26)
@@ -104,7 +104,7 @@ Partial Class Rec_TrackerPartialDiscount
         '
         Me.CurrentQuantity_lbl.AutoSize = True
         Me.CurrentQuantity_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentQuantity_lbl.Location = New System.Drawing.Point(140, 61)
+        Me.CurrentQuantity_lbl.Location = New System.Drawing.Point(134, 61)
         Me.CurrentQuantity_lbl.Name = "CurrentQuantity_lbl"
         Me.CurrentQuantity_lbl.Size = New System.Drawing.Size(16, 24)
         Me.CurrentQuantity_lbl.TabIndex = 96
@@ -114,7 +114,7 @@ Partial Class Rec_TrackerPartialDiscount
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(37, 67)
+        Me.Label3.Location = New System.Drawing.Point(31, 67)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 16)
         Me.Label3.TabIndex = 95

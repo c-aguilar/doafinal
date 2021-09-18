@@ -1,10 +1,9 @@
 ﻿Public Class DiC_DeliverTerminal
-    Public Property Warehouse As String
     Dim DieCenters As ArrayList
     Dim RemainTime As Integer = 30
     Dim Counter As Integer = 0
     Private Sub DiC_DeliverTerminal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DieCenters = SQL.Current.GetList("DieCenter", "DiC_Centers", {"Warehouse"}, {Me.Warehouse})
+        DieCenters = SQL.Current.GetList("DieCenter", "DiC_Centers", {"Warehouse"}, {My.Settings.Warehouse})
         Option_txt.Focus()
     End Sub
 
@@ -37,14 +36,52 @@
                 Dim serial As New Serialnumber(Option_txt.Text)
                 Option_txt.Text = ""
                 Option_txt.Focus()
-                If serial.Exist Then
+                If serial.Exists Then
                     If Not serial.RedTag Then
                         If Not SQL.Current.Exists("DiC_Picklist", "DeliverySerialnumber", serial.ID) Then
                             If Parameter("DiC_OnlyOnCenter") Then
                                 If SQL.Current.Exists(String.Format("SELECT DieCenter FROM DiC_Map WHERE Partnumber = '{0}' AND DieCenter IN ('{1}');", serial.Partnumber, String.Join("','", Me.DieCenters.ToArray))) Then
+                                    Dim id As Integer = SQL.Current.GetScalar(String.Format("SELECT MIN(ID) FROM DiC_Picklist WHERE Partnumber = '{0}' AND DieCenter IN ('{1}') AND Printed = 0;", serial.Partnumber, String.Join("','", Me.DieCenters.ToArray)), 0)
+                                    If id = 0 Then
+                                        FlashAlerts.ShowError("Terminal no solicitada.")
+                                        Log(String.Format("{0} | {1}", serial.SerialNumber, My.Settings.Warehouse), "DiC_NoRequiredSerial")
+                                    Else
+                                        If Parameter("DiC_FixSerialStatus") Then
+                                            Select Case serial.Status
+                                                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
+                                                    Log(serial.SerialNumber, "DiC_DeliverNoStoredSerial")
+                                                    serial.Store("00000000")
+                                                    serial.Empty()
+                                                Case Serialnumber.SerialStatus.Tracker
+                                                    Log(serial.SerialNumber, "DiC_DeliverTrackerSerial")
+                                                Case Serialnumber.SerialStatus.Quality
+                                                    Log(serial.SerialNumber, "DiC_DeliverQualitySerial")
+                                                    serial.Empty()
+                                                Case Serialnumber.SerialStatus.Stored
+                                                    Log(serial.SerialNumber, "DiC_DeliverNoEmptySerial")
+                                                    serial.Empty()
+                                                Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter
+                                                    Log(serial.SerialNumber, "DiC_DeliverNoEmptySerial")
+                                                    serial.Empty()
+                                            End Select
+                                        End If
+                                        SQL.Current.Update("DiC_Picklist", {"Printed", "DeliverySerialnumber"}, {1, serial.ID}, "ID", id)
+                                        Counter += 1
+                                        Count_lbl.Text = Counter
+                                        FlashAlerts.ShowConfirm("Entregado.")
+                                    End If
+                                Else
+                                    FlashAlerts.ShowError("El numero no pertenece a " & String.Join(" o ", Me.DieCenters.ToArray))
+                                End If
+                            Else
+                                Dim id As Integer = SQL.Current.GetScalar(String.Format("SELECT MIN(ID) FROM DiC_Picklist WHERE Partnumber = '{0}' AND DieCenter IN ('{1}');", serial.Partnumber, String.Join("','", Me.DieCenters.ToArray)), 0)
+                                If id = 0 Then
+                                    FlashAlerts.ShowError("Terminal no solicitada.")
+                                    Log(String.Format("{0} | {1}", serial.SerialNumber, My.Settings.Warehouse), "DiC_NoRequiredSerial")
+                                Else
                                     If Parameter("DiC_FixSerialStatus") Then
                                         Select Case serial.Status
-                                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
+                                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                                                 Log(serial.SerialNumber, "DiC_DeliverNoStoredSerial")
                                                 serial.Store("00000000")
                                                 serial.Empty()
@@ -61,47 +98,12 @@
                                                 serial.Empty()
                                         End Select
                                     End If
-                                    Dim id As Integer = SQL.Current.GetScalar(String.Format("SELECT MIN(ID) FROM DiC_Picklist WHERE Partnumber = '{0}' AND DieCenter IN ('{1}') AND Printed = 0;", serial.Partnumber, String.Join("','", Me.DieCenters.ToArray)), 0)
-                                    If id = 0 Then
-                                        Log(String.Format("{0} | {1}", serial.SerialNumber, Me.Warehouse), "DiC_NoRequiredSerial")
-                                    Else
-                                        SQL.Current.Update("DiC_Picklist", {"Printed", "DeliverySerialnumber"}, {1, serial.ID}, "ID", id)
-                                    End If
+
+                                    SQL.Current.Update("DiC_Picklist", {"Printed", "DeliverySerialnumber"}, {1, serial.ID}, "ID", id)
                                     Counter += 1
                                     Count_lbl.Text = Counter
                                     FlashAlerts.ShowConfirm("Entregado.")
-                                Else
-                                    FlashAlerts.ShowError("El numero no pertenece a " & String.Join(" o ", Me.DieCenters.ToArray))
                                 End If
-                            Else
-                                If Parameter("DiC_FixSerialStatus") Then
-                                    Select Case serial.Status
-                                        Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
-                                            Log(serial.SerialNumber, "DiC_DeliverNoStoredSerial")
-                                            serial.Store("00000000")
-                                            serial.Empty()
-                                        Case Serialnumber.SerialStatus.Tracker
-                                            Log(serial.SerialNumber, "DiC_DeliverTrackerSerial")
-                                        Case Serialnumber.SerialStatus.Quality
-                                            Log(serial.SerialNumber, "DiC_DeliverQualitySerial")
-                                            serial.Empty()
-                                        Case Serialnumber.SerialStatus.Stored
-                                            Log(serial.SerialNumber, "DiC_DeliverNoEmptySerial")
-                                            serial.Empty()
-                                        Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter
-                                            Log(serial.SerialNumber, "DiC_DeliverNoEmptySerial")
-                                            serial.Empty()
-                                    End Select
-                                End If
-                                Dim id As Integer = SQL.Current.GetScalar(String.Format("SELECT MIN(ID) FROM DiC_Picklist WHERE Partnumber = '{0}' AND DieCenter IN ('{1}');", serial.Partnumber, String.Join("','", Me.DieCenters.ToArray)), 0)
-                                If id = 0 Then
-                                    Log(String.Format("{0} | {1}", serial.SerialNumber, Me.Warehouse), "DiC_NoRequiredSerial")
-                                Else
-                                    SQL.Current.Update("DiC_Picklist", {"Printed", "DeliverySerialnumber"}, {1, serial.ID}, "ID", id)
-                                End If
-                                Counter += 1
-                                Count_lbl.Text = Counter
-                                FlashAlerts.ShowConfirm("Entregado.")
                             End If
                         Else
                             FlashAlerts.ShowError("Serie escaneada anteriormente.")

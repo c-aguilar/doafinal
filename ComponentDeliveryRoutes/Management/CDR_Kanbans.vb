@@ -8,7 +8,9 @@ Public Class CDR_Kanbans
     Private Sub frmKanbans_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GF.FillCombobox(cboBusiness, SQL.Current.GetDatatable("SELECT DISTINCT Business FROM CDR_ProductionControl ORDER BY Business"))
         dgvResult.AutoGenerateColumns = False
-        sb = New SearchBox(dgvActual)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(dgvActual)
     End Sub
 
     Private Sub cboBusiness_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cboBusiness.SelectionChangeCommitted
@@ -18,7 +20,7 @@ Public Class CDR_Kanbans
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         If cboBusiness.SelectedIndex > -1 Then
-            If Not changes_saved AndAlso MessageBox.Show("Existen cambios si guardar. Deseas actualizar en la base de datos?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+            If Not changes_saved AndAlso MessageBox.Show("Existen cambios si guardar. ¿Deseas actualizar en la base de datos?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                 For Each row As DataGridViewRow In dgvActual.Rows
                     If CBool(row.Cells("kan_updateda").Value) AndAlso SQL.Current.Update("CDR_Kanbans", {"Container", "Pieces", "Frequency", "Hrs", "Comment", "Rack", "Local", "Partnumber", "Description"}, {row.Cells("kan_containera").Value, row.Cells("kan_piecesa").Value, row.Cells("kan_frequencya").Value, row.Cells("kan_hrsa").Value, row.Cells("kan_commenta").Value, row.Cells("kan_racka").Value, row.Cells("kan_locala").Value, row.Cells("kan_partnumbera").Value, row.Cells("kan_descriptiona").Value}, {"Code"}, {row.Cells("kan_codea").Value}) Then
                         SQL.Current.Execute(String.Format("INSERT INTO CDR_KanbansHistory (kanID,Partnumber,Board,Description,Kit,Engloc,Slot,Side,Section,Route,Pieces,Container,[Index],Business,Requeriment,[2h],Quantity,Frequency,Hrs,Comment,Rack,Local,[Date],Code) " & _
@@ -54,7 +56,7 @@ Public Class CDR_Kanbans
                 dgvActual.Rows(dgvActual.CurrentCell.RowIndex).Cells("kan_updateda").Value = 1
                 changes_saved = False
             Catch ex As Exception
-                FlashAlerts.ShowError("Hubo un error al recalcular los valores. Compruebe que la informacion necesaria es correcta.")
+                FlashAlerts.ShowError("Hubo un error al recalcular los valores. Compruebe que la información necesaria es correcta.")
             End Try
         End If
     End Sub
@@ -100,7 +102,7 @@ Public Class CDR_Kanbans
                         End If
                     End If
                 Catch ex As Exception
-                    FlashAlerts.ShowError("Hubo un error al recalcular los valores. Compruebe que la informacion necesaria es correcta.")
+                    FlashAlerts.ShowError("Hubo un error al recalcular los valores. Compruebe que la información necesaria es correcta.")
                 End Try
             End If
         End With
@@ -117,7 +119,7 @@ Public Class CDR_Kanbans
                 End If
             Next
             changes_saved = True
-            FlashAlerts.ShowConfirm("Hecho!")
+            FlashAlerts.ShowConfirm("¡Hecho!")
         End If
     End Sub
 
@@ -132,7 +134,7 @@ Public Class CDR_Kanbans
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("Seguro de eliminar esta kanban del sistema?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("¿Seguro de eliminar esta kanban del sistema?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             If SQL.Current.Delete("CDR_Kanbans", "Code", dgvActual.Rows(row_index_cms).Cells("kan_codea").Value) Then
                 SQL.Current.Execute(String.Format("INSERT INTO CDR_KanbansHistory (ID,partnumber,board,description,kit,slot,side,section,route,pieces,container,index,business,requirement,[2h],quantity,frequency,hrs,comment,rack,[local],[dat]e,code) " & _
                                                               "SELECT TOP 1 ID,partnumber,board,description,kit,slot,side,section,route,pieces,container,[index],business,requirement,[2h],quantity,frequency,hrs,'Eliminado',rack,[local],GETDATE(),code " & _
@@ -166,7 +168,7 @@ Public Class CDR_Kanbans
                     dgvResult.Rows.Clear()
                     dgvResult.Visible = True
                     For Each r As DataRow In SQL.Current.GetDatatable(String.Format(squery, current_business, current_board)).Rows
-                        dgvResult.Rows.Add(False, r("code"), r("partnumber"), r("description"), r("rack"), r("location"), r("board"), r("kit"), r("loc"), r("slot"), r("side"), r("section"), r("route"), r("container_name"), r("container_pieces"), r("i"), r("Business"), r("requirement"), r("quantity"), r("2h"), r("frequency"), r("hrs"))
+                        dgvResult.Rows.Add(False, r("code"), r("partnumber"), r("description"), r("rack"), r("location"), r("board"), r("kit"), r("loc"), r("slot"), r("side"), r("section"), r("route"), r("routeid"), r("container_name"), r("container_pieces"), r("i"), r("Business"), r("requirement"), r("quantity"), r("2h"), r("frequency"), r("hrs"))
                         With dgvResult.Rows(dgvResult.Rows.GetLastRow(DataGridViewElementStates.None))
                             If IsDBNull(r("code")) Then
                                 .DefaultCellStyle.BackColor = Color.Gray
@@ -201,7 +203,7 @@ Public Class CDR_Kanbans
                     dgvResult.Rows.Clear()
                     dgvResult.Visible = True
                     For Each r As DataRow In SQL.Current.GetDatatable(String.Format(squery, current_business)).Rows
-                        dgvResult.Rows.Add(False, r("code"), r("partnumber"), r("description"), r("rack"), r("location"), r("board"), r("kit"), r("loc"), r("slot"), r("side"), r("section"), r("Route"), r("container_name"), r("container_pieces"), r("i"), r("Business"), r("requirement"), r("quantity"), r("2h"), r("frequency"), r("hrs"))
+                        dgvResult.Rows.Add(False, r("code"), r("partnumber"), r("description"), r("rack"), r("location"), r("board"), r("kit"), r("loc"), r("slot"), r("side"), r("section"), r("route"), r("routeid"), r("container_name"), r("container_pieces"), r("i"), r("Business"), r("requirement"), r("quantity"), r("2h"), r("frequency"), r("hrs"))
                         With dgvResult.Rows(dgvResult.Rows.GetLastRow(DataGridViewElementStates.None))
                             If IsDBNull(r("code")) Then
                                 .DefaultCellStyle.BackColor = Color.Gray
@@ -221,7 +223,7 @@ Public Class CDR_Kanbans
             End If
             LoadKanbans()
         Catch ex As Exception
-            FlashAlerts.ShowError("Surgio un problema al cargar la informacion. Valida la contenerizacion y requiriento de Control de Produccion del negocio seleccionado.")
+            FlashAlerts.ShowError("Surgio un problema al cargar la información. Valida la contenerizacion y requiriento de Control de Producción del negocio seleccionado.")
         End Try
     End Sub
 
@@ -275,13 +277,13 @@ Public Class CDR_Kanbans
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        If current_business <> "" AndAlso dgvResult.Rows.Count > 0 AndAlso MessageBox.Show("Seguro de reemplazar esta informacion en la base de datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If current_business <> "" AndAlso dgvResult.Rows.Count > 0 AndAlso MessageBox.Show("¿Seguro de reemplazar esta información en la base de datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             Dim errors As Boolean = False
             For Each row As DataGridViewRow In dgvResult.Rows
                 If row.Cells("kan_chk").Value = True Then
                     If Not IsDBNull(row.Cells("kan_code").Value) AndAlso row.DefaultCellStyle.BackColor = Color.Crimson Then
                         If SQL.Current.Update("CDR_Kanbans", {"container", "pieces", "[frequency]", "hrs", "rack", "[local]", "partnumber", "[description]", "slot", "side", "section", "business", "requirement", "[2h]", "engloc", "[route]", "quantity"},
-                                           {row.Cells("kan_container").Value, row.Cells("kan_pieces").Value, row.Cells("kan_frequency").Value, row.Cells("kan_hrs").Value, row.Cells("kan_rack").Value, row.Cells("kan_local").Value, row.Cells("kan_partnumber").Value, row.Cells("kan_description").Value, row.Cells("kan_slot").Value, row.Cells("kan_side").Value, row.Cells("kan_section").Value, row.Cells("kan_business").Value, row.Cells("kan_requirement").Value, row.Cells("kan_2h").Value, row.Cells("kan_engloc").Value, row.Cells("kan_route").Value, row.Cells("kan_quantity").Value}, {"code"}, {row.Cells("kan_code").Value}) Then
+                                           {row.Cells("kan_container").Value, row.Cells("kan_pieces").Value, row.Cells("kan_frequency").Value, row.Cells("kan_hrs").Value, row.Cells("kan_rack").Value, row.Cells("kan_local").Value, row.Cells("kan_partnumber").Value, row.Cells("kan_description").Value, row.Cells("kan_slot").Value, row.Cells("kan_side").Value, row.Cells("kan_section").Value, row.Cells("kan_business").Value, row.Cells("kan_requirement").Value, row.Cells("kan_2h").Value, row.Cells("kan_engloc").Value, row.Cells("kan_route_ID").Value, row.Cells("kan_quantity").Value}, {"code"}, {row.Cells("kan_code").Value}) Then
                             SQL.Current.Execute(String.Format("INSERT INTO CDR_KanbansHistory (kanID,partnumber,board,description,kit,engloc,slot,side,section,route,pieces,container,[index],business,requirement,[2h],quantity,frequency,hrs,comment,rack,[local],[date],code) " & _
                                                                 "SELECT ID,partnumber,board,description,kit,engloc,slot,side,section,route,pieces,container,[index],business,requirement,[2h],quantity,frequency,hrs,comment,rack,[local],GETDATE(),code " & _
                                                                 "FROM CDR_Kanbans WHERE code='{0}'", row.Cells("kan_code").Value))
@@ -290,7 +292,7 @@ Public Class CDR_Kanbans
                         End If
                     ElseIf IsDBNull(row.Cells("kan_code").Value) AndAlso row.DefaultCellStyle.BackColor = Color.Gray AndAlso Not IsDBNull(row.Cells("kan_pieces").Value) Then
                         If SQL.Current.Insert("CDR_Kanbans", {"partnumber", "board", "[description]", "kit", "engloc", "slot", "side", "section", "[route]", "pieces", "container", "[index]", "business", "requirement", "[2h]", "quantity", "[frequency]", "hrs", "comment", "rack", "[local]"},
-                                              {row.Cells("kan_partnumber").Value, row.Cells("kan_board").Value, row.Cells("kan_description").Value, row.Cells("kan_kit").Value, row.Cells("kan_engloc").Value, row.Cells("kan_slot").Value, row.Cells("kan_side").Value, row.Cells("kan_section").Value, row.Cells("kan_route").Value, row.Cells("kan_pieces").Value, row.Cells("kan_container").Value, row.Cells("kan_index").Value, row.Cells("kan_business").Value, row.Cells("kan_requirement").Value, row.Cells("kan_2h").Value, row.Cells("kan_quantity").Value, row.Cells("kan_frequency").Value, row.Cells("kan_hrs").Value, "Alta", row.Cells("kan_rack").Value, row.Cells("kan_local").Value}) Then
+                                              {row.Cells("kan_partnumber").Value, row.Cells("kan_board").Value, row.Cells("kan_description").Value, row.Cells("kan_kit").Value, row.Cells("kan_engloc").Value, row.Cells("kan_slot").Value, row.Cells("kan_side").Value, row.Cells("kan_section").Value, row.Cells("kan_route_ID").Value, row.Cells("kan_pieces").Value, row.Cells("kan_container").Value, row.Cells("kan_index").Value, row.Cells("kan_business").Value, row.Cells("kan_requirement").Value, row.Cells("kan_2h").Value, row.Cells("kan_quantity").Value, row.Cells("kan_frequency").Value, row.Cells("kan_hrs").Value, "Alta", row.Cells("kan_rack").Value, row.Cells("kan_local").Value}) Then
                             SQL.Current.Execute(String.Format("INSERT INTO CDR_KanbansHistory (kanID,partnumber,board,description,kit,engloc,slot,side,section,route,pieces,container,[index],business,requirement,[2h],quantity,frequency,hrs,comment,rack,[local],[date],code) " & _
                                                             "SELECT ID,partnumber,board,description,kit,engloc,slot,side,section,route,pieces,container,[index],business,requirement,[2h],quantity,frequency,hrs,comment,rack,[local],GETDATE(),code " & _
                                                             "FROM CDR_Kanbans WHERE board='{0}' AND kit='{1}' AND partnumber='{2}';", row.Cells("kan_board").Value, row.Cells("kan_kit").Value, row.Cells("kan_partnumber").Value))
@@ -308,7 +310,7 @@ Public Class CDR_Kanbans
             If errors Then
                 FlashAlerts.ShowInformation("Hecho! Pero se presentaron algunos errores que no fueron actualizados.")
             Else
-                FlashAlerts.ShowConfirm("Hecho!")
+                FlashAlerts.ShowConfirm("¡Hecho!")
             End If
         End If
     End Sub
@@ -321,14 +323,14 @@ Public Class CDR_Kanbans
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        If current_business <> "" AndAlso MessageBox.Show("¿Eliminar kanbans?", "Confirmar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes AndAlso
-            MessageBox.Show("Se eliminara completamente esta informacion de la base de datos. ¿Seguro de continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If current_business <> "" AndAlso MessageBox.Show("¿Eliminar kanbans?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes AndAlso
+            MessageBox.Show("Se eliminara completamente esta información de la base de datos. ¿Seguro de continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             If current_board <> "" Then
-                If Not SQL.Current.Delete("CDR_Kanbans", {"Business", "Board"}, {current_business, current_board}) Then
+                If Not SQL.Current.Update("CDR_Kanbans", {"Active"}, {0}, {"Business", "Board"}, {current_business, current_board}) Then
                     FlashAlerts.ShowError("Error al tratar de eliminar las kanbans.")
                 End If
             Else
-                If Not SQL.Current.Delete("CDR_Kanbans", "Business", current_business) Then
+                If Not SQL.Current.Update("CDR_Kanbans", {"Active"}, {0}, "Business", current_business) Then
                     FlashAlerts.ShowError("Error al tratar de eliminar las kanbans.")
                 End If
             End If
@@ -339,12 +341,12 @@ Public Class CDR_Kanbans
     Private Sub LoadKanbans()
         dgvActual.Rows.Clear()
         If current_business <> "" AndAlso current_board <> "" Then
-            For Each r As DataRow In SQL.Current.GetDatatable(String.Format("SELECT ID,code, partnumber, description, rack, [local], board, kit, engloc, slot, side, section, route, container,pieces, [index], business, requirement,quantity, [2h], frequency, hrs, comment,0 updated FROM CDR_Kanbans WHERE business='{0}' AND board='{1}' ORDER BY kit,engloc,[index]", current_business, current_board)).Rows
+            For Each r As DataRow In SQL.Current.GetDatatable(String.Format("SELECT K.ID,code, partnumber, K.description, rack, [local], board, kit, engloc, slot, side, section, R.Description AS route, container,pieces, [index], business, requirement,quantity, [2h], frequency, hrs, comment,0 updated FROM CDR_Kanbans AS K LEFT OUTER JOIN CDR_Routes AS R ON K.Route = R.Route WHERE business='{0}' AND board='{1}' AND Active = 1 ORDER BY kit,engloc,[index]", current_business, current_board)).Rows
                 dgvActual.Rows.Add(r.ItemArray)
                 dgvActual.Rows(dgvActual.Rows.GetLastRow(DataGridViewElementStates.None)).ContextMenuStrip = cmsActual
             Next
         ElseIf current_business <> "" Then
-            For Each r As DataRow In SQL.Current.GetDatatable(String.Format("SELECT ID,code, partnumber, description, rack, [local], board, kit, engloc, slot, side, section, route, container,pieces, [index], business, requirement,quantity, [2h], frequency, hrs, comment,0 updated FROM CDR_Kanbans WHERE business='{0}' ORDER BY board,kit,engloc,[index]", current_business)).Rows
+            For Each r As DataRow In SQL.Current.GetDatatable(String.Format("SELECT K.ID,code, partnumber, K.description, rack, [local], board, kit, engloc, slot, side, section, R.Description AS route, container,pieces, [index], business, requirement,quantity, [2h], frequency, hrs, comment,0 updated FROM CDR_Kanbans AS K LEFT OUTER JOIN CDR_Routes AS R ON K.Route = R.Route WHERE business='{0}' AND Active = 1 ORDER BY board,kit,engloc,[index]", current_business)).Rows
                 dgvActual.Rows.Add(r.ItemArray)
                 dgvActual.Rows(dgvActual.Rows.GetLastRow(DataGridViewElementStates.None)).ContextMenuStrip = cmsActual
             Next
@@ -352,8 +354,8 @@ Public Class CDR_Kanbans
     End Sub
 
     Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
-
         sb.Show()
+        sb.BringToFront()
     End Sub
 
     Private Sub chkCheck_CheckedChanged(sender As Object, e As EventArgs) Handles chkCheck.CheckedChanged

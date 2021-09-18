@@ -13,10 +13,10 @@
     Private Sub LoadMovers()
         Dim movers As DataTable
         If ID_rb.Checked AndAlso IsNumeric(ID_txt.Text) Then
-            movers = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.ID = {0};", ID_txt.Text))
+            movers = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, [Date], Requisitor, Customer, Partnumbers, T.[Description], Locality, ShippingDate FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.ID = {0};", ID_txt.Text))
             Movers_dgv.DataSource = movers
         ElseIf Username_rb.Checked Then
-            movers = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.Status IN ('{0}','{1}','{2}') AND M.Username = '{3}';", If(Approved_chk.Checked, "A", ""), If(PickedUp_chk.Checked, "P", ""), If(Shipped_chk.Checked, "S", ""), Username_cbo.SelectedValue))
+            movers = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, [Date], Requisitor, Customer, Partnumbers, T.[Description], Locality, ShippingDate FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.Status IN ('{0}','{1}','{2}') AND M.Username = '{3}';", If(Approved_chk.Checked, "A", ""), If(PickedUp_chk.Checked, "P", ""), If(Shipped_chk.Checked, "S", ""), Username_cbo.SelectedValue))
             Movers_dgv.DataSource = movers
         End If
     End Sub
@@ -31,14 +31,16 @@
             Dim pdf As New PDF
             pdf.Title = String.Format("Mover de Material | ID {0}", mover("id"))
             pdf.TitleFontSize = 14
-            pdf.Subtitle = String.Format("Planta: {7}{0}Autorizado por: {1}{0}Fecha: {2}{0}Destino: {3}{0}Requisitor: {4}{0}Tipo: {5}{0}Comentario: {6}", vbCrLf, user_authorization, mover("date"), mover("locality"), mover("requisitor"), type, mover("comment"), Parameter("SYS_PlantCode"))
+            pdf.Subtitle = String.Format("Planta: {7}{0}Autorizado por: {1}{0}Fecha: {2}{0}Destino: {3}{0}Requisitor: {4}{0}Tipo: {5}{8}{0}Comentario: {6}", vbCrLf, user_authorization, mover("date"), mover("locality"), mover("requisitor"), type, mover("comment"), Parameter("SYS_PlantCode"), If(mover("shippingdate") = "", "", vbCrLf & "Fecha Requerida de Embarque: " & CDate(mover("shippingdate")).ToShortDateString))
             pdf.Footer = String.Format("Mover de Material | ID {0} | Planta {1}", mover("id"), Parameter("SYS_PlantCode"))
+            pdf.TextAfterTable = String.Format("{0}Surtido por: ________________        Transferido por: ________________        Embarcado por: ________________{0}{0}Fecha:        ________________         No. Documento:________________        Fecha:                ________________ ", vbCrLf)
             pdf.PageNumber = True
             pdf.Logo = New PDF.Logotype()
             pdf.Logo.Image = My.Resources.APTIV
             pdf.Logo.Alignment = CAguilar.PDF.Page.Align.Right
             pdf.Logo.Format = System.Drawing.Imaging.ImageFormat.Png
             pdf.DataSource = SQL.Current.GetDatatable(String.Format("SELECT M.[Partnumber] AS Material,ISNULL([Description],'') AS Descripcion,CASE WHEN M.UoM = 'PC' THEN LEFT(CONVERT(VARCHAR(10),[Quantity]),LEN(CONVERT(VARCHAR(10),[Quantity]))-4) ELSE CONVERT(VARCHAR(10),[Quantity]) END AS Cantidad, M.[UoM] AS Unidad,[TSA] AS TSA,ISNULL(dbo.Smk_Locations(M.[Partnumber]),'') AS [Localizacion] FROM Ord_MoverPartnumbers AS M LEFT OUTER JOIN Sys_RawMaterial AS R ON M.Partnumber = R.Partnumber WHERE MoverID = {0} ORDER BY ISNULL(dbo.Smk_Locations(M.[Partnumber]),'');", mover("id")))
+
             pdf.HeaderFontSize = 10
             pdf.CellFontSize = 11
             pdf.ColumnsWidths = {15, 25, 15, 15, 15, 15}

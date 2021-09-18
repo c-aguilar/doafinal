@@ -33,8 +33,19 @@
         Dim current_year As String = dtpFrom.Value.Year
         Dim query_W1 As String
         Dim query_W2 As String
+
+        If SQL.Current.GetScalar(String.Format("SELECT COUNT(Material) FROM Sch_VL10 WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1};", last_week, last_year)) = 0 Then
+            LoadingScreen.Hide()
+            FlashAlerts.ShowError("VL10 de semana anterior no descargada.")
+            Exit Sub
+        ElseIf SQL.Current.GetScalar(String.Format("SELECT COUNT(Material) FROM Sch_VL10 WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1};", current_week, current_year)) = 0 Then
+            LoadingScreen.Hide()
+            FlashAlerts.ShowError("VL10 de semana seleccionada no descargada.")
+            Exit Sub
+        End If
+
         If cboFamily.SelectedItem = "*" Then
-            query_W1 = String.Format("SELECT ISNULL(M.Business,'') AS Business,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W1 = String.Format("SELECT ISNULL(M.Business,'') AS Negocio,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
          "V.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
          "FROM Sch_VL10 AS V LEFT OUTER JOIN Sch_Materials AS M ON V.Material = M.Material LEFT OUTER JOIN Sch_Business AS B ON M.Business = B.Business RIGHT OUTER JOIN Sys_Calendar AS C ON C.Date = V.DeliveryDate " & _
          "WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
@@ -46,14 +57,14 @@
          "WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND DeliveryDate < '{2}' " & _
          "GROUP BY M.Business,M.CustomerPN,V.Material " & _
          "UNION ALL " & _
-         "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Shipped' AS [Week]," & _
+         "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Embarcado' AS [Week]," & _
          "V.Material,ISNULL(SUM(Quantity),0) AS Quantity " & _
          "FROM (SELECT DISTINCT Material FROM Sch_VL10 WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1}) AS V LEFT OUTER JOIN Sch_Materials AS M ON V.Material = M.Material LEFT OUTER JOIN Sch_Business AS B ON M.Business = B.Business " & _
          "LEFT OUTER JOIN Sch_ZMDESNR AS Z ON V.Material = Z.Material " & _
-         "AND [Date] = '{2}' " & _
-         "GROUP BY M.Business,M.CustomerPN,V.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"))
+         "AND [Date] BETWEEN '{2}' AND '{3}' " & _
+         "GROUP BY M.Business,M.CustomerPN,V.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"), dtpFrom.Value.ToString("yyyy-MM-dd"))
 
-            query_W2 = String.Format("SELECT ISNULL(M.Business,'') AS Business,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W2 = String.Format("SELECT ISNULL(M.Business,'') AS Negocio,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
          "V.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
          "FROM Sch_VL10 AS V LEFT OUTER JOIN Sch_Materials AS M ON V.Material = M.Material LEFT OUTER JOIN Sch_Business AS B ON M.Business = B.Business RIGHT OUTER JOIN Sys_Calendar AS C ON C.Date = V.DeliveryDate " & _
          "WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
@@ -65,26 +76,26 @@
          "WHERE DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND DeliveryDate < '{2}' " & _
          "GROUP BY M.Business,M.CustomerPN,V.Material;", current_week, current_year, dtpFrom.Value.ToString("yyyy-MM-dd"))
         ElseIf cboBusiness.SelectedItem = "*" Then
-            query_W1 = String.Format("SELECT M.Business,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W1 = String.Format("SELECT M.Business AS Negocio,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
           "M.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
           "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business CROSS JOIN Sys_Calendar AS C LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND C.Date = V.DeliveryDate AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} " & _
-          "WHERE B.Family='{3}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
+          "WHERE B.Family='{4}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
           "GROUP BY CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2),M.Business,M.CustomerPN,M.Material " & _
           "UNION ALL " & _
           "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'PastDue' AS [Week], " & _
           "M.Material,ISNULL(SUM(OpenQuantity),0) AS Quantity " & _
           "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND DeliveryDate < '{2}' " & _
-          "WHERE B.Family='{3}' " & _
+          "WHERE B.Family='{4}' " & _
           "GROUP BY M.Business,M.CustomerPN,M.Material " & _
           "UNION ALL " & _
-          "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Shipped' AS [Week]," & _
+          "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Embarcado' AS [Week]," & _
           "M.Material,ISNULL(SUM(Quantity),0) AS Quantity " & _
           "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN Sch_ZMDESNR AS Z ON M.Material = Z.Material " & _
-          "AND [Date] = '{2}' " & _
-          "WHERE B.Family='{3}' " & _
-          "GROUP BY M.Business,M.CustomerPN,M.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"), cboFamily.SelectedItem)
+          "AND [Date] BETWEEN '{2}' AND '{3}' " & _
+          "WHERE B.Family='{4}' " & _
+          "GROUP BY M.Business,M.CustomerPN,M.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"), dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem)
 
-            query_W2 = String.Format("SELECT ISNULL(M.Business,'') AS Business,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W2 = String.Format("SELECT ISNULL(M.Business,'') AS Negocio,ISNULL(M.CustomerPN,'') AS CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
                 "M.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
                 "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business CROSS JOIN Sys_Calendar AS C LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND C.Date = V.DeliveryDate AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} " & _
                 "WHERE B.Family='{3}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
@@ -96,26 +107,26 @@
           "WHERE B.Family='{3}' " & _
           "GROUP BY M.Business,M.CustomerPN,M.Material;", current_week, current_year, dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem)
         Else
-            query_W1 = String.Format("SELECT M.Business,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W1 = String.Format("SELECT M.Business AS Negocio,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
             "M.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
             "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business CROSS JOIN Sys_Calendar AS C LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND C.Date = V.DeliveryDate AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} " & _
-            "WHERE B.Family='{3}' AND B.Business = '{4}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
+            "WHERE B.Family='{4}' AND B.Business = '{5}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
             "GROUP BY CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2),M.Business,M.CustomerPN,M.Material " & _
             "UNION ALL " & _
             "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'PastDue' AS [Week], " & _
             "M.Material,ISNULL(SUM(OpenQuantity),0) AS Quantity " & _
             "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} AND DeliveryDate < '{2}' " & _
-            "WHERE B.Family='{3}' AND B.Business = '{4}' " & _
+            "WHERE B.Family='{4}' AND B.Business = '{5}' " & _
             "GROUP BY M.Business,M.CustomerPN,M.Material " & _
             "UNION ALL " & _
-            "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Shipped' AS [Week]," & _
+            "SELECT ISNULL(M.Business,''),ISNULL(M.CustomerPN,''),'Embarcado' AS [Week]," & _
             "M.Material,ISNULL(SUM(Quantity),0) AS Quantity " & _
             "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business LEFT OUTER JOIN Sch_ZMDESNR AS Z ON M.Material = Z.Material " & _
-            "AND [Date] = '{2}' " & _
-            "WHERE B.Family='{3}' AND B.Business = '{4}' " & _
-            "GROUP BY M.Business,M.CustomerPN,M.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"), cboFamily.SelectedItem, cboBusiness.SelectedItem)
+            "AND [Date] BETWEEN '{2}' AND '{3}' " & _
+            "WHERE B.Family='{4}' AND B.Business = '{5}' " & _
+            "GROUP BY M.Business,M.CustomerPN,M.Material;", last_week, last_year, dtpFrom.Value.AddDays(-7).ToString("yyyy-MM-dd"), dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem, cboBusiness.SelectedItem)
 
-            query_W2 = String.Format("SELECT M.Business,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
+            query_W2 = String.Format("SELECT M.Business AS Negocio,M.CustomerPN,CONVERT(VARCHAR,DATEPART(YY,[Date])) + '/' + RIGHT('0' + CONVERT(VARCHAR,DATEPART(WK,[Date])),2)  AS [Week]," & _
                 "M.Material,ISNULL(Sum(OpenQuantity),0) AS Quantity " & _
                 "FROM Sch_Materials AS M INNER JOIN Sch_Business AS B ON M.Business = B.Business CROSS JOIN Sys_Calendar AS C LEFT OUTER JOIN Sch_VL10 AS V ON M.Material = V.Material AND C.Date = V.DeliveryDate AND DATEPART(WK,DownloadDate) = {0} AND DATEPART(YY,DownloadDate) = {1} " & _
                 "WHERE B.Family='{3}' AND B.Business = '{4}' AND  [Date] BETWEEN '{2}' AND DATEADD(D,112,'{2}') " & _
@@ -130,8 +141,8 @@
 
         Dim pivoter_w1 As New PivotTable(SQL.Current.GetDatatable(query_W1))
         Dim pivoter_w2 As New PivotTable(SQL.Current.GetDatatable(query_W2))
-        Dim pivot_w1 = pivoter_w1.PivotData("Business", "Material", "CustomerPN", "Quantity", AggregateFunction.Sum, {"Week"}, "System.Int32")
-        Dim pivot_w2 = pivoter_w2.PivotData("Business", "Material", "CustomerPN", "Quantity", AggregateFunction.Sum, {"Week"}, "System.Int32")
+        Dim pivot_w1 = pivoter_w1.PivotData("Negocio", "Material", "CustomerPN", "Quantity", AggregateFunction.Sum, {"Week"}, "System.Int32")
+        Dim pivot_w2 = pivoter_w2.PivotData("Negocio", "Material", "CustomerPN", "Quantity", AggregateFunction.Sum, {"Week"}, "System.Int32")
         pivot_w1.TableName = "W1"
         pivot_w2.TableName = "W2"
 
@@ -144,23 +155,23 @@
         ds.Tables.Add(pivot_w2)
 
         Dim report As New DataTable("Variations")
-        report.Merge(pivot_w1.DefaultView.ToTable(True, "Business", "Material", "CustomerPN"))
+        report.Merge(pivot_w1.DefaultView.ToTable(True, "Negocio", "Material", "CustomerPN"))
         report.PrimaryKey = {report.Columns("Material")}
         For Each row As DataRow In pivot_w2.Rows
-            If report.Rows.Find(row.Item("Material")) Is Nothing Then report.Rows.Add(row.Item("Business"), row.Item("Material"), row.Item("CustomerPN"))
+            If report.Rows.Find(row.Item("Material")) Is Nothing Then report.Rows.Add(row.Item("Negocio"), row.Item("Material"), row.Item("CustomerPN"))
         Next
 
         ds.Tables.Add(report)
         ds.Relations.Add(New DataRelation("RW1", ds.Tables("Variations").Columns("Material"), ds.Tables("W1").Columns("Material"), False))
         ds.Relations.Add(New DataRelation("RW2", ds.Tables("Variations").Columns("Material"), ds.Tables("W2").Columns("Material"), False))
 
-        ds.Tables("Variations").Columns.Add(New DataColumn("PastDue", GetType(Integer), String.Format("(ISNULL(AVG(Child(RW1).[Shipped]),0) - ISNULL(AVG(Child(RW1).[{0}/{1}]),0) - ISNULL(AVG(Child(RW1).[PastDue]),0)) * -1", last_year, last_week)))
-        ds.Tables("Variations").Columns.Add(New DataColumn("Current PastDue", GetType(Integer), String.Format("ISNULL(AVG(Child(RW2).[PastDue]),0)", last_year, last_week)))
+        ds.Tables("Variations").Columns.Add(New DataColumn("PastDue", GetType(Integer), String.Format("(ISNULL(AVG(Child(RW1).[Embarcado]),0) - ISNULL(AVG(Child(RW1).[{0}/{1}]),0) - ISNULL(AVG(Child(RW1).[PastDue]),0)) * -1", last_year, last_week)))
+        ds.Tables("Variations").Columns.Add(New DataColumn("PastDue Actual", GetType(Integer), String.Format("ISNULL(AVG(Child(RW2).[PastDue]),0)", last_year, last_week)))
 
         Dim expression_wks As String = ""
         Dim cnter As Integer = 0
         For Each col As DataColumn In pivot_w1.Columns
-            If Not {"Business", "CustomerPN", "Material", "PastDue", "Shipped", String.Format("{0}/{1}", last_year, last_week), String.Format("{0}/{1}", current_year, current_week)}.Contains(col.ColumnName) Then
+            If Not {"Negocio", "CustomerPN", "Material", "PastDue", "Embarcado", String.Format("{0}/{1}", last_year, last_week), String.Format("{0}/{1}", current_year, current_week)}.Contains(col.ColumnName) Then
                 If Not ds.Tables("W2").Columns.Contains(col.ColumnName) Then
                     ds.Tables("W2").Columns.Add(col.ColumnName, col.DataType)
                 End If
@@ -173,13 +184,13 @@
                 cnter += 1
             End If
             If cnter = 4 Then
-                ds.Tables("Variations").Columns.Add(New DataColumn("On LeadTime", GetType(Integer), expression_wks.Trim("+")))
+                ds.Tables("Variations").Columns.Add(New DataColumn("En LeadTime", GetType(Integer), expression_wks.Trim("+")))
                 cnter += 1
             End If
         Next
         ds.Tables("W2").Columns("PastDue").SetOrdinal(3)
         ds.Tables("W1").Columns("PastDue").SetOrdinal(3)
-        ds.Tables("W1").Columns("Shipped").SetOrdinal(5)
+        ds.Tables("W1").Columns("Embarcado").SetOrdinal(5)
         dgvLastWeek.DataSource = ds.Tables("W1")
         dgvCurrentWeek.DataSource = ds.Tables("W2")
         dgvVariations.DataSource = ds.Tables("Variations")
@@ -226,9 +237,9 @@
                     End If
                 Next
             Next
-            If MyExcel.SaveAs({DTable.FromDatagridview(dgvVariations, "Variations"), DTable.FromDatagridview(dgvLastWeek, "Last Week"), DTable.FromDatagridview(dgvCurrentWeek, "Current Week")}, False, , {cl}) Then
+            If MyExcel.SaveAs({DTable.FromDatagridview(dgvVariations, "Variacions"), DTable.FromDatagridview(dgvLastWeek, "Semana Anterior"), DTable.FromDatagridview(dgvCurrentWeek, "Semana Seleccionada")}, False, , {cl}) Then
                 LoadingScreen.Hide()
-                FlashAlerts.ShowConfirm("Done!")
+                FlashAlerts.ShowConfirm("¡Hecho!")
             Else
                 LoadingScreen.Hide()
             End If

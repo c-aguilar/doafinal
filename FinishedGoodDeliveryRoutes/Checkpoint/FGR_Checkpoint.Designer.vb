@@ -22,17 +22,22 @@ Partial Class FGR_Checkpoint
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FGR_Checkpoint))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DieCenter_lbl = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Store_btn = New System.Windows.Forms.Button()
-        Me.Find_btn = New System.Windows.Forms.Button()
+        Me.Picklist_dgv = New System.Windows.Forms.DataGridView()
+        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Name_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Option_txt = New CAguilar.WaterMarkTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Warehouse_lbl = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.Picklist_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,49 +78,75 @@ Partial Class FGR_Checkpoint
         Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.Controls.Add(Me.Store_btn)
-        Me.Panel3.Controls.Add(Me.Find_btn)
+        Me.Panel3.Controls.Add(Me.Picklist_dgv)
         Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Location = New System.Drawing.Point(128, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(694, 419)
         Me.Panel3.TabIndex = 0
         '
-        'Store_btn
+        'Picklist_dgv
         '
-        Me.Store_btn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Picklist_dgv.AllowUserToAddRows = False
+        Me.Picklist_dgv.AllowUserToDeleteRows = False
+        Me.Picklist_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Store_btn.BackColor = System.Drawing.Color.White
-        Me.Store_btn.BackgroundImage = CType(resources.GetObject("Store_btn.BackgroundImage"), System.Drawing.Image)
-        Me.Store_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Store_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Store_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Store_btn.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Store_btn.Location = New System.Drawing.Point(407, 86)
-        Me.Store_btn.Name = "Store_btn"
-        Me.Store_btn.Size = New System.Drawing.Size(264, 93)
-        Me.Store_btn.TabIndex = 39
-        Me.Store_btn.Text = "ALTA"
-        Me.Store_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Store_btn.UseVisualStyleBackColor = False
+        Me.Picklist_dgv.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Picklist_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Picklist_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Picklist_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Picklist_dgv.ColumnHeadersVisible = False
+        Me.Picklist_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.Name_})
+        Me.Picklist_dgv.EnableHeadersVisualStyles = False
+        Me.Picklist_dgv.GridColor = System.Drawing.SystemColors.Control
+        Me.Picklist_dgv.Location = New System.Drawing.Point(74, 78)
+        Me.Picklist_dgv.Name = "Picklist_dgv"
+        Me.Picklist_dgv.ReadOnly = True
+        Me.Picklist_dgv.RowHeadersVisible = False
+        Me.Picklist_dgv.RowTemplate.DividerHeight = 60
+        Me.Picklist_dgv.RowTemplate.Height = 140
+        Me.Picklist_dgv.Size = New System.Drawing.Size(550, 334)
+        Me.Picklist_dgv.TabIndex = 30
         '
-        'Find_btn
+        'Code
         '
-        Me.Find_btn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Find_btn.BackColor = System.Drawing.Color.White
-        Me.Find_btn.BackgroundImage = CType(resources.GetObject("Find_btn.BackgroundImage"), System.Drawing.Image)
-        Me.Find_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Find_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Find_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Find_btn.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Find_btn.Location = New System.Drawing.Point(24, 86)
-        Me.Find_btn.Name = "Find_btn"
-        Me.Find_btn.Size = New System.Drawing.Size(264, 93)
-        Me.Find_btn.TabIndex = 37
-        Me.Find_btn.Text = "BUSCAR"
-        Me.Find_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Find_btn.UseVisualStyleBackColor = False
+        Me.Code.DataPropertyName = "Route"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("CCode39", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Code.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Code.HeaderText = "Code"
+        Me.Code.Name = "Code"
+        Me.Code.ReadOnly = True
+        Me.Code.Width = 350
+        '
+        'Name_
+        '
+        Me.Name_.DataPropertyName = "Description"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Name_.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Name_.HeaderText = "Name"
+        Me.Name_.Name = "Name_"
+        Me.Name_.ReadOnly = True
+        Me.Name_.Width = 190
         '
         'Panel2
         '
@@ -141,7 +172,7 @@ Partial Class FGR_Checkpoint
         Me.Option_txt.TabIndex = 24
         Me.Option_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Option_txt.WaterMarkColor = System.Drawing.Color.Gray
-        Me.Option_txt.WaterMarkText = "Escanea una opcion..."
+        Me.Option_txt.WaterMarkText = "Escanea una ruta..."
         '
         'Panel4
         '
@@ -153,18 +184,34 @@ Partial Class FGR_Checkpoint
         Me.Panel4.Size = New System.Drawing.Size(119, 419)
         Me.Panel4.TabIndex = 1
         '
+        'Warehouse_lbl
+        '
+        Me.Warehouse_lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Warehouse_lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.Warehouse_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Warehouse_lbl.ForeColor = System.Drawing.Color.White
+        Me.Warehouse_lbl.Location = New System.Drawing.Point(725, 13)
+        Me.Warehouse_lbl.Name = "Warehouse_lbl"
+        Me.Warehouse_lbl.Size = New System.Drawing.Size(232, 23)
+        Me.Warehouse_lbl.TabIndex = 53
+        Me.Warehouse_lbl.Text = "Warehouse"
+        Me.Warehouse_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'FGR_Checkpoint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(972, 492)
+        Me.Controls.Add(Me.Warehouse_lbl)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.DieCenter_lbl)
         Me.Name = "FGR_Checkpoint"
         Me.ShowIcon = False
         Me.Text = "Finished Good Routes"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        CType(Me.Picklist_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -173,9 +220,11 @@ Partial Class FGR_Checkpoint
     Friend WithEvents DieCenter_lbl As System.Windows.Forms.Label
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Store_btn As System.Windows.Forms.Button
-    Friend WithEvents Find_btn As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Option_txt As CAguilar.WaterMarkTextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents Picklist_dgv As System.Windows.Forms.DataGridView
+    Friend WithEvents Code As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Name_ As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Warehouse_lbl As System.Windows.Forms.Label
 End Class

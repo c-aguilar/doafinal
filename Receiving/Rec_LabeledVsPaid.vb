@@ -7,9 +7,9 @@ Public Class Rec_LabeledVsPaid
             np = Partnumber_txt.Text
         End If
         If np = "*" Then
-            series = SQL.Current.GetDatatable(String.Format("SELECT R.PartNumber AS [Numero de Parte],SerialNumber AS Serie,Quantity AS Cantidad,UoM AS Unidad,[Date] AS Fecha,CONVERT(BIT,CASE WHEN Status IN ('S','O','C','Q','E') THEN 1 ELSE 0 END) AS [En Supermercado],CASE WHEN LEN(ISNULL(serial_randomLocal,ISNULL(RandomLocation,M.Location))) = 8 AND LEFT(ISNULL(serial_randomLocal,ISNULL(RandomLocation,M.Location)),2) IN ('11','12','13','14','15','16','17') THEN 'Sur' ELSE 'Norte' END AS Estacion FROM Smk_Serials AS R LEFT OUTER JOIN Smk_Map AS M ON R.Partnumber = M.Partnumber AND R.Warehouse = M.Warehouse LEFT OUTER JOIN SMSBarrels.dbo.tblSerials AS B ON R.SerialNumber = B.serial_number WHERE R.Status <> 'D' AND R.[Date] BETWEEN CONVERT(DATETIME,'{0}') AND CONVERT(DATETIME,'{1}')", From_dtp.Value.ToString("yyyy-MM-dd HH:mm"), To_dtp.Value.ToString("yyyy-MM-dd HH:mm")), "Series")
+            series = SQL.Current.GetDatatable(String.Format("SELECT R.PartNumber AS [Numero de Parte],SerialNumber AS Serie,Quantity AS Cantidad,UoM AS Unidad,[Date] AS Fecha,CONVERT(BIT,CASE WHEN Status IN ('S','O','C','Q','E') THEN 1 ELSE 0 END) AS [En Supermercado],CASE WHEN LEN(R.Location) = 8 AND LEFT(R.Location,2) IN ('11','12','13','14','15','16','17') THEN 'Sur' ELSE 'Norte' END AS Estacion FROM Smk_Serials AS R LEFT OUTER JOIN Smk_Map AS M ON R.Partnumber = M.Partnumber AND R.Warehouse = M.Warehouse WHERE R.Status <> 'D' AND R.[Date] BETWEEN CONVERT(DATETIME,'{0}') AND CONVERT(DATETIME,'{1}')", From_dtp.Value.ToString("yyyy-MM-dd HH:mm"), To_dtp.Value.ToString("yyyy-MM-dd HH:mm")), "Series")
         Else
-            series = SQL.Current.GetDatatable(String.Format("SELECT R.PartNumber AS [Numero de Parte],SerialNumber AS Serie,Quantity AS Cantidad,UoM AS Unidad,[Date] AS Fecha,CONVERT(BIT,CASE WHEN Status IN ('S','O','C','Q','E') THEN 1 ELSE 0 END) AS [En Supermercado],CASE WHEN LEN(ISNULL(serial_randomLocal,ISNULL(RandomLocation,M.Location))) = 8 AND LEFT(ISNULL(serial_randomLocal,ISNULL(RandomLocation,M.Location)),2) IN ('11','12','13','14','15','16','17') THEN 'Sur' ELSE 'Norte' END AS Estacion FROM Smk_Serials AS R LEFT OUTER JOIN Smk_Map AS M ON R.Partnumber = M.Partnumber AND R.Warehouse = M.Warehouse LEFT OUTER JOIN SMSBarrels.dbo.tblSerials AS B ON R.SerialNumber = B.serial_number WHERE R.Status <> 'D' AND R.Partnumber = '{0}' AND R.[Date] BETWEEN CONVERT(DATETIME,'{1}') AND CONVERT(DATETIME,'{2}')", np, From_dtp.Value.ToString("yyyy-MM-dd HH:mm"), To_dtp.Value.ToString("yyyy-MM-dd HH:mm")), "Series")
+            series = SQL.Current.GetDatatable(String.Format("SELECT R.PartNumber AS [Numero de Parte],SerialNumber AS Serie,Quantity AS Cantidad,UoM AS Unidad,[Date] AS Fecha,CONVERT(BIT,CASE WHEN Status IN ('S','O','C','Q','E') THEN 1 ELSE 0 END) AS [En Supermercado],CASE WHEN LEN(R.Location) = 8 AND LEFT(R.Location,2) IN ('11','12','13','14','15','16','17') THEN 'Sur' ELSE 'Norte' END AS Estacion FROM Smk_Serials AS R LEFT OUTER JOIN Smk_Map AS M ON R.Partnumber = M.Partnumber AND R.Warehouse = M.Warehouse WHERE R.Status <> 'D' AND R.Partnumber = '{0}' AND R.[Date] BETWEEN CONVERT(DATETIME,'{1}') AND CONVERT(DATETIME,'{2}')", np, From_dtp.Value.ToString("yyyy-MM-dd HH:mm"), To_dtp.Value.ToString("yyyy-MM-dd HH:mm")), "Series")
         End If
         Result_dgv.DataSource = series
         chrPercentNorte.Series(0).Points.Clear()
@@ -25,7 +25,7 @@ Public Class Rec_LabeledVsPaid
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
         If Result_dgv.DataSource IsNot Nothing Then
             If MyExcel.SaveAs(Result_dgv.DataSource, False) Then
-                MsgBox("Hecho!", MsgBoxStyle.Information)
+                MsgBox("¡Hecho!", MsgBoxStyle.Information)
             End If
         End If
     End Sub

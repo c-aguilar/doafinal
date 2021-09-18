@@ -76,7 +76,7 @@ Partial Class Rec_ToQuality
         '
         'Location_txt
         '
-        Me.Location_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Location_txt.BackColor = System.Drawing.Color.Ivory
         Me.Location_txt.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         Me.Location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Location_txt.Location = New System.Drawing.Point(154, 61)
@@ -89,7 +89,7 @@ Partial Class Rec_ToQuality
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(93, 29)
         Me.Serial_txt.MaxLength = 16

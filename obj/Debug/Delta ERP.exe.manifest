@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Delta ERP.exe" version="1.0.0.194" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Delta ERP.exe" version="2.0.0.275" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="delta.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -43,26 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CAguilar.dll" size="584192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CAguilar.dll" size="666112">
       <assemblyIdentity name="CAguilar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rhR5sIE6yEg6b2ttMEg/ZdQ3Hw+iXhcIxVv8/p/zCnM=</dsig:DigestValue>
+        <dsig:DigestValue>ZCDBPGrF0cQn+prOKsWJ+lqnrPsfoVvantx4wD2ZEUQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Delta ERP.exe" size="6155776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Delta ERP.exe" size="11549696">
       <assemblyIdentity name="Delta ERP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>llUYhhYxkaaWg/8sf0ilmi7Co2C2zDeNfWJ38ZeDoPI=</dsig:DigestValue>
+        <dsig:DigestValue>1xC2bdY/jHYlYOXOM/6XPfYlTPFBN72qXdrT/kPLTtI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DPCtlUruNet.dll" size="125240">
+      <assemblyIdentity name="DPCtlUruNet" version="1.0.0.1" publicKeyToken="7F32EF930FEC5E5F" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>asrQ6AIDeK7K6Wa88ud8CkUg5OETl1DErUcmah2A1+k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DPUruNet.dll" size="58680">
+      <assemblyIdentity name="DPUruNet" version="1.0.0.1" publicKeyToken="7F32EF930FEC5E5F" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Rt/f1xm8E/rokOUIai1aB3ISsc4PTuFwY6ar00Yxxuo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,13 +102,25 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Delta ERP.exe.config" size="2052">
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675240">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ZwERVqCNpZLV/m7xEsti4QyIvlNJkP3N/vXrubHMbGM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Delta ERP.exe.config" size="3319">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>96T3P8qXfWehXL74VPA8kTS/WtQUS59i+8tpB/KusYE=</dsig:DigestValue>
+      <dsig:DigestValue>we0mPPhxYvrHKGT402KPN+78V2xKfrVAlEe+WzbAP4U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="delta.ico" size="35022">

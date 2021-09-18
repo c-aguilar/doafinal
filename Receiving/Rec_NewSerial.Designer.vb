@@ -43,12 +43,14 @@ Partial Class Rec_NewSerial
         Me.Lot_lbl = New System.Windows.Forms.Label()
         Me.Expiration_lbl = New System.Windows.Forms.Label()
         Me.Partnumber_txt = New System.Windows.Forms.MaskedTextBox()
+        Me.Container_lbl = New System.Windows.Forms.Label()
+        Me.Container_cbo = New System.Windows.Forms.ComboBox()
         CType(Me.Containers_nud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Containers_nud
         '
-        Me.Containers_nud.BackColor = System.Drawing.Color.LightYellow
+        Me.Containers_nud.BackColor = System.Drawing.Color.Ivory
         Me.Containers_nud.Location = New System.Drawing.Point(252, 134)
         Me.Containers_nud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Containers_nud.Name = "Containers_nud"
@@ -88,7 +90,7 @@ Partial Class Rec_NewSerial
         '
         'Lot_txt
         '
-        Me.Lot_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Lot_txt.BackColor = System.Drawing.Color.Ivory
         Me.Lot_txt.Location = New System.Drawing.Point(15, 192)
         Me.Lot_txt.MaxLength = 20
         Me.Lot_txt.Name = "Lot_txt"
@@ -98,7 +100,7 @@ Partial Class Rec_NewSerial
         '
         'Truck_txt
         '
-        Me.Truck_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Truck_txt.BackColor = System.Drawing.Color.Ivory
         Me.Truck_txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Truck_txt.Location = New System.Drawing.Point(142, 74)
         Me.Truck_txt.MaxLength = 20
@@ -108,7 +110,7 @@ Partial Class Rec_NewSerial
         '
         'Quantity_txt
         '
-        Me.Quantity_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Quantity_txt.BackColor = System.Drawing.Color.Ivory
         Me.Quantity_txt.Location = New System.Drawing.Point(146, 134)
         Me.Quantity_txt.Name = "Quantity_txt"
         Me.Quantity_txt.Size = New System.Drawing.Size(100, 20)
@@ -128,7 +130,7 @@ Partial Class Rec_NewSerial
         '
         Me.Save_btn.Image = CType(resources.GetObject("Save_btn.Image"), System.Drawing.Image)
         Me.Save_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Save_btn.Location = New System.Drawing.Point(283, 231)
+        Me.Save_btn.Location = New System.Drawing.Point(363, 231)
         Me.Save_btn.Name = "Save_btn"
         Me.Save_btn.Size = New System.Drawing.Size(130, 40)
         Me.Save_btn.TabIndex = 10
@@ -139,7 +141,7 @@ Partial Class Rec_NewSerial
         '
         Me.Clean_btn.Image = CType(resources.GetObject("Clean_btn.Image"), System.Drawing.Image)
         Me.Clean_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Clean_btn.Location = New System.Drawing.Point(415, 231)
+        Me.Clean_btn.Location = New System.Drawing.Point(495, 231)
         Me.Clean_btn.Name = "Clean_btn"
         Me.Clean_btn.Size = New System.Drawing.Size(130, 40)
         Me.Clean_btn.TabIndex = 11
@@ -152,9 +154,9 @@ Partial Class Rec_NewSerial
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 18)
+        Me.Label1.Size = New System.Drawing.Size(43, 18)
         Me.Label1.TabIndex = 80
-        Me.Label1.Text = "Escaner"
+        Me.Label1.Text = "Linea"
         '
         'Label2
         '
@@ -214,7 +216,7 @@ Partial Class Rec_NewSerial
         Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label7.Location = New System.Drawing.Point(0, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(557, 25)
+        Me.Label7.Size = New System.Drawing.Size(637, 25)
         Me.Label7.TabIndex = 86
         Me.Label7.Text = "Generar Nueva Serie"
         '
@@ -242,21 +244,44 @@ Partial Class Rec_NewSerial
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(15, 134)
-        Me.Partnumber_txt.Mask = "AAAAAAAA"
         Me.Partnumber_txt.Name = "Partnumber_txt"
         Me.Partnumber_txt.Size = New System.Drawing.Size(118, 20)
         Me.Partnumber_txt.TabIndex = 3
         Me.Partnumber_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Partnumber_txt.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
+        'Container_lbl
+        '
+        Me.Container_lbl.AutoSize = True
+        Me.Container_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Container_lbl.Location = New System.Drawing.Point(447, 112)
+        Me.Container_lbl.Name = "Container_lbl"
+        Me.Container_lbl.Size = New System.Drawing.Size(72, 18)
+        Me.Container_lbl.TabIndex = 90
+        Me.Container_lbl.Text = "Container"
+        Me.Container_lbl.Visible = False
+        '
+        'Container_cbo
+        '
+        Me.Container_cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Container_cbo.FormattingEnabled = True
+        Me.Container_cbo.Items.AddRange(New Object() {"PC", "M", "FT", "KG", "LB", "L"})
+        Me.Container_cbo.Location = New System.Drawing.Point(450, 133)
+        Me.Container_cbo.Name = "Container_cbo"
+        Me.Container_cbo.Size = New System.Drawing.Size(175, 21)
+        Me.Container_cbo.TabIndex = 89
+        Me.Container_cbo.Visible = False
+        '
         'Rec_NewSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(557, 283)
+        Me.ClientSize = New System.Drawing.Size(637, 283)
+        Me.Controls.Add(Me.Container_lbl)
+        Me.Controls.Add(Me.Container_cbo)
         Me.Controls.Add(Me.Partnumber_txt)
         Me.Controls.Add(Me.Expiration_lbl)
         Me.Controls.Add(Me.Lot_lbl)
@@ -305,4 +330,6 @@ Partial Class Rec_NewSerial
     Friend WithEvents Lot_lbl As System.Windows.Forms.Label
     Friend WithEvents Expiration_lbl As System.Windows.Forms.Label
     Friend WithEvents Partnumber_txt As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Container_lbl As System.Windows.Forms.Label
+    Friend WithEvents Container_cbo As System.Windows.Forms.ComboBox
 End Class

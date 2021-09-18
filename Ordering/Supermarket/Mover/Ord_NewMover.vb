@@ -2,7 +2,9 @@
     Dim partnumbers As DataTable
     Dim types As DataTable
     Dim mover_approved As Boolean = False
+    Dim mover_shipping As Boolean = False
     Private Sub Ord_NewMover_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ShippingDate_dtp.MinDate = Delta.CurrentDate
         partnumbers = New DataTable
         partnumbers.Columns.Add("Partnumber")
         partnumbers.Columns.Add("Quantity", GetType(Decimal))
@@ -32,7 +34,7 @@
             TSA_txt.Clear()
             Partnumber_txt.Focus()
         Else
-            FlashAlerts.ShowInformation("El numero de parte debe contener 8 caracteres.")
+            FlashAlerts.ShowInformation("El número de parte debe contener 8 caracteres.")
         End If
     End Sub
 
@@ -42,13 +44,18 @@
             If Requisitor_txt.Text.Trim <> "" AndAlso Customer_txt.Text.Trim <> "" AndAlso Type_cbo.SelectedItem IsNot Nothing AndAlso Reason_txt.Text.Trim <> "" AndAlso Comment_txt.Text.Trim <> "" AndAlso Locality_txt.Text.Trim <> "" Then
                 Dim autoapproval As Boolean = types.Rows.Find(Type_cbo.SelectedValue).Item("AutoApproval")
                 If (autoapproval OrElse User.Current.HasPermission("Ordering_Movers_AutomaticApprovement_flag")) Then
-                    If SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]", "ApprovalUsername"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "A", User.Current.Username}) Then
+                    If mover_shipping AndAlso SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]", "ApprovalUsername", "ShippingDate"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "A", User.Current.Username, ShippingDate_dtp.Value.Date}) Then
+                        mover_approved = True
+                        BulkPartnumbers()
+                    ElseIf Not mover_shipping AndAlso SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]", "ApprovalUsername"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "A", User.Current.Username}) Then
                         mover_approved = True
                         BulkPartnumbers()
                     Else
                         FlashAlerts.ShowError("Error al crear el mover.")
                     End If
-                ElseIf Not SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "N"}) Then
+                ElseIf mover_shipping AndAlso Not SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]", "ShippingDate"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "N", ShippingDate_dtp.Value.Date}) Then
+                    FlashAlerts.ShowError("Error al crear el mover.")
+                ElseIf Not mover_shipping AndAlso Not SQL.Current.Insert("Ord_Movers", {"Username", "Requisitor", "Customer", "[Type]", "Reason", "Comment", "Locality", "[Status]"}, {User.Current.Username, Requisitor_txt.Text, Customer_txt.Text, Type_cbo.SelectedValue, Reason_txt.Text, Comment_txt.Text, Locality_txt.Text, "N"}) Then
                     FlashAlerts.ShowError("Error al crear el mover.")
                 Else
                     BulkPartnumbers()
@@ -57,7 +64,7 @@
                 FlashAlerts.ShowError("Todos los campos son requeridos.")
             End If
         Else
-            FlashAlerts.ShowError("No hay ningun numero de parte agregado.")
+            FlashAlerts.ShowError("No hay ningun número de parte agregado.")
         End If
     End Sub
 
@@ -85,8 +92,9 @@
                 Dim pdf As New PDF
                 pdf.Title = String.Format("Mover de Material | ID {0}", mover("id"))
                 pdf.TitleFontSize = 14
-                pdf.Subtitle = String.Format("Planta: {7}{0}Autorizado por: {1}{0}Fecha: {2}{0}Destino: {3}{0}Requisitor: {4}{0}Tipo: {5}{0}Comentario: {6}", vbCrLf, user_authorization, mover("date"), mover("locality"), mover("requisitor"), type, mover("comment"), Parameter("SYS_PlantCode"))
+                pdf.Subtitle = String.Format("Planta: {7}{0}Autorizado por: {1}{0}Fecha: {2}{0}Destino: {3}{0}Requisitor: {4}{0}Tipo: {5}{8}{0}Comentario: {6}", vbCrLf, user_authorization, mover("date"), mover("locality"), mover("requisitor"), type, mover("comment"), Parameter("SYS_PlantCode"), If(mover("shippingdate") = "", "", vbCrLf & "Fecha Requerida de Embarque: " & CDate(mover("shippingdate")).ToShortDateString))
                 pdf.Footer = String.Format("Mover de Material | ID {0} | Planta {1}", mover("id"), Parameter("SYS_PlantCode"))
+                pdf.TextAfterTable = String.Format("{0}Surtido por: ________________        Transferido por: ________________        Embarcado por: ________________{0}{0}Fecha:        ________________         No. Documento:________________        Fecha:                ________________ ", vbCrLf)
                 pdf.PageNumber = True
                 pdf.Logo = New PDF.Logotype()
                 pdf.Logo.Image = My.Resources.APTIV
@@ -109,7 +117,7 @@
 
         Else
             SQL.Current.Delete("Ord_Movers", "ID", id)
-            FlashAlerts.ShowError("Error al guardar numeros de parte.")
+            FlashAlerts.ShowError("Error al guardar números de parte.")
         End If
     End Sub
 
@@ -117,6 +125,9 @@
         Dim clipboard As DataTable = DTable.FromClipboard()
         If clipboard.Columns.Count >= 4 Then
             For Each c As DataRow In clipboard.Rows
+                For i = 0 To 3 'quitar espacios
+                    c.Item(i) = c.Item(i).ToString.Trim
+                Next
                 If {"PZ", "PCS", "PIEZAS", "PIECES"}.Contains(c.Item(2).ToString.ToUpper) Then
                     c.Item(2) = "PC"
                 End If
@@ -137,13 +148,13 @@
                 End If
 
                 If {"PC", "M", "FT", "L", "KG", "LB"}.Contains(c.Item(2).ToString.ToUpper) Then
-                    Dim partnumber As DataRow = partnumbers.Rows.Find(Strings.Right("00000000" & c.Item(0), 8))
+                    Dim partnumber As DataRow = partnumbers.Rows.Find(RawMaterial.Format(c.Item(0)))
                     If partnumber IsNot Nothing Then
                         partnumber.Item("Quantity") = If(c.Item(2).ToString.ToUpper = "PC", CInt(c.Item(1)), CDec(c.Item(1)))
                         partnumber.Item("UoM") = c.Item(2)
                         partnumber.Item("TSA") = c.Item(3)
                     Else
-                        Dim pn As New RawMaterial(Strings.Right("00000000" & c.Item(0), 8))
+                        Dim pn As New RawMaterial(RawMaterial.Format(c.Item(0)))
                         If pn.Exist Then
                             Select Case pn.UoM
                                 Case RawMaterial.UnitOfMeasure.PC
@@ -156,7 +167,7 @@
                                     partnumbers.Rows.Add(pn.Partnumber, CDec(c.Item(1)), pn.UoM.ToString, c.Item(3))
                             End Select
                         Else
-                            FlashAlerts.ShowError("No existe el numero de parte " & pn.Partnumber)
+                            FlashAlerts.ShowError("No existe el número de parte " & pn.Partnumber)
                         End If
                     End If
                 Else
@@ -188,7 +199,7 @@
             Else
                 Partnumber_txt.Clear()
                 Partnumber_txt.Focus()
-                FlashAlerts.ShowError("No existe el numero de parte.")
+                FlashAlerts.ShowError("No existe el número de parte.")
             End If
         End If
     End Sub
@@ -199,5 +210,11 @@
 
     Private Sub Ord_NewMover_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me.Dispose()
+    End Sub
+
+    Private Sub Type_cbo_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles Type_cbo.SelectionChangeCommitted
+        mover_shipping = SQL.Current.Exists("Ord_MoverTypes", {"Type", "MustShip"}, {Type_cbo.SelectedValue, 1})
+        ShippingDate_dtp.Visible = mover_shipping
+        Shipping_lbl.Visible = mover_shipping
     End Sub
 End Class

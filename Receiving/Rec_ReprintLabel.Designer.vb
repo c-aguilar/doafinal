@@ -25,11 +25,15 @@ Partial Class Rec_ReprintLabel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Rec_ReprintLabel))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Serial_txt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -47,11 +51,13 @@ Partial Class Rec_ReprintLabel
         Me.Range2_txt = New System.Windows.Forms.TextBox()
         Me.Range_rb = New System.Windows.Forms.RadioButton()
         Me.RangeA_txt = New System.Windows.Forms.TextBox()
+        Me.Items_btn = New System.Windows.Forms.Button()
         Me.Serialnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Partnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UoM = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Warehouse = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Location_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TruckNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Date_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Print = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -72,12 +78,12 @@ Partial Class Rec_ReprintLabel
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(17, 51)
         Me.Serial_txt.MaxLength = 16
         Me.Serial_txt.Name = "Serial_txt"
-        Me.Serial_txt.Size = New System.Drawing.Size(191, 24)
+        Me.Serial_txt.Size = New System.Drawing.Size(154, 24)
         Me.Serial_txt.TabIndex = 94
         '
         'Label2
@@ -122,6 +128,7 @@ Partial Class Rec_ReprintLabel
         '
         'Print_btn
         '
+        Me.Print_btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Print_btn.Image = CType(resources.GetObject("Print_btn.Image"), System.Drawing.Image)
         Me.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Print_btn.Location = New System.Drawing.Point(644, 87)
@@ -133,7 +140,7 @@ Partial Class Rec_ReprintLabel
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(612, 50)
         Me.Partnumber_txt.MaxLength = 8
@@ -157,13 +164,43 @@ Partial Class Rec_ReprintLabel
         Me.Serials_dgv.AllowColumnHiding = True
         Me.Serials_dgv.AllowUserToAddRows = False
         Me.Serials_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray
+        Me.Serials_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Serials_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Serials_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Serials_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Serials_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Serials_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Serialnumber, Me.Partnumber, Me.Quantity, Me.UoM, Me.Warehouse, Me.TruckNumber, Me.Date_, Me.Print})
+        Me.Serials_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Serialnumber, Me.Partnumber, Me.Quantity, Me.UoM, Me.Warehouse, Me.Location_, Me.TruckNumber, Me.Date_, Me.Print})
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Serials_dgv.DefaultCellStyle = DataGridViewCellStyle10
+        Me.Serials_dgv.DefaultRowFilter = Nothing
+        Me.Serials_dgv.EnableHeadersVisualStyles = False
         Me.Serials_dgv.Location = New System.Drawing.Point(7, 115)
         Me.Serials_dgv.Name = "Serials_dgv"
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Serials_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.Serials_dgv.ShowRowNumber = True
         Me.Serials_dgv.Size = New System.Drawing.Size(866, 357)
         Me.Serials_dgv.TabIndex = 99
@@ -202,6 +239,7 @@ Partial Class Rec_ReprintLabel
         '
         'SelectAll_chk
         '
+        Me.SelectAll_chk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SelectAll_chk.AutoSize = True
         Me.SelectAll_chk.Location = New System.Drawing.Point(750, 92)
         Me.SelectAll_chk.Name = "SelectAll_chk"
@@ -212,7 +250,7 @@ Partial Class Rec_ReprintLabel
         '
         'Range2_txt
         '
-        Me.Range2_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Range2_txt.BackColor = System.Drawing.Color.Ivory
         Me.Range2_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Range2_txt.Location = New System.Drawing.Point(319, 51)
         Me.Range2_txt.MaxLength = 10
@@ -232,7 +270,7 @@ Partial Class Rec_ReprintLabel
         '
         'RangeA_txt
         '
-        Me.RangeA_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.RangeA_txt.BackColor = System.Drawing.Color.Ivory
         Me.RangeA_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RangeA_txt.Location = New System.Drawing.Point(227, 51)
         Me.RangeA_txt.MaxLength = 10
@@ -240,11 +278,23 @@ Partial Class Rec_ReprintLabel
         Me.RangeA_txt.Size = New System.Drawing.Size(86, 24)
         Me.RangeA_txt.TabIndex = 107
         '
+        'Items_btn
+        '
+        Me.Items_btn.BackColor = System.Drawing.SystemColors.Control
+        Me.Items_btn.Image = CType(resources.GetObject("Items_btn.Image"), System.Drawing.Image)
+        Me.Items_btn.Location = New System.Drawing.Point(172, 51)
+        Me.Items_btn.Margin = New System.Windows.Forms.Padding(0)
+        Me.Items_btn.Name = "Items_btn"
+        Me.Items_btn.Size = New System.Drawing.Size(23, 23)
+        Me.Items_btn.TabIndex = 110
+        Me.Items_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Items_btn.UseVisualStyleBackColor = False
+        '
         'Serialnumber
         '
         Me.Serialnumber.DataPropertyName = "Serialnumber"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.Serialnumber.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.Serialnumber.DefaultCellStyle = DataGridViewCellStyle3
         Me.Serialnumber.HeaderText = "Serie"
         Me.Serialnumber.Name = "Serialnumber"
         Me.Serialnumber.Width = 110
@@ -252,8 +302,8 @@ Partial Class Rec_ReprintLabel
         'Partnumber
         '
         Me.Partnumber.DataPropertyName = "Partnumber"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.Partnumber.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.Partnumber.DefaultCellStyle = DataGridViewCellStyle4
         Me.Partnumber.HeaderText = "No. de Parte"
         Me.Partnumber.Name = "Partnumber"
         Me.Partnumber.Width = 90
@@ -261,10 +311,10 @@ Partial Class Rec_ReprintLabel
         'Quantity
         '
         Me.Quantity.DataPropertyName = "OriginalQuantity"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle3.Format = "N1"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Quantity.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle5.Format = "N1"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.Quantity.DefaultCellStyle = DataGridViewCellStyle5
         Me.Quantity.HeaderText = "Cantidad"
         Me.Quantity.Name = "Quantity"
         Me.Quantity.Width = 70
@@ -272,8 +322,8 @@ Partial Class Rec_ReprintLabel
         'UoM
         '
         Me.UoM.DataPropertyName = "UoM"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.UoM.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.UoM.DefaultCellStyle = DataGridViewCellStyle6
         Me.UoM.HeaderText = "Unidad"
         Me.UoM.Name = "UoM"
         Me.UoM.Width = 50
@@ -281,26 +331,33 @@ Partial Class Rec_ReprintLabel
         'Warehouse
         '
         Me.Warehouse.DataPropertyName = "WarehouseName"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.Warehouse.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.Warehouse.DefaultCellStyle = DataGridViewCellStyle7
         Me.Warehouse.HeaderText = "Estacion"
         Me.Warehouse.Name = "Warehouse"
+        '
+        'Location_
+        '
+        Me.Location_.DataPropertyName = "Location"
+        Me.Location_.HeaderText = "Localizacion"
+        Me.Location_.Name = "Location_"
+        Me.Location_.ReadOnly = True
         '
         'TruckNumber
         '
         Me.TruckNumber.DataPropertyName = "TruckNumber"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.TruckNumber.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.TruckNumber.DefaultCellStyle = DataGridViewCellStyle8
         Me.TruckNumber.HeaderText = "No. de Troca"
         Me.TruckNumber.Name = "TruckNumber"
         '
         'Date_
         '
         Me.Date_.DataPropertyName = "Date"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle7.Format = "g"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.Date_.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle9.Format = "g"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.Date_.DefaultCellStyle = DataGridViewCellStyle9
         Me.Date_.HeaderText = "Fecha"
         Me.Date_.Name = "Date_"
         '
@@ -318,6 +375,7 @@ Partial Class Rec_ReprintLabel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(880, 480)
+        Me.Controls.Add(Me.Items_btn)
         Me.Controls.Add(Me.Range2_txt)
         Me.Controls.Add(Me.Range_rb)
         Me.Controls.Add(Me.RangeA_txt)
@@ -360,11 +418,13 @@ Partial Class Rec_ReprintLabel
     Friend WithEvents Range2_txt As System.Windows.Forms.TextBox
     Friend WithEvents Range_rb As System.Windows.Forms.RadioButton
     Friend WithEvents RangeA_txt As System.Windows.Forms.TextBox
+    Friend WithEvents Items_btn As System.Windows.Forms.Button
     Friend WithEvents Serialnumber As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Partnumber As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Quantity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UoM As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Warehouse As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Location_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TruckNumber As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Date_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Print As System.Windows.Forms.DataGridViewCheckBoxColumn

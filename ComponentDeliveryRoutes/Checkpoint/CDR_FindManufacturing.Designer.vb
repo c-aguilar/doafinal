@@ -23,7 +23,8 @@ Partial Class CDR_FindManufacturing
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDR_FindManufacturing))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -44,7 +45,7 @@ Partial Class CDR_FindManufacturing
         Me.lblTitle.ForeColor = System.Drawing.Color.SteelBlue
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(800, 25)
+        Me.lblTitle.Size = New System.Drawing.Size(988, 25)
         Me.lblTitle.TabIndex = 35
         Me.lblTitle.Text = "Buscar en Manufactura"
         '
@@ -52,7 +53,7 @@ Partial Class CDR_FindManufacturing
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(289, 80)
+        Me.Label1.Location = New System.Drawing.Point(386, 80)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(217, 20)
         Me.Label1.TabIndex = 145
@@ -64,9 +65,9 @@ Partial Class CDR_FindManufacturing
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.DarkGray
         Me.Panel4.Controls.Add(Me.Kanban_txt)
-        Me.Panel4.Location = New System.Drawing.Point(265, 28)
+        Me.Panel4.Location = New System.Drawing.Point(348, 28)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(271, 41)
+        Me.Panel4.Size = New System.Drawing.Size(293, 41)
         Me.Panel4.TabIndex = 144
         '
         'Kanban_txt
@@ -78,7 +79,7 @@ Partial Class CDR_FindManufacturing
         Me.Kanban_txt.ForeColor = System.Drawing.Color.Black
         Me.Kanban_txt.Location = New System.Drawing.Point(3, 3)
         Me.Kanban_txt.Name = "Kanban_txt"
-        Me.Kanban_txt.Size = New System.Drawing.Size(265, 35)
+        Me.Kanban_txt.Size = New System.Drawing.Size(287, 35)
         Me.Kanban_txt.TabIndex = 1
         Me.Kanban_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Kanban_txt.WaterMarkColor = System.Drawing.Color.Gray
@@ -94,9 +95,9 @@ Partial Class CDR_FindManufacturing
         Me.Close_btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close_btn.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Close_btn.Location = New System.Drawing.Point(549, 495)
+        Me.Close_btn.Location = New System.Drawing.Point(747, 595)
         Me.Close_btn.Name = "Close_btn"
-        Me.Close_btn.Size = New System.Drawing.Size(238, 93)
+        Me.Close_btn.Size = New System.Drawing.Size(229, 93)
         Me.Close_btn.TabIndex = 143
         Me.Close_btn.Text = "CERRAR"
         Me.Close_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -106,33 +107,35 @@ Partial Class CDR_FindManufacturing
         '
         Me.Kanbans_dgv.AllowUserToAddRows = False
         Me.Kanbans_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro
+        Me.Kanbans_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.Kanbans_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.Kanbans_dgv.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Kanbans_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Kanbans_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Kanbans_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.Kanbans_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Kanbans_dgv.ColumnHeadersVisible = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Kanbans_dgv.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Kanbans_dgv.DefaultCellStyle = DataGridViewCellStyle6
         Me.Kanbans_dgv.Location = New System.Drawing.Point(12, 103)
         Me.Kanbans_dgv.Name = "Kanbans_dgv"
         Me.Kanbans_dgv.ReadOnly = True
         Me.Kanbans_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.Kanbans_dgv.RowHeadersVisible = False
         Me.Kanbans_dgv.RowTemplate.Height = 30
-        Me.Kanbans_dgv.Size = New System.Drawing.Size(776, 386)
+        Me.Kanbans_dgv.Size = New System.Drawing.Size(964, 486)
         Me.Kanbans_dgv.TabIndex = 146
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 492)
+        Me.Label2.Location = New System.Drawing.Point(15, 592)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(147, 26)
         Me.Label2.TabIndex = 147
@@ -142,7 +145,7 @@ Partial Class CDR_FindManufacturing
         'Local_lbl
         '
         Me.Local_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Local_lbl.Location = New System.Drawing.Point(12, 518)
+        Me.Local_lbl.Location = New System.Drawing.Point(13, 618)
         Me.Local_lbl.Name = "Local_lbl"
         Me.Local_lbl.Size = New System.Drawing.Size(531, 70)
         Me.Local_lbl.TabIndex = 148
@@ -152,7 +155,7 @@ Partial Class CDR_FindManufacturing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 600)
+        Me.ClientSize = New System.Drawing.Size(988, 700)
         Me.Controls.Add(Me.Local_lbl)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Kanbans_dgv)

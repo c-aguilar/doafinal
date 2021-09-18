@@ -22,21 +22,15 @@ Partial Class DeltaReporter
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeltaReporter))
         Me.ssStatus = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Report_dgv = New CAguilar.DataGridViewWithFilters()
         Me.Controls_flp = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Conditions_cms = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Equal_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Different_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Greater_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GreaterOrEqual_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Lower_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LowerOrEqual_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.In_mi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NotIn_mi = New System.Windows.Forms.ToolStripMenuItem()
         Me.Report_cbo = New System.Windows.Forms.ComboBox()
         Me.Run_btn = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.ToolStripButton()
@@ -46,11 +40,12 @@ Partial Class DeltaReporter
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMain = New System.Windows.Forms.ToolStrip()
+        Me.Pivot_btn = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Area_lbl = New System.Windows.Forms.ToolStripLabel()
         Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         Me.ssStatus.SuspendLayout()
         CType(Me.Report_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Conditions_cms.SuspendLayout()
         Me.ToolStripMain.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,13 +69,45 @@ Partial Class DeltaReporter
         Me.Report_dgv.AllowColumnHiding = True
         Me.Report_dgv.AllowUserToAddRows = False
         Me.Report_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Report_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Report_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Report_dgv.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Report_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Report_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Report_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Report_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Report_dgv.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Report_dgv.DefaultRowFilter = Nothing
+        Me.Report_dgv.EnableHeadersVisualStyles = False
         Me.Report_dgv.Location = New System.Drawing.Point(229, 31)
         Me.Report_dgv.Name = "Report_dgv"
         Me.Report_dgv.ReadOnly = True
+        Me.Report_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Report_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.Report_dgv.ShowRowNumber = True
         Me.Report_dgv.Size = New System.Drawing.Size(951, 694)
         Me.Report_dgv.TabIndex = 6
@@ -96,62 +123,6 @@ Partial Class DeltaReporter
         Me.Controls_flp.Padding = New System.Windows.Forms.Padding(5)
         Me.Controls_flp.Size = New System.Drawing.Size(218, 667)
         Me.Controls_flp.TabIndex = 8
-        '
-        'Conditions_cms
-        '
-        Me.Conditions_cms.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Equal_mi, Me.Different_mi, Me.Greater_mi, Me.GreaterOrEqual_mi, Me.Lower_mi, Me.LowerOrEqual_mi, Me.In_mi, Me.NotIn_mi})
-        Me.Conditions_cms.Name = "Conditions_cms"
-        Me.Conditions_cms.Size = New System.Drawing.Size(168, 180)
-        '
-        'Equal_mi
-        '
-        Me.Equal_mi.Checked = True
-        Me.Equal_mi.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.Equal_mi.Name = "Equal_mi"
-        Me.Equal_mi.Size = New System.Drawing.Size(167, 22)
-        Me.Equal_mi.Text = "Igual"
-        '
-        'Different_mi
-        '
-        Me.Different_mi.Name = "Different_mi"
-        Me.Different_mi.Size = New System.Drawing.Size(167, 22)
-        Me.Different_mi.Text = "Diferente"
-        '
-        'Greater_mi
-        '
-        Me.Greater_mi.Name = "Greater_mi"
-        Me.Greater_mi.Size = New System.Drawing.Size(167, 22)
-        Me.Greater_mi.Text = "Mayor"
-        '
-        'GreaterOrEqual_mi
-        '
-        Me.GreaterOrEqual_mi.Name = "GreaterOrEqual_mi"
-        Me.GreaterOrEqual_mi.Size = New System.Drawing.Size(167, 22)
-        Me.GreaterOrEqual_mi.Text = "Mayor o Igual"
-        '
-        'Lower_mi
-        '
-        Me.Lower_mi.Name = "Lower_mi"
-        Me.Lower_mi.Size = New System.Drawing.Size(167, 22)
-        Me.Lower_mi.Text = "Menor"
-        '
-        'LowerOrEqual_mi
-        '
-        Me.LowerOrEqual_mi.Name = "LowerOrEqual_mi"
-        Me.LowerOrEqual_mi.Size = New System.Drawing.Size(167, 22)
-        Me.LowerOrEqual_mi.Text = "Menor o Igual"
-        '
-        'In_mi
-        '
-        Me.In_mi.Name = "In_mi"
-        Me.In_mi.Size = New System.Drawing.Size(167, 22)
-        Me.In_mi.Text = "Igual (x,y,z,...)"
-        '
-        'NotIn_mi
-        '
-        Me.NotIn_mi.Name = "NotIn_mi"
-        Me.NotIn_mi.Size = New System.Drawing.Size(167, 22)
-        Me.NotIn_mi.Text = "Diferente (x,y,z,...)"
         '
         'Report_cbo
         '
@@ -225,12 +196,26 @@ Partial Class DeltaReporter
         '
         'ToolStripMain
         '
-        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExport, Me.PrintToolStripButton, Me.toolStripSeparator, Me.CopyToolStripButton, Me.FindToolStripButton, Me.toolStripSeparator1, Me.Area_lbl, Me.Title_lbl})
+        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExport, Me.PrintToolStripButton, Me.toolStripSeparator, Me.CopyToolStripButton, Me.FindToolStripButton, Me.toolStripSeparator1, Me.Pivot_btn, Me.ToolStripSeparator2, Me.Area_lbl, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
         Me.ToolStripMain.Size = New System.Drawing.Size(1184, 29)
         Me.ToolStripMain.TabIndex = 3
         Me.ToolStripMain.Text = "ToolStrip1"
+        '
+        'Pivot_btn
+        '
+        Me.Pivot_btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Pivot_btn.Image = CType(resources.GetObject("Pivot_btn.Image"), System.Drawing.Image)
+        Me.Pivot_btn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Pivot_btn.Name = "Pivot_btn"
+        Me.Pivot_btn.Size = New System.Drawing.Size(23, 26)
+        Me.Pivot_btn.Text = "&Tabla Pivote"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 29)
         '
         'Area_lbl
         '
@@ -261,11 +246,10 @@ Partial Class DeltaReporter
         Me.Controls.Add(Me.ToolStripMain)
         Me.Name = "DeltaReporter"
         Me.ShowIcon = False
-        Me.Text = "Delta Reporter"
+        Me.Text = "Delta ERP Reporter"
         Me.ssStatus.ResumeLayout(False)
         Me.ssStatus.PerformLayout()
         CType(Me.Report_dgv, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Conditions_cms.ResumeLayout(False)
         Me.ToolStripMain.ResumeLayout(False)
         Me.ToolStripMain.PerformLayout()
         Me.ResumeLayout(False)
@@ -276,15 +260,6 @@ Partial Class DeltaReporter
     Friend WithEvents lblStatus As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Report_dgv As CAguilar.DataGridViewWithFilters
     Friend WithEvents Controls_flp As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents Conditions_cms As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents Equal_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Different_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Greater_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GreaterOrEqual_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Lower_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LowerOrEqual_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents In_mi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NotIn_mi As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Report_cbo As System.Windows.Forms.ComboBox
     Friend WithEvents Run_btn As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.ToolStripButton
@@ -296,4 +271,6 @@ Partial Class DeltaReporter
     Friend WithEvents ToolStripMain As System.Windows.Forms.ToolStrip
     Friend WithEvents Title_lbl As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Area_lbl As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents Pivot_btn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
 End Class

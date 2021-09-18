@@ -22,14 +22,9 @@ Partial Class CDR_KanbanScan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDR_KanbanScan))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.Kanbans_dgv = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kanban = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.result = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.icon_img = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Kanban_txt = New CAguilar.WaterMarkTextBox()
         Me.Close_btn = New System.Windows.Forms.Button()
         Me.Kanban_pnl = New System.Windows.Forms.Panel()
@@ -55,13 +50,18 @@ Partial Class CDR_KanbanScan
         Me.OperatorName_lbl = New System.Windows.Forms.Label()
         Me.Route_lbl = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        CType(Me.Kanbans_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Kanbans_dgv = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kanban = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.result = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.icon_img = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Kanban_pnl.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.Picture_pb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.Kanbans_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -75,64 +75,6 @@ Partial Class CDR_KanbanScan
         Me.lblTitle.Size = New System.Drawing.Size(900, 25)
         Me.lblTitle.TabIndex = 35
         Me.lblTitle.Text = "Escaneo de Contenedores"
-        '
-        'Kanbans_dgv
-        '
-        Me.Kanbans_dgv.AllowUserToAddRows = False
-        Me.Kanbans_dgv.AllowUserToDeleteRows = False
-        Me.Kanbans_dgv.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.Kanbans_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Kanbans_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.Kanbans_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Kanbans_dgv.ColumnHeadersVisible = False
-        Me.Kanbans_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.kanban, Me.result, Me.icon_img})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Kanbans_dgv.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Kanbans_dgv.Location = New System.Drawing.Point(576, 116)
-        Me.Kanbans_dgv.Name = "Kanbans_dgv"
-        Me.Kanbans_dgv.ReadOnly = True
-        Me.Kanbans_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.Kanbans_dgv.RowHeadersVisible = False
-        Me.Kanbans_dgv.RowTemplate.Height = 30
-        Me.Kanbans_dgv.Size = New System.Drawing.Size(312, 512)
-        Me.Kanbans_dgv.TabIndex = 39
-        '
-        'ID
-        '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Visible = False
-        '
-        'kanban
-        '
-        Me.kanban.DataPropertyName = "Kanban"
-        Me.kanban.HeaderText = "Kanban"
-        Me.kanban.Name = "kanban"
-        Me.kanban.ReadOnly = True
-        Me.kanban.Width = 250
-        '
-        'result
-        '
-        Me.result.DataPropertyName = "Result"
-        Me.result.HeaderText = "Result"
-        Me.result.Name = "result"
-        Me.result.ReadOnly = True
-        Me.result.Visible = False
-        '
-        'icon_img
-        '
-        Me.icon_img.HeaderText = "Icon"
-        Me.icon_img.Name = "icon_img"
-        Me.icon_img.ReadOnly = True
-        Me.icon_img.Width = 50
         '
         'Kanban_txt
         '
@@ -292,7 +234,7 @@ Partial Class CDR_KanbanScan
         '
         'Count_lbl
         '
-        Me.Count_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Count_lbl.Font = New System.Drawing.Font("DS-Digital", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Count_lbl.Location = New System.Drawing.Point(3, 5)
         Me.Count_lbl.Name = "Count_lbl"
         Me.Count_lbl.Size = New System.Drawing.Size(170, 55)
@@ -325,7 +267,7 @@ Partial Class CDR_KanbanScan
         '
         'Unknow_lbl
         '
-        Me.Unknow_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Unknow_lbl.Font = New System.Drawing.Font("DS-Digital", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Unknow_lbl.Location = New System.Drawing.Point(3, 5)
         Me.Unknow_lbl.Name = "Unknow_lbl"
         Me.Unknow_lbl.Size = New System.Drawing.Size(170, 55)
@@ -358,7 +300,7 @@ Partial Class CDR_KanbanScan
         '
         'Percent_lbl
         '
-        Me.Percent_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Percent_lbl.Font = New System.Drawing.Font("DS-Digital", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Percent_lbl.Location = New System.Drawing.Point(5, 5)
         Me.Percent_lbl.Name = "Percent_lbl"
         Me.Percent_lbl.Size = New System.Drawing.Size(170, 55)
@@ -431,7 +373,7 @@ Partial Class CDR_KanbanScan
         Me.Route_lbl.Name = "Route_lbl"
         Me.Route_lbl.Size = New System.Drawing.Size(201, 35)
         Me.Route_lbl.TabIndex = 139
-        Me.Route_lbl.Text = "RUTA 1"
+        Me.Route_lbl.Text = "Ruta 1"
         '
         'Panel4
         '
@@ -444,11 +386,70 @@ Partial Class CDR_KanbanScan
         Me.Panel4.Size = New System.Drawing.Size(271, 41)
         Me.Panel4.TabIndex = 140
         '
+        'Kanbans_dgv
+        '
+        Me.Kanbans_dgv.AllowUserToAddRows = False
+        Me.Kanbans_dgv.AllowUserToDeleteRows = False
+        Me.Kanbans_dgv.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Kanbans_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Kanbans_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Kanbans_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Kanbans_dgv.ColumnHeadersVisible = False
+        Me.Kanbans_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.kanban, Me.result, Me.icon_img})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Kanbans_dgv.DefaultCellStyle = DataGridViewCellStyle1
+        Me.Kanbans_dgv.Location = New System.Drawing.Point(576, 116)
+        Me.Kanbans_dgv.Name = "Kanbans_dgv"
+        Me.Kanbans_dgv.ReadOnly = True
+        Me.Kanbans_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Kanbans_dgv.RowHeadersVisible = False
+        Me.Kanbans_dgv.RowTemplate.Height = 30
+        Me.Kanbans_dgv.Size = New System.Drawing.Size(312, 512)
+        Me.Kanbans_dgv.TabIndex = 141
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "DeltaID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        '
+        'kanban
+        '
+        Me.kanban.DataPropertyName = "KanbanID"
+        Me.kanban.HeaderText = "Kanban"
+        Me.kanban.Name = "kanban"
+        Me.kanban.ReadOnly = True
+        Me.kanban.Width = 250
+        '
+        'result
+        '
+        Me.result.DataPropertyName = "Result"
+        Me.result.HeaderText = "Result"
+        Me.result.Name = "result"
+        Me.result.ReadOnly = True
+        Me.result.Visible = False
+        '
+        'icon_img
+        '
+        Me.icon_img.HeaderText = "Icon"
+        Me.icon_img.Name = "icon_img"
+        Me.icon_img.ReadOnly = True
+        Me.icon_img.Width = 50
+        '
         'CDR_KanbanScan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(900, 639)
+        Me.Controls.Add(Me.Kanbans_dgv)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Route_lbl)
         Me.Controls.Add(Me.OperatorName_lbl)
@@ -459,7 +460,6 @@ Partial Class CDR_KanbanScan
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Kanban_pnl)
         Me.Controls.Add(Me.Close_btn)
-        Me.Controls.Add(Me.Kanbans_dgv)
         Me.Controls.Add(Me.lblTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CDR_KanbanScan"
@@ -467,7 +467,6 @@ Partial Class CDR_KanbanScan
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Delivery Routes Components"
-        CType(Me.Kanbans_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Kanban_pnl.ResumeLayout(False)
         Me.Kanban_pnl.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -476,11 +475,11 @@ Partial Class CDR_KanbanScan
         CType(Me.Picture_pb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.Kanbans_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents lblTitle As System.Windows.Forms.Label
-    Friend WithEvents Kanbans_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents Kanban_txt As CAguilar.WaterMarkTextBox
     Friend WithEvents Close_btn As System.Windows.Forms.Button
     Friend WithEvents Kanban_pnl As System.Windows.Forms.Panel
@@ -506,6 +505,7 @@ Partial Class CDR_KanbanScan
     Friend WithEvents OperatorName_lbl As System.Windows.Forms.Label
     Friend WithEvents Route_lbl As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents Kanbans_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kanban As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents result As System.Windows.Forms.DataGridViewTextBoxColumn

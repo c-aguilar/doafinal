@@ -47,7 +47,7 @@ Partial Class Sch_VL10WaterfallReport
         Me.Copy_btn = New System.Windows.Forms.ToolStripButton()
         Me.Find_btn = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Title_btn = New System.Windows.Forms.ToolStripLabel()
+        Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         CType(Me.Waterfall_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -227,7 +227,7 @@ Partial Class Sch_VL10WaterfallReport
         '
         'ToolStripMain
         '
-        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Export_btn, Me.toolStripSeparator, Me.Copy_btn, Me.Find_btn, Me.toolStripSeparator1, Me.Title_btn})
+        Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Export_btn, Me.toolStripSeparator, Me.Copy_btn, Me.Find_btn, Me.toolStripSeparator1, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
         Me.ToolStripMain.Size = New System.Drawing.Size(1158, 29)
@@ -273,13 +273,13 @@ Partial Class Sch_VL10WaterfallReport
         Me.toolStripSeparator1.Name = "toolStripSeparator1"
         Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 29)
         '
-        'Title_btn
+        'Title_lbl
         '
-        Me.Title_btn.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Title_btn.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Title_btn.Name = "Title_btn"
-        Me.Title_btn.Size = New System.Drawing.Size(240, 26)
-        Me.Title_btn.Text = "VL10 Requirements Waterfall"
+        Me.Title_lbl.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Title_lbl.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Title_lbl.Name = "Title_lbl"
+        Me.Title_lbl.Size = New System.Drawing.Size(240, 26)
+        Me.Title_lbl.Text = "VL10 Requirements Waterfall"
         '
         'Sch_VL10WaterfallReport
         '
@@ -335,6 +335,6 @@ Partial Class Sch_VL10WaterfallReport
     Friend WithEvents Copy_btn As System.Windows.Forms.ToolStripButton
     Friend WithEvents Find_btn As System.Windows.Forms.ToolStripButton
     Friend WithEvents toolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Title_btn As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents Title_lbl As System.Windows.Forms.ToolStripLabel
 
 End Class

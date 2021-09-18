@@ -121,7 +121,7 @@ Partial Class DiC_DeliverTerminal
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(214, 35)
         Me.CountDown_lbl.TabIndex = 52
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'CountDown_timer

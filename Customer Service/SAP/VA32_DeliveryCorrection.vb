@@ -22,13 +22,13 @@
             Next
             dgvMaterials.DataSource = materials_dt
             If error_counter > 0 Then
-                MsgBox(String.Format("{0} errors found on pasting.", error_counter), MsgBoxStyle.Exclamation)
+                MsgBox(String.Format("{0} errores encontrados al pegar.", error_counter), MsgBoxStyle.Exclamation)
             End If
         End If
     End Sub
 
     Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
-        If txtShipTo.Text <> "" AndAlso txtDelivery.Text <> "" AndAlso materials_dt.Rows.Count > 0 AndAlso MessageBox.Show("Continue correction?", "Confirm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If txtShipTo.Text <> "" AndAlso txtDelivery.Text <> "" AndAlso materials_dt.Rows.Count > 0 AndAlso MessageBox.Show("¿Continuar con correccion?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             LoadingScreen.Show()
             Dim sap As New SAP
             If sap.Available Then

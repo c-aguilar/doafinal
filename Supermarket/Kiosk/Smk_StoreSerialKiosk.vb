@@ -24,9 +24,9 @@
         If serial IsNot Nothing Then
             Dim local As String = Location_txt.Text
             Select Case serial.Status
-                Case Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker
+                Case Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker, Serialnumber.SerialStatus.Presupermarket
                     If serial.Store(local, Me.Badge) Then
-                        If Not serial.Type = RawMaterial.MaterialType.Cable AndAlso My.Settings.Warehouse <> serial.Warehouse Then
+                        If My.Settings.Warehouse <> serial.Warehouse Then
                             serial.TransferRandom(local, My.Settings.Warehouse, Me.Badge)
                         End If
                         Clean()
@@ -52,7 +52,7 @@
                         End If
                     End If
                 Case Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.Open
-                    If local <> serial.ServiceLocation Then
+                    If local <> serial.Location Then
                         If MessageBox.Show("La serie se encuentra en servicio. ¿Deseas cambiarla de local?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                             If My.Settings.Warehouse = serial.Warehouse Then
                                 If serial.ChangeLocation(local, Me.Badge) Then
@@ -90,7 +90,7 @@
     End Sub
 
     Private Sub Serial_txt_TextChanged(sender As Object, e As EventArgs) Handles Serial_txt.TextChanged
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             ReadSerial()
         ElseIf Serial_txt.Text.Trim.ToUpper = "CLOSE" Then
             Me.Close()
@@ -117,28 +117,23 @@
 
     Private Sub ReadSerial()
         RemainTime = 30
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             serial = New Serialnumber(Serial_txt.Text)
-            If serial.Exist Then
+            If serial.Exists Then
                 If serial.RedTag Then
                     Clean()
                     FlashAlerts.ShowError("Serie bloqueada por calidad.")
                 ElseIf serial.InvoiceTrouble Then
+                    Log(serial.SerialNumber, "Smk_TryStoreSerialOnTracker", Me.Badge)
                     Clean()
                     FlashAlerts.ShowInformation("La serie se encuentra en Tracker de Problemas.")
-                    Log(serial.SerialNumber, "Smk_TryStoreSerialOnTracker", Me.Badge)
                 Else
                     Select Case serial.Status
-                        Case Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.ServiceOnQuality, Serialnumber.SerialStatus.Stored
+                        Case Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.ServiceOnQuality, Serialnumber.SerialStatus.Stored, Serialnumber.SerialStatus.Presupermarket
                             Location_txt.Focus()
                         Case Serialnumber.SerialStatus.Empty
-                            If serial.Type = RawMaterial.MaterialType.Cable Then
-                                Clean()
-                                FlashAlerts.ShowInformation("La serie ya fue dada de alta previamente en Barriles.")
-                            Else
-                                Clean()
-                                FlashAlerts.ShowError("La serie ya fue declarada vacia.")
-                            End If
+                            Clean()
+                            FlashAlerts.ShowError("La serie ya fue declarada vacia.")
                     End Select
                 End If
             Else

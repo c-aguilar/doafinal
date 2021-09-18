@@ -13,8 +13,10 @@
         DieCenter_lbl.Text = "Picklist " & Me.DieCenter
         If Parameter("DiC_Picklist").ToUpper = "SERIALNUMBER" Then
             Option_txt.WaterMarkText = "ESCANEA LA SERIE..."
-        Else
+        ElseIf Parameter("DiC_Picklist").ToUpper = "PARTNUMBER" Then
             Option_txt.WaterMarkText = "ESCANEA EL NO DE PARTE..."
+        ElseIf Parameter("DiC_Picklist").ToUpper = "DIENUMBER" Then
+            Option_txt.WaterMarkText = "ESCANEA EL NO DE DADO..."
         End If
         If AutoCloseForm Then
             CountDown_timer.Enabled = True
@@ -68,15 +70,15 @@
                 If Parameter("DiC_Picklist").ToUpper = "SERIALNUMBER" Then
                     If Parameter("DiC_OnlyOnCenter") Then
                         Dim serial As New Serialnumber(Option_txt.Text)
-                        Option_txt.Text = ""
+                        Option_txt.Clear()
                         Option_txt.Focus()
-                        If serial.Exist Then
+                        If serial.Exists Then
                             If Not serial.RedTag Then
                                 If SQL.Current.Exists("DiC_Map", {"Partnumber", "DieCenter"}, {serial.Partnumber, Me.DieCenter}) Then
                                     If Not SQL.Current.Exists("DiC_Picklist", "ScannedSerialnumber", serial.ID) Then
                                         If Parameter("DiC_FixSerialStatus") Then
                                             Select Case serial.Status
-                                                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
+                                                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                                                     Log(serial.SerialNumber, "DiC_AskNoStoredSerial")
                                                     serial.Store("00000000")
                                                     serial.Empty()
@@ -113,14 +115,14 @@
                         serial = Nothing
                     Else
                         Dim serial As New Serialnumber(Option_txt.Text)
-                        Option_txt.Text = ""
+                        Option_txt.Clear()
                         Option_txt.Focus()
-                        If serial.Exist Then
+                        If serial.Exists Then
                             If Not serial.RedTag Then
                                 If Not SQL.Current.Exists("DiC_Picklist", "ScannedSerialnumber", serial.ID) Then
                                     If Parameter("DiC_FixSerialStatus") Then
                                         Select Case serial.Status
-                                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
+                                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                                                 Log(serial.SerialNumber, "DiC_AskNoStoredSerial")
                                                 serial.Store("00000000")
                                                 serial.Empty()
@@ -153,7 +155,7 @@
                         End If
                         serial = Nothing
                     End If
-                Else
+                ElseIf Parameter("DiC_Picklist").ToUpper = "PARTNUMBER" Then
                     If RawMaterial.Exists(Option_txt.Text) Then
                         If Parameter("DiC_OnlyOnCenter") Then
                             If SQL.Current.Exists("DiC_Map", {"Partnumber", "DieCenter"}, {Option_txt.Text, Me.DieCenter}) Then
@@ -180,6 +182,26 @@
                         Option_txt.Clear()
                         Option_txt.Focus()
                         FlashAlerts.ShowError("Numero de parte incorrecto.")
+                    End If
+                ElseIf Parameter("DiC_Picklist").ToUpper = "DIENUMBER" Then
+                    Dim die_partnumber As String = SQL.Current.GetString("Partnumber", "DiC_DiePartnumbers", "DieNumber", Option_txt.Text, "")
+                    If die_partnumber <> "" Then
+                        If RawMaterial.Exists(die_partnumber) Then
+                            SQL.Current.Insert("DiC_Picklist", {"Partnumber", "DieCenter", "DieNumber"}, {die_partnumber, Me.DieCenter, Option_txt.Text})
+                            Option_txt.Clear()
+                            Option_txt.Focus()
+                            Counter += 1
+                            LoadPicklist()
+                            FlashAlerts.ShowConfirm("Número registrado.")
+                        Else
+                            Option_txt.Clear()
+                            Option_txt.Focus()
+                            FlashAlerts.ShowError("Número de parte incorrecto.")
+                        End If
+                    Else
+                        Option_txt.Clear()
+                        Option_txt.Focus()
+                        FlashAlerts.ShowError("Número de dado incorrecto.")
                     End If
                 End If
         End Select

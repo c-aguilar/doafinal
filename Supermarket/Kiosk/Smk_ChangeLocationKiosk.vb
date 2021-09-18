@@ -21,7 +21,7 @@
     Private Sub Change()
         RemainTime = 15
         If serial IsNot Nothing Then
-            If serial.Exist Then
+            If serial.Exists Then
                 Select Case serial.Status
                     Case Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.ServiceOnQuality
                         If Not serial.RedTag AndAlso serial.InvoiceTrouble Then
@@ -80,15 +80,9 @@
                             End If
                         End If
                     Case Serialnumber.SerialStatus.Empty
-                        If serial.Type = RawMaterial.MaterialType.Cable Then
-                            serial.ChangeLocation(Location_txt.Text, Me.Badge)
-                            Clean()
-                            FlashAlerts.ShowConfirm("Localizacion actualizada.")
-                        Else
-                            Clean()
-                            FlashAlerts.ShowError("La serie se encuentrada declarada vacia.")
-                        End If
-                    Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
+                        Clean()
+                        FlashAlerts.ShowError("La serie se encuentrada declarada vacia.")
+                    Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                         Clean()
                         FlashAlerts.ShowError("La serie no ha sido dada de alta.")
                 End Select
@@ -116,7 +110,7 @@
     End Sub
 
     Private Sub Serial_txt_TextChanged(sender As Object, e As EventArgs) Handles Serial_txt.TextChanged
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             Location_txt.Focus()
             ReadSerial()
         ElseIf Serial_txt.Text.ToUpper.Trim = "CLOSE" Then
@@ -131,26 +125,17 @@
     Private Sub ReadSerial()
         RemainTime = 30
         serial = New Serialnumber(Serial_txt.Text)
-        If serial.Exist Then
+        If serial.Exists Then
             Select Case serial.Status
-                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
+                Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                     Clean()
                     FlashAlerts.ShowError("La serie no ha sido dada de alta.")
-                Case Serialnumber.SerialStatus.Stored, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker
-                    OldLocation_txt.Text = serial.RandomLocation
-                    Warehouse_txt.Text = serial.WarehouseName
-                Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality
-                    OldLocation_txt.Text = serial.ServiceLocation
+                Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality, Serialnumber.SerialStatus.Stored, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker
+                    OldLocation_txt.Text = serial.Location
                     Warehouse_txt.Text = serial.WarehouseName
                 Case Serialnumber.SerialStatus.Empty
-                    If serial.Type = RawMaterial.MaterialType.Cable Then
-                        Dim sms As New SQL(Parameter("SMK_SMSBarrelsStringConn2"))
-                        OldLocation_txt.Text = sms.GetString(String.Format("SELECT CASE WHEN serial_status IN ('SMK','ON CUTTER') THEN serial_serviceLocal ELSE serial_randomLocal END FROM tblSerials WHERE Serial_number = '{0}';", serial.SerialNumber))
-                        Warehouse_txt.Text = "Barriles"
-                    Else
-                        Clean()
-                        FlashAlerts.ShowError("Serie declarada vacia.")
-                    End If
+                    Clean()
+                    FlashAlerts.ShowError("Serie declarada vacia.")
             End Select
         Else
             Clean()
@@ -182,4 +167,5 @@
     Private Sub Close_btn_Click(sender As Object, e As EventArgs) Handles Close_btn.Click
         Me.Close()
     End Sub
+
 End Class

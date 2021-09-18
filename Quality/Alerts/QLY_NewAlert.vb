@@ -4,17 +4,17 @@
         If Partnumber_txt.MaskCompleted Then
             If RawMaterial.Exists(Partnumber_txt.Text) Then
                 If Reason_txt.Text <> "" Then
-                    If SQL.Current.Exists("Qly_PartnumberAlerts", {"Partnumber", "Active"}, {Partnumber_txt.Text, 1}) Then
-                        FlashAlerts.ShowInformation("Existe una alerta activa del numero de parte.")
+                    'If SQL.Current.Exists("Qly_PartnumberAlerts", {"Partnumber", "Active"}, {Partnumber_txt.Text, 1}) Then
+                    '    FlashAlerts.ShowInformation("Existe una alerta activa del numero de parte.")
+                    'Else
+                    If SQL.Current.Insert("Qly_PartnumberAlerts", {"Partnumber", "Reason", "Username"}, {Partnumber_txt.Text, Reason_txt.Text, User.Current.Username}) Then
+                        Partnumber_txt.Clear()
+                        Reason_txt.Clear()
+                        FlashAlerts.ShowConfirm("Alerta creada.")
                     Else
-                        If SQL.Current.Insert("Qly_PartnumberAlerts", {"Partnumber", "Reason", "Username"}, {Partnumber_txt.Text, Reason_txt.Text, User.Current.Username}) Then
-                            Partnumber_txt.Clear()
-                            Reason_txt.Clear()
-                            FlashAlerts.ShowConfirm("Alerta creada.")
-                        Else
-                            FlashAlerts.ShowError("Error al crear la alerta.")
-                        End If
+                        FlashAlerts.ShowError("Error al crear la alerta.")
                     End If
+                    'End If
                 Else
                     Reason_txt.Focus()
                     FlashAlerts.ShowInformation("Debes ingresar un motivo.")

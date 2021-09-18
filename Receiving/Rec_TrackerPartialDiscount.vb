@@ -34,9 +34,9 @@
     End Sub
 
     Private Sub ReadSerial()
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             serial = New Serialnumber(Serial_txt.Text)
-            If serial.Exist Then
+            If serial.Exists Then
                 If serial.RedTag Then
                     Clean()
                     FlashAlerts.ShowError("Serie bloqueada por calidad.")
@@ -70,11 +70,11 @@
     End Sub
 
     Private Sub Smk_PartialDiscount_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-         Me.Dispose()
+        Me.Dispose()
     End Sub
 
     Private Sub Serial_txt_TextChanged(sender As Object, e As EventArgs) Handles Serial_txt.TextChanged
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             ReadSerial()
         End If
     End Sub

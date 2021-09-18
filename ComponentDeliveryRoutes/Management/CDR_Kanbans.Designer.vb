@@ -25,28 +25,6 @@ Partial Class CDR_Kanbans
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDR_Kanbans))
         Me.dgvResult = New System.Windows.Forms.DataGridView()
-        Me.kan_chk = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.kan_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_partnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_rack = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_local = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_board = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_kit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_engloc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_slot = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_side = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_section = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_route = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_container = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.kan_pieces = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_index = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_business = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_requirement = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_2h = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_frequency = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kan_hrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -101,6 +79,29 @@ Partial Class CDR_Kanbans
         Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.kan_chk = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.kan_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_partnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_description = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_rack = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_local = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_board = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_kit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_engloc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_slot = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_side = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_section = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_route = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_route_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_container = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.kan_pieces = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_index = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_business = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_requirement = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_2h = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_frequency = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kan_hrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvResult, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
@@ -119,159 +120,13 @@ Partial Class CDR_Kanbans
         Me.dgvResult.AllowUserToAddRows = False
         Me.dgvResult.AllowUserToDeleteRows = False
         Me.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvResult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.kan_chk, Me.kan_code, Me.kan_partnumber, Me.kan_description, Me.kan_rack, Me.kan_local, Me.kan_board, Me.kan_kit, Me.kan_engloc, Me.kan_slot, Me.kan_side, Me.kan_section, Me.kan_route, Me.kan_container, Me.kan_pieces, Me.kan_index, Me.kan_business, Me.kan_requirement, Me.kan_quantity, Me.kan_2h, Me.kan_frequency, Me.kan_hrs})
+        Me.dgvResult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.kan_chk, Me.kan_code, Me.kan_partnumber, Me.kan_description, Me.kan_rack, Me.kan_local, Me.kan_board, Me.kan_kit, Me.kan_engloc, Me.kan_slot, Me.kan_side, Me.kan_section, Me.kan_route, Me.kan_route_id, Me.kan_container, Me.kan_pieces, Me.kan_index, Me.kan_business, Me.kan_requirement, Me.kan_quantity, Me.kan_2h, Me.kan_frequency, Me.kan_hrs})
         Me.dgvResult.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvResult.Location = New System.Drawing.Point(191, 0)
         Me.dgvResult.Name = "dgvResult"
         Me.dgvResult.Size = New System.Drawing.Size(813, 345)
         Me.dgvResult.TabIndex = 3
         Me.dgvResult.Visible = False
-        '
-        'kan_chk
-        '
-        Me.kan_chk.HeaderText = "Actualizar"
-        Me.kan_chk.Name = "kan_chk"
-        '
-        'kan_code
-        '
-        Me.kan_code.DataPropertyName = "Code"
-        Me.kan_code.HeaderText = "ID"
-        Me.kan_code.Name = "kan_code"
-        Me.kan_code.ReadOnly = True
-        '
-        'kan_partnumber
-        '
-        Me.kan_partnumber.DataPropertyName = "Partnumber"
-        Me.kan_partnumber.HeaderText = "Partnumber"
-        Me.kan_partnumber.Name = "kan_partnumber"
-        '
-        'kan_description
-        '
-        Me.kan_description.DataPropertyName = "Description"
-        Me.kan_description.HeaderText = "Descripcion"
-        Me.kan_description.Name = "kan_description"
-        '
-        'kan_rack
-        '
-        Me.kan_rack.DataPropertyName = "Rack"
-        Me.kan_rack.HeaderText = "Rack"
-        Me.kan_rack.Name = "kan_rack"
-        '
-        'kan_local
-        '
-        Me.kan_local.DataPropertyName = "Local"
-        Me.kan_local.HeaderText = "Localizacion"
-        Me.kan_local.Name = "kan_local"
-        Me.kan_local.ReadOnly = True
-        '
-        'kan_board
-        '
-        Me.kan_board.DataPropertyName = "Board"
-        Me.kan_board.HeaderText = "Tablero"
-        Me.kan_board.Name = "kan_board"
-        '
-        'kan_kit
-        '
-        Me.kan_kit.DataPropertyName = "Kit"
-        Me.kan_kit.HeaderText = "Kit"
-        Me.kan_kit.Name = "kan_kit"
-        '
-        'kan_engloc
-        '
-        Me.kan_engloc.DataPropertyName = "EngLoc"
-        Me.kan_engloc.HeaderText = "EngLoc"
-        Me.kan_engloc.Name = "kan_engloc"
-        '
-        'kan_slot
-        '
-        Me.kan_slot.DataPropertyName = "Slot"
-        Me.kan_slot.HeaderText = "Slot"
-        Me.kan_slot.Name = "kan_slot"
-        Me.kan_slot.ReadOnly = True
-        '
-        'kan_side
-        '
-        Me.kan_side.DataPropertyName = "Side"
-        Me.kan_side.HeaderText = "Lado"
-        Me.kan_side.Name = "kan_side"
-        Me.kan_side.ReadOnly = True
-        '
-        'kan_section
-        '
-        Me.kan_section.DataPropertyName = "Section"
-        Me.kan_section.HeaderText = "Seccion"
-        Me.kan_section.Name = "kan_section"
-        Me.kan_section.ReadOnly = True
-        '
-        'kan_route
-        '
-        Me.kan_route.DataPropertyName = "Route"
-        Me.kan_route.HeaderText = "Ruta"
-        Me.kan_route.Name = "kan_route"
-        Me.kan_route.ReadOnly = True
-        '
-        'kan_container
-        '
-        Me.kan_container.DataPropertyName = "Container"
-        Me.kan_container.HeaderText = "Contenedor"
-        Me.kan_container.Items.AddRange(New Object() {"1/4", "1/2", "16S", "8S", "4S", "2S", "JT", "STDPACK"})
-        Me.kan_container.Name = "kan_container"
-        '
-        'kan_pieces
-        '
-        Me.kan_pieces.DataPropertyName = "Pieces"
-        Me.kan_pieces.HeaderText = "Piezas"
-        Me.kan_pieces.Name = "kan_pieces"
-        Me.kan_pieces.ReadOnly = True
-        '
-        'kan_index
-        '
-        Me.kan_index.DataPropertyName = "Index"
-        Me.kan_index.HeaderText = "Tarjeta"
-        Me.kan_index.Name = "kan_index"
-        Me.kan_index.ReadOnly = True
-        '
-        'kan_business
-        '
-        Me.kan_business.DataPropertyName = "Business"
-        Me.kan_business.HeaderText = "Negocio"
-        Me.kan_business.Name = "kan_business"
-        Me.kan_business.ReadOnly = True
-        '
-        'kan_requirement
-        '
-        Me.kan_requirement.DataPropertyName = "Requirement"
-        Me.kan_requirement.HeaderText = "Requerimiento"
-        Me.kan_requirement.Name = "kan_requirement"
-        Me.kan_requirement.ReadOnly = True
-        '
-        'kan_quantity
-        '
-        Me.kan_quantity.DataPropertyName = "Quantity"
-        Me.kan_quantity.HeaderText = "Cantidad"
-        Me.kan_quantity.Name = "kan_quantity"
-        Me.kan_quantity.ReadOnly = True
-        '
-        'kan_2h
-        '
-        Me.kan_2h.DataPropertyName = "2h"
-        Me.kan_2h.HeaderText = "2Hras"
-        Me.kan_2h.Name = "kan_2h"
-        Me.kan_2h.ReadOnly = True
-        '
-        'kan_frequency
-        '
-        Me.kan_frequency.DataPropertyName = "Frequency"
-        Me.kan_frequency.HeaderText = "Frecuencia"
-        Me.kan_frequency.Name = "kan_frequency"
-        Me.kan_frequency.ReadOnly = True
-        '
-        'kan_hrs
-        '
-        Me.kan_hrs.DataPropertyName = "Hrs"
-        Me.kan_hrs.HeaderText = "Horas"
-        Me.kan_hrs.Name = "kan_hrs"
-        Me.kan_hrs.ReadOnly = True
         '
         'Label4
         '
@@ -750,6 +605,160 @@ Partial Class CDR_Kanbans
         Me.Label7.TabIndex = 115
         Me.Label7.Text = "Generacion de Kanbans"
         '
+        'kan_chk
+        '
+        Me.kan_chk.HeaderText = "Actualizar"
+        Me.kan_chk.Name = "kan_chk"
+        '
+        'kan_code
+        '
+        Me.kan_code.DataPropertyName = "Code"
+        Me.kan_code.HeaderText = "ID"
+        Me.kan_code.Name = "kan_code"
+        Me.kan_code.ReadOnly = True
+        '
+        'kan_partnumber
+        '
+        Me.kan_partnumber.DataPropertyName = "Partnumber"
+        Me.kan_partnumber.HeaderText = "Partnumber"
+        Me.kan_partnumber.Name = "kan_partnumber"
+        '
+        'kan_description
+        '
+        Me.kan_description.DataPropertyName = "Description"
+        Me.kan_description.HeaderText = "Descripcion"
+        Me.kan_description.Name = "kan_description"
+        '
+        'kan_rack
+        '
+        Me.kan_rack.DataPropertyName = "Rack"
+        Me.kan_rack.HeaderText = "Rack"
+        Me.kan_rack.Name = "kan_rack"
+        '
+        'kan_local
+        '
+        Me.kan_local.DataPropertyName = "Local"
+        Me.kan_local.HeaderText = "Localizacion"
+        Me.kan_local.Name = "kan_local"
+        Me.kan_local.ReadOnly = True
+        '
+        'kan_board
+        '
+        Me.kan_board.DataPropertyName = "Board"
+        Me.kan_board.HeaderText = "Tablero"
+        Me.kan_board.Name = "kan_board"
+        '
+        'kan_kit
+        '
+        Me.kan_kit.DataPropertyName = "Kit"
+        Me.kan_kit.HeaderText = "Kit"
+        Me.kan_kit.Name = "kan_kit"
+        '
+        'kan_engloc
+        '
+        Me.kan_engloc.DataPropertyName = "EngLoc"
+        Me.kan_engloc.HeaderText = "EngLoc"
+        Me.kan_engloc.Name = "kan_engloc"
+        '
+        'kan_slot
+        '
+        Me.kan_slot.DataPropertyName = "Slot"
+        Me.kan_slot.HeaderText = "Slot"
+        Me.kan_slot.Name = "kan_slot"
+        Me.kan_slot.ReadOnly = True
+        '
+        'kan_side
+        '
+        Me.kan_side.DataPropertyName = "Side"
+        Me.kan_side.HeaderText = "Lado"
+        Me.kan_side.Name = "kan_side"
+        Me.kan_side.ReadOnly = True
+        '
+        'kan_section
+        '
+        Me.kan_section.DataPropertyName = "Section"
+        Me.kan_section.HeaderText = "Seccion"
+        Me.kan_section.Name = "kan_section"
+        Me.kan_section.ReadOnly = True
+        '
+        'kan_route
+        '
+        Me.kan_route.DataPropertyName = "Route"
+        Me.kan_route.HeaderText = "Ruta"
+        Me.kan_route.Name = "kan_route"
+        Me.kan_route.ReadOnly = True
+        '
+        'kan_route_id
+        '
+        Me.kan_route_id.DataPropertyName = "RouteID"
+        Me.kan_route_id.HeaderText = "Route ID"
+        Me.kan_route_id.Name = "kan_route_id"
+        Me.kan_route_id.ReadOnly = True
+        Me.kan_route_id.Visible = False
+        '
+        'kan_container
+        '
+        Me.kan_container.DataPropertyName = "Container"
+        Me.kan_container.HeaderText = "Contenedor"
+        Me.kan_container.Items.AddRange(New Object() {"1/4", "1/2", "16S", "8S", "4S", "2S", "JT", "STDPACK"})
+        Me.kan_container.Name = "kan_container"
+        '
+        'kan_pieces
+        '
+        Me.kan_pieces.DataPropertyName = "Pieces"
+        Me.kan_pieces.HeaderText = "Piezas"
+        Me.kan_pieces.Name = "kan_pieces"
+        Me.kan_pieces.ReadOnly = True
+        '
+        'kan_index
+        '
+        Me.kan_index.DataPropertyName = "Index"
+        Me.kan_index.HeaderText = "Tarjeta"
+        Me.kan_index.Name = "kan_index"
+        Me.kan_index.ReadOnly = True
+        '
+        'kan_business
+        '
+        Me.kan_business.DataPropertyName = "Business"
+        Me.kan_business.HeaderText = "Negocio"
+        Me.kan_business.Name = "kan_business"
+        Me.kan_business.ReadOnly = True
+        '
+        'kan_requirement
+        '
+        Me.kan_requirement.DataPropertyName = "Requirement"
+        Me.kan_requirement.HeaderText = "Requerimiento"
+        Me.kan_requirement.Name = "kan_requirement"
+        Me.kan_requirement.ReadOnly = True
+        '
+        'kan_quantity
+        '
+        Me.kan_quantity.DataPropertyName = "Quantity"
+        Me.kan_quantity.HeaderText = "Cantidad"
+        Me.kan_quantity.Name = "kan_quantity"
+        Me.kan_quantity.ReadOnly = True
+        '
+        'kan_2h
+        '
+        Me.kan_2h.DataPropertyName = "2h"
+        Me.kan_2h.HeaderText = "2Hras"
+        Me.kan_2h.Name = "kan_2h"
+        Me.kan_2h.ReadOnly = True
+        '
+        'kan_frequency
+        '
+        Me.kan_frequency.DataPropertyName = "Frequency"
+        Me.kan_frequency.HeaderText = "Frecuencia"
+        Me.kan_frequency.Name = "kan_frequency"
+        Me.kan_frequency.ReadOnly = True
+        '
+        'kan_hrs
+        '
+        Me.kan_hrs.DataPropertyName = "Hrs"
+        Me.kan_hrs.HeaderText = "Horas"
+        Me.kan_hrs.Name = "kan_hrs"
+        Me.kan_hrs.ReadOnly = True
+        '
         'CDR_Kanbans
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -808,28 +817,6 @@ Partial Class CDR_Kanbans
     Friend WithEvents chkCheck As System.Windows.Forms.CheckBox
     Friend WithEvents chkKeepContainer As System.Windows.Forms.CheckBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents kan_chk As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents kan_code As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_partnumber As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_description As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_rack As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_local As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_board As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_kit As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_engloc As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_slot As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_side As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_section As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_route As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_container As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents kan_pieces As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_index As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_business As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_requirement As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_quantity As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_2h As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_frequency As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents kan_hrs As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kan_ID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kan_codea As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kan_partnumbera As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -854,4 +841,27 @@ Partial Class CDR_Kanbans
     Friend WithEvents kan_hrsa As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kan_commenta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kan_updateda As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_chk As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents kan_code As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_partnumber As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_description As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_rack As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_local As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_board As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_kit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_engloc As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_slot As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_side As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_section As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_route As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_route_id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_container As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents kan_pieces As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_index As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_business As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_requirement As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_quantity As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_2h As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_frequency As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents kan_hrs As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

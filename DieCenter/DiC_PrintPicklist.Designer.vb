@@ -27,6 +27,7 @@ Partial Class DiC_PrintPicklist
         Me.Print_btn = New System.Windows.Forms.Button()
         Me.Warehouse_cbo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ZPL_chk = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -70,11 +71,22 @@ Partial Class DiC_PrintPicklist
         Me.Label1.TabIndex = 39
         Me.Label1.Text = "Centro de dados:"
         '
+        'ZPL_chk
+        '
+        Me.ZPL_chk.AutoSize = True
+        Me.ZPL_chk.Location = New System.Drawing.Point(27, 103)
+        Me.ZPL_chk.Name = "ZPL_chk"
+        Me.ZPL_chk.Size = New System.Drawing.Size(46, 17)
+        Me.ZPL_chk.TabIndex = 40
+        Me.ZPL_chk.Text = "ZPL"
+        Me.ZPL_chk.UseVisualStyleBackColor = True
+        '
         'DiC_PrintPicklist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(268, 135)
+        Me.Controls.Add(Me.ZPL_chk)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Warehouse_cbo)
         Me.Controls.Add(Me.Print_btn)
@@ -93,4 +105,5 @@ Partial Class DiC_PrintPicklist
     Friend WithEvents Print_btn As System.Windows.Forms.Button
     Friend WithEvents Warehouse_cbo As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ZPL_chk As System.Windows.Forms.CheckBox
 End Class

@@ -56,7 +56,7 @@ Partial Class Ord_ABC
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Location = New System.Drawing.Point(86, 32)
         Me.Partnumber_txt.Name = "Partnumber_txt"
         Me.Partnumber_txt.Size = New System.Drawing.Size(117, 20)

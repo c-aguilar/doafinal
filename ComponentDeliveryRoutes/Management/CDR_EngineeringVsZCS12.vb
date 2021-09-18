@@ -75,7 +75,7 @@ Public Class CDR_EngineeringVsZCS12
                 FlashAlerts.ShowError("Imposible conectar a SAP.")
             End If
         Else
-            FlashAlerts.ShowError("No existe informacion en Control de Produccion del tablero seleccionado.")
+            FlashAlerts.ShowError("No existe información en Control de Producción del tablero seleccionado.")
         End If
     End Sub
 
@@ -94,38 +94,12 @@ Public Class CDR_EngineeringVsZCS12
             Next
             Cursor.Current = Cursors.Arrow
             Me.Text = "Comparativo SAP vs Ingenieria"
-            MsgBox("Hecho!", MsgBoxStyle.Information)
+            MsgBox("¡Hecho!", MsgBoxStyle.Information)
         End If
     End Sub
 
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If result IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(result, Title_lbl.Text, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(result, True) Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = result
-                        pdf.Title = Title_lbl.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm("Exportado.")
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(result, Title_lbl.Text)
     End Sub
 
     Private Sub CDR_EngineeringVsZCS12_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed

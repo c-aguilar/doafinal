@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub LoadMovers()
-        Dim movers As DataTable = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.Status = 'P' AND T.MustShip = 1;"))
+        Dim movers As DataTable = SQL.Current.GetDatatable(String.Format("SELECT ID,Fullname, [Date], Requisitor, Customer, Partnumbers, T.[Description], Locality, ShippingDate FROM Ord_Movers AS M INNER JOIN Sys_Users AS U ON M.Username = U.Username INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID WHERE M.Status = 'P' AND T.MustShip = 1;"))
         Movers_dgv.DataSource = movers
     End Sub
 

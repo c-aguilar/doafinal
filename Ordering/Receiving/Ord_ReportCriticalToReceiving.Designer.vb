@@ -23,10 +23,12 @@ Partial Class Ord_ReportCriticalToReceiving
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Partnumber_txt = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Comment_txt = New System.Windows.Forms.TextBox()
@@ -40,6 +42,7 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.Transporter = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Delivery = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Comment = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Date_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Username = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,12 +56,16 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.Delivery_txt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Transporter_txt = New System.Windows.Forms.TextBox()
+        Me.QuantityStop_chk = New System.Windows.Forms.CheckBox()
+        Me.Quantity_nud = New System.Windows.Forms.NumericUpDown()
+        Me.UoM_lbl = New System.Windows.Forms.Label()
         CType(Me.Actives_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(91, 31)
         Me.Partnumber_txt.Mask = "AAAAAAAA"
@@ -79,7 +86,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Comment_txt
         '
-        Me.Comment_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Comment_txt.BackColor = System.Drawing.Color.Ivory
         Me.Comment_txt.Location = New System.Drawing.Point(91, 110)
         Me.Comment_txt.MaxLength = 150
         Me.Comment_txt.Multiline = True
@@ -104,7 +111,7 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label7.Location = New System.Drawing.Point(0, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(909, 25)
+        Me.Label7.Size = New System.Drawing.Size(1014, 25)
         Me.Label7.TabIndex = 97
         Me.Label7.Text = "Reportar Numero de Parte Critico"
         '
@@ -113,40 +120,46 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.Actives_dgv.AllowColumnHiding = True
         Me.Actives_dgv.AllowUserToAddRows = False
         Me.Actives_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray
+        Me.Actives_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Actives_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Actives_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Actives_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Actives_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Actives_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Actives_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Partnumber, Me.Area, Me.Plates, Me.Transporter, Me.Delivery, Me.Comment, Me.Date_, Me.Fullname, Me.Username, Me.cancel_btn})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Actives_dgv.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Actives_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Partnumber, Me.Area, Me.Plates, Me.Transporter, Me.Delivery, Me.Comment, Me.Quantity, Me.Date_, Me.Fullname, Me.Username, Me.cancel_btn})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Actives_dgv.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Actives_dgv.DefaultRowFilter = Nothing
+        Me.Actives_dgv.EnableHeadersVisualStyles = False
         Me.Actives_dgv.Location = New System.Drawing.Point(4, 154)
         Me.Actives_dgv.Name = "Actives_dgv"
         Me.Actives_dgv.ReadOnly = True
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Actives_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Actives_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.Actives_dgv.ShowRowNumber = True
-        Me.Actives_dgv.Size = New System.Drawing.Size(901, 378)
+        Me.Actives_dgv.Size = New System.Drawing.Size(1006, 378)
         Me.Actives_dgv.TabIndex = 8
         '
         'ID
@@ -160,8 +173,8 @@ Partial Class Ord_ReportCriticalToReceiving
         'Partnumber
         '
         Me.Partnumber.DataPropertyName = "Partnumber"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        Me.Partnumber.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.Partnumber.DefaultCellStyle = DataGridViewCellStyle3
         Me.Partnumber.HeaderText = "No. de Parte"
         Me.Partnumber.Name = "Partnumber"
         Me.Partnumber.ReadOnly = True
@@ -177,6 +190,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Plates
         '
+        Me.Plates.DataPropertyName = "Plates"
         Me.Plates.HeaderText = "Placas/Troca"
         Me.Plates.Name = "Plates"
         Me.Plates.ReadOnly = True
@@ -184,6 +198,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Transporter
         '
+        Me.Transporter.DataPropertyName = "Transporter"
         Me.Transporter.HeaderText = "Transportista"
         Me.Transporter.Name = "Transporter"
         Me.Transporter.ReadOnly = True
@@ -191,6 +206,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Delivery
         '
+        Me.Delivery.DataPropertyName = "Delivery"
         Me.Delivery.HeaderText = "Delivery"
         Me.Delivery.Name = "Delivery"
         Me.Delivery.ReadOnly = True
@@ -204,13 +220,24 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.Comment.ReadOnly = True
         Me.Comment.Width = 150
         '
+        'Quantity
+        '
+        Me.Quantity.DataPropertyName = "Quantity"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Format = "N3"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Quantity.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Quantity.HeaderText = "Cantidad"
+        Me.Quantity.Name = "Quantity"
+        Me.Quantity.ReadOnly = True
+        '
         'Date_
         '
         Me.Date_.DataPropertyName = "Date"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle3.Format = "g"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Date_.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle5.Format = "g"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.Date_.DefaultCellStyle = DataGridViewCellStyle5
         Me.Date_.HeaderText = "Fecha"
         Me.Date_.Name = "Date_"
         Me.Date_.ReadOnly = True
@@ -253,8 +280,8 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Area_txt
         '
-        Me.Area_txt.BackColor = System.Drawing.Color.LightYellow
-        Me.Area_txt.Location = New System.Drawing.Point(342, 87)
+        Me.Area_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Area_txt.Location = New System.Drawing.Point(342, 83)
         Me.Area_txt.MaxLength = 20
         Me.Area_txt.Name = "Area_txt"
         Me.Area_txt.Size = New System.Drawing.Size(168, 20)
@@ -263,7 +290,7 @@ Partial Class Ord_ReportCriticalToReceiving
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(304, 90)
+        Me.Label3.Location = New System.Drawing.Point(304, 86)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 101
@@ -271,7 +298,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Plates_txt
         '
-        Me.Plates_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Plates_txt.BackColor = System.Drawing.Color.Ivory
         Me.Plates_txt.Location = New System.Drawing.Point(91, 58)
         Me.Plates_txt.MaxLength = 20
         Me.Plates_txt.Name = "Plates_txt"
@@ -298,7 +325,7 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Delivery_txt
         '
-        Me.Delivery_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Delivery_txt.BackColor = System.Drawing.Color.Ivory
         Me.Delivery_txt.Location = New System.Drawing.Point(91, 84)
         Me.Delivery_txt.MaxLength = 20
         Me.Delivery_txt.Name = "Delivery_txt"
@@ -316,18 +343,52 @@ Partial Class Ord_ReportCriticalToReceiving
         '
         'Transporter_txt
         '
-        Me.Transporter_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Transporter_txt.BackColor = System.Drawing.Color.Ivory
         Me.Transporter_txt.Location = New System.Drawing.Point(342, 58)
         Me.Transporter_txt.MaxLength = 20
         Me.Transporter_txt.Name = "Transporter_txt"
         Me.Transporter_txt.Size = New System.Drawing.Size(168, 20)
         Me.Transporter_txt.TabIndex = 3
         '
+        'QuantityStop_chk
+        '
+        Me.QuantityStop_chk.AutoSize = True
+        Me.QuantityStop_chk.Location = New System.Drawing.Point(268, 35)
+        Me.QuantityStop_chk.Name = "QuantityStop_chk"
+        Me.QuantityStop_chk.Size = New System.Drawing.Size(118, 17)
+        Me.QuantityStop_chk.TabIndex = 108
+        Me.QuantityStop_chk.Text = "Critico hasta recibir:"
+        Me.QuantityStop_chk.UseVisualStyleBackColor = True
+        '
+        'Quantity_nud
+        '
+        Me.Quantity_nud.BackColor = System.Drawing.Color.Ivory
+        Me.Quantity_nud.DecimalPlaces = 3
+        Me.Quantity_nud.Enabled = False
+        Me.Quantity_nud.Location = New System.Drawing.Point(388, 34)
+        Me.Quantity_nud.Maximum = New Decimal(New Integer() {999999, 0, 0, 0})
+        Me.Quantity_nud.Name = "Quantity_nud"
+        Me.Quantity_nud.Size = New System.Drawing.Size(94, 20)
+        Me.Quantity_nud.TabIndex = 109
+        Me.Quantity_nud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'UoM_lbl
+        '
+        Me.UoM_lbl.AutoSize = True
+        Me.UoM_lbl.Location = New System.Drawing.Point(488, 37)
+        Me.UoM_lbl.Name = "UoM_lbl"
+        Me.UoM_lbl.Size = New System.Drawing.Size(22, 13)
+        Me.UoM_lbl.TabIndex = 110
+        Me.UoM_lbl.Text = "     "
+        '
         'Ord_ReportCriticalToReceiving
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(909, 536)
+        Me.ClientSize = New System.Drawing.Size(1014, 536)
+        Me.Controls.Add(Me.UoM_lbl)
+        Me.Controls.Add(Me.Quantity_nud)
+        Me.Controls.Add(Me.QuantityStop_chk)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Transporter_txt)
         Me.Controls.Add(Me.Label5)
@@ -347,6 +408,7 @@ Partial Class Ord_ReportCriticalToReceiving
         Me.ShowIcon = False
         Me.Text = "Ordering"
         CType(Me.Actives_dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,6 +428,9 @@ Partial Class Ord_ReportCriticalToReceiving
     Friend WithEvents Delivery_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Transporter_txt As System.Windows.Forms.TextBox
+    Friend WithEvents QuantityStop_chk As System.Windows.Forms.CheckBox
+    Friend WithEvents Quantity_nud As System.Windows.Forms.NumericUpDown
+    Friend WithEvents UoM_lbl As System.Windows.Forms.Label
     Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Partnumber As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Area As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -373,6 +438,7 @@ Partial Class Ord_ReportCriticalToReceiving
     Friend WithEvents Transporter As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Delivery As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Comment As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Quantity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Date_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Fullname As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Username As System.Windows.Forms.DataGridViewTextBoxColumn

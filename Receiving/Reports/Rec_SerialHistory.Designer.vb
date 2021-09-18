@@ -43,7 +43,7 @@ Partial Class Rec_SerialHistory
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(17, 51)
         Me.Serial_txt.Name = "Serial_txt"
@@ -92,7 +92,7 @@ Partial Class Rec_SerialHistory
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(215, 51)
         Me.Partnumber_txt.Name = "Partnumber_txt"

@@ -45,7 +45,7 @@
 
     Private Sub ReadSerial()
         Dim serial As New Serialnumber(Serialnumber_txt.Text)
-        If serial.Exist Then
+        If serial.Exists Then
             If serial.RedTag Then
                 Log(serial.SerialNumber, "CDR_EmptyRedTagSerial")
             End If
@@ -58,7 +58,7 @@
                     Case Serialnumber.SerialStatus.Tracker
                         serial.TrackerPartialDiscount(serial.CurrentQuantity, Route.Badge)
                         Log(serial.SerialNumber, "CDR_EmptyTrackerSerial")
-                    Case Delta_ERP.Serialnumber.SerialStatus.New, Delta_ERP.Serialnumber.SerialStatus.Pending
+                    Case Delta_ERP.Serialnumber.SerialStatus.New, Delta_ERP.Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                         dt_serialnumber.Rows.Add(serial.SerialNumber, "Error")
                     Case Delta_ERP.Serialnumber.SerialStatus.Stored
                         If serial.Open("00000000") AndAlso serial.EmptyByRoute(Route.Badge) Then

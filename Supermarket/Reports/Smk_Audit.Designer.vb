@@ -62,7 +62,7 @@ Partial Class Smk_Audit
         Me.empty_btn = New CAguilar.DataGridViewImprovedButtonColumn()
         Me.Result_dgv = New CAguilar.DataGridViewWithFilters()
         Me.partnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delta_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pending = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sap = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.difference = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -107,7 +107,7 @@ Partial Class Smk_Audit
         Me.Run_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Run_btn.Image = CType(resources.GetObject("Run_btn.Image"), System.Drawing.Image)
         Me.Run_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Run_btn.Location = New System.Drawing.Point(707, 29)
+        Me.Run_btn.Location = New System.Drawing.Point(804, 30)
         Me.Run_btn.Name = "Run_btn"
         Me.Run_btn.Size = New System.Drawing.Size(100, 25)
         Me.Run_btn.TabIndex = 112
@@ -292,6 +292,8 @@ Partial Class Smk_Audit
         '
         'open_btn
         '
+        Me.open_btn.DefaultImage = Nothing
+        Me.open_btn.DefaultText = ""
         Me.open_btn.HeaderText = ""
         Me.open_btn.Name = "open_btn"
         Me.open_btn.ReadOnly = True
@@ -301,6 +303,8 @@ Partial Class Smk_Audit
         '
         'partial_btn
         '
+        Me.partial_btn.DefaultImage = Nothing
+        Me.partial_btn.DefaultText = ""
         Me.partial_btn.HeaderText = ""
         Me.partial_btn.Name = "partial_btn"
         Me.partial_btn.ReadOnly = True
@@ -310,6 +314,8 @@ Partial Class Smk_Audit
         '
         'empty_btn
         '
+        Me.empty_btn.DefaultImage = Nothing
+        Me.empty_btn.DefaultText = ""
         Me.empty_btn.HeaderText = ""
         Me.empty_btn.Name = "empty_btn"
         Me.empty_btn.ReadOnly = True
@@ -334,7 +340,7 @@ Partial Class Smk_Audit
         Me.Result_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.Result_dgv.ColumnHeadersHeight = 34
         Me.Result_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Result_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partnumber, Me.delta, Me.pending, Me.sap, Me.difference, Me.button})
+        Me.Result_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partnumber, Me.delta_, Me.pending, Me.sap, Me.difference, Me.button})
         DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -370,16 +376,16 @@ Partial Class Smk_Audit
         '
         'delta
         '
-        Me.delta.DataPropertyName = "Cantidad en Delta"
+        Me.delta_.DataPropertyName = "Cantidad en Delta"
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle9.Format = "N3"
         DataGridViewCellStyle9.NullValue = Nothing
-        Me.delta.DefaultCellStyle = DataGridViewCellStyle9
-        Me.delta.HeaderText = "Cantidad en Delta"
-        Me.delta.Name = "delta"
-        Me.delta.ReadOnly = True
-        Me.delta.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.delta.Width = 70
+        Me.delta_.DefaultCellStyle = DataGridViewCellStyle9
+        Me.delta_.HeaderText = "Cantidad en Delta"
+        Me.delta_.Name = "delta"
+        Me.delta_.ReadOnly = True
+        Me.delta_.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.delta_.Width = 70
         '
         'pending
         '
@@ -427,45 +433,39 @@ Partial Class Smk_Audit
         'All_rb
         '
         Me.All_rb.AutoSize = True
-        Me.All_rb.Enabled = False
-        Me.All_rb.Location = New System.Drawing.Point(824, 33)
+        Me.All_rb.Location = New System.Drawing.Point(619, 35)
         Me.All_rb.Name = "All_rb"
         Me.All_rb.Size = New System.Drawing.Size(50, 17)
         Me.All_rb.TabIndex = 130
         Me.All_rb.Text = "Todo"
         Me.All_rb.UseVisualStyleBackColor = True
-        Me.All_rb.Visible = False
         '
         'IgnoreMSpec_rb
         '
         Me.IgnoreMSpec_rb.AutoSize = True
         Me.IgnoreMSpec_rb.Checked = True
-        Me.IgnoreMSpec_rb.Enabled = False
-        Me.IgnoreMSpec_rb.Location = New System.Drawing.Point(880, 33)
+        Me.IgnoreMSpec_rb.Location = New System.Drawing.Point(619, 50)
         Me.IgnoreMSpec_rb.Name = "IgnoreMSpec_rb"
         Me.IgnoreMSpec_rb.Size = New System.Drawing.Size(91, 17)
         Me.IgnoreMSpec_rb.TabIndex = 129
         Me.IgnoreMSpec_rb.TabStop = True
         Me.IgnoreMSpec_rb.Text = "Omitir M-Spec"
         Me.IgnoreMSpec_rb.UseVisualStyleBackColor = True
-        Me.IgnoreMSpec_rb.Visible = False
         '
         'OnlyMspec_rb
         '
         Me.OnlyMspec_rb.AutoSize = True
-        Me.OnlyMspec_rb.Enabled = False
-        Me.OnlyMspec_rb.Location = New System.Drawing.Point(977, 33)
+        Me.OnlyMspec_rb.Location = New System.Drawing.Point(619, 65)
         Me.OnlyMspec_rb.Name = "OnlyMspec_rb"
         Me.OnlyMspec_rb.Size = New System.Drawing.Size(86, 17)
         Me.OnlyMspec_rb.TabIndex = 128
         Me.OnlyMspec_rb.Text = "Solo M-Spec"
         Me.OnlyMspec_rb.UseVisualStyleBackColor = True
-        Me.OnlyMspec_rb.Visible = False
         '
         'IgnoreZero_chk
         '
         Me.IgnoreZero_chk.AutoSize = True
-        Me.IgnoreZero_chk.Location = New System.Drawing.Point(608, 34)
+        Me.IgnoreZero_chk.Location = New System.Drawing.Point(716, 36)
         Me.IgnoreZero_chk.Name = "IgnoreZero_chk"
         Me.IgnoreZero_chk.Size = New System.Drawing.Size(82, 17)
         Me.IgnoreZero_chk.TabIndex = 127
@@ -575,7 +575,7 @@ Partial Class Smk_Audit
     Friend WithEvents OnlyMspec_rb As System.Windows.Forms.RadioButton
     Friend WithEvents IgnoreZero_chk As System.Windows.Forms.CheckBox
     Friend WithEvents partnumber As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents delta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents delta_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents pending As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents sap As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents difference As System.Windows.Forms.DataGridViewTextBoxColumn

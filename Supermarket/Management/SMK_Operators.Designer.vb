@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SMK_Operators
+Partial Class Smk_Operators
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class SMK_Operators
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SMK_Operators))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Smk_Operators))
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Firstname_txt = New System.Windows.Forms.TextBox()
         Me.Badge_txt = New System.Windows.Forms.MaskedTextBox()
@@ -38,6 +38,12 @@ Partial Class SMK_Operators
         Me.Badge_cbo = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Role_cbo = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Activity_txt = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Department_txt = New System.Windows.Forms.MaskedTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Delete_btn = New System.Windows.Forms.Button()
         CType(Me.Picture_pb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -57,9 +63,9 @@ Partial Class SMK_Operators
         '
         'Firstname_txt
         '
-        Me.Firstname_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Firstname_txt.BackColor = System.Drawing.Color.Ivory
         Me.Firstname_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Firstname_txt.Location = New System.Drawing.Point(6, 77)
+        Me.Firstname_txt.Location = New System.Drawing.Point(7, 77)
         Me.Firstname_txt.MaxLength = 20
         Me.Firstname_txt.Name = "Firstname_txt"
         Me.Firstname_txt.Size = New System.Drawing.Size(170, 24)
@@ -67,10 +73,9 @@ Partial Class SMK_Operators
         '
         'Badge_txt
         '
-        Me.Badge_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Badge_txt.BackColor = System.Drawing.Color.Ivory
         Me.Badge_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Badge_txt.Location = New System.Drawing.Point(6, 32)
-        Me.Badge_txt.Mask = "000000000"
+        Me.Badge_txt.Location = New System.Drawing.Point(7, 32)
         Me.Badge_txt.Name = "Badge_txt"
         Me.Badge_txt.Size = New System.Drawing.Size(109, 26)
         Me.Badge_txt.TabIndex = 2
@@ -79,9 +84,9 @@ Partial Class SMK_Operators
         '
         'Lastname_txt
         '
-        Me.Lastname_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Lastname_txt.BackColor = System.Drawing.Color.Ivory
         Me.Lastname_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lastname_txt.Location = New System.Drawing.Point(6, 120)
+        Me.Lastname_txt.Location = New System.Drawing.Point(7, 120)
         Me.Lastname_txt.MaxLength = 20
         Me.Lastname_txt.Name = "Lastname_txt"
         Me.Lastname_txt.Size = New System.Drawing.Size(170, 24)
@@ -89,10 +94,11 @@ Partial Class SMK_Operators
         '
         'Shift_cbo
         '
-        Me.Shift_cbo.BackColor = System.Drawing.Color.LightYellow
+        Me.Shift_cbo.BackColor = System.Drawing.Color.Ivory
+        Me.Shift_cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Shift_cbo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Shift_cbo.FormattingEnabled = True
-        Me.Shift_cbo.Location = New System.Drawing.Point(6, 163)
+        Me.Shift_cbo.Location = New System.Drawing.Point(7, 163)
         Me.Shift_cbo.Name = "Shift_cbo"
         Me.Shift_cbo.Size = New System.Drawing.Size(65, 26)
         Me.Shift_cbo.TabIndex = 5
@@ -159,7 +165,7 @@ Partial Class SMK_Operators
         '
         Me.Save_btn.Image = CType(resources.GetObject("Save_btn.Image"), System.Drawing.Image)
         Me.Save_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Save_btn.Location = New System.Drawing.Point(262, 231)
+        Me.Save_btn.Location = New System.Drawing.Point(262, 367)
         Me.Save_btn.Name = "Save_btn"
         Me.Save_btn.Size = New System.Drawing.Size(100, 23)
         Me.Save_btn.TabIndex = 7
@@ -186,6 +192,12 @@ Partial Class SMK_Operators
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Role_cbo)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Activity_txt)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Department_txt)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Delete_btn)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Firstname_txt)
@@ -200,31 +212,91 @@ Partial Class SMK_Operators
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(11, 81)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(368, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(368, 396)
         Me.GroupBox1.TabIndex = 50
         Me.GroupBox1.TabStop = False
+        '
+        'Role_cbo
+        '
+        Me.Role_cbo.BackColor = System.Drawing.Color.Ivory
+        Me.Role_cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Role_cbo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Role_cbo.FormattingEnabled = True
+        Me.Role_cbo.Location = New System.Drawing.Point(7, 251)
+        Me.Role_cbo.Name = "Role_cbo"
+        Me.Role_cbo.Size = New System.Drawing.Size(300, 26)
+        Me.Role_cbo.TabIndex = 55
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 323)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(77, 13)
+        Me.Label9.TabIndex = 54
+        Me.Label9.Text = "Departamento:"
+        '
+        'Activity_txt
+        '
+        Me.Activity_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Activity_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Activity_txt.Location = New System.Drawing.Point(7, 296)
+        Me.Activity_txt.MaxLength = 70
+        Me.Activity_txt.Name = "Activity_txt"
+        Me.Activity_txt.Size = New System.Drawing.Size(249, 24)
+        Me.Activity_txt.TabIndex = 53
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 280)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(54, 13)
+        Me.Label8.TabIndex = 52
+        Me.Label8.Text = "Actividad:"
+        '
+        'Department_txt
+        '
+        Me.Department_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Department_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Department_txt.Location = New System.Drawing.Point(7, 339)
+        Me.Department_txt.Mask = "0000"
+        Me.Department_txt.Name = "Department_txt"
+        Me.Department_txt.Size = New System.Drawing.Size(62, 26)
+        Me.Department_txt.TabIndex = 50
+        Me.Department_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Department_txt.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 237)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(43, 13)
+        Me.Label7.TabIndex = 49
+        Me.Label7.Text = "Puesto:"
         '
         'Delete_btn
         '
         Me.Delete_btn.Image = CType(resources.GetObject("Delete_btn.Image"), System.Drawing.Image)
         Me.Delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Delete_btn.Location = New System.Drawing.Point(156, 231)
+        Me.Delete_btn.Location = New System.Drawing.Point(156, 367)
         Me.Delete_btn.Name = "Delete_btn"
         Me.Delete_btn.Size = New System.Drawing.Size(100, 23)
         Me.Delete_btn.TabIndex = 8
         Me.Delete_btn.Text = "Eliminar"
         Me.Delete_btn.UseVisualStyleBackColor = True
         '
-        'SMK_Operators
+        'Smk_Operators
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 354)
+        Me.ClientSize = New System.Drawing.Size(391, 489)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Badge_cbo)
         Me.Controls.Add(Me.lblTitle)
-        Me.Name = "SMK_Operators"
+        Me.Name = "Smk_Operators"
         Me.ShowIcon = False
         Me.Text = "Supermarket"
         CType(Me.Picture_pb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -250,4 +322,10 @@ Partial Class SMK_Operators
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Delete_btn As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Activity_txt As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Department_txt As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Role_cbo As System.Windows.Forms.ComboBox
 End Class

@@ -72,7 +72,7 @@ Partial Class Smk_ChangeLocationKiosk
         '
         'Location_txt
         '
-        Me.Location_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Location_txt.BackColor = System.Drawing.Color.Ivory
         Me.Location_txt.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         Me.Location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Location_txt.Location = New System.Drawing.Point(173, 199)
@@ -85,7 +85,7 @@ Partial Class Smk_ChangeLocationKiosk
         '
         'OldLocation_txt
         '
-        Me.OldLocation_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.OldLocation_txt.BackColor = System.Drawing.Color.Ivory
         Me.OldLocation_txt.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         Me.OldLocation_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldLocation_txt.Location = New System.Drawing.Point(173, 107)
@@ -119,7 +119,7 @@ Partial Class Smk_ChangeLocationKiosk
         '
         'Warehouse_txt
         '
-        Me.Warehouse_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Warehouse_txt.BackColor = System.Drawing.Color.Ivory
         Me.Warehouse_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Warehouse_txt.Location = New System.Drawing.Point(173, 144)
         Me.Warehouse_txt.Name = "Warehouse_txt"
@@ -129,7 +129,7 @@ Partial Class Smk_ChangeLocationKiosk
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(99, 70)
         Me.Serial_txt.MaxLength = 16
@@ -148,7 +148,7 @@ Partial Class Smk_ChangeLocationKiosk
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(250, 26)
         Me.CountDown_lbl.TabIndex = 101
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Close_btn

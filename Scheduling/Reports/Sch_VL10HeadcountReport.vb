@@ -28,9 +28,9 @@
     Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
         LoadingScreen.Show()
         If cboFamily.SelectedItem = "*" Then
-            Dim data As DataTable = SQL.Current.GetDatatable(String.Format("SELECT ISNULL(VL10.[Material],'EMPTY_MATERIAL') AS Material,SC.[Date],ISNULL(OpenQuantity,0) AS Quantity,ISNULL((ShippingPoints * OpenQuantity) / 802,0) AS SPoints,ISNULL(SM.Business,'EMPTY_BUSINESS') AS Business " & _
+            Dim data As DataTable = SQL.Current.GetDatatable(String.Format("SELECT ISNULL(VL10.[Material],'EMPTY_MATERIAL') AS Material,SC.[Date],ISNULL(OpenQuantity,0) AS Quantity,ISNULL((Points * OpenQuantity) / 802,0) AS SPoints,ISNULL(SM.Business,'EMPTY_BUSINESS') AS Business " & _
                                                                            "FROM Sys_Calendar AS SC LEFT OUTER JOIN vw_Sch_DailyCustomerRequirements AS VL10 " & _
-                                                                           "ON SC.[Date] = VL10.DeliveryDate LEFT OUTER JOIN Sch_Materials AS SM ON VL10.Material = SM.Material LEFT OUTER JOIN Sch_ShippingPoints AS SP ON VL10.Material = SP.Material " & _
+                                                                           "ON SC.[Date] = VL10.DeliveryDate LEFT OUTER JOIN Sch_Materials AS SM ON VL10.Material = SM.Material LEFT OUTER JOIN Sch_ShippingPoints AS SP ON VL10.Material = SP.Material AND DATEPART(MONTH,SC.[Week]) = SP.[Month] AND DATEPART(YEAR,SC.[Date])" & _
                                                                            "WHERE SC.[Date] BETWEEN '{0}' AND '{1}' ORDER BY SC.Date ", dtpFrom.Value.ToString("yyyy-MM-dd"), dtpTo.Value.ToString("yyyy-MM-dd")))
             Dim pivoter As New PivotTable(data)
             Dim headcount = pivoter.PivotDates("Business", "SPoints", AggregateFunction.Sum, "Date", "System.Double")

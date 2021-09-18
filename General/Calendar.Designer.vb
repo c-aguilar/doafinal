@@ -74,7 +74,7 @@ Partial Class Calendar
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Calendar"
-        Me.Text = "Calendar"
+        Me.Text = "Calendario"
         Me.ResumeLayout(False)
 
     End Sub

@@ -1,19 +1,15 @@
 ﻿Public Class Dic_Selector
-    Public Property Warehouse As String
-    Dim DieCenters As ArrayList
     Dim Options As DataTable
+    Dim deliver As Boolean = False
     Private Sub Dic_Selector_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Me.Warehouse = "" Then
-            Me.Warehouse = SQL.Current.GetString("Warehouse", "Dic_AuthorizedCheckpoints", "MachineName", Environment.MachineName, "")
-        End If
-        DieCenters = SQL.Current.GetList("DieCenter", "DiC_Centers", {"Warehouse"}, {Me.Warehouse})
         Option_txt.Focus()
         LoadOptions()
     End Sub
 
     Private Sub LoadOptions()
-        Options = SQL.Current.GetDatatable(String.Format("SELECT '*' + DieCenter + '*' AS Code,DieCenter AS Name FROM DiC_Centers WHERE Warehouse = '{0}';", Me.Warehouse))
-        Options.Rows.Add("*Entregar*", "Entregar")
+        Options = SQL.Current.GetDatatable(String.Format("SELECT '*' + DieCenter + '*' AS Code,DieCenter AS Name FROM DiC_Centers WHERE Warehouse = '{0}' AND Active = 1;", My.Settings.Warehouse))
+        deliver = SQL.Current.Exists("DiC_Centers", {"Warehouse", "WithinTerminals", "Active"}, {My.Settings.Warehouse, 1, 1})
+        If deliver Then Options.Rows.Add("*Entregar*", "Entregar")
         Picklist_dgv.DataSource = Options
     End Sub
 
@@ -32,15 +28,20 @@
     Private Sub ReadOption()
         Select Case Option_txt.Text.ToUpper
             Case "ENTREGAR"
-                Dim background As New FadeBackground()
-                Dim deliv As New DiC_DeliverTerminal
-                deliv.Warehouse = Me.Warehouse
-                background.Show()
-                deliv.ShowDialog()
-                background.Close()
-                background.Dispose()
-                Option_txt.Clear()
-                Option_txt.Focus()
+                If deliver Then
+                    Dim background As New FadeBackground()
+                    Dim deliv As New DiC_DeliverTerminal
+                    background.Show()
+                    deliv.ShowDialog()
+                    background.Close()
+                    background.Dispose()
+                    Option_txt.Clear()
+                    Option_txt.Focus()
+                Else
+                    Option_txt.Clear()
+                    Option_txt.Focus()
+                    FlashAlerts.ShowError("Opción incorrecta.")
+                End If
             Case Else
                 If Options.Compute("COUNT(Name)", String.Format("Name = '{0}'", Option_txt.Text)) = 1 Then
                     Dim background As New FadeBackground()
@@ -56,7 +57,7 @@
                 Else
                     Option_txt.Clear()
                     Option_txt.Focus()
-                    FlashAlerts.ShowError("Opcion incorrecta.")
+                    FlashAlerts.ShowError("Opción incorrecta.")
                 End If
         End Select
     End Sub

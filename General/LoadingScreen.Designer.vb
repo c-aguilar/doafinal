@@ -25,7 +25,7 @@ Partial Class LoadingScreen
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoadingScreen))
         Me.pbProgress = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Message_lbl = New System.Windows.Forms.Label()
         Me.lblVersion = New System.Windows.Forms.Label()
         CType(Me.pbProgress, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel.SuspendLayout()
@@ -49,7 +49,7 @@ Partial Class LoadingScreen
         Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120.0!))
         Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel.Controls.Add(Me.pbProgress, 1, 1)
-        Me.TableLayoutPanel.Controls.Add(Me.Label1, 1, 0)
+        Me.TableLayoutPanel.Controls.Add(Me.Message_lbl, 1, 0)
         Me.TableLayoutPanel.Controls.Add(Me.lblVersion, 2, 2)
         Me.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel.Location = New System.Drawing.Point(0, 0)
@@ -61,17 +61,17 @@ Partial Class LoadingScreen
         Me.TableLayoutPanel.Size = New System.Drawing.Size(800, 788)
         Me.TableLayoutPanel.TabIndex = 1
         '
-        'Label1
+        'Message_lbl
         '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(343, 296)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 48)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Cargando..."
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Message_lbl.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Message_lbl.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Message_lbl.ForeColor = System.Drawing.Color.White
+        Me.Message_lbl.Location = New System.Drawing.Point(343, 296)
+        Me.Message_lbl.Name = "Message_lbl"
+        Me.Message_lbl.Size = New System.Drawing.Size(114, 48)
+        Me.Message_lbl.TabIndex = 1
+        Me.Message_lbl.Text = "Cargando..."
+        Me.Message_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblVersion
         '
@@ -109,7 +109,7 @@ Partial Class LoadingScreen
     End Sub
     Friend WithEvents pbProgress As System.Windows.Forms.PictureBox
     Friend WithEvents TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Message_lbl As System.Windows.Forms.Label
     Friend WithEvents lblVersion As System.Windows.Forms.Label
 
 End Class

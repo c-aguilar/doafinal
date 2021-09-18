@@ -12,7 +12,7 @@
                         If SQL.Current.Insert("DiC_Picklist", {"Partnumber", "DieCenter", "ScannedSerialnumber"}, {Partnumber_txt.Text, DieCenter_cbo.SelectedValue, 0}) Then
                             Partnumber_txt.Clear()
                             Partnumber_txt.Focus()
-                            FlashAlerts.ShowConfirm("Hecho!")
+                            FlashAlerts.ShowConfirm("¡Hecho!")
                         Else
                             FlashAlerts.ShowInformation("Error al registrar el numero de parte.")
                         End If
@@ -24,7 +24,7 @@
                         If SQL.Current.Insert("DiC_Picklist", {"Partnumber", "DieCenter", "ScannedSerialnumber"}, {Partnumber_txt.Text, DieCenter_cbo.SelectedValue, 0}) Then
                             Partnumber_txt.Clear()
                             Partnumber_txt.Focus()
-                            FlashAlerts.ShowConfirm("Hecho!")
+                            FlashAlerts.ShowConfirm("¡Hecho!")
                         Else
                             FlashAlerts.ShowInformation("Error al registrar el numero de parte.")
                         End If

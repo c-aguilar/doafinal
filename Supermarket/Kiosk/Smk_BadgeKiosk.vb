@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub Badge_txt_TextChanged(sender As Object, e As EventArgs) Handles Badge_txt.TextChanged
-        If Badge_txt.TextLength = 9 And IsNumeric(Badge_txt.Text) Then
+        If Badge_txt.TextLength = Parameter("SYS_BadgeLength", 9) And IsNumeric(Badge_txt.Text) Then
             ReadBadge()
         ElseIf Badge_txt.TextLength = 10 Then
             ReadBadge()
@@ -17,8 +17,8 @@
     End Sub
 
     Private Sub ReadBadge()
-        If SQL.Current.Exists("Smk_Operators", {"Badge", "Active"}, {Strings.Right(Badge_txt.Text, 9), 1}) Then
-            Me.SelectedBadge = Strings.Right(Badge_txt.Text, 9)
+        If SQL.Current.Exists(String.Format("SELECT Badge FROM Smk_Operators WHERE Badge = '{0}' AND Active = 1 AND Area IN ('SMK','REC','CDR')", Strings.Right(Badge_txt.Text, Parameter("SYS_BadgeLength", 9)))) Then
+            Me.SelectedBadge = Strings.Right(Badge_txt.Text, Parameter("SYS_BadgeLength", 9))
             Me.DialogResult = Windows.Forms.DialogResult.OK
             Me.Close()
         Else

@@ -38,4 +38,9 @@
     Private Sub ConditionSelector_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub NotIn_btn_Click(sender As Object, e As EventArgs) Handles NotIn_btn.Click
+        Condition = DeltaReporter.Condition.NotIn
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+    End Sub
 End Class

@@ -30,7 +30,7 @@
                         SQL.Current.Insert("Smk_RackOwners", {"Badge", "Rack", "Warehouse"}, {Badge_cbo.SelectedValue, Rack_txt.Text, Warehouse_cbo.SelectedValue})
                         RefreshRacks()
                         Rack_txt.Clear()
-                        FlashAlerts.ShowConfirm("Hecho!")
+                        FlashAlerts.ShowConfirm("¡Hecho!")
                     Else
                         FlashAlerts.ShowInformation("Rack ya registrado para el operador.")
                     End If

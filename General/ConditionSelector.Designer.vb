@@ -37,6 +37,8 @@ Partial Class ConditionSelector
         Me.MinorEqual_btn = New System.Windows.Forms.Button()
         Me.In_lbl = New System.Windows.Forms.Label()
         Me.In_btn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NotIn_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Equal_btn
@@ -200,11 +202,36 @@ Partial Class ConditionSelector
         Me.In_btn.TabIndex = 25
         Me.In_btn.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(33, 199)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "No dentro de..."
+        '
+        'NotIn_btn
+        '
+        Me.NotIn_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.NotIn_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NotIn_btn.FlatAppearance.BorderSize = 0
+        Me.NotIn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NotIn_btn.Image = Global.Delta_ERP.My.Resources.Resources.not_in
+        Me.NotIn_btn.Location = New System.Drawing.Point(6, 195)
+        Me.NotIn_btn.Margin = New System.Windows.Forms.Padding(0)
+        Me.NotIn_btn.Name = "NotIn_btn"
+        Me.NotIn_btn.Size = New System.Drawing.Size(21, 21)
+        Me.NotIn_btn.TabIndex = 27
+        Me.NotIn_btn.UseVisualStyleBackColor = True
+        '
         'ConditionSelector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(130, 197)
+        Me.ClientSize = New System.Drawing.Size(130, 225)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.NotIn_btn)
         Me.Controls.Add(Me.In_lbl)
         Me.Controls.Add(Me.In_btn)
         Me.Controls.Add(Me.MinorEqual_lbl)
@@ -242,4 +269,6 @@ Partial Class ConditionSelector
     Friend WithEvents MinorEqual_btn As System.Windows.Forms.Button
     Friend WithEvents In_lbl As System.Windows.Forms.Label
     Friend WithEvents In_btn As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents NotIn_btn As System.Windows.Forms.Button
 End Class

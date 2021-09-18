@@ -46,7 +46,7 @@ Partial Class Smk_MovementHistory
         '
         Me.Serial_rb.AutoSize = True
         Me.Serial_rb.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Serial_rb.Location = New System.Drawing.Point(226, 37)
+        Me.Serial_rb.Location = New System.Drawing.Point(521, 37)
         Me.Serial_rb.Name = "Serial_rb"
         Me.Serial_rb.Size = New System.Drawing.Size(52, 17)
         Me.Serial_rb.TabIndex = 94
@@ -70,7 +70,7 @@ Partial Class Smk_MovementHistory
         '
         Me.Find_btn.Image = CType(resources.GetObject("Find_btn.Image"), System.Drawing.Image)
         Me.Find_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Find_btn.Location = New System.Drawing.Point(761, 33)
+        Me.Find_btn.Location = New System.Drawing.Point(752, 33)
         Me.Find_btn.Name = "Find_btn"
         Me.Find_btn.Size = New System.Drawing.Size(100, 25)
         Me.Find_btn.TabIndex = 96
@@ -137,7 +137,7 @@ Partial Class Smk_MovementHistory
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(460, 39)
+        Me.Label5.Location = New System.Drawing.Point(219, 39)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 13)
         Me.Label5.TabIndex = 115
@@ -148,7 +148,7 @@ Partial Class Smk_MovementHistory
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(613, 39)
+        Me.Label6.Location = New System.Drawing.Point(367, 39)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(36, 13)
         Me.Label6.TabIndex = 117
@@ -159,7 +159,7 @@ Partial Class Smk_MovementHistory
         Me.To_dtp.CustomFormat = ""
         Me.To_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.To_dtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.To_dtp.Location = New System.Drawing.Point(655, 35)
+        Me.To_dtp.Location = New System.Drawing.Point(405, 35)
         Me.To_dtp.Name = "To_dtp"
         Me.To_dtp.Size = New System.Drawing.Size(100, 20)
         Me.To_dtp.TabIndex = 116
@@ -169,16 +169,16 @@ Partial Class Smk_MovementHistory
         Me.From_dtp.CustomFormat = ""
         Me.From_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.From_dtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.From_dtp.Location = New System.Drawing.Point(507, 35)
+        Me.From_dtp.Location = New System.Drawing.Point(263, 35)
         Me.From_dtp.Name = "From_dtp"
         Me.From_dtp.Size = New System.Drawing.Size(100, 20)
         Me.From_dtp.TabIndex = 114
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Serial_txt.Location = New System.Drawing.Point(284, 35)
+        Me.Serial_txt.Location = New System.Drawing.Point(576, 35)
         Me.Serial_txt.MaxLength = 16
         Me.Serial_txt.Name = "Serial_txt"
         Me.Serial_txt.Size = New System.Drawing.Size(170, 20)
@@ -186,9 +186,9 @@ Partial Class Smk_MovementHistory
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Partnumber_txt.Location = New System.Drawing.Point(119, 35)
+        Me.Partnumber_txt.Location = New System.Drawing.Point(111, 35)
         Me.Partnumber_txt.MaxLength = 8
         Me.Partnumber_txt.Name = "Partnumber_txt"
         Me.Partnumber_txt.Size = New System.Drawing.Size(101, 20)

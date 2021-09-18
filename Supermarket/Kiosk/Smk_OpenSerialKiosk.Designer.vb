@@ -56,7 +56,7 @@ Partial Class Smk_OpenSerialKiosk
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(74, 83)
         Me.Serial_txt.MaxLength = 16
@@ -93,7 +93,7 @@ Partial Class Smk_OpenSerialKiosk
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(326, 26)
         Me.CountDown_lbl.TabIndex = 105
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'CountDown_timer

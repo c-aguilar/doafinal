@@ -2,7 +2,10 @@
     Dim data As DataTable
     Dim sb As SearchBox
     Private Sub OrderingForecastWaterfall_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sb = New SearchBox(Me.Report_dgv)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(Me.Report_dgv)
+
         From_dtp.Value = LastMonday().AddDays(-7)
         For Each sloc In SQL.Current.GetList("SELECT DISTINCT Sloc FROM (SELECT DISTINCT RandomSloc AS Sloc FROM Smk_SAPSlocs UNION SELECT DISTINCT ServiceSloc FROM Smk_SAPSlocs UNION SELECT DISTINCT DullSloc AS Sloc FROM Smk_SAPSlocs) AS Slocs ORDER BY Sloc")
             Slocs_clb.Items.Add(sloc, True)
@@ -11,36 +14,11 @@
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        If data IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(data, "PronosticoVsConsumoReal", True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(data, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = data
-                        pdf.Title = "Pronostico Vs Consumo Real"
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(data, Title_lbl.Text)
     End Sub
 
     Private Sub CopyToolStripButton_Click(sender As Object, e As EventArgs) Handles CopyToolStripButton.Click
@@ -54,7 +32,7 @@
         LoadingScreen.Show()
         Dim part_filter As String = ""
         If Not Partnumber_txt.Text = "*" AndAlso Not Partnumber_txt.Text = "" Then
-            part_filter = String.Format("H.Partnumber = '{0}' AND", Strings.right("00000000" & Partnumber_txt.Text, 8))
+            part_filter = String.Format("H.Partnumber = '{0}' AND", RawMaterial.Format(Partnumber_txt.Text))
         End If
         Dim checked_slocs As New ArrayList
         For Each s In Slocs_clb.CheckedItems

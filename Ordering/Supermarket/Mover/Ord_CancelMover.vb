@@ -4,7 +4,12 @@
     End Sub
 
     Private Sub LoadMovers()
-        Dim movers As DataTable = SQL.Current.GetDatatable(String.Format("SELECT ID, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] WHERE Username = '{0}' AND M.Status IN ('N','A');", User.Current.Username))
+        Dim movers As DataTable
+        If User.Current.IsAdmin Then
+            movers = SQL.Current.GetDatatable(String.Format("SELECT ID, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] WHERE M.Status IN ('N','A','P');"))
+        Else
+            movers = SQL.Current.GetDatatable(String.Format("SELECT ID, Requisitor, Customer, Partnumbers, T.[Description], Locality, [Date] FROM Ord_Movers AS M INNER JOIN (SELECT MoverID,COUNT(*) AS Partnumbers FROM Ord_MoverPartnumbers GROUP BY MoverID) AS P ON M.ID = P.MoverID INNER JOIN Ord_MoverTypes AS T ON M.[Type] = T.[Type] WHERE Username = '{0}' AND M.Status IN ('N','A');", User.Current.Username))
+        End If
         Movers_dgv.DataSource = movers
     End Sub
 

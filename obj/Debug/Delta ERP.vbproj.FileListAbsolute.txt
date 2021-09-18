@@ -149,3 +149,1176 @@ C:\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
 C:\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbprojResolveAssemblyReference.cache
 C:\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ForecastVs261.resources
 C:\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.exe.config
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.exe
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.xml
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.pdb
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.exe.manifest
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.application
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.exe
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.pdb
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\Delta ERP.xml
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\CAguilar.dll
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\CAguilar.pdb
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\bin\Debug\CAguilar.xml
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_StartingWorkChecklist.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_CheckpointTemplate.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanScan.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_PrintKanban.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_FindManufacturing.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_EngineeringVsZCS12.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_Operators.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_Workload.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanPrint.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_Kanbans.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_ScanningHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlan.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CR_AMRReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CR_ForecastVs261.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DiC_AskManual.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DiC_DeliverTerminal.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DiC_Picklist.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DiC_PrintPicklist.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Dic_Selector.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_Checkpoint.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_SerialScan.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_Badge.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_CancelSerialMovements.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_Backflush.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FGR_Operators.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.AboutBox.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.NewUser.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.ClonePermissionsFrom.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.UserRights.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.AlertsReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CalendarRange.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_Checkpoint.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingPartnumbers.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_ExitRoute.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.CDR_EmptyContainers.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.VA32_DeliveryCorrection.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DeltaReporter.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.FadeBackground.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.EnterBox.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.PDFViewer.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.SingleReportViewer.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.BagLabelPrinter.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.MAn_SamplesMaterialMovers_mi.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11_Details.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.MAn_ConsumptionHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.DownloadMB51.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Profile.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ImportForecast.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ControlledPartnumbers.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ReportCriticalToReceiving.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_CriticalHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ABC.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ConsumptionHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastVsZapimatinfo.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastWaterfall.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_MoverHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_ApproveMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_PrintMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_CancelMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_NewMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_AnswerMixMax.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxAlerts.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.QLY_RejectSerialnumber.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveSerialAlert.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.QLY_NewAlert.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveAlert.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Qly_AlertsHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.REC_Containers.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_ToTracker.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.REC_Operators.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_LabeledVsPaid.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_DeleteLabel.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_ReprintLabel.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_SMSVsMB51.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_Labeling.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_NewSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerToService.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_SerialHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_ToQuality.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerPartialDiscount.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerDiscountHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_AutoScheduleOptions.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_BusinessSelectorDialog.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Calendar.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.ErrorReportViewer.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.LoginForm.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Main.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ChartHeadcountWorkloadSchedule.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHighVolume.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ImportProductionPlan.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_CompatibilityReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10WaterfallReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10HeadcountReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHigh.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_CSVProductionPlanOptionsDialog.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyLow.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Resources.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.LoadingScreen.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanHeadcountReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10Variations.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10VsCapacityReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_SchedulingPrintLabels.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadDateRangeSelector.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_DownloadedDatesUpload.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadWaterfallReport.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Shi_ShipMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSettings.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableNewReel.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterChange.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterToService.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePhysicalInventory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialsOnCutters.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePendingNextSerials.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableLoginForm.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToCutter.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToService.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRoutesRegistry.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialReprint.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchRandom.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchService.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableServiceToCutter.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSelectTara.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCheckpoint.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_CableDeclareEmpty.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ReturnToRandom.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ManualAdjustment.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocation.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmpty.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscount.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ReactiveSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_SerialMovements.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_BadgeKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocationKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerialKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerialKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscountKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerialKiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_ChooseWarehouse.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_FixSerialnumber.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_Operators.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_RackOwners.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_PickUpMoverManual.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_PickupMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintMover.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_Audit.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_BrokenFIFO.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_MovementHistory.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPVsDelta.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_SimpleAudit.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_AlertMissing.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_Kiosk.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPTransfers.resources
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.vbproj.GenerateResource.Cache
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.exe.manifest
+C:\SVNRBEV\Delta ERP - Copy\Delta ERP\obj\Debug\Delta ERP.application
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.config
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.manifest
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.application
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.pdb
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Delta ERP.xml
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\CAguilar.dll
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.dll
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\DPUruNet.dll
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\Newtonsoft.Json.dll
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\CAguilar.pdb
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\CAguilar.xml
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.xml
+C:\SVNRBEV\Delta ERP\Delta ERP\bin\Debug\DPUruNet.xml
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Capabilities.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewOperatorEnrollment.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Enrollment.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Indentification.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ReaderSelection.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_StartingWorkChecklist.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_CheckpointTemplate.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanScan.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_PrintKanban.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_FindManufacturing.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EngineeringVsZCS12.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_GenericKanbans.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbansManagement.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Operators.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Workload.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanPrint.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Kanbans.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR2_Kanbans.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ScanningHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Headcount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_WeeklyScanningHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanRunAllSuggestions.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MaterialScheduledChanges.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrderFake.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentePlanSelectOrderDialog.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrder.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewPromise.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlan.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ActiveRawMaterialSerials.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanSimulation.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_HarnRequirementDetails.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ImportPhysicalInventory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MRPSelectDialog.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PhysicalInventoryDialog.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_QuickTasks.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_BusinessScheduledChanges.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QuickTaskComponentPlanControl.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_AMRReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ForecastVs261.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_AskManual.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_DeliverTerminal.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_Picklist.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_PrintPicklist.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Dic_Selector.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Checkpoint.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_SerialScan.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Badge.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_CancelSerialMovements.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Backflush.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Operators.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_BackflushHours.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Headcount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AboutBox.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewUser.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ClonePermissionsFrom.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.UserRights.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AlertsReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CalendarRange.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Checkpoint.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingPartnumbers.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ExitRoute.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EmptyContainers.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.VA32_DeliveryCorrection.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaPivoter.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaReporter.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FadeBackground.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.EnterBox.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PDFViewer.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.SingleReportViewer.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PopupReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.BagLabelPrinter.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ZMF47.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_SamplesMaterialMovers_mi.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InsertPermit.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_MandatoryPermitsVsBOM.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_Process309.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11_Details.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ConsumptionHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DownloadMB51.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Profile.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ImportForecast.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ControlledPartnumbers.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ReportCriticalToReceiving.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CriticalHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ABC.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ConsumptionHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastVsZapimatinfo.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastWaterfall.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MoverHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ApproveMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_PrintMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CancelMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_NewMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_AnswerMixMax.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_SetMfgConsumption.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxAlerts.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RejectSerialnumber.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveSerialAlert.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_NewAlert.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveAlert.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_ServiceToQuality.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Qly_AlertsHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Containers.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ZPLPrinterSettings.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToTracker.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Operators.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_LabeledVsPaid.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_DeleteLabel.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ReprintLabel.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SMSVsMB51.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Labeling.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_NewSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerToService.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SerialHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToQuality.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerPartialDiscount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Headcount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_AutoScheduleOptions.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_BusinessSelectorDialog.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Calendar.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ErrorReportViewer.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoginForm.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Main.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ChartHeadcountWorkloadSchedule.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHighVolume.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ImportProductionPlan.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleItemBOMVariation.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CompatibilityReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleBOMVariation.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleNewLevelResult.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleValidation.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10WaterfallReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10HeadcountReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHigh.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CSVProductionPlanOptionsDialog.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyLow.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Resources.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoadingScreen.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanHeadcountReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10Variations.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10VsCapacityReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_SchedulingPrintLabels.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadDateRangeSelector.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_DownloadedDatesUpload.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadWaterfallReport.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Operators.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_ShipMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Headcount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SmkSettings.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableNewReel.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterChange.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterToService.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePhysicalInventory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialsOnCutters.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePendingNextSerials.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sys_Authentication.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToCutter.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToService.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRoutesRegistry.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialReprint.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchRandom.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchService.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableServiceToCutter.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSelectTara.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCheckpoint.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableDeclareEmpty.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SamplesWeight.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReturnToRandom.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ManualAdjustment.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocation.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmpty.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReactiveSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SerialMovements.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BadgeKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocationKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerialKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerialKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscountKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerialKiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyDiscrepancy.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChooseWarehouse.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FixSerialnumber.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Operators.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_RackOwners.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickUpMoverManual.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickupMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintMover.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Audit.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BrokenFIFO.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Headcount.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_MovementHistory.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPVsDelta.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SimpleAudit.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StdWork.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_AlertMissing.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Kiosk.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPTransfers.resources
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbproj.GenerateResource.Cache
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe.manifest
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.application
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.xml
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.pdb
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbprojResolveAssemblyReference.cache
+C:\SVNRBEV\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PEng_Leadcodes.resources
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.config
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.manifest
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.application
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.pdb
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Delta ERP.xml
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\CAguilar.dll
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.dll
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\DPUruNet.dll
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\Newtonsoft.Json.dll
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\CAguilar.pdb
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\CAguilar.xml
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.xml
+C:\GitRepo\Delta ERP\Delta ERP\bin\Debug\DPUruNet.xml
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbprojResolveAssemblyReference.cache
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Capabilities.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewOperatorEnrollment.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Enrollment.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Indentification.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ReaderSelection.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_HealingContainerization.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_StartingWorkChecklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_CheckpointTemplate.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanScan.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_PrintKanban.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_FindManufacturing.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_DiscountCritical.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_OutCart.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_CartStatus.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_ExitCart.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_InCart.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_KanbanScan.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_LoopIcon.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_StartingWorkChecklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_Checkpoint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EngineeringVsZCS12.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_GenericKanbans.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbansManagement.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Operators.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Workload.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanPrint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Kanbans.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR2_Kanbans.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ScanningHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Headcount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_WeeklyScanningHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanRunAllSuggestions.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MaterialScheduledChanges.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrderFake.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentePlanSelectOrderDialog.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrder.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewPromise.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlan.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ActiveRawMaterialSerials.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanSimulation.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_HarnRequirementDetails.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ImportPhysicalInventory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MRPSelectDialog.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PhysicalInventoryDialog.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_QuickTasks.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_BusinessScheduledChanges.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QuickTaskComponentPlanControl.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_DeletePicklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_Picklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PrintPicklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_AMRReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ForecastVs261.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_AskManual.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_DeliverTerminal.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_Picklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_PrintPicklist.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Dic_Selector.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Checkpoint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_SerialScan.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Badge.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_CancelSerialMovements.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Backflush.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Operators.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_BackflushHours.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Headcount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AboutBox.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewUser.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ClonePermissionsFrom.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.UserRights.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AlertsReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CalendarRange.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Checkpoint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingPartnumbers.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ExitRoute.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EmptyContainers.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.VA32_DeliveryCorrection.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaPivoter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaReporter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FadeBackground.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.EnterBox.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PDFViewer.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.SingleReportViewer.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PopupReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.BagLabelPrinter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ZMF47.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_SamplesMaterialMovers_mi.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InsertPermit.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_MandatoryPermitsVsBOM.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_Process309.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11_Details.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ConsumptionHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DownloadMB51.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Profile.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ImportForecast.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ControlledPartnumbers.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ReportCriticalToReceiving.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CriticalHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ABC.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ConsumptionHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastVsZapimatinfo.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastWaterfall.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MoverHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ApproveMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_PrintMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CancelMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_NewMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_AnswerMixMax.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_SetMfgConsumption.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxAlerts.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PEng_Leadcodes.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RejectSerialnumber.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveSerialAlert.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_NewAlert.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveAlert.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_ServiceToQuality.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Qly_AlertsHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Containers.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ZPLPrinterSettings.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToTracker.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Operators.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_LabeledVsPaid.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_DeleteLabel.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ReprintLabel.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SMSVsMB51.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Labeling.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_NewSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerToService.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SerialHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToQuality.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerPartialDiscount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Headcount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_AutoScheduleOptions.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_BusinessSelectorDialog.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Calendar.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ErrorReportViewer.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoginForm.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Main.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ChartHeadcountWorkloadSchedule.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHighVolume.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ImportProductionPlan.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleItemBOMVariation.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CompatibilityReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleBOMVariation.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleNewLevelResult.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleValidation.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10WaterfallReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10HeadcountReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHigh.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CSVProductionPlanOptionsDialog.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyLow.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Resources.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoadingScreen.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanHeadcountReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10Variations.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10VsCapacityReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_SchedulingPrintLabels.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadDateRangeSelector.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_DownloadedDatesUpload.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadWaterfallReport.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Operators.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_ShipMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Headcount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalRandomToCutter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SmkSettings.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableNewReel.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterChange.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterToService.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePhysicalInventory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialsOnCutters.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePendingNextSerials.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sys_Authentication.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToCutter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToService.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRoutesRegistry.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialReprint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchRandom.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchService.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableServiceToCutter.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSelectTara.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCheckpoint.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableDeclareEmpty.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SamplesWeight.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReturnToRandom.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ManualAdjustment.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocation.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmpty.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReactiveSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SerialMovements.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BadgeKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocationKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerialKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerialKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscountKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerialKiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintLinkLabels.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyDiscrepancy.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_LinkLabels.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChooseWarehouse.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FixSerialnumber.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Operators.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_RackOwners.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickUpMoverManual.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickupMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintMover.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Audit.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BrokenFIFO.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Headcount.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_MovementHistory.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPVsDelta.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SimpleAudit.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StdWork.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_AlertMissing.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Kiosk.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPTransfers.resources
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbproj.GenerateResource.Cache
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe.manifest
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.application
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.xml
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta ERP.pdb
+C:\GitRepo\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PrintingDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Capabilities.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewOperatorEnrollment.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Enrollment.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Indentification.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ReaderSelection.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_HealingContainerization.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_StartingWorkChecklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_CheckpointTemplate.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanScan.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_PrintKanban.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_FindManufacturing.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_DiscountCritical.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_OutCart.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_CartStatus.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_ExitCart.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_InCart.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_KanbanScan.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_LoopIcon.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_StartingWorkChecklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EngineeringVsZCS12.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_GenericKanbans.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbansManagement.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Operators.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Workload.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanPrint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Kanbans.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR2_Kanbans.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ScanningHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Headcount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_WeeklyScanningHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanRunAllSuggestions.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MaterialScheduledChanges.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrderFake.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentePlanSelectOrderDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrder.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewPromise.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlan.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ActiveRawMaterialSerials.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanSimulation.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_HarnRequirementDetails.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ImportPhysicalInventory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MRPSelectDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PhysicalInventoryDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_QuickTasks.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_BusinessScheduledChanges.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QuickTaskComponentPlanControl.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_DeletePicklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_Picklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PrintPicklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_AMRReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ForecastVs261.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_AskManual.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_DeliverTerminal.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_Picklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_PrintPicklist.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Dic_Selector.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PrintingDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_SerialScan.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Badge.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_CancelSerialMovements.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Backflush.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Operators.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_BackflushHours.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Headcount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AboutBox.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewUser.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ClonePermissionsFrom.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.UserRights.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AlertsReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CalendarRange.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingPartnumbers.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ExitRoute.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EmptyContainers.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.VA32_DeliveryCorrection.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaPivoter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaReporter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FadeBackground.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.EnterBox.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PDFViewer.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.SingleReportViewer.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PopupReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.BagLabelPrinter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ZMF47.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_SamplesMaterialMovers_mi.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InsertPermit.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_MandatoryPermitsVsBOM.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_Process309.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11_Details.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ConsumptionHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DownloadMB51.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Profile.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ImportForecast.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ControlledPartnumbers.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ReportCriticalToReceiving.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CriticalHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ABC.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ConsumptionHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastVsZapimatinfo.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastWaterfall.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MoverHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ApproveMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_PrintMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CancelMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_NewMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_AnswerMixMax.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_SetMfgConsumption.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxAlerts.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PEng_Leadcodes.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RejectSerialnumber.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveSerialAlert.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_NewAlert.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveAlert.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_ServiceToQuality.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Qly_AlertsHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Containers.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ZPLPrinterSettings.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToTracker.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Operators.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_LabeledVsPaid.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_DeleteLabel.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ReprintLabel.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SMSVsMB51.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Labeling.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_NewSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerToService.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SerialHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToQuality.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerPartialDiscount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Headcount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_AutoScheduleOptions.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_BusinessSelectorDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Calendar.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ErrorReportViewer.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoginForm.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Main.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ChartHeadcountWorkloadSchedule.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHighVolume.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ImportProductionPlan.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleItemBOMVariation.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CompatibilityReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleBOMVariation.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleNewLevelResult.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleValidation.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10WaterfallReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10HeadcountReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHigh.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CSVProductionPlanOptionsDialog.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyLow.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Resources.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoadingScreen.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanHeadcountReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10Variations.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10VsCapacityReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_SchedulingPrintLabels.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadDateRangeSelector.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_DownloadedDatesUpload.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadWaterfallReport.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Operators.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_ShipMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Headcount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalRandomToCutter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SmkSettings.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableNewReel.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterChange.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterToService.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePhysicalInventory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialsOnCutters.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePendingNextSerials.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sys_Authentication.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToCutter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToService.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRoutesRegistry.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialReprint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchRandom.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchService.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableServiceToCutter.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSelectTara.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCheckpoint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableDeclareEmpty.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SamplesWeight.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReturnToRandom.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ManualAdjustment.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocation.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmpty.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReactiveSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SerialMovements.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BadgeKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocationKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerialKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerialKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscountKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerialKiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintLinkLabels.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyDiscrepancy.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_LinkLabels.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChooseWarehouse.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FixSerialnumber.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Operators.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_RackOwners.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickUpMoverManual.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickupMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintMover.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Audit.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BrokenFIFO.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Dashboard.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Headcount.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_MovementHistory.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPVsDelta.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SimpleAudit.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StdWork.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_AlertMissing.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Kiosk.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPTransfers.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbproj.GenerateResource.Cache
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.config
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.manifest
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.application
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.pdb
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.xml
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.dll
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\itextsharp.dll
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.pdb
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.xml
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe.manifest
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.application
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.xml
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.pdb
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService_New.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService2_New.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalRandomToCutter_New.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_AddMissingKanban.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_MissingIDKanbans.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableAPI.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_APITicketSelector.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TimeSusceptibleMaterial.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_APIPrint.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InitialWeightAnalysis.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_Containerization.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Dashboard.resources
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.dll
+C:\Users\mz23zx\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\DPUruNet.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.config
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.xml
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.pdb
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe.manifest
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.application
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.exe
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.pdb
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Delta ERP.xml
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\DPCtlUruNet.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\DPUruNet.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\itextsharp.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.pdb
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\bin\Debug\CAguilar.xml
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Capabilities.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewOperatorEnrollment.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Enrollment.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Indentification.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ReaderSelection.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_HealingContainerization.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_StartingWorkChecklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_CheckpointTemplate.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanScan.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_PrintKanban.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_FindManufacturing.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_AddMissingKanban.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_DiscountCritical.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_MissingIDKanbans.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_OutCart.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_CartStatus.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_ExitCart.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_InCart.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_KanbanScan.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_LoopIcon.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_StartingWorkChecklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EngineeringVsZCS12.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_GenericKanbans.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbansManagement.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Operators.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Workload.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanPrint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Kanbans.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_KanbanHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR2_Kanbans.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DDR_Containerization.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ScanningHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Headcount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_WeeklyScanningHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanRunAllSuggestions.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MaterialScheduledChanges.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrderFake.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentePlanSelectOrderDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewOrder.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanNewPromise.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlan.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ActiveRawMaterialSerials.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ComponentPlanSimulation.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_HarnRequirementDetails.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ImportPhysicalInventory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_MRPSelectDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PhysicalInventoryDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_QuickTasks.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_BusinessScheduledChanges.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QuickTaskComponentPlanControl.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_DeletePicklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_Picklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_PrintPicklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_AMRReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CR_ForecastVs261.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_AskManual.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_DeliverTerminal.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_Picklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DiC_PrintPicklist.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Dic_Selector.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PrintingDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_SerialScan.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Badge.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_CancelSerialMovements.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Backflush.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Operators.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_BackflushHours.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FGR_Headcount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AboutBox.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.NewUser.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ClonePermissionsFrom.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.UserRights.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.AlertsReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CalendarRange.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_Checkpoint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_MissingPartnumbers.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_ExitRoute.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.CDR_EmptyContainers.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.VA32_DeliveryCorrection.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ConditionSelector.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaPivoter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DeltaReporter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.FadeBackground.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.EnterBox.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PDFViewer.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.SingleReportViewer.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PopupReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.BagLabelPrinter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ZMF47.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_SamplesMaterialMovers_mi.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InsertPermit.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_MandatoryPermitsVsBOM.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_Process309.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_InitialWeightAnalysis.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MB51_261VsZ11_Details.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.MAn_ConsumptionHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.DownloadMB51.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Profile.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ImportForecast.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ControlledPartnumbers.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ReportCriticalToReceiving.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CriticalHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ABC.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ConsumptionHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastVsZapimatinfo.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ForecastWaterfall.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MoverHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_ApproveMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_PrintMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_CancelMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_NewMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_AnswerMixMax.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_SetMfgConsumption.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Ord_MixMaxAlerts.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.PEng_Leadcodes.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RejectSerialnumber.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveSerialAlert.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_NewAlert.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_RemoveAlert.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.QLY_ServiceToQuality.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Qly_AlertsHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Containers.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ZPLPrinterSettings.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Dashboard.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToTracker.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.REC_Operators.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_LabeledVsPaid.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_DeleteLabel.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ReprintLabel.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SMSVsMB51.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Labeling.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_NewSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerToService.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_SerialHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_ToQuality.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_TrackerPartialDiscount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Rec_Headcount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_AutoScheduleOptions.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_BusinessSelectorDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Calendar.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.ErrorReportViewer.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoginForm.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Main.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ChartHeadcountWorkloadSchedule.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHighVolume.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ImportProductionPlan.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleItemBOMVariation.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CompatibilityReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleBOMVariation.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleNewLevelResult.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_LevelScheduleValidation.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10WaterfallReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10HeadcountReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyHigh.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_CSVProductionPlanOptionsDialog.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanDailyLow.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Resources.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.LoadingScreen.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_ProductionPlanHeadcountReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10Variations.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_VL10VsCapacityReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_SchedulingPrintLabels.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadDateRangeSelector.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_DownloadedDatesUpload.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sch_UploadWaterfallReport.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Operators.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_ShipMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Shi_Headcount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_APIPrint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_APITicketSelector.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableAPI.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SmkSettings.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableNewReel.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterChange.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCutterToService.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePhysicalInventory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialsOnCutters.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CablePendingNextSerials.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Sys_Authentication.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToCutter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRandomToService.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableRoutesRegistry.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSerialReprint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchRandom.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSearchService.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableServiceToCutter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableSelectTara.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableCheckpoint.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_CableDeclareEmpty.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SamplesWeight.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReturnToRandom.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ManualAdjustment.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocation.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmpty.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ReactiveSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SerialMovements.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BadgeKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChangeLocationKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FindSerialKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_OpenSerialKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PartialDiscountKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StoreSerialKiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintLinkLabels.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_DeclareEmptyDiscrepancy.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_LinkLabels.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_NewSerial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_ChooseWarehouse.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_FixSerialnumber.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Operators.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_RackOwners.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickUpMoverManual.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PickupMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_PrintMover.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Audit.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_BrokenFIFO.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Dashboard.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Headcount.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_MovementHistory.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TimeSusceptibleMaterial.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPVsDelta.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SimpleAudit.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_StdWork.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_AlertMissing.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_Kiosk.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_SAPTransfers.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService_New.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalCutterToService2_New.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalRandomToCutter.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta_ERP.Smk_TerminalRandomToCutter_New.resources
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.vbproj.GenerateResource.Cache
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.exe.manifest
+C:\Users\mz23zx\Documents\Documents\Proyectos\Delta ERP\Delta ERP\obj\Debug\Delta ERP.application

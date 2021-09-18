@@ -6,7 +6,99 @@ DeltaERP
 </name>
 </assembly>
 <members>
-<member name="P:Delta_ERP.My.Resources.Resources.ResourceManager">
+<member name="F:Delta_ERP.Enrollment.preenrollmentFmds">
+	<summary>
+ Holds the main form with many functions common to all of SDK actions.
+ </summary>
+</member><member name="M:Delta_ERP.Enrollment.Enrollment_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialize the form.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Delta_ERP.Enrollment.OnCaptured(DPUruNet.CaptureResult)">
+	<summary>
+ Handler for when a fingerprint is captured.
+ </summary>
+	<param name="captureResult">contains info and data on the fingerprint capture</param>
+</member><member name="M:Delta_ERP.Fingerprint.StartCaptureAsync(DPUruNet.Reader.CaptureCallback)">
+	<summary>
+ Hookup capture handler and start capture.
+ </summary>
+	<param name="OnCaptured">Delegate to hookup as handler of the On_Captured event</param>
+	<returns>Returns true if successful; false if unsuccessful</returns>
+</member><member name="M:Delta_ERP.Fingerprint.CancelCaptureAndCloseReader(DPUruNet.Reader.CaptureCallback)">
+	<summary>
+ Cancel the capture and then close the reader.
+ </summary>
+	<param name="OnCaptured">Delegate to unhook as handler of the On_Captured event </param>
+</member><member name="M:Delta_ERP.Fingerprint.CheckCaptureResult(DPUruNet.CaptureResult)">
+	<summary>
+ Check quality of the resulting capture.
+ </summary>
+</member><member name="M:Delta_ERP.Fingerprint.CaptureFingerAsync">
+	<summary>Function to capture a finger. Always get status first and calibrate or wait if necessary.  Always check status and capture errors. </summary>
+</member><member name="M:Delta_ERP.Fingerprint.GetStatus">
+	<summary>
+ Check the device status before starting capture.
+ </summary>
+</member><member name="M:Delta_ERP.Fingerprint.CreateBitmap(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Create a bitmap from raw data in row/column format.
+ </summary>
+	<param name="bytes"></param>
+	<param name="width"></param>
+	<param name="height"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Delta_ERP.Indentification.IdentifiedBadge">
+	<summary>
+ Holds the main form with many functions common to all of SDK actions.
+ </summary>
+</member><member name="M:Delta_ERP.Indentification.Identification_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialize the form.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Delta_ERP.Indentification.OnCaptured(DPUruNet.CaptureResult)">
+	<summary>
+ Handler for when a fingerprint is captured.
+ </summary>
+	<param name="captureResult">contains info and data on the fingerprint capture</param>
+</member><member name="F:Delta_ERP.NewOperatorEnrollment.preenrollmentFmds">
+	<summary>
+ Holds the main form with many functions common to all of SDK actions.
+ </summary>
+</member><member name="M:Delta_ERP.NewOperatorEnrollment.Enrollment_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialize the form.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Delta_ERP.NewOperatorEnrollment.OnCaptured(DPUruNet.CaptureResult)">
+	<summary>
+ Handler for when a fingerprint is captured.
+ </summary>
+	<param name="captureResult">contains info and data on the fingerprint capture</param>
+</member><member name="M:Delta_ERP.ReaderSelection.btnRefresh_Click(System.Object,System.EventArgs)">
+	<summary>
+ Clear the control of readers, get readers and display.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Delta_ERP.Capabilities.Capabilities_Load(System.Object,System.EventArgs)">
+	<summary>
+ Open a device in cooperative mode.  Display capabilities of the reader.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -23,6 +115,10 @@ DeltaERP
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ajax_loader_gray_512">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.AppIcon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
@@ -31,7 +127,27 @@ DeltaERP
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.arrow_down_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.arrow_refresh">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.arrow_right_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.arrow_up_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.battery_low">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.battery_low_32">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -44,6 +160,42 @@ DeltaERP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.box_open_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_arrow_left">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_down">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_up">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_valid">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_white_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_white_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.bullet_wrench">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -63,6 +215,38 @@ DeltaERP
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_inside">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_inside_wait">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_not_started">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_outside">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_outside_wait">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_scanning_in">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ddr_scanning_out">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.delete_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.delete_package_16">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -72,6 +256,10 @@ DeltaERP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.excel_exports_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.flag_flyaway_red">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -95,6 +283,14 @@ DeltaERP
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.link_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.lock">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.minor">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -108,6 +304,10 @@ DeltaERP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.not_equal">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.not_in">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -259,7 +459,47 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.purple_warning_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.question_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.radioactivity">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.REC_TrackerEmailTemplate">
+	<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        .auto-style2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #006699;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="color: #5e9ca0;"&gt;Material enviado a tracker de pendientes de procesar.&lt;/h1&gt;
+&lt;h2 style="color: #2e6c80;"&gt;Detalles:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Usuario: &lt;/strong&gt; @username&lt;br /&gt;&lt;br /&gt;&lt;s [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.red_warning_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.run_macros_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.shield">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -272,6 +512,10 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.text_list_bullets">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.tick_16">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -291,6 +535,36 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.wrench_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_APILabel">
+	<summary>
+  Looks up a localized string similar to ^XA^LL0600^PW1200
+^FT800,100^A0N,60,50^FH\^FB1100,1,0,L,1^FDFOLIO: @folio^FS
+
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDPUNTO DE USO^FS
+^FT5,260^A0N,68,50FH\^FB360,1,0,C,1^FR^FD@service^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPESO NETO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@weight^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
+^FO0,151^GB1175,310,6^FS
+^FT100,100^A0N,110,140^FH\^FD@api^FS
+
+^FO360,156^GB0,300,6^FS
+ [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_ControlledLabel">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT0,160^A0N,140,80^FH\^FB1200,1,0,C,1^FD***MATERIAL CONTROLADO***^FS
+^FT0,340^A0N,200,200^FH\^FB1200,1,0,C,1^FD@partnumber^FS
+^FT0,520^A0N,140,80^FH\^FB1200,1,0,C,1^FD*************************************^FS
+^PQ1,0,1,Y^XZ.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_CriticalLabel">
 	<summary>
   Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
@@ -301,6 +575,89 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
 ^FT0,590^A0N,60,60^FH\^FB1200,2,0,L,1^FDComentario: @comment^FS
 ^PQ1,0,1,Y^XZ.
 </summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_DicPicklist_6Cols">
+	<summary>
+  Looks up a localized string similar to ^XA^LL0400^PW1800
+^FT10,70^A0N,50,50^FH\^FB550,1,0,L,1^FDCDD^FS
+^FT300,70^A0N,50,50^FH\^FB550,1,0,L,1^FDLocal Smk^FS
+^FT550,70^A0N,50,50^FH\^FB550,1,0,L,1^FDLocal Serie^FS
+^FT800,70^A0N,50,50^FH\^FB550,1,0,L,1^FDEstatus^FS
+^FT1100,70^A0N,50,50^FH\^FB550,1,0,L,1^FDSerie^FS
+^FT1500,70^A0N,50,50^FH\^FB550,1,0,L,1^FDNo. de Parte^FS
+@rows
+^FO5,10^GB0,580,3^FS
+^FO290,10^GB0,580,3^FS
+^FO540,10^GB0,580,3^FS
+^FO790,10^GB0,580,3^FS
+^FO1090,10^GB0,580,3^FS
+^FO1490,10^GB0,580,3^FS
+^FO1785,10^GB0,580,3^FS
+ [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_DicPicklist_6Cols_Row">
+	<summary>
+  Looks up a localized string similar to ^FT10,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@cdd^FS
+^FT300,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@smk^FS
+^FT550,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD0@local^FS
+^FT800,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@status^FS
+^FT1100,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@serial^FS
+^FT1500,@item70^A0N,60,50^FH\^FB550,1,0,L,1^FD@np^FS.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_DicPicklist_6Cols_Row_Vertical">
+	<summary>
+  Looks up a localized string similar to ^FT@item70,200^A0N,60,50^FWB^FB550,1,0,L,1^FD@cdd^FS
+^FT@item70,650^A0N,40,30^FWB^FB400,2,0,L,1^FD@smk^FS
+^FT@item70,920^A0N,60,50^FWB^FB550,1,0,L,1^FD@local^FS
+^FT@item70,1130^A0N,60,50^FWB^FB550,1,0,L,1^FD@status^FS
+^FT@item70,1540^A0N,60,50^FWB^FB550,1,0,L,1^FD@serial^FS
+^FT@item70,1780^A0N,60,50^FWB^FB550,1,0,L,1^FD@np^FS.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_DicPicklist_6Cols_Vertical">
+	<summary>
+  Looks up a localized string similar to ^XA^XB^LL2107^PW903^MTD^MNN
+^FT70,190^A0N,50,50^FWB^FB550,1,0,L,1^FDCDD^FS
+^FT70,650^A0N,50,50^FWB^FB550,1,0,L,1^FDLocal Smk^FS
+^FT70,920^A0N,50,50^FWB^FB550,1,0,L,1^FDLocal Serie^FS
+^FT70,1130^A0N,50,50^FWB^FB550,1,0,L,1^FDEstatus^FS
+^FT70,1540^A0N,50,50^FWB^FB550,1,0,L,1^FDSerie^FS
+^FT70,1780^A0N,50,50^FWB^FB550,1,0,L,1^FDNo. Parte^FS
+
+@rows
+
+^FO5,10^GB0,1780,3^FS
+^FO85,10^GB0,1780,3^FS
+^FO590,10^GB0,1780,3^FS
+^FO10,10^GB580,0,3^FS
+^FO10,220^GB580,0,3^FS
+^FO10,670^GB580,0,3^FS
+^FO10,950^GB [rest of string was truncated]";.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_LinkLabel">
+	<summary>
+  Looks up a localized string similar to ^XA
+^FO20,20^GB1180,120,70^FS
+^FT20,190^A0N,80,80^FB1180,2,0,C,1^FR^FDETIQUETA DE ENLACE^FS
+^FT20,280^A0N,160,110^FB1180,1,0,C,1^FD@partnumber^FS
+^FT20,390^A0N,50,50^FB1180,2,0,C,1^FD@description^FS
+^BY3,3,104^FT280,490^BCN,,N,N^FD@serial^FS
+^FT20,625^A0N,70,70^FB1180,2,0,C,1^FD@serial^FS
+^PQ1,0,1,Y^XZ.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_MasterLabel">
+	<summary>
+  Looks up a localized string similar to ^XA^LL0600^PW1200
+^FO0,5^GB1175,140,70^FS
+^FT250,140^A0N,155,200^FH\^FR^FDMASTER^FS
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDESTACION^FS
+^FT5,260^A0N,90,65^FH\^FB360,1,0,C,1^FR^FD@warehouse^FS
+^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@service^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^FD@qty @uom^FS
+^FT970,230^A0N,100,60^FH\^FB210,1,0,C,1^FD@legend^FS
+^FT1020,290^A0N,28,28^FH\^FD [rest of string was truncated]";.
+</summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_MoverLabel">
 	<summary>
   Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
@@ -309,6 +666,16 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
 ^FT20,430^A0N,80,80^FH\^FB1200,1,0,L,1^FDCantidad: @quantity @uom^FS
 ^FT20,490^A0N,60,60^FH\^FB1200,1,0,L,1^FDLocal: @local^FS
 ^BY4,4,104^FT20,150^BCN,,Y,N^FD@partid^FS
+^PQ1,0,1,Y^XZ.
+</summary>
+</member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_NoMaterial">
+	<summary>
+  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH0,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
+^FT50,100^FB1100,1,0,C,0^A0N,70,60^FH\^FDMaterial^FS
+^FT50,200^FB1100,1,0,C,0^A0N,150,140^FH\^FD@partnumber^FS
+^FT50,520^FB1100,2,0,C,0^A0N,180,170^FH\^FDNO SURTIDO^FS
+^FT50,550^FB1100,2,0,C,0^A0N,80,80^FH\^FD@date^FS
+^FT100,540^FB1000,1,0,R,0^A0N,40,40^FH\^FDSMS Barriles^FS
 ^PQ1,0,1,Y^XZ.
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_QualityLabel">
@@ -322,17 +689,18 @@ WHERE SC.[Date] BETWEEN '{0}' AND '{1}' AND (('{0}' BETWEEN StartProduction AND 
 </summary>
 </member><member name="P:Delta_ERP.My.Resources.Resources.ZPL_ReceivingLabel">
 	<summary>
-  Looks up a localized string similar to ^XA~TA000~JSN^LT0^MMT^MNW^MTT^PON^PMN^LH20,0^JMA^PR4,4^MD0^JUS^LRN^CI0^XZ^XA^LL0600^PW1200
-^BY3,3,70^FT560,90^BCN,,N,N^FD@partnumber^FS
+  Looks up a localized string similar to ^XA^LL0600^PW1200
+^BY3,3,70^FT700,90^BCN,,N,N^FD@partnumber^FS
 ^FT160,70^A0N,70,60^FH\^FB550,1,0,L,1^FD@supplierpart^FS
-^FT160,140^A0N,70,60^FH\^FB880,1,0,L,1^FD@suppliername^FS
-^FO0,453^GB970,0,6^FS
-^FO3,151^GB363,0,6^FS
-^FT125,185^A0N,28,28^FH\^FDESTACION^FS
-^FT5,255^A0N,100,65^FH\^FB360,1,0,C,1^FD@warehouse^FS
-^FO3,267^GB363,0,6^FS
+^FT160,140^A0N,60,50^FH\^FB1100,1,0,L,1^FD@suppliername^FS
+
+^FO3,151^GB363,120,60^FS
+^FT125,185^A0N,28,28^FH\^FR^FDESTACION^FS
+^FT5,260^A0N,90,65^FH\^FB360,1,0,C,1^FR^FD@warehouse^FS
 ^FT10,298^A0N,28,28^FH\^FB350,1,0,C,1^FDPUNTO DE USO^FS
-^FT10,353^A0N,68,50^FH\^FB350,1,0,C, [rest of string was truncated]";.
+^FT10,353^A0N,68,50^FH\^FB350,1,0,C,1^FD@service^FS
+^FT10,388^A0N,28,28^FH\^FB350,1,0,C,1^FDCANTIDAD^FS
+^FT10,448^A0N,70,70^FH\^FB350,1,0,C,1^ [rest of string was truncated]";.
 </summary>
 </member><member name="T:Delta_ERP.My.Resources.Resources">
 	<summary>

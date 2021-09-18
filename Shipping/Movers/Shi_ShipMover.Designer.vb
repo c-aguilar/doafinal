@@ -24,24 +24,29 @@ Partial Class Shi_ShipMover
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Shi_ShipMover))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Shi_ShipMover))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Movers_dgv = New CAguilar.DataGridViewWithFilters()
+        Me.ToolStripMain = New System.Windows.Forms.ToolStrip()
+        Me.Refresh_btn = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me._date = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.requisitor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.customer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.partnumbers = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.locality = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me._date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ShippingDate_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.export_btn = New CAguilar.DataGridViewImprovedButtonColumn()
         Me.ship_btn = New CAguilar.DataGridViewImprovedButtonColumn()
-        Me.ToolStripMain = New System.Windows.Forms.ToolStrip()
-        Me.Refresh_btn = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
         CType(Me.Movers_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStripMain.SuspendLayout()
         Me.SuspendLayout()
@@ -51,114 +56,54 @@ Partial Class Shi_ShipMover
         Me.Movers_dgv.AllowColumnHiding = True
         Me.Movers_dgv.AllowUserToAddRows = False
         Me.Movers_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray
+        Me.Movers_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Movers_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Movers_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Movers_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Movers_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Movers_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Movers_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Username, Me.requisitor, Me.customer, Me.partnumbers, Me.type, Me.locality, Me._date, Me.export_btn, Me.ship_btn})
+        Me.Movers_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Username, Me._date, Me.requisitor, Me.customer, Me.partnumbers, Me.type, Me.locality, Me.ShippingDate_col, Me.export_btn, Me.ship_btn})
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Movers_dgv.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Movers_dgv.DefaultRowFilter = Nothing
+        Me.Movers_dgv.EnableHeadersVisualStyles = False
         Me.Movers_dgv.Location = New System.Drawing.Point(4, 32)
         Me.Movers_dgv.Name = "Movers_dgv"
         Me.Movers_dgv.ReadOnly = True
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Movers_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.Movers_dgv.ShowRowNumber = True
-        Me.Movers_dgv.Size = New System.Drawing.Size(866, 424)
+        Me.Movers_dgv.Size = New System.Drawing.Size(975, 424)
         Me.Movers_dgv.TabIndex = 89
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "ID"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.id.DefaultCellStyle = DataGridViewCellStyle2
-        Me.id.HeaderText = "ID"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Width = 70
-        '
-        'Username
-        '
-        Me.Username.DataPropertyName = "Fullname"
-        Me.Username.HeaderText = "Creado por"
-        Me.Username.Name = "Username"
-        Me.Username.ReadOnly = True
-        '
-        'requisitor
-        '
-        Me.requisitor.DataPropertyName = "Requisitor"
-        Me.requisitor.HeaderText = "Requisitor"
-        Me.requisitor.Name = "requisitor"
-        Me.requisitor.ReadOnly = True
-        Me.requisitor.Width = 120
-        '
-        'customer
-        '
-        Me.customer.DataPropertyName = "Customer"
-        Me.customer.HeaderText = "Cliente"
-        Me.customer.Name = "customer"
-        Me.customer.ReadOnly = True
-        '
-        'partnumbers
-        '
-        Me.partnumbers.DataPropertyName = "Partnumbers"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.partnumbers.DefaultCellStyle = DataGridViewCellStyle3
-        Me.partnumbers.HeaderText = "Nos. de Parte"
-        Me.partnumbers.Name = "partnumbers"
-        Me.partnumbers.ReadOnly = True
-        Me.partnumbers.Width = 80
-        '
-        'type
-        '
-        Me.type.DataPropertyName = "Description"
-        Me.type.HeaderText = "Tipo"
-        Me.type.Name = "type"
-        Me.type.ReadOnly = True
-        Me.type.Width = 80
-        '
-        'locality
-        '
-        Me.locality.DataPropertyName = "Locality"
-        Me.locality.HeaderText = "Localidad"
-        Me.locality.Name = "locality"
-        Me.locality.ReadOnly = True
-        '
-        '_date
-        '
-        Me._date.DataPropertyName = "Date"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.Format = "g"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me._date.DefaultCellStyle = DataGridViewCellStyle4
-        Me._date.HeaderText = "Fecha"
-        Me._date.Name = "_date"
-        Me._date.ReadOnly = True
-        '
-        'export_btn
-        '
-        Me.export_btn.HeaderText = ""
-        Me.export_btn.Name = "export_btn"
-        Me.export_btn.ReadOnly = True
-        Me.export_btn.Width = 30
-        '
-        'ship_btn
-        '
-        Me.ship_btn.HeaderText = ""
-        Me.ship_btn.Name = "ship_btn"
-        Me.ship_btn.ReadOnly = True
-        Me.ship_btn.Width = 30
         '
         'ToolStripMain
         '
         Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Refresh_btn, Me.toolStripSeparator, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
-        Me.ToolStripMain.Size = New System.Drawing.Size(874, 29)
+        Me.ToolStripMain.Size = New System.Drawing.Size(983, 29)
         Me.ToolStripMain.TabIndex = 116
         Me.ToolStripMain.Text = "ToolStrip1"
         '
@@ -184,11 +129,107 @@ Partial Class Shi_ShipMover
         Me.Title_lbl.Size = New System.Drawing.Size(262, 26)
         Me.Title_lbl.Text = "Marcar Mover como Embarcado"
         '
+        'id
+        '
+        Me.id.DataPropertyName = "ID"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.id.DefaultCellStyle = DataGridViewCellStyle3
+        Me.id.HeaderText = "ID"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Width = 70
+        '
+        'Username
+        '
+        Me.Username.DataPropertyName = "Fullname"
+        Me.Username.HeaderText = "Usuario"
+        Me.Username.Name = "Username"
+        Me.Username.ReadOnly = True
+        '
+        '_date
+        '
+        Me._date.DataPropertyName = "Date"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Format = "g"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me._date.DefaultCellStyle = DataGridViewCellStyle4
+        Me._date.HeaderText = "Fecha"
+        Me._date.Name = "_date"
+        Me._date.ReadOnly = True
+        '
+        'requisitor
+        '
+        Me.requisitor.DataPropertyName = "Requisitor"
+        Me.requisitor.HeaderText = "Requisitor"
+        Me.requisitor.Name = "requisitor"
+        Me.requisitor.ReadOnly = True
+        Me.requisitor.Width = 120
+        '
+        'customer
+        '
+        Me.customer.DataPropertyName = "Customer"
+        Me.customer.HeaderText = "Cliente"
+        Me.customer.Name = "customer"
+        Me.customer.ReadOnly = True
+        '
+        'partnumbers
+        '
+        Me.partnumbers.DataPropertyName = "Partnumbers"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.partnumbers.DefaultCellStyle = DataGridViewCellStyle5
+        Me.partnumbers.HeaderText = "Nos. de Parte"
+        Me.partnumbers.Name = "partnumbers"
+        Me.partnumbers.ReadOnly = True
+        Me.partnumbers.Width = 80
+        '
+        'type
+        '
+        Me.type.DataPropertyName = "Description"
+        Me.type.HeaderText = "Tipo"
+        Me.type.Name = "type"
+        Me.type.ReadOnly = True
+        Me.type.Width = 80
+        '
+        'locality
+        '
+        Me.locality.DataPropertyName = "Locality"
+        Me.locality.HeaderText = "Localidad"
+        Me.locality.Name = "locality"
+        Me.locality.ReadOnly = True
+        '
+        'ShippingDate_col
+        '
+        Me.ShippingDate_col.DataPropertyName = "ShippingDate"
+        DataGridViewCellStyle6.Format = "d"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.ShippingDate_col.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ShippingDate_col.HeaderText = "Fecha Req. Embarque"
+        Me.ShippingDate_col.Name = "ShippingDate_col"
+        Me.ShippingDate_col.ReadOnly = True
+        '
+        'export_btn
+        '
+        Me.export_btn.DefaultImage = Nothing
+        Me.export_btn.DefaultText = ""
+        Me.export_btn.HeaderText = ""
+        Me.export_btn.Name = "export_btn"
+        Me.export_btn.ReadOnly = True
+        Me.export_btn.Width = 30
+        '
+        'ship_btn
+        '
+        Me.ship_btn.DefaultImage = Nothing
+        Me.ship_btn.DefaultText = ""
+        Me.ship_btn.HeaderText = ""
+        Me.ship_btn.Name = "ship_btn"
+        Me.ship_btn.ReadOnly = True
+        Me.ship_btn.Width = 30
+        '
         'Shi_ShipMover
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 461)
+        Me.ClientSize = New System.Drawing.Size(983, 461)
         Me.Controls.Add(Me.ToolStripMain)
         Me.Controls.Add(Me.Movers_dgv)
         Me.Name = "Shi_ShipMover"
@@ -208,12 +249,13 @@ Partial Class Shi_ShipMover
     Friend WithEvents Title_lbl As System.Windows.Forms.ToolStripLabel
     Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Username As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents _date As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents requisitor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents customer As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents partnumbers As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents type As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents locality As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents _date As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ShippingDate_col As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents export_btn As CAguilar.DataGridViewImprovedButtonColumn
     Friend WithEvents ship_btn As CAguilar.DataGridViewImprovedButtonColumn
 End Class

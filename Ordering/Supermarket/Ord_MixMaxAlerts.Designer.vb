@@ -25,8 +25,9 @@ Partial Class Ord_MixMaxAlerts
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ord_MixMaxAlerts))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -34,6 +35,7 @@ Partial Class Ord_MixMaxAlerts
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Username_cbo = New System.Windows.Forms.ComboBox()
         Me.ToolStripMain = New System.Windows.Forms.ToolStrip()
@@ -58,6 +60,7 @@ Partial Class Ord_MixMaxAlerts
         Me.Location_ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Forecast = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Transit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierName_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnswerBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Answer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PromiseDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,7 +92,7 @@ Partial Class Ord_MixMaxAlerts
         Me.ToolStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Export_btn, Me.Find_btn, Me.toolStripSeparator, Me.Title_lbl})
         Me.ToolStripMain.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripMain.Name = "ToolStripMain"
-        Me.ToolStripMain.Size = New System.Drawing.Size(1284, 29)
+        Me.ToolStripMain.Size = New System.Drawing.Size(1415, 29)
         Me.ToolStripMain.TabIndex = 139
         Me.ToolStripMain.Text = "ToolStrip1"
         '
@@ -134,23 +137,42 @@ Partial Class Ord_MixMaxAlerts
         Me.Report_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Report_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Report_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Report_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Report_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Partnumber, Me.Description, Me.MRP, Me.Owner_, Me.AlertType, Me.ReportedBy, Me.Date_, Me.Comment, Me.Location_, Me.Forecast, Me.Transit, Me.AnswerBy, Me.Answer, Me.PromiseDate, Me.AnswerDate})
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.NullValue = Nothing
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Report_dgv.DefaultCellStyle = DataGridViewCellStyle10
+        Me.Report_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Partnumber, Me.Description, Me.MRP, Me.Owner_, Me.AlertType, Me.ReportedBy, Me.Date_, Me.Comment, Me.Location_, Me.Forecast, Me.Transit, Me.SupplierName_col, Me.AnswerBy, Me.Answer, Me.PromiseDate, Me.AnswerDate})
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.NullValue = Nothing
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Report_dgv.DefaultCellStyle = DataGridViewCellStyle11
+        Me.Report_dgv.DefaultRowFilter = Nothing
+        Me.Report_dgv.EnableHeadersVisualStyles = False
         Me.Report_dgv.Location = New System.Drawing.Point(6, 60)
         Me.Report_dgv.Name = "Report_dgv"
         Me.Report_dgv.ReadOnly = True
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Report_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.Report_dgv.RowTemplate.Height = 30
         Me.Report_dgv.ShowRowNumber = True
-        Me.Report_dgv.Size = New System.Drawing.Size(1272, 497)
+        Me.Report_dgv.Size = New System.Drawing.Size(1403, 497)
         Me.Report_dgv.TabIndex = 140
         '
         'Run_btn
@@ -185,6 +207,7 @@ Partial Class Ord_MixMaxAlerts
         'ID
         '
         Me.ID.DataPropertyName = "ID"
+        Me.ID.Frozen = True
         Me.ID.HeaderText = "ID"
         Me.ID.Name = "ID"
         Me.ID.ReadOnly = True
@@ -194,6 +217,7 @@ Partial Class Ord_MixMaxAlerts
         'Partnumber
         '
         Me.Partnumber.DataPropertyName = "Partnumber"
+        Me.Partnumber.Frozen = True
         Me.Partnumber.HeaderText = "No. de Parte"
         Me.Partnumber.Name = "Partnumber"
         Me.Partnumber.ReadOnly = True
@@ -202,9 +226,9 @@ Partial Class Ord_MixMaxAlerts
         'Description
         '
         Me.Description.DataPropertyName = "Description"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Description.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Description.DefaultCellStyle = DataGridViewCellStyle3
         Me.Description.HeaderText = "Descripcion"
         Me.Description.Name = "Description"
         Me.Description.ReadOnly = True
@@ -245,8 +269,8 @@ Partial Class Ord_MixMaxAlerts
         'Date_
         '
         Me.Date_.DataPropertyName = "Date"
-        DataGridViewCellStyle3.Format = "MMMM dd HH:mm"
-        Me.Date_.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Format = "MMMM dd HH:mm"
+        Me.Date_.DefaultCellStyle = DataGridViewCellStyle4
         Me.Date_.HeaderText = "Fecha"
         Me.Date_.Name = "Date_"
         Me.Date_.ReadOnly = True
@@ -254,9 +278,9 @@ Partial Class Ord_MixMaxAlerts
         'Comment
         '
         Me.Comment.DataPropertyName = "Comment"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Comment.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Comment.DefaultCellStyle = DataGridViewCellStyle5
         Me.Comment.HeaderText = "Comentario"
         Me.Comment.Name = "Comment"
         Me.Comment.ReadOnly = True
@@ -274,10 +298,10 @@ Partial Class Ord_MixMaxAlerts
         'Forecast
         '
         Me.Forecast.DataPropertyName = "Forecast"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle5.Format = "N1"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.Forecast.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle6.Format = "N1"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.Forecast.DefaultCellStyle = DataGridViewCellStyle6
         Me.Forecast.HeaderText = "Requerimiento Semanal"
         Me.Forecast.Name = "Forecast"
         Me.Forecast.ReadOnly = True
@@ -286,14 +310,21 @@ Partial Class Ord_MixMaxAlerts
         'Transit
         '
         Me.Transit.DataPropertyName = "Transit"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle6.NullValue = Nothing
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Transit.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle7.NullValue = Nothing
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Transit.DefaultCellStyle = DataGridViewCellStyle7
         Me.Transit.HeaderText = "Transito"
         Me.Transit.Name = "Transit"
         Me.Transit.ReadOnly = True
         Me.Transit.Width = 80
+        '
+        'SupplierName_col
+        '
+        Me.SupplierName_col.DataPropertyName = "SupplierName"
+        Me.SupplierName_col.HeaderText = "Proveedor"
+        Me.SupplierName_col.Name = "SupplierName_col"
+        Me.SupplierName_col.ReadOnly = True
         '
         'AnswerBy
         '
@@ -306,9 +337,9 @@ Partial Class Ord_MixMaxAlerts
         'Answer
         '
         Me.Answer.DataPropertyName = "Answer"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Answer.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Answer.DefaultCellStyle = DataGridViewCellStyle8
         Me.Answer.HeaderText = "Respuesta"
         Me.Answer.Name = "Answer"
         Me.Answer.ReadOnly = True
@@ -317,8 +348,8 @@ Partial Class Ord_MixMaxAlerts
         'PromiseDate
         '
         Me.PromiseDate.DataPropertyName = "PromiseDate"
-        DataGridViewCellStyle8.Format = "MMMM dd HH:mm"
-        Me.PromiseDate.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle9.Format = "MMMM dd HH:mm"
+        Me.PromiseDate.DefaultCellStyle = DataGridViewCellStyle9
         Me.PromiseDate.HeaderText = "Fecha Promesa"
         Me.PromiseDate.Name = "PromiseDate"
         Me.PromiseDate.ReadOnly = True
@@ -327,8 +358,8 @@ Partial Class Ord_MixMaxAlerts
         'AnswerDate
         '
         Me.AnswerDate.DataPropertyName = "AnswerDate"
-        DataGridViewCellStyle9.Format = "MMMM dd HH:mm"
-        Me.AnswerDate.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle10.Format = "MMMM dd HH:mm"
+        Me.AnswerDate.DefaultCellStyle = DataGridViewCellStyle10
         Me.AnswerDate.HeaderText = "Fecha Respuesta"
         Me.AnswerDate.Name = "AnswerDate"
         Me.AnswerDate.ReadOnly = True
@@ -338,7 +369,7 @@ Partial Class Ord_MixMaxAlerts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 562)
+        Me.ClientSize = New System.Drawing.Size(1415, 562)
         Me.Controls.Add(Me.Report_dgv)
         Me.Controls.Add(Me.ToolStripMain)
         Me.Controls.Add(Me.Label4)
@@ -379,6 +410,7 @@ Partial Class Ord_MixMaxAlerts
     Friend WithEvents Location_ As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Forecast As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Transit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SupplierName_col As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents AnswerBy As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Answer As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PromiseDate As System.Windows.Forms.DataGridViewTextBoxColumn

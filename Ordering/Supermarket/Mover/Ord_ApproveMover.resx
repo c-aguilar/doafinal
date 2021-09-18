@@ -123,6 +123,9 @@
   <metadata name="_user.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="_date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="requisitor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -144,13 +147,29 @@
   <metadata name="locality.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="_date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="comments.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="comment.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="approve_btn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ToolStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Refresh_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVDhPnVJLS5RhFD6DQSsDx8tioojcGi6GoF2gjnPx
+        svGSNJZJG125yEWLWliMzS1RImtGxVvhNx9luDDKINBR85Y4jjLCXBaSy6B+wdM5832T9zQfOLznnPc8
+        z3nP4aXToMJDP+0+gh7+P5r7CrG5PYzSZ6cQsXpJKfcQytxsTLCy3zVJGF+4iOXUa5T8S8TuM6B/xob5
+        RCMWUk58S93GfNKJcLwRgTBBXcln3wWb9wgROyfVteuYiF3BWDQbYxvZUNjEfxO5gOASIRTNxZfYg8MC
+        Vf6sl51TJijx83B9JTQPEe70ayOIcPciiyeM+BC9n84xxawxdVTwhge3CA95VouLftxopSeclqK01fbk
+        QN2oQTnvRc/tR9VzgojcbKcAh0VseTY/jVRyXu7tnbTj8O+SHT5SpF54Egsy3UwSSKdQtBp1PcZMwTU2
+        MxM9Vjf9kpfKi0VEu94DmfFdpAlqMgfdvDj5QBbO3eWdtLwleGcJSvIcnk4VoPSRQdVpGmS7n2JtCG0a
+        0fedMLBKGIoQhte1U2x86xJGV4p5uQbpfllj6hCBmXgHQqt5CHCn6fgthBP1mE3WYy7FJ/vB6TLwKH/3
+        cRBm+a6LiRd4v2RC10dCQy/B+YrSJAv/ypLH9FnqtPKjkRaRv38vWJjptNeusp0IsyzP4abfenwmSLdi
+        zT0ORH8A8K0ZJZsqGvoAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

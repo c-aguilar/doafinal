@@ -28,20 +28,20 @@
         Dim query_b As String
 
         If cboFamily.SelectedItem = "*" Then
-            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material WHERE [Date]='{0}' ORDER BY PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"))
+            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material AND DATEPART(MONTH,PP.[Week]) = SP.[Month] AND DATEPART(YEAR,PP.[Week]) LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material WHERE [Date]='{0}' ORDER BY PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"))
         ElseIf cboBusiness.SelectedItem = "*" Then
-            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE [Date]='{0}' AND B.Family='{1}' ORDER BY B.Family,PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem)
+            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material AND DATEPART(MONTH,PP.[Week]) = SP.[Month] AND DATEPART(YEAR,PP.[Week]) LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE [Date]='{0}' AND B.Family='{1}' ORDER BY B.Family,PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem)
         Else
-            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE [Date]='{0}' AND B.Family='{1}' AND B.Business = '{2}' ORDER BY B.Family,B.Business,PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem, cboBusiness.SelectedItem)
+            query_b = String.Format(" FROM Sch_SAP_ProductionPlan AS PP LEFT OUTER JOIN Sch_ShippingPoints AS SP ON PP.Material = SP.Material AND DATEPART(MONTH,PP.[Week]) = SP.[Month] AND DATEPART(YEAR,PP.[Week]) LEFT OUTER JOIN Sch_Materials AS M ON PP.Material = M.Material INNER JOIN Sch_Business AS B ON M.Business = B.Business WHERE [Date]='{0}' AND B.Family='{1}' AND B.Business = '{2}' ORDER BY B.Family,B.Business,PP.Material", dtpFrom.Value.ToString("yyyy-MM-dd"), cboFamily.SelectedItem, cboBusiness.SelectedItem)
         End If
 
 
 
         For i = 1 To 14
-            query &= String.Format("Day{0}*ISNULL(ShippingPoints,0)/808 AS Day{0},", i)
+            query &= String.Format("Day{0}*ISNULL(Points,0)/808 AS Day{0},", i)
         Next
         For i = 3 To 16
-            query &= String.Format("Week{0}*ISNULL(ShippingPoints,0)/808 AS Week{0},", i)
+            query &= String.Format("Week{0}*ISNULL(Points,0)/808 AS Week{0},", i)
         Next
         Dim data As DataTable = SQL.Current.GetDatatable(query.Trim(",") & query_b, "Headcount")
         data.Columns("SPoints").SetOrdinal(3)

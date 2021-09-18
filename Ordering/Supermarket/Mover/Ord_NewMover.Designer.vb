@@ -22,7 +22,10 @@ Partial Class Ord_NewMover
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ord_NewMover))
         Me.Requisitor_txt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -54,6 +57,8 @@ Partial Class Ord_NewMover
         Me.Paste_btn = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.Title_lbl = New System.Windows.Forms.ToolStripLabel()
+        Me.Shipping_lbl = New System.Windows.Forms.Label()
+        Me.ShippingDate_dtp = New System.Windows.Forms.DateTimePicker()
         CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Partnumbers_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +67,7 @@ Partial Class Ord_NewMover
         '
         'Requisitor_txt
         '
-        Me.Requisitor_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Requisitor_txt.BackColor = System.Drawing.Color.Ivory
         Me.Requisitor_txt.Location = New System.Drawing.Point(72, 35)
         Me.Requisitor_txt.MaxLength = 30
         Me.Requisitor_txt.Name = "Requisitor_txt"
@@ -89,7 +94,7 @@ Partial Class Ord_NewMover
         '
         'Reason_txt
         '
-        Me.Reason_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Reason_txt.BackColor = System.Drawing.Color.Ivory
         Me.Reason_txt.Location = New System.Drawing.Point(72, 61)
         Me.Reason_txt.MaxLength = 300
         Me.Reason_txt.Multiline = True
@@ -108,7 +113,7 @@ Partial Class Ord_NewMover
         '
         'Comment_txt
         '
-        Me.Comment_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Comment_txt.BackColor = System.Drawing.Color.Ivory
         Me.Comment_txt.Location = New System.Drawing.Point(349, 61)
         Me.Comment_txt.MaxLength = 500
         Me.Comment_txt.Multiline = True
@@ -127,7 +132,7 @@ Partial Class Ord_NewMover
         '
         'Customer_txt
         '
-        Me.Customer_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Customer_txt.BackColor = System.Drawing.Color.Ivory
         Me.Customer_txt.Location = New System.Drawing.Point(349, 35)
         Me.Customer_txt.MaxLength = 50
         Me.Customer_txt.Name = "Customer_txt"
@@ -145,7 +150,7 @@ Partial Class Ord_NewMover
         '
         'Locality_txt
         '
-        Me.Locality_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Locality_txt.BackColor = System.Drawing.Color.Ivory
         Me.Locality_txt.Location = New System.Drawing.Point(633, 61)
         Me.Locality_txt.MaxLength = 50
         Me.Locality_txt.Name = "Locality_txt"
@@ -163,7 +168,7 @@ Partial Class Ord_NewMover
         '
         'Type_cbo
         '
-        Me.Type_cbo.BackColor = System.Drawing.Color.LightYellow
+        Me.Type_cbo.BackColor = System.Drawing.Color.Ivory
         Me.Type_cbo.FormattingEnabled = True
         Me.Type_cbo.Location = New System.Drawing.Point(633, 35)
         Me.Type_cbo.Name = "Type_cbo"
@@ -172,7 +177,7 @@ Partial Class Ord_NewMover
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(6, 32)
         Me.Partnumber_txt.Mask = "AAAAAAAA"
@@ -193,7 +198,7 @@ Partial Class Ord_NewMover
         '
         'Quantity_nud
         '
-        Me.Quantity_nud.BackColor = System.Drawing.Color.LightYellow
+        Me.Quantity_nud.BackColor = System.Drawing.Color.Ivory
         Me.Quantity_nud.Location = New System.Drawing.Point(309, 32)
         Me.Quantity_nud.Maximum = New Decimal(New Integer() {999999, 0, 0, 0})
         Me.Quantity_nud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
@@ -214,7 +219,7 @@ Partial Class Ord_NewMover
         '
         'UOM_cbo
         '
-        Me.UOM_cbo.BackColor = System.Drawing.Color.LightYellow
+        Me.UOM_cbo.BackColor = System.Drawing.Color.Ivory
         Me.UOM_cbo.FormattingEnabled = True
         Me.UOM_cbo.Items.AddRange(New Object() {"PC", "M", "FT", "L", "LB", "KG"})
         Me.UOM_cbo.Location = New System.Drawing.Point(397, 31)
@@ -243,7 +248,7 @@ Partial Class Ord_NewMover
         '
         'TSA_txt
         '
-        Me.TSA_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.TSA_txt.BackColor = System.Drawing.Color.Ivory
         Me.TSA_txt.Location = New System.Drawing.Point(491, 31)
         Me.TSA_txt.MaxLength = 25
         Me.TSA_txt.Name = "TSA_txt"
@@ -268,11 +273,11 @@ Partial Class Ord_NewMover
         Me.GroupBox1.Size = New System.Drawing.Size(810, 64)
         Me.GroupBox1.TabIndex = 115
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Nos."
+        Me.GroupBox1.Text = "Nos. de Parte"
         '
         'Description_txt
         '
-        Me.Description_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Description_txt.BackColor = System.Drawing.Color.Ivory
         Me.Description_txt.Location = New System.Drawing.Point(92, 31)
         Me.Description_txt.MaxLength = 25
         Me.Description_txt.Name = "Description_txt"
@@ -304,21 +309,43 @@ Partial Class Ord_NewMover
         '
         Me.Partnumbers_dgv.AllowColumnHiding = True
         Me.Partnumbers_dgv.AllowUserToAddRows = False
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray
+        Me.Partnumbers_dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.Partnumbers_dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Partnumbers_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Partnumbers_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.Partnumbers_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Partnumbers_dgv.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Partnumbers_dgv.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Partnumbers_dgv.DefaultRowFilter = Nothing
+        Me.Partnumbers_dgv.EnableHeadersVisualStyles = False
         Me.Partnumbers_dgv.Location = New System.Drawing.Point(6, 186)
         Me.Partnumbers_dgv.Name = "Partnumbers_dgv"
         Me.Partnumbers_dgv.ReadOnly = True
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Partnumbers_dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.Partnumbers_dgv.ShowRowNumber = True
         Me.Partnumbers_dgv.Size = New System.Drawing.Size(912, 324)
         Me.Partnumbers_dgv.TabIndex = 118
@@ -363,11 +390,32 @@ Partial Class Ord_NewMover
         Me.Title_lbl.Size = New System.Drawing.Size(206, 26)
         Me.Title_lbl.Text = "Nuevo Mover de Material"
         '
+        'Shipping_lbl
+        '
+        Me.Shipping_lbl.AutoSize = True
+        Me.Shipping_lbl.Location = New System.Drawing.Point(573, 90)
+        Me.Shipping_lbl.Name = "Shipping_lbl"
+        Me.Shipping_lbl.Size = New System.Drawing.Size(58, 13)
+        Me.Shipping_lbl.TabIndex = 121
+        Me.Shipping_lbl.Text = "Embarque:"
+        Me.Shipping_lbl.Visible = False
+        '
+        'ShippingDate_dtp
+        '
+        Me.ShippingDate_dtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.ShippingDate_dtp.Location = New System.Drawing.Point(633, 87)
+        Me.ShippingDate_dtp.Name = "ShippingDate_dtp"
+        Me.ShippingDate_dtp.Size = New System.Drawing.Size(156, 20)
+        Me.ShippingDate_dtp.TabIndex = 122
+        Me.ShippingDate_dtp.Visible = False
+        '
         'Ord_NewMover
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 516)
+        Me.Controls.Add(Me.ShippingDate_dtp)
+        Me.Controls.Add(Me.Shipping_lbl)
         Me.Controls.Add(Me.ToolStripMain)
         Me.Controls.Add(Me.Partnumbers_dgv)
         Me.Controls.Add(Me.GroupBox1)
@@ -426,4 +474,6 @@ Partial Class Ord_NewMover
     Friend WithEvents Title_lbl As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Description_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Shipping_lbl As System.Windows.Forms.Label
+    Friend WithEvents ShippingDate_dtp As System.Windows.Forms.DateTimePicker
 End Class

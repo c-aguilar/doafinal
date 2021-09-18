@@ -68,7 +68,7 @@ Partial Class Smk_StoreSerialKiosk
         '
         'Location_txt
         '
-        Me.Location_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Location_txt.BackColor = System.Drawing.Color.Ivory
         Me.Location_txt.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         Me.Location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Location_txt.Location = New System.Drawing.Point(169, 120)
@@ -81,7 +81,7 @@ Partial Class Smk_StoreSerialKiosk
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(99, 83)
         Me.Serial_txt.MaxLength = 16
@@ -100,7 +100,7 @@ Partial Class Smk_StoreSerialKiosk
         Me.CountDown_lbl.Name = "CountDown_lbl"
         Me.CountDown_lbl.Size = New System.Drawing.Size(310, 26)
         Me.CountDown_lbl.TabIndex = 92
-        Me.CountDown_lbl.Text = "Tiempo restante: 0"
+        Me.CountDown_lbl.Text = "Tiempo restante: 30"
         Me.CountDown_lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Close_btn

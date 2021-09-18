@@ -34,7 +34,12 @@ Partial Class Smk_FixSerialnumber
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Partnumber_txt = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Weight_nud = New System.Windows.Forms.NumericUpDown()
+        Me.Weight_lbl = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Container_cbo = New System.Windows.Forms.ComboBox()
         CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Weight_nud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -51,7 +56,7 @@ Partial Class Smk_FixSerialnumber
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
         Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(86, 46)
         Me.Serial_txt.MaxLength = 16
@@ -63,7 +68,7 @@ Partial Class Smk_FixSerialnumber
         '
         Me.Cancel_btn.Image = CType(resources.GetObject("Cancel_btn.Image"), System.Drawing.Image)
         Me.Cancel_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Cancel_btn.Location = New System.Drawing.Point(23, 203)
+        Me.Cancel_btn.Location = New System.Drawing.Point(23, 270)
         Me.Cancel_btn.Name = "Cancel_btn"
         Me.Cancel_btn.Size = New System.Drawing.Size(100, 25)
         Me.Cancel_btn.TabIndex = 110
@@ -73,7 +78,7 @@ Partial Class Smk_FixSerialnumber
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 53)
+        Me.Label1.Location = New System.Drawing.Point(44, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 112
@@ -84,7 +89,7 @@ Partial Class Smk_FixSerialnumber
         Me.OK_btn.Enabled = False
         Me.OK_btn.Image = CType(resources.GetObject("OK_btn.Image"), System.Drawing.Image)
         Me.OK_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.OK_btn.Location = New System.Drawing.Point(129, 203)
+        Me.OK_btn.Location = New System.Drawing.Point(129, 270)
         Me.OK_btn.Name = "OK_btn"
         Me.OK_btn.Size = New System.Drawing.Size(100, 25)
         Me.OK_btn.TabIndex = 113
@@ -93,7 +98,7 @@ Partial Class Smk_FixSerialnumber
         '
         'Quantity_nud
         '
-        Me.Quantity_nud.BackColor = System.Drawing.Color.LightYellow
+        Me.Quantity_nud.BackColor = System.Drawing.Color.Ivory
         Me.Quantity_nud.DecimalPlaces = 3
         Me.Quantity_nud.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Quantity_nud.Location = New System.Drawing.Point(86, 107)
@@ -107,7 +112,7 @@ Partial Class Smk_FixSerialnumber
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 113)
+        Me.Label2.Location = New System.Drawing.Point(26, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 114
@@ -128,7 +133,7 @@ Partial Class Smk_FixSerialnumber
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 144)
+        Me.Label3.Location = New System.Drawing.Point(34, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 117
@@ -136,7 +141,7 @@ Partial Class Smk_FixSerialnumber
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(86, 77)
         Me.Partnumber_txt.MaxLength = 16
@@ -149,17 +154,63 @@ Partial Class Smk_FixSerialnumber
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(13, 84)
+        Me.Label4.Location = New System.Drawing.Point(8, 84)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 119
         Me.Label4.Text = "No. de Parte:"
         '
+        'Weight_nud
+        '
+        Me.Weight_nud.BackColor = System.Drawing.Color.Ivory
+        Me.Weight_nud.DecimalPlaces = 3
+        Me.Weight_nud.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Weight_nud.Location = New System.Drawing.Point(86, 201)
+        Me.Weight_nud.Maximum = New Decimal(New Integer() {9999999, 0, 0, 0})
+        Me.Weight_nud.Name = "Weight_nud"
+        Me.Weight_nud.Size = New System.Drawing.Size(120, 24)
+        Me.Weight_nud.TabIndex = 121
+        Me.Weight_nud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Weight_lbl
+        '
+        Me.Weight_lbl.AutoSize = True
+        Me.Weight_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Weight_lbl.Location = New System.Drawing.Point(44, 207)
+        Me.Weight_lbl.Name = "Weight_lbl"
+        Me.Weight_lbl.Size = New System.Drawing.Size(34, 13)
+        Me.Weight_lbl.TabIndex = 120
+        Me.Weight_lbl.Text = "Peso:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(13, 176)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(65, 13)
+        Me.Label5.TabIndex = 122
+        Me.Label5.Text = "Contenedor:"
+        '
+        'Container_cbo
+        '
+        Me.Container_cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Container_cbo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Container_cbo.FormattingEnabled = True
+        Me.Container_cbo.Location = New System.Drawing.Point(86, 169)
+        Me.Container_cbo.Name = "Container_cbo"
+        Me.Container_cbo.Size = New System.Drawing.Size(84, 26)
+        Me.Container_cbo.TabIndex = 123
+        '
         'Smk_FixSerialnumber
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(252, 245)
+        Me.ClientSize = New System.Drawing.Size(252, 307)
+        Me.Controls.Add(Me.Container_cbo)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Weight_nud)
+        Me.Controls.Add(Me.Weight_lbl)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Partnumber_txt)
         Me.Controls.Add(Me.Label3)
@@ -175,6 +226,7 @@ Partial Class Smk_FixSerialnumber
         Me.ShowIcon = False
         Me.Text = "Supermarket"
         CType(Me.Quantity_nud, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Weight_nud, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,4 +242,8 @@ Partial Class Smk_FixSerialnumber
     Private WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Partnumber_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Weight_nud As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Weight_lbl As System.Windows.Forms.Label
+    Private WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Container_cbo As System.Windows.Forms.ComboBox
 End Class

@@ -4,43 +4,21 @@
     Dim sb As SearchBox
     Dim report As DataTable
     Private Sub Ord_ConsumptionHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sb = New SearchBox(Me.Report_dgv)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(Me.Report_dgv)
+
         From_dtp.Value = CurrentDate.AddDays(-30)
         From_dtp.MaxDate = CurrentDate()
     End Sub
 
     Private Sub Find_btn_Click(sender As Object, e As EventArgs) Handles Find_btn.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If report IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(report.DefaultView, Title_lbl.Text, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(report.DefaultView.ToTable, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = report.DefaultView.ToTable
-                        pdf.Title = Title_lbl.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(report.DefaultView, Title_lbl.Text)
     End Sub
 
     Private Sub Copy_btn_Click(sender As Object, e As EventArgs) Handles Copy_btn.Click
@@ -183,15 +161,15 @@
         If ld.ShowDialog() = Windows.Forms.DialogResult.OK Then
             selected_partnumbers.Clear()
             For Each p In ld.Items
-                If Not selected_partnumbers.Contains(Strings.Right("00000000" & p.ToString, 8)) Then
-                    selected_partnumbers.Add(Strings.Right("00000000" & p.ToString, 8))
+                If Not selected_partnumbers.Contains(RawMaterial.Format(p)) Then
+                    selected_partnumbers.Add(RawMaterial.Format(p))
                 End If
             Next
             If selected_partnumbers.Count > 0 Then
                 Partnumber_txt.Text = String.Join(",", selected_partnumbers.ToArray)
                 Partnumber_txt.Enabled = False
             Else
-                Partnumber_txt.Text = ""
+                Partnumber_txt.Clear()
                 Partnumber_txt.Enabled = True
             End If
         End If

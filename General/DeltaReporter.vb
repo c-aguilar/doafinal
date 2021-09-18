@@ -1,15 +1,55 @@
 ﻿Public Class DeltaReporter
     Dim ParameterList As New List(Of Parameter)
     Dim sb As SearchBox
-
     Public Property DataSource As DataTable
     Public Property Title As String
     Public Property Area As String
     Private Sub ReportViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GF.FillCombobox(Report_cbo, SQL.Current.GetDatatable(String.Format("SELECT Alias,Name FROM Sys_Reports WHERE Area = '{0}' ORDER BY Alias", Me.Area)), "Alias", "Name")
-        sb = New SearchBox(Me.Report_dgv)
+        sb = New SearchBox
+        sb.MdiParent = Me.MdiParent
+        sb.SetNewDataGridView(Me.Report_dgv)
+
         Title_lbl.Text = ""
-        Area_lbl.Text = Me.Area
+        Select Case Me.Area
+            Case "SMK"
+                Area_lbl.Text = "Supermercado"
+            Case "REC"
+                Area_lbl.Text = "Recibos"
+            Case "SHI"
+                Area_lbl.Text = "Embarques"
+            Case "QLY"
+                Area_lbl.Text = "Calidad"
+            Case "ORD"
+                Area_lbl.Text = "Ordenamiento"
+            Case "SCH"
+                Area_lbl.Text = "Control de Producción"
+            Case "CR"
+                Area_lbl.Text = "Component Readiness"
+            Case "CDR"
+                Area_lbl.Text = "Rutas de Componentes"
+            Case "FGR"
+                Area_lbl.Text = "Rutas de PT"
+            Case "MAN"
+                Area_lbl.Text = "Analista de Materiales"
+            Case "ADM"
+                Area_lbl.Text = "Administrador"
+            Case "LDP"
+                Area_lbl.Text = "Leadprep"
+            Case "SEC"
+                Area_lbl.Text = "Secundarios"
+            Case "IGP"
+                Area_lbl.Text = "Ing de Proceso"
+            Case "MET"
+                Area_lbl.Text = "Ing de Metodos"
+            Case "MTO"
+                Area_lbl.Text = "Mantenimiento"
+            Case "PR"
+                Area_lbl.Text = "Program Readiness"
+            Case Else
+                Area_lbl.Text = Me.Area
+        End Select
+        AddHandler Report_cbo.KeyDown, AddressOf DeltaReporter_KeyDown
     End Sub
 
     Private Class Parameter
@@ -33,25 +73,27 @@
         GreaterOrEqualThan
         MinorOrEqualThan
         [In]
+        NotIn
     End Enum
 
-   
-
     Private Sub PrintToolStripButton_Click(sender As Object, e As EventArgs) Handles PrintToolStripButton.Click
-        If Not IsNothing(Me.DataSource) AndAlso MyExcel.Print(Me.DataSource.DefaultView.ToTable, False, Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape) Then
-            FlashAlerts.ShowConfirm("Hecho!")
+        If Not IsNothing(Me.DataSource) Then
+            Delta.Print(Me.DataSource, Me.Area, Me.Title)
         End If
     End Sub
 
     Private Sub CopyToolStripButton_Click(sender As Object, e As EventArgs) Handles CopyToolStripButton.Click
         If Not IsNothing(Me.DataSource) Then
+            Report_dgv.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText
             Clipboard.SetDataObject(Report_dgv.GetClipboardContent())
+            Report_dgv.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText
             Status("Copiado")
         End If
     End Sub
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 
     Private Sub Status(ByVal text As String)
@@ -64,37 +106,14 @@
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        If Me.DataSource IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(Me.DataSource.DefaultView.ToTable, Strings.Left(Me.Title.Replace("*", "").Replace("?", "").Replace(":", "").Replace("\", "").Replace("/", ""), 30), False) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(Me.DataSource.DefaultView.ToTable, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = Me.DataSource.DefaultView.ToTable
-                        pdf.Title = Me.Title
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
-
+        If Me.DataSource IsNot Nothing Then Delta.Export(Me.DataSource, Strings.Left(Me.Title.Replace("*", "").Replace("?", "").Replace(":", "").Replace("\", "").Replace("/", ""), 30))
     End Sub
 
     Private Sub Run_btn_Click(sender As Object, e As EventArgs) Handles Run_btn.Click
+        LoadReport()
+    End Sub
+
+    Private Sub LoadReport()
         If Report_cbo.SelectedValue IsNot Nothing Then
             LoadingScreen.Show()
             Dim command As New SqlClient.SqlCommand
@@ -102,8 +121,10 @@
             Dim filter As String = SQL.Current.GetString("Filter", "Sys_Reports", "Name", Report_cbo.SelectedValue, "")
             Dim sort As String = SQL.Current.GetString("Sort", "Sys_Reports", "Name", Report_cbo.SelectedValue, "")
             Dim groupby As String = SQL.Current.GetString("[Group]", "Sys_Reports", "Name", Report_cbo.SelectedValue, "")
+            Dim having As String = SQL.Current.GetString("[Having]", "Sys_Reports", "Name", Report_cbo.SelectedValue, "")
             If sort <> "" Then sort = "ORDER BY " & sort
             If groupby <> "" Then groupby = "GROUP BY " & groupby
+            If having <> "" Then having = "HAVING " & having
             Dim extra_filter As New ArrayList
             Dim counter As Integer = 1
             For Each p In ParameterList
@@ -246,6 +267,8 @@
                                     extra_filter.Add(String.Format("{0} <= {1}", p.Name, String.Format("@p{0}", counter)))
                                 Case Condition.In
                                     extra_filter.Add(String.Format("{0} IN ({1})", p.Name, String.Join(",", p.Values.ToArray)))
+                                Case Condition.NotIn
+                                    extra_filter.Add(String.Format("{0} NOT IN ({1})", p.Name, String.Join(",", p.Values.ToArray)))
                             End Select
                         Case "String"
                             Select Case p.Condition
@@ -267,6 +290,12 @@
                                         new_values.Add(v.ToString.Replace("'", "''"))
                                     Next
                                     extra_filter.Add(String.Format("{0} IN ('{1}')", p.Name, String.Join("','", new_values.ToArray)))
+                                Case Condition.NotIn
+                                    Dim new_values As New ArrayList
+                                    For Each v In p.Values
+                                        new_values.Add(v.ToString.Replace("'", "''"))
+                                    Next
+                                    extra_filter.Add(String.Format("{0} NOT IN ('{1}')", p.Name, String.Join("','", new_values.ToArray)))
                             End Select
                     End Select
                     counter += 1
@@ -274,15 +303,15 @@
             Next
             If filter = "" Then
                 If extra_filter.Count = 0 Then
-                    [select] = String.Format("{0} {1} {2};", [select], groupby, sort)
+                    [select] = String.Format("{0} {1} {2} {3};", [select], groupby, having, sort)
                 Else
-                    [select] = String.Format("{0} WHERE {1} {2} {3};", [select], String.Join(" AND ", extra_filter.ToArray), groupby, sort)
+                    [select] = String.Format("{0} WHERE {1} {2} {3} {4};", [select], String.Join(" AND ", extra_filter.ToArray), groupby, having, sort)
                 End If
             Else
                 If extra_filter.Count = 0 Then
-                    [select] = String.Format("{0} WHERE {1} {2} {3};", [select], filter, groupby, sort)
+                    [select] = String.Format("{0} WHERE {1} {2} {3} {4};", [select], filter, groupby, having, sort)
                 Else
-                    [select] = String.Format("{0} WHERE {1} AND {2} {3} {4};", [select], filter, String.Join(" AND ", extra_filter.ToArray), groupby, sort)
+                    [select] = String.Format("{0} WHERE {1} AND {2} {3} {4} {5};", [select], filter, String.Join(" AND ", extra_filter.ToArray), groupby, having, sort)
                 End If
             End If
             command.CommandText = [select]
@@ -291,6 +320,7 @@
             LoadingScreen.Hide()
         End If
     End Sub
+
 
     Private Sub LoadParameters()
         ParameterList.Clear()
@@ -319,6 +349,8 @@
                     item.Condition = Condition.MinorOrEqualThan
                 Case "In"
                     item.Condition = Condition.In
+                Case "NotIn"
+                    item.Condition = Condition.NotIn
             End Select
             item.ConditionButton.BackgroundImageLayout = ImageLayout.Zoom
             Select Case item.Condition
@@ -342,6 +374,9 @@
                     item.ListButton.Visible = False
                 Case Condition.In
                     item.ConditionButton.Image = My.Resources._in
+                    item.ListButton.Visible = True
+                Case Condition.NotIn
+                    item.ConditionButton.Image = My.Resources.not_in
                     item.ListButton.Visible = True
             End Select
             item.ConditionButton.FlatStyle = FlatStyle.Flat
@@ -383,6 +418,7 @@
                     control.Format = DateTimePickerFormat.Custom
                     control.Size = New Size(100, 20)
                     control.Enabled = item.FilterActiveCheckbox.Checked
+                    AddHandler control.KeyDown, AddressOf DeltaReporter_KeyDown
                     If item.DefaultValue <> "" AndAlso Date.TryParse(item.DefaultValue, Nothing) Then control.Value = CDate(item.DefaultValue)
                     item.Control = control
                     flp.Controls.Add(item.FilterActiveCheckbox)
@@ -396,6 +432,7 @@
                     control.Format = DateTimePickerFormat.Custom
                     control.Size = New Size(130, 20)
                     control.Enabled = item.FilterActiveCheckbox.Checked
+                    AddHandler control.KeyDown, AddressOf DeltaReporter_KeyDown
                     If item.DefaultValue <> "" AndAlso Date.TryParse(item.DefaultValue, Nothing) Then control.Value = CDate(item.DefaultValue)
                     item.Control = control
                     flp.Controls.Add(item.FilterActiveCheckbox)
@@ -409,6 +446,7 @@
                     control.AutoSize = True
                     control.RightToLeft = Windows.Forms.RightToLeft.Yes
                     control.Enabled = item.FilterActiveCheckbox.Checked
+                    AddHandler control.KeyDown, AddressOf DeltaReporter_KeyDown
                     If item.DefaultValue <> "" AndAlso Boolean.TryParse(item.DefaultValue, Nothing) Then control.Checked = CBool(item.DefaultValue)
                     item.Control = control
                     flp.Controls.Add(item.FilterActiveCheckbox)
@@ -419,6 +457,7 @@
                     control.Size = New Size(100, 20)
                     control.Text = item.DefaultValue
                     control.Enabled = item.FilterActiveCheckbox.Checked
+                    AddHandler control.KeyDown, AddressOf DeltaReporter_KeyDown
                     item.Control = control
                     flp.Controls.Add(item.FilterActiveCheckbox)
                     flp.Controls.Add(item.ConditionButton)
@@ -442,9 +481,12 @@
     Private Sub FilterStateChanged(sender As Object, e As EventArgs)
         Dim cb = CType(sender, CheckBox)
         Dim p As Parameter = cb.Tag
+        If p.Condition = Condition.In OrElse p.Condition = Condition.NotIn Then
+            p.ListButton.Enabled = cb.Checked
+        Else
+            p.Control.Enabled = cb.Checked
+        End If
         p.ConditionButton.Enabled = cb.Checked
-        p.Control.Enabled = cb.Checked
-
     End Sub
 
     Private Sub ConditionClick(sender As Object, e As EventArgs)
@@ -465,8 +507,12 @@
                 cs.MinorEqual_lbl.Enabled = False
         End Select
 
-        If cs.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If cs.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
             If p.Condition = Condition.In AndAlso cs.Condition <> Condition.In Then
+                p.Control.Text = ""
+                p.Control.Enabled = True
+                p.Values.Clear()
+            ElseIf p.Condition = Condition.NotIn AndAlso cs.Condition <> Condition.NotIn Then
                 p.Control.Text = ""
                 p.Control.Enabled = True
                 p.Values.Clear()
@@ -496,6 +542,11 @@
                     p.ListButton.Visible = True
                     p.Control.Text = ""
                     p.Control.Enabled = False
+                Case Condition.NotIn
+                    p.ConditionButton.Image = My.Resources.not_in
+                    p.ListButton.Visible = True
+                    p.Control.Text = ""
+                    p.Control.Enabled = False
             End Select
         End If
     End Sub
@@ -506,7 +557,7 @@
         ld.Items.AddRange(p.Values)
         ld.Title = p.Alias
         ld.AcceptDuplicates = False
-        If ld.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If ld.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
             p.Values.Clear()
             p.Values = ld.Items
             If p.Values.Count > 0 Then
@@ -517,4 +568,27 @@
         End If
         ld.Dispose()
     End Sub
+
+    Private Sub DeltaReporter_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+
+    End Sub
+
+    Private Sub DeltaReporter_KeyDown(sender As Object, e As KeyEventArgs)
+        If e.KeyCode = Keys.F5 Then
+            LoadReport()
+        End If
+    End Sub
+
+    Private Sub Pivot_btn_Click(sender As Object, e As EventArgs) Handles Pivot_btn.Click
+        If Me.DataSource IsNot Nothing Then
+            LoadingScreen.Show()
+            Dim pivoter As New DeltaPivoter
+            pivoter.Title = Me.Title
+            pivoter.MdiParent = Me.MdiParent
+            pivoter.DataSource = Me.DataSource.DefaultView.ToTable
+            pivoter.Show()
+            LoadingScreen.Hide()
+        End If
+    End Sub
+
 End Class

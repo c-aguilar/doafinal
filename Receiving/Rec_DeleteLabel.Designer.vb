@@ -48,7 +48,7 @@ Partial Class Rec_DeleteLabel
         Me.Label7.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label7.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Maroon
+        Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label7.Location = New System.Drawing.Point(0, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(880, 25)
@@ -57,18 +57,18 @@ Partial Class Rec_DeleteLabel
         '
         'Serial_txt
         '
-        Me.Serial_txt.BackColor = System.Drawing.Color.LightYellow
-        Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Serial_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Serial_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Serial_txt.Location = New System.Drawing.Point(17, 51)
         Me.Serial_txt.Name = "Serial_txt"
-        Me.Serial_txt.Size = New System.Drawing.Size(191, 24)
+        Me.Serial_txt.Size = New System.Drawing.Size(191, 20)
         Me.Serial_txt.TabIndex = 94
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(412, 51)
+        Me.Label2.Location = New System.Drawing.Point(415, 51)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 89
@@ -77,18 +77,18 @@ Partial Class Rec_DeleteLabel
         'From_dtp
         '
         Me.From_dtp.CustomFormat = "dd-MM-yy HH:mm"
-        Me.From_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.From_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.From_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.From_dtp.Location = New System.Drawing.Point(459, 47)
         Me.From_dtp.Name = "From_dtp"
-        Me.From_dtp.Size = New System.Drawing.Size(125, 21)
+        Me.From_dtp.Size = New System.Drawing.Size(112, 20)
         Me.From_dtp.TabIndex = 88
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(412, 74)
+        Me.Label3.Location = New System.Drawing.Point(415, 71)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 91
@@ -97,15 +97,16 @@ Partial Class Rec_DeleteLabel
         'To_dtp
         '
         Me.To_dtp.CustomFormat = "dd-MM-yy HH:mm"
-        Me.To_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.To_dtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.To_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.To_dtp.Location = New System.Drawing.Point(459, 69)
         Me.To_dtp.Name = "To_dtp"
-        Me.To_dtp.Size = New System.Drawing.Size(125, 21)
+        Me.To_dtp.Size = New System.Drawing.Size(112, 20)
         Me.To_dtp.TabIndex = 90
         '
         'Delete_btn
         '
+        Me.Delete_btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Delete_btn.Image = CType(resources.GetObject("Delete_btn.Image"), System.Drawing.Image)
         Me.Delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Delete_btn.Location = New System.Drawing.Point(644, 87)
@@ -117,11 +118,11 @@ Partial Class Rec_DeleteLabel
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
-        Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(598, 51)
         Me.Partnumber_txt.Name = "Partnumber_txt"
-        Me.Partnumber_txt.Size = New System.Drawing.Size(156, 24)
+        Me.Partnumber_txt.Size = New System.Drawing.Size(156, 20)
         Me.Partnumber_txt.TabIndex = 94
         '
         'Find_btn
@@ -184,6 +185,7 @@ Partial Class Rec_DeleteLabel
         '
         'SelectAll_chk
         '
+        Me.SelectAll_chk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SelectAll_chk.AutoSize = True
         Me.SelectAll_chk.Location = New System.Drawing.Point(750, 92)
         Me.SelectAll_chk.Name = "SelectAll_chk"
@@ -204,20 +206,20 @@ Partial Class Rec_DeleteLabel
         '
         'RangeA_txt
         '
-        Me.RangeA_txt.BackColor = System.Drawing.Color.LightYellow
-        Me.RangeA_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RangeA_txt.BackColor = System.Drawing.Color.Ivory
+        Me.RangeA_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RangeA_txt.Location = New System.Drawing.Point(222, 51)
         Me.RangeA_txt.Name = "RangeA_txt"
-        Me.RangeA_txt.Size = New System.Drawing.Size(86, 24)
+        Me.RangeA_txt.Size = New System.Drawing.Size(86, 20)
         Me.RangeA_txt.TabIndex = 104
         '
         'Range2_txt
         '
-        Me.Range2_txt.BackColor = System.Drawing.Color.LightYellow
-        Me.Range2_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Range2_txt.BackColor = System.Drawing.Color.Ivory
+        Me.Range2_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Range2_txt.Location = New System.Drawing.Point(314, 51)
         Me.Range2_txt.Name = "Range2_txt"
-        Me.Range2_txt.Size = New System.Drawing.Size(86, 24)
+        Me.Range2_txt.Size = New System.Drawing.Size(86, 20)
         Me.Range2_txt.TabIndex = 106
         '
         'Rec_DeleteLabel

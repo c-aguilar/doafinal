@@ -26,51 +26,54 @@
 
     Private Sub Empty()
         RemainTime = 30
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             Dim serial As New Serialnumber(Serial_txt.Text)
-            If serial.Exist Then
-                If serial.RedTag Then
+            If serial.Exists Then
+                If serial.Type = RawMaterial.MaterialType.Cable Then
                     Clean()
-                    FlashAlerts.ShowInformation("La serie bloqueada por Calidad.")
-                ElseIf serial.InvoiceTrouble Then
-                    Clean()
-                    FlashAlerts.ShowInformation("La serie se encuentra en Tracker de Problemas.")
-                    Log(serial.SerialNumber, "Smk_TryEmptySerialOnTracker", Me.Badge)
+                    FlashAlerts.ShowError("La serie pertenece a un barril de Cable.")
                 Else
-                    Select Case serial.Status
-                        Case Serialnumber.SerialStatus.Empty
-                            Clean()
-                            FlashAlerts.ShowInformation("La serie ya se encuentra declarada vacia.")
-                        Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending
-                            Clean()
-                            FlashAlerts.ShowError("La serie no ha sido dada de alta.")
-                        Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality 'TODOS ESTAN EN SLOC DE SERVICIO
-                            If serial.Empty(Me.Badge) Then
+                    If serial.RedTag Then
+                        Clean()
+                        FlashAlerts.ShowInformation("La serie bloqueada por Calidad.")
+                    ElseIf serial.InvoiceTrouble Then
+                        Log(serial.SerialNumber, "Smk_TryEmptySerialOnTracker", Me.Badge)
+                        Clean()
+                        FlashAlerts.ShowInformation("La serie se encuentra en Tracker de Problemas.")
+                    Else
+                        Select Case serial.Status
+                            Case Serialnumber.SerialStatus.Empty
                                 Clean()
-                                FlashAlerts.ShowConfirm("Serie declarada vacia.")
-                            Else
-                                FlashAlerts.ShowError("Error al declarar vacia la serie.")
-                            End If
-                        Case Serialnumber.SerialStatus.Stored, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker 'TODOS ESTAN EN SLOC DE RESERVA
-                            'VALIDAR FIFO
-                            If Parameter("SMK_ForceFIFO", False) AndAlso Not (serial.SerialNumber = SMK.NextFIFO(serial.Partnumber, My.Settings.Warehouse) OrElse serial.SerialNumber = SMK.NextFIFO(serial.Partnumber)) Then
+                                FlashAlerts.ShowInformation("La serie ya se encuentra declarada vacia.")
+                            Case Serialnumber.SerialStatus.New, Serialnumber.SerialStatus.Pending, Serialnumber.SerialStatus.Presupermarket
                                 Clean()
-                                FlashAlerts.ShowError("FIFO incorrecto.")
-                            Else
-                                'PRIMERO ABRIRA LA SERIE
-                                If serial.Open(SQL.Current.GetString("Location", "Smk_Map", {"Partnumber", "Warehouse"}, {serial.Partnumber, serial.Warehouse}, "00000000"), Me.Badge) Then
-                                    If serial.Empty(Me.Badge) Then
-                                        Clean()
-                                        FlashAlerts.ShowConfirm("Serie declarada vacia.")
-                                    Else
-                                        FlashAlerts.ShowError("Error al declarar vacia la serie.")
-                                    End If
+                                FlashAlerts.ShowError("La serie no ha sido dada de alta.")
+                            Case Serialnumber.SerialStatus.Open, Serialnumber.SerialStatus.OnCutter, Serialnumber.SerialStatus.ServiceOnQuality 'TODOS ESTAN EN SLOC DE SERVICIO
+                                If serial.Empty(Me.Badge) Then
+                                    Clean()
+                                    FlashAlerts.ShowConfirm("Serie declarada vacia.")
                                 Else
                                     FlashAlerts.ShowError("Error al declarar vacia la serie.")
                                 End If
-                            End If
-                    End Select
+                            Case Serialnumber.SerialStatus.Stored, Serialnumber.SerialStatus.Quality, Serialnumber.SerialStatus.Tracker 'TODOS ESTAN EN SLOC DE RESERVA
+                                'VALIDAR FIFO
+                                If Parameter("SMK_ForceFIFO", False) AndAlso Not (serial.SerialNumber = SMK.NextFIFO(serial.Partnumber, My.Settings.Warehouse) OrElse serial.SerialNumber = SMK.NextFIFO(serial.Partnumber)) Then
+                                    Clean()
+                                    FlashAlerts.ShowError("FIFO incorrecto.")
+                                Else
+                                    If serial.Open(serial.Location, Me.Badge) Then
+                                        serial.Empty(Me.Badge)
+                                        Clean()
+                                        FlashAlerts.ShowConfirm("Serie declarada vacia.")
+                                    Else
+                                        serial.ReturnToRandom(serial.Location)
+                                        FlashAlerts.ShowError("Error al declarar vacia la serie.")
+                                    End If
+                                End If
+                        End Select
+                    End If
                 End If
+
             Else
                 Clean()
                 FlashAlerts.ShowError("La serie no existe.")
@@ -91,7 +94,7 @@
     End Sub
 
     Private Sub Serial_txt_TextChanged(sender As Object, e As EventArgs) Handles Serial_txt.TextChanged
-        If SMK.IsSerial(Serial_txt.Text) Then
+        If SMK.IsSerialFormat(Serial_txt.Text) Then
             Empty()
         ElseIf Serial_txt.Text.ToUpper = "CLOSE" Then
             Me.Close()
@@ -111,5 +114,9 @@
             e.SuppressKeyPress = True
             Empty()
         End If
+    End Sub
+
+    Private Sub CountDown_lbl_Click(sender As Object, e As EventArgs) Handles CountDown_lbl.Click
+
     End Sub
 End Class

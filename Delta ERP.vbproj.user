@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>\\dl2cv74w1\wwwroot\Apps\RBEV\Delta ERP\|\\DL6VZ14W1\wwwroot\apps\Delta\|\\dl2cv74w1\wwwroot\apps\DeltaCSManagement\</PublishUrlHistory>
-    <InstallUrlHistory>http://DL2CV74W1/apps/RBEV/Delta ERP/|http://DL6VZ14W1/apps/Delta/|http://DL2CV74W1/APPS/DeltaCSManagement/</InstallUrlHistory>
+    <PublishUrlHistory>ftp://DLJ0JFMR2/Apps/RBEV/Delta ERP/|\\DLJ0JFMR2\wwwroot\Apps\RBEV\Delta ERP\|\\10.221.60.132\wwwroot\Apps\RBEV\Delta ERP\|\\DLJ0JFMR2\wwwroot\Apps\RBEIX\Delta ERP\|\\dl2cv74w1\wwwroot\Apps\RBEV\Delta ERP\</PublishUrlHistory>
+    <InstallUrlHistory>http://DLJ0JFMR2/apps/RBEV/Delta ERP/|http://10.221.60.132/apps/RBEV/Delta ERP/|http://DLJ0JFMR2/apps/RBEIX/Delta ERP/|http://DL2CV74W1/apps/RBEV/Delta ERP/|http://DL6VZ14W1/apps/Delta/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
@@ -12,5 +12,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
 </Project>

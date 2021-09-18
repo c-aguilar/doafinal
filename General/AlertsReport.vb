@@ -1,4 +1,16 @@
-﻿Public Class AlertsReport
+﻿Imports System.Runtime.InteropServices
+Public Class AlertsReport
+    <DllImport("user32.dll")> _
+    Private Shared Function ReleaseCapture() As Boolean
+    End Function
+
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Public Shared Function SendMessage(ByVal hWnd As IntPtr, ByVal Msg As Integer, ByVal wParam As Integer, ByRef lParam As Integer) As Integer
+    End Function
+    Private Sub Control_MouseDown(sender As Object, e As MouseEventArgs) Handles ToolStripMain.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112, &HF012, 0)
+    End Sub
 
     Private Sub AlertsReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshAlerts()
@@ -22,5 +34,9 @@
             e.Graphics.DrawImage(My.Resources.cross_16, rect)
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub Close_btn_Click(sender As Object, e As EventArgs) Handles Close_btn.Click
+        Me.Close()
     End Sub
 End Class

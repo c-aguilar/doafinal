@@ -40,7 +40,7 @@ Partial Class DownloadMB51
         'DownloadMB51_Sloc_cbo
         '
         Me.DownloadMB51_Sloc_cbo.FormattingEnabled = True
-        Me.DownloadMB51_Sloc_cbo.Items.AddRange(New Object() {"0001", "0007", "0002"})
+        Me.DownloadMB51_Sloc_cbo.Items.AddRange(New Object() {"0001", "0007", "0002", "0009", "0006"})
         Me.DownloadMB51_Sloc_cbo.Location = New System.Drawing.Point(121, 63)
         Me.DownloadMB51_Sloc_cbo.Name = "DownloadMB51_Sloc_cbo"
         Me.DownloadMB51_Sloc_cbo.Size = New System.Drawing.Size(100, 21)
@@ -67,7 +67,7 @@ Partial Class DownloadMB51
         'DownloadMB51_MovType_cbo
         '
         Me.DownloadMB51_MovType_cbo.FormattingEnabled = True
-        Me.DownloadMB51_MovType_cbo.Items.AddRange(New Object() {"Z11", "261", "101", "711", "702", "701", "*"})
+        Me.DownloadMB51_MovType_cbo.Items.AddRange(New Object() {"Z11", "261", "262", "101", "102", "701", "702", "309", "901", "343", "344", "657", "933", "934", "131", "132", "641", "642", "601", "*"})
         Me.DownloadMB51_MovType_cbo.Location = New System.Drawing.Point(121, 90)
         Me.DownloadMB51_MovType_cbo.Name = "DownloadMB51_MovType_cbo"
         Me.DownloadMB51_MovType_cbo.Size = New System.Drawing.Size(100, 21)

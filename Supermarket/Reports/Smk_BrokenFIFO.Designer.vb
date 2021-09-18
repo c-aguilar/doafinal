@@ -90,7 +90,7 @@ Partial Class Smk_BrokenFIFO
         '
         'Partnumber_txt
         '
-        Me.Partnumber_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Partnumber_txt.BackColor = System.Drawing.Color.Ivory
         Me.Partnumber_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Partnumber_txt.Location = New System.Drawing.Point(119, 34)
         Me.Partnumber_txt.Mask = "AAAAAAAA"
@@ -137,7 +137,7 @@ Partial Class Smk_BrokenFIFO
         '
         'Badge_txt
         '
-        Me.Badge_txt.BackColor = System.Drawing.Color.LightYellow
+        Me.Badge_txt.BackColor = System.Drawing.Color.Ivory
         Me.Badge_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Badge_txt.Location = New System.Drawing.Point(306, 34)
         Me.Badge_txt.Mask = "AAAAAAAAA"

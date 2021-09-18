@@ -2,7 +2,9 @@
     Dim material_items As New ArrayList
     Dim sb As SearchBox
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sb = New SearchBox(Me.Waterfall_dgv)
+        sb = New SearchBox
+        sb.SetNewDataGridView(Me.Waterfall_dgv)
+        sb.MdiParent = Me.MdiParent
         To_dtp.Value = GetMonday(Now)
         From_dtp.Value = GetMonday(Now).AddDays(-112)
         Material_txt.Text = "*"
@@ -10,33 +12,7 @@
 
 #Region "Generic Controls"
     Private Sub Export_btn_Click(sender As Object, e As EventArgs) Handles Export_btn.Click
-        If Waterfall_dgv.DataSource IsNot Nothing Then
-            Dim ed As New ExportDialog
-            If ed.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Select Case ed.ChoosenFormat
-                    Case ExportDialog.Format.Excel
-                        If MyExcel.SaveAs(Waterfall_dgv.DataSource, Title_btn.Text, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.CSV
-                        If CSV.SaveAs(Waterfall_dgv.DataSource, True) Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                    Case ExportDialog.Format.PDF
-                        Dim pdf As New PDF
-                        pdf.DataSource = Waterfall_dgv.DataSource
-                        pdf.Title = Title_btn.Text
-                        pdf.Subtitle = Application.ProductName
-                        pdf.Orientation = pdf.Orientations.Landscape
-                        pdf.PageNumber = True
-                        pdf.PageNumberPosition = pdf.Page.Position.BottomCenter
-                        If pdf.SaveAs() Then
-                            FlashAlerts.ShowConfirm(Language.Sentence(43))
-                        End If
-                        pdf.Dispose()
-                End Select
-            End If
-        End If
+        Delta.Export(Waterfall_dgv.DataSource, Title_lbl.Text)
     End Sub
 
     Private Sub Copy_btn_Click(sender As Object, e As EventArgs) Handles Copy_btn.Click
@@ -47,6 +23,7 @@
 
     Private Sub Find_btn_Click(sender As Object, e As EventArgs) Handles Find_btn.Click
         sb.Show()
+        sb.BringToFront()
     End Sub
 #End Region
 
@@ -71,6 +48,7 @@
         If Daily_rb.Checked Then
             If OnlyMaterial_rb.Checked Then
                 pivot = pivoter.PivotDates("Material", "DownloadDate", "OpenQuantity", AggregateFunction.Sum, "DeliveryDate", "System.Int32")
+
                 pivot.DefaultView.Sort = "Material,DownloadDate"
             ElseIf MaterialAndShipTo_rb.Checked Then
                 pivot = pivoter.PivotDates("Material", "ShipTo", "DownloadDate", "OpenQuantity", AggregateFunction.Sum, "DeliveryDate", "System.Int32")
@@ -107,7 +85,7 @@
                 Material_txt.Text = String.Join(",", material_items.ToArray)
                 Material_txt.Enabled = False
             Else
-                Material_txt.Text = ""
+                Material_txt.Clear()
                 Material_txt.Enabled = True
             End If
         End If
